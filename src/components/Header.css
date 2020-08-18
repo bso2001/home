@@ -57,26 +57,26 @@
 	top: 5vh;
 	right: 0;
 	margin: 0; padding: 0;
-	width: 30rem;
+	width: 55vw;
 	height: fit-content;
+	padding: 1vh 0;
+	background-color: #00699f;
 }
 
 #Header-menu > li, #Header-menu > a
 {
 	color: #ffca45 !important;
-	font: 2.2rem "HelveticaNeue-Light", sans-serif;
+	font: 2.2rem "HelveticaNeue", sans-serif;
 	line-height: 6rem;
 	text-decoration: none !important;
-	text-transform: uppercase;
+	padding-left: 8vw;
 	list-style: none;
-	background-color: #00699f;
 	outline: 0;
 }
 
 #Header-menu > li
 {
-	width: 30rem;
-	text-align: center;
+	width: inherit;
 }
 
 #Header-menu > li:hover

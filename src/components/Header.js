@@ -14,7 +14,7 @@ class Header extends React.Component
 				<div className="Header-title"> <a href="/"> S. Bert Olsson </a> </div>
 				<div id="Header-menu-box">
 					<div id="Header-burger" onClick={this.toggleMenu}>
-						<i className="fa fa-bars"></i>
+						{ this.menuIcon() }
 					</div>
 
 					{ this.showMenu() }
@@ -30,14 +30,20 @@ class Header extends React.Component
 
 		return (
 			<ul id="Header-menu">
-				<li><a href="/music"> Music </a></li>
-				<li><a href="/images"> Images </a></li>
-				<li><a href="https://olsson.tech" target="_new"> Tech </a></li>
-				<li><a href="https://charts.bertolsson.com" target="_new"> Charts </a></li>
+				<li><a href="/music"> MUSIC </a></li>
+				<li><a href="/images"> IMAGES </a></li>
+				<li><a href="https://olsson.tech" target="_new"> TECHNOLOGY </a></li>
+				<li><a target="_new" href= "https://www.ebay.com/sch/i.html?_saslop=1&_sasl=bso2001"> My eBay Listings </a></li>
+				<li><a href="https://charts.bertolsson.com" target="_new"> Band Charts </a></li>
 				<li><a href="https://olsson.tech/CS/Bert-Olsson-Resume.pdf" id="resume-link" target="_new"> Résumé </a></li>
-				<li><a href="https://olsson.tech/CS/Bert-Olsson-CV.pdf" id="resume-link" target="_new"> TLDR? 1-Page CV </a></li>
+				<li><a href="https://olsson.tech/CS/Bert-Olsson-CV.pdf" id="resume-link" target="_new"> TLDR? 1-pg CV here </a></li>
 			</ul>
 		)
+	}
+	
+	menuIcon()
+	{
+		return ( this.state.menuVisible ) ?  <i className="fa fa-times"></i> : <i className="fa fa-bars"></i>
 	}
 }
 
