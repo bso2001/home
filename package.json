@@ -19,7 +19,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "jest" : {
+  "jest": {
     "setupTestFrameworkScriptFile": "src/library/setupTests.js"
   },
   "browserslist": {
