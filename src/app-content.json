@@ -1,0 +1,30 @@
+{
+	"appname" : "BSO Home",
+	"version" : "1.0.0",
+	"pages" :
+	{
+		"Landing" :
+		{
+			"bannerImage" : "http://olsson.tech/CS/images/lakemcd-07232015.png",
+			"bannerText" : "Arts & Crafts and Other Sundries",
+			"cards" :
+			{
+				"Music" :
+				{
+					"image" : "https://olsson.tech/CS/images/studio-1.jpg",
+					"text" : "Hopefully pleasing original sounds."
+				},
+				"Images" :
+				{
+					"image" : "https://olsson.tech/CS/images/imagery.png",
+					"text" : "Pictures, some that move."
+				},
+				"Technology" :
+				{
+					"image" : "https://olsson.tech/CS/images/tech.png",
+					"text" : "Things that help pay the bills."
+				}
+			}
+		}
+	}
+}

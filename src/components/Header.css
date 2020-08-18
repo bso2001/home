@@ -1,0 +1,87 @@
+.Header
+{
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 5vh;
+	width: 100%;
+	z-index: 100;
+	background-color: #00699f;
+	box-sizing: border-box;
+}
+
+.Header-title
+{
+	font-family: "HelveticaNeue-Light", sans-serif;
+	font-size: 3rem;
+	text-transform: uppercase;
+	white-space: nowrap;
+	margin-left: 4vw;
+	flex: 2;
+	text-shadow: #ffca45 .2px .2px;
+}
+
+.Header-title a
+{
+	color: #ffca45;
+}
+
+.Header-title a:visited
+{
+	color: #ffca45;
+}
+
+.Header-menu-box
+{
+	cursor: pointer;
+}
+
+#Header-burger
+{
+	margin-right: 4vw;
+	cursor: pointer;
+}
+
+#Header-burger i
+{
+	color: #efba35;
+	font-size: 4rem;
+}
+
+#Header-menu
+{
+	position: absolute;
+	top: 5vh;
+	right: 0;
+	margin: 0; padding: 0;
+	width: 30rem;
+	height: fit-content;
+}
+
+#Header-menu > li, #Header-menu > a
+{
+	color: #ffca45 !important;
+	font: 2.2rem "HelveticaNeue-Light", sans-serif;
+	line-height: 6rem;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	list-style: none;
+	background-color: #00699f;
+	outline: 0;
+}
+
+#Header-menu > li
+{
+	width: 30rem;
+	text-align: center;
+}
+
+#Header-menu > li:hover
+{
+	display: block;
+	background-color: #454d61;
+	transition: all .5s;
+}

@@ -1,0 +1,48 @@
+html
+{
+        font-family: HelveticaNeue, Arial, sans-serif;
+        font-size: calc( .8vh + (100vw / 60) / 10 );
+}
+
+body
+{
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code
+{
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a
+{
+        color: inherit;
+        text-decoration: none;
+}
+
+a:visited
+{
+        color: inherit;
+}
+
+/* our global styling */
+
+.Page
+{
+	background-color: #eee !important;
+	padding-top: 10vh;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 80vh;
+}
+
+.Card
+{
+	background-color: #dfdfdf;
+	width: 90%;
+	display: flex;
+}

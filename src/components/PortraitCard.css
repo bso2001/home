@@ -1,0 +1,46 @@
+.PortraitCard
+{
+	height: 14vh;
+	max-height: 14vh;
+	cursor: pointer;
+	display: flex;
+}
+
+.PortraitCard-image-container
+{
+	flex: 2;
+	max-width: 25vh;
+	height: 14vh;
+	max-height: 14vh;
+}
+
+.PortraitCard-image-container img
+{
+	height: 100%;
+	width: 100%;
+}
+
+.PortraitCard-textbox
+{
+	flex: 3;
+	margin: auto 10vw auto 10vw;
+	box-sizing: border-box;
+}
+
+.PortraitCard-title
+{
+	color: #171717;
+	font-family: HelveticaNeue-Medium, Impact, sans-serif;
+        font-size: 2.2rem;
+	line-height: 3.4rem;
+        text-align: center;
+        text-transform: uppercase;
+}
+
+.PortraitCard-text
+{
+	color: #666;
+	font-family: HelveticaNeue, sans-serif;
+	font-size: 2.2rem;
+	text-align: center;
+}

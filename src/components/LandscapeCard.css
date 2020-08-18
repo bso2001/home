@@ -1,0 +1,30 @@
+.LandscapeCard
+{
+	height: 16vh;
+	max-height: 16vh;
+	flex-flow: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.LandscapeCard-image-container
+{
+	width: 100%;
+	height: 75%;
+}
+
+.LandscapeCard-image
+{
+	background-size: cover !important;
+	background-position-y: 70% !important;
+	height: 100%;
+}
+
+.LandscapeCard-text
+{
+	color: #4a4a4a;
+	font-family: HelveticaNeue, sans-serif;
+	font-size: 2.2rem;
+	padding-bottom: .8rem;		/* don't really understand this one... */
+	text-transform: uppercase;
+}
