@@ -5,15 +5,13 @@ class Header extends React.Component
 {
 	state = { menuVisible : false }
 
-	toggleMenu = () => { this.setState({ menuVisible : !this.state.menuVisible }) }
-
 	render()
 	{
 		return (
 			<div className="Header">
 				<div className="Header-title"> <a href="/"> S. Bert Olsson </a> </div>
 				<div className="Header-menu-box">
-					<div className="Header-burger" onClick={this.toggleMenu}>
+					<div className="Header-burger" onClick={() => this.setState({ menuVisible : !this.state.menuVisible })}>
 						{ this.menuIcon() }
 					</div>
 
@@ -29,7 +27,7 @@ class Header extends React.Component
 			return null
 
 		return (
-			<div className="Header-menu">
+			<div className="Header-menu" onClick={() => this.setState({ menuVisible : false })}>
 				<a href="/music"> MUSIC </a>
 				<a href="/images"> IMAGES </a>
 				<a href="https://olsson.tech" target="_new"> TECHNOLOGY </a>
