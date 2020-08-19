@@ -6,7 +6,8 @@ class PortraitCard extends React.Component
 	render()
 	{
 		return (
-			<div className="Card PortraitCard">
+			<div className="Card PortraitCard"
+					style={{ 'flex-direction' : this.props.reverse ? 'row-reverse' : 'initial' }}>
 				<div className="PortraitCard-image-container">
 					<img src={this.props.image} alt="" />
 				</div>
@@ -22,12 +23,26 @@ class PortraitCard extends React.Component
 	{
 		let pclist = []
 
-		if ( pageData.cards )
+		if ( pageData && pageData.cards )
 		{
+			let reverse = false
+
 			for ( let cardTitle in pageData.cards )
 			{
 				let card = pageData.cards[ cardTitle ]
-				pclist.push( <PortraitCard image={card.image} title={cardTitle} text={card.text} key={cardTitle} /> )
+
+				pclist.push
+				(
+					<PortraitCard
+						image={card.image}
+						title={cardTitle}
+						reverse={reverse}
+						text={card.text}
+						key={cardTitle}
+					/>
+				)
+
+				reverse = !reverse
 			}
 		}
 

@@ -1,13 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import LandingPage from './pages/Landing'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
+import './index.css'
 import * as serviceWorker from './library/serviceWorker'
 
-ReactDOM.render( <React.StrictMode> <LandingPage /> </React.StrictMode>, document.getElementById('rootContent') )
+import LandingPage from './pages/Landing'
+import MusicPage from './pages/Music'
+
+const routing =
+(
+	<Router>
+		<Route exact path = "/" component = {LandingPage} />
+		<Route path = "/music" component = {MusicPage} />
+	</Router>
+)
+
+ReactDOM.render( routing, document.getElementById('rootContent') )
 
 				// If you want your app to work offline and load faster, you can change
 				// unregister() to register() below. Note this comes with some pitfalls.
 				// Learn more about service workers: https://bit.ly/CRA-PWA [301'ed]
-serviceWorker.register()
+serviceWorker.unregister()

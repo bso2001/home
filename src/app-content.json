@@ -1,28 +1,55 @@
 {
-	"appname" : "BSO Home",
-	"version" : "1.0.0",
+	"appname" : "BSO Home Page",
 	"pages" :
 	{
 		"Landing" :
 		{
-			"bannerImage" : "http://olsson.tech/CS/images/lakemcd-07232015.png",
+			"bannerImage" : "http://olsson.tech/assets/images/lakemcd-07232015.png",
 			"bannerText" : "Arts & Crafts and Other Sundries",
 			"cards" :
 			{
 				"Music" :
 				{
-					"image" : "https://olsson.tech/CS/images/studio-1.jpg",
+					"image" : "https://olsson.tech/assets/images/studio-1.jpg",
 					"text" : "Hopefully pleasing original sounds."
 				},
 				"Images" :
 				{
-					"image" : "https://olsson.tech/CS/images/imagery.png",
+					"image" : "https://olsson.tech/assets/images/imagery.png",
 					"text" : "Pictures, some that move."
 				},
 				"Technology" :
 				{
-					"image" : "https://olsson.tech/CS/images/tech.png",
+					"image" : "https://olsson.tech/assets/images/tech.png",
 					"text" : "Things that help pay the bills."
+				}
+			}
+		},
+		"Music" :
+		{
+			"bannerImage" : "http://olsson.tech/assets/images/studio-820c.jpg",
+			"bannerText" : "Music for which I was partially culpable.",
+			"cards" :
+			{
+				"Century 21 Music" :
+				{
+					"image" : "https://olsson.tech/assets/images/music.jpg",
+					"text" : "A celebration of Y2K survival."
+				},
+				"Solo Recordings" :
+				{
+					"image" : "https://olsson.tech/assets/images/sheet-music-165.jpg",
+					"text" : "Music made in various home studios."
+				},
+				"Providence" :
+				{
+					"image" : "https://olsson.tech/assets/images/tape1.jpg",
+					"text" : "The band in which I learned many things."
+				},
+				"Gas Music from Jupiter" :
+				{
+					"image" : "https://olsson.tech/assets/images/jupiter-juno.jpg",
+					"text" : "Some explanation will be required."
 				}
 			}
 		}
