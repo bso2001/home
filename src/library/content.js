@@ -8,7 +8,17 @@ const generatePortraitCards = ( pageData ) =>
 		for ( let cardTitle in pageData.cards )
 		{
 			let card = pageData.cards[ cardTitle ]
-			this.portraitCards.push( <PortraitCard image={card.image} title={cardTitle} text={card.text} key={cardTitle} /> )
+
+			this.portraitCards.push
+			(
+				<PortraitCard
+					image={card.image}
+					link={card.link}
+					text={card.text}
+					title={cardTitle}
+					key={cardTitle}
+				/>
+			)
 		}
 	}
 }

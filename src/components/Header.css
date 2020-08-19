@@ -39,49 +39,44 @@
 	cursor: pointer;
 }
 
-#Header-burger
+.Header-burger
 {
 	margin-right: 4vw;
 	cursor: pointer;
 }
 
-#Header-burger i
+.Header-burger i
 {
 	color: #efba35;
 	font-size: 4rem;
 }
 
-#Header-menu
+.Header-menu
 {
 	position: absolute;
 	top: 5vh;
 	right: 0;
-	margin: 0; padding: 0;
-	width: 55vw;
+	margin: 0;
+	width: 65vw;
 	height: fit-content;
-	padding: 1vh 0;
+	padding: 1vh 0 .8vh 0;
 	background-color: #00699f;
 }
 
-#Header-menu > li, #Header-menu > a
+.Header-menu > a
 {
+	display: block;
 	color: #ffca45 !important;
 	font: 2.2rem "HelveticaNeue", sans-serif;
 	line-height: 6rem;
-	text-decoration: none !important;
-	padding-left: 8vw;
-	list-style: none;
-	outline: 0;
+	text-decoration: none;
+	width: 100%;
+	padding-left: 4rem;
+	box-sizing: border-box;
 }
 
-#Header-menu > li
+.Header-menu > a:hover
 {
-	width: inherit;
-}
-
-#Header-menu > li:hover
-{
-	display: block;
 	background-color: #454d61;
 	transition: all .5s;
 }

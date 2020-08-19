@@ -6,6 +6,8 @@ html
 
 body
 {
+	height: 100%;
+	background-color: #f8f8f8 !important;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -27,22 +29,22 @@ a:visited
         color: inherit;
 }
 
-/* our global styling */
+/* Our global styling is living here. */
 
 .Page
 {
-	background-color: #eee !important;
-	padding-top: 10vh;
+	padding-top: 5vh;
 	display: flex;
 	flex-flow: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
-	height: 80vh;
+	height: 100vh;
+	box-sizing: border-box;
 }
 
 .Card
 {
-	background-color: #dfdfdf;
+	background-color: #e8e8e8;
 	width: 90%;
 	display: flex;
 }
