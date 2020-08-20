@@ -1,4 +1,7 @@
 import React from 'react'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+
 import './PortraitCard.css'
 
 class PortraitCard extends React.Component
@@ -6,16 +9,17 @@ class PortraitCard extends React.Component
 	render()
 	{
 		return (
-			<div className="Card PortraitCard" onClick={ () => this.cardClicked(this.props.link) }
-					style={{ flexDirection : this.props.reverse ? 'row-reverse' : 'initial' }}>
-				<div className="PortraitCard-image-container">
+			<Card className="Card PortraitCard" onClick={ () => this.cardClicked(this.props.link) }>
+			    <CardContent style={{ flexDirection : this.props.reverse ? 'row-reverse' : 'initial' }}>
+				<div className="PortraitCard-image-container" style={{ backgroundColor : this.props.imageBg }}>
 					<img src={this.props.image} alt="" />
 				</div>
 				<div className="PortraitCard-textbox">
 					<div className="PortraitCard-title">{this.props.title}</div>
 					<div className="PortraitCard-text">{this.props.text}</div>
 				</div>
-			</div>
+			    </CardContent>
+			</Card>
 		)
 	}
 
@@ -37,10 +41,14 @@ class PortraitCard extends React.Component
 			{
 				let card = pageData.cards[ cardTitle ]
 
+				if ( ! card.imageBg )
+					card.imageBg = 'white'
+
 				pclist.push
 				(
 					<PortraitCard
 						image={card.image}
+						imageBg={card.imageBg}
 						link={card.link}
 						title={cardTitle}
 						reverse={reverse}

@@ -7,12 +7,14 @@ import * as serviceWorker from './library/serviceWorker'
 
 import LandingPage from './pages/Landing'
 import MusicPage from './pages/Music'
+import ProvidencePage from './pages/Providence'
 
 const routing =
 (
 	<Router>
 		<Route exact path = "/" component = {LandingPage} />
 		<Route path = "/music" component = {MusicPage} />
+		<Route path = "/providence" component = {ProvidencePage} />
 	</Router>
 )
 

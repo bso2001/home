@@ -1,3 +1,11 @@
+.PortraitCard .MuiCardContent-root
+{
+	padding: 0 !important;
+	width: 100% !important;
+	display: flex;
+	flex-flow: row;
+}
+
 .PortraitCard
 {
 	height: 14vh;
@@ -32,10 +40,10 @@
 {
 	color: #484848;
 	font-family: HelveticaNeue, Impact, sans-serif;
-        font-size: 2.3rem;
+        font-size: 2.8rem;
+	line-height: 3.4rem;
 	font-weight: 600;
 	letter-spacing: -.1rem;
-	line-height: 3.4rem;
         text-align: center;
 }
 
@@ -43,7 +51,7 @@
 {
 	color: #000;
 	font-family: HelveticaNeue-Light, sans-serif;
-	font-size: 2.2rem;
+	font-size: 2.4rem;
 	letter-spacing: -.1rem;
 	text-align: center;
 }

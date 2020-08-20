@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -14,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf build home-*.tgz && react-scripts build && (cd build; tar czf ../home-`date '+%Y%m%d%H%M%S'`.tgz *)",
+    "clean": "rm -rf build home-*.tgz",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

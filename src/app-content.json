@@ -17,6 +17,7 @@
 				"Images" :
 				{
 					"image" : "https://olsson.tech/assets/images/imagery.png",
+					"imageBg" : "#402f17",
 					"link" : "/images",
 					"text" : "Pictures, some that move"
 				},
@@ -42,7 +43,7 @@
 				},
 				"Solo Recordings" :
 				{
-					"image" : "http://olsson.tech/assets/images/studio-820c.jpg",
+					"image" : "http://olsson.tech/assets/images/studio-820b.jpg",
 					"link" : "/solo",
 					"text" : "Creations in various home studios"
 				},
