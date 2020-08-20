@@ -34,17 +34,13 @@ a:visited
 .Page
 {
 	padding-top: 5vh;
-	display: flex;
-	flex-flow: column;
-	justify-content: space-around;
-	align-items: center;
-	height: 100vh;
 	box-sizing: border-box;
 }
 
 .Card
 {
-	width: 90%;
+	width: 100%;
+	margin-bottom: 2vh;
 	display: flex;
 	background-color: #f8f8f8 !important;
 }

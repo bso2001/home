@@ -16,7 +16,7 @@ class PortraitCard extends React.Component
 				</div>
 				<div className="PortraitCard-textbox">
 					<div className="PortraitCard-title">{this.props.title}</div>
-					<div className="PortraitCard-text">{this.props.text}</div>
+					<div className="PortraitCard-text" dangerouslySetInnerHTML={{ __html: this.props.text }} />
 				</div>
 			    </CardContent>
 			</Card>

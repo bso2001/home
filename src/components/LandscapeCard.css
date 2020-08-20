@@ -11,6 +11,8 @@
 	max-height: 16vh;
 	display: flex;
 	flex-flow: column;
+	margin-bottom: 4vh !important;
+	border-radius: 0 !important;
 }
 
 .LandscapeCard-image-container

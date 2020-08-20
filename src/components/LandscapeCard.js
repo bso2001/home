@@ -14,7 +14,7 @@ class LandscapeCard extends React.Component
 				<div className="LandscapeCard-image-container">
 					<div className="LandscapeCard-image" style={{ background: 'url(' + this.props.image + ')' }} alt=""></div>
 				</div>
-				<div className="LandscapeCard-text">{this.props.text}</div>
+				<div className="LandscapeCard-text" dangerouslySetInnerHTML={{ __html: this.props.text }} />
 			    </CardContent>
 			</Card>
 		)

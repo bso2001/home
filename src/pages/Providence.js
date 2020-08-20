@@ -8,14 +8,21 @@ import PortraitCard from '../components/PortraitCard'
 
 class ProvidencePage extends React.Component
 {
+
 	constructor()
 	{
 		super()
 
-		this.data = Config.pageData( 'Providence' )
+		this.pageName = 'Providence'
+		this.data = Config.pageData( this.pageName )
 
 		if ( ! this.data )
 			this.data = {}
+		else
+		{
+			if ( ! this.data.bannerTitle )
+				this.data.bannerTitle = this.pageName
+		}
 
 		this.portraitCards = PortraitCard.generateList( this.data )
 	}
@@ -25,7 +32,7 @@ class ProvidencePage extends React.Component
 		return (
 			<div className="Page Providence-page">
 				<Header />
-				<DetailCard image={this.data.bannerImage} text={this.data.bannerText} />
+				<DetailCard image={this.data.bannerImage} text={this.data.bannerText} title={this.data.bannerTitle} />
 				{ this.portraitCards }
 			</div>
 		)

@@ -60,6 +60,39 @@
 					"text" : "Some explanation required"
 				}
 			}
+		},
+		"Providence" :
+		{
+			"bannerImage" : "https://olsson.tech/assets/images/tape1.jpg",
+			"bannerText" : "<p> I met Ray Nering in grade school when we were 12 or 14 or like that.  Soon thereafter, we were trying to make music.  Not many years later, we met drummer Frank Romond, and by the mid-to-late 70's, we decided we were a band called <i>Providence</i>.  </p> <p> Mark Dobry soon joined as the bass player.  Ansel Spada became the singer.  Dana Vagovsky and Dean Rubine played keyboards on some projects.  </p> <p> For ten years or so, we recorded lots of originals, all of them on analog tape.  And all these guys were a big part of my life through all those years.  </p>",
+			"cards" :
+			{
+				"Five" :
+				{
+					"image" : "https://olsson.tech/assets/images/five-cover.png",
+					"text" : "Recorded between September & November 1984 at Earthquake Studios & Cedar Lane"
+				},
+				"Questions of Perspective" :
+				{
+					"image" : "https://olsson.tech/assets/images/questions.jpg",
+					"text" : "Recorded during August & September 1983 at Campbell Lane"
+				},
+				"Prophecies" :
+				{
+					"image" : "https://olsson.tech/assets/images/prophecies.jpg",
+					"text" : "Recorded between January & March 1983 at Campbell Lane"
+				},
+				"Providence II" :
+				{
+					"image" : "https://olsson.tech/assets/images/tape1.jpg",
+					"text" : "Recorded in late 1981"
+				},
+				"Providence" :
+				{
+					"image" : "https://olsson.tech/assets/images/tape1.jpg",
+					"text" : "Recorded during the winter of 1979-1980"
+				}
+			}
 		}
 	}
 }
