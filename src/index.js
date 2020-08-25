@@ -8,6 +8,7 @@ import * as serviceWorker from './library/serviceWorker'
 import LandingPage from './pages/Landing'
 import MusicPage from './pages/Music'
 import ProvidencePage from './pages/Providence'
+import ProvidenceFivePage from './pages/providence/Five'
 
 const routing =
 (
@@ -15,6 +16,7 @@ const routing =
 		<Route exact path = "/" component = {LandingPage} />
 		<Route path = "/music" component = {MusicPage} />
 		<Route path = "/providence" component = {ProvidencePage} />
+		<Route path = "/providence-five" component = {ProvidenceFivePage} />
 	</Router>
 )
 

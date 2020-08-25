@@ -37,23 +37,3 @@
 	justify-content: center;
 	padding: 0 2vw 0 2vw;
 }
-
-.PortraitCard-title
-{
-	color: #484848;
-	font-family: HelveticaNeue, Impact, sans-serif;
-        font-size: 2.6rem;
-	line-height: 3.4rem;
-	font-weight: 600;
-	letter-spacing: -.1rem;
-        text-align: center;
-}
-
-.PortraitCard-text
-{
-	color: #000;
-	font-family: HelveticaNeue-Light, sans-serif;
-	font-size: 2.4rem;
-	letter-spacing: -.05rem;
-	text-align: center;
-}

@@ -1,11 +1,12 @@
 {
 	"appname" : "BSO Home Page",
+	"headerTitle" : "S. BERT OLSSON",
 	"pages" :
 	{
 		"Landing" :
 		{
 			"bannerImage" : "http://olsson.tech/assets/images/lakemcd-07232015.png",
-			"bannerText" : "Arts & Crafts and Other Sundries",
+			"bannerText" : "ARTS & CRAFTS and OTHER SUNDRIES",
 			"cards" :
 			{
 				"Music" :
@@ -64,35 +65,42 @@
 		"Providence" :
 		{
 			"bannerImage" : "https://olsson.tech/assets/images/tape1.jpg",
-			"bannerText" : "<p> I met Ray Nering in grade school when we were 12 or 14 or like that.  Soon thereafter, we were trying to make music.  Not many years later, we met drummer Frank Romond, and by the mid-to-late 70's, we decided we were a band called <i>Providence</i>.  </p> <p> Mark Dobry soon joined as the bass player.  Ansel Spada became the singer.  Dana Vagovsky and Dean Rubine played keyboards on some projects.  </p> <p> For ten years or so, we recorded lots of originals, all of them on analog tape.  And all these guys were a big part of my life through all those years.  </p>",
+			"bannerText" : "I met Ray Nering in grade school when we were 12 or 14 or like that.  Soon thereafter, we were trying to make music.  Not many years later, we met drummer Frank Romond, and by the mid-to-late 70's, we decided we were a band called <i>Providence</i>. <p> Mark Dobry soon joined as the bass player.  Ansel Spada became the singer.  Dana Vagovsky and Dean Rubine played keyboards on some projects.  </p> <p> For ten years or so, we recorded lots of originals, all of them on analog tape.  And all these guys were a big part of my life through all those years.</p>",
 			"cards" :
 			{
 				"Five" :
 				{
 					"image" : "https://olsson.tech/assets/images/five-cover.png",
-					"text" : "Recorded between September & November 1984 at Earthquake Studios & Cedar Lane"
+					"link" : "/providence-five",
+					"text" : "September&mdash;November 1984"
 				},
 				"Questions of Perspective" :
 				{
 					"image" : "https://olsson.tech/assets/images/questions.jpg",
-					"text" : "Recorded during August & September 1983 at Campbell Lane"
+					"text" : "August&mdash;September 1983"
 				},
 				"Prophecies" :
 				{
 					"image" : "https://olsson.tech/assets/images/prophecies.jpg",
-					"text" : "Recorded between January & March 1983 at Campbell Lane"
+					"text" : "January&mdash;March 1983"
 				},
 				"Providence II" :
 				{
 					"image" : "https://olsson.tech/assets/images/tape1.jpg",
-					"text" : "Recorded in late 1981"
+					"text" : "Late 1981"
 				},
 				"Providence" :
 				{
 					"image" : "https://olsson.tech/assets/images/tape1.jpg",
-					"text" : "Recorded during the winter of 1979-1980"
+					"text" : "Winter of 1979-1980"
 				}
 			}
+		},
+		"ProvidenceFive" :
+		{
+			"bannerImage" : "https://olsson.tech/assets/images/five-banner.jpg",
+			"bannerTitle" : "Providence Five",
+			"bannerText" : "Though we didn't know it at the time, this turned out to be the final official Providence recording.  The bass, drums, and some rhythm guitars were recorded on September 8-9, 1984 at Earthquake Studios in Scotch Plains.  Most of the guitars, the keyboards, and vocals, were added at Cedar Lane during October.  The final mix was apparently produced in a marathon session on November 9.<p/>"
 		}
 	}
 }

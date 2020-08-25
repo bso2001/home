@@ -1,7 +1,5 @@
 html
 {
-        font-family: HelveticaNeue, Arial, sans-serif;
-        font-size: calc( .8vh + (100vw / 60) / 10 );
 }
 
 body

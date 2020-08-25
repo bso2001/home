@@ -1,6 +1,8 @@
 import React from 'react'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
+import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
 
 import './PortraitCard.css'
 
@@ -15,8 +17,8 @@ class PortraitCard extends React.Component
 					<img src={this.props.image} alt="" />
 				</div>
 				<div className="PortraitCard-textbox">
-					<div className="PortraitCard-title">{this.props.title}</div>
-					<div className="PortraitCard-text" dangerouslySetInnerHTML={{ __html: this.props.text }} />
+					<Typography variant="h6">{this.props.title}</Typography>
+					<Typography variant="body1" dangerouslySetInnerHTML={{ __html: this.props.text }} />
 				</div>
 			    </CardContent>
 			</Card>

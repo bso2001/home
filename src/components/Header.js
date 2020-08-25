@@ -1,5 +1,26 @@
 import React from 'react'
+import Config from '../library/config'
+import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
+
 import './Header.css'
+
+const styling = theme => 
+({
+	title :
+	{
+		color: '#efba35',
+		marginLeft: '4vw !important',
+		flex: 2
+	},
+
+	burger :
+	{
+		color: '#efba35',
+		marginRight : '4vw',
+		cursor : 'pointer'
+	}
+})
 
 class Header extends React.Component
 {
@@ -7,13 +28,18 @@ class Header extends React.Component
 
 	render()
 	{
+		const { classes } = this.props
+
+		this.title = Config.paramData( 'headerTitle' )
+
 		return (
 			<div className="Header">
-				<div className="Header-title"> <a href="/"> S. Bert Olsson </a> </div>
+				<Typography variant="h5" className={classes.title}> <a href="/">{this.title}</a> </Typography>
 				<div className="Header-menu-box">
-					<div className="Header-burger" onClick={() => this.setState({ menuVisible : !this.state.menuVisible })}>
+					<Typography variant="h5" className={classes.burger}
+										onClick={() => this.setState({ menuVisible : !this.state.menuVisible })}>
 						{ this.menuIcon() }
-					</div>
+					</Typography>
 
 					{ this.showMenu() }
 				</div>
@@ -45,4 +71,4 @@ class Header extends React.Component
 	}
 }
 
-export default Header
+export default withStyles( styling, { withTheme: true } )( Header )
