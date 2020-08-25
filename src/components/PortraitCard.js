@@ -9,7 +9,7 @@ class PortraitCard extends React.Component
 	render()
 	{
 		return (
-			<Card className="Card PortraitCard" onClick={ () => this.cardClicked(this.props.link) }>
+			<Card className="Card PortraitCard" onClick={ () => this.cardClicked() }>
 			    <CardContent style={{ flexDirection : this.props.reverse ? 'row-reverse' : 'initial' }}>
 				<div className="PortraitCard-image-container" style={{ backgroundColor : this.props.imageBg }}>
 					<img src={this.props.image} alt="" />
@@ -23,10 +23,13 @@ class PortraitCard extends React.Component
 		)
 	}
 
-	cardClicked( link )
+	cardClicked()
 	{
-		if ( link )
-			window.top.location = link
+		if ( this.props.link )
+			window.top.location = this.props.link
+
+		else if ( this.props.href )
+			window.open( this.props.href, "_blank" )
 	}
 
 	static generateList( pageData )
@@ -49,6 +52,7 @@ class PortraitCard extends React.Component
 					<PortraitCard
 						image={card.image}
 						imageBg={card.imageBg}
+						href={card.href}
 						link={card.link}
 						title={cardTitle}
 						reverse={reverse}

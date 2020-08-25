@@ -10,8 +10,8 @@
 {
 	width: 96% !important;
 	margin-left: 2% !important;
-	height: 14vh;
-	max-height: 14vh;
+	height: 18vh;
+	max-height: 18vh;
 	cursor: pointer;
 }
 
@@ -19,8 +19,8 @@
 {
 	flex: 2;
 	max-width: 25vh;
-	height: 14vh;
-	max-height: 14vh;
+	height: 18vh;
+	max-height: 18vh;
 }
 
 .PortraitCard-image-container img
@@ -53,7 +53,7 @@
 {
 	color: #000;
 	font-family: HelveticaNeue-Light, sans-serif;
-	font-size: 2.2rem;
-	letter-spacing: -.1rem;
+	font-size: 2.4rem;
+	letter-spacing: -.05rem;
 	text-align: center;
 }

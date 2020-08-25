@@ -24,7 +24,7 @@
 				"Technology" :
 				{
 					"image" : "https://olsson.tech/assets/images/tech.png",
-					"link" : "/tech",
+					"href" : "https://olsson.tech",
 					"text" : "Things that help pay bills"
 				}
 			}
@@ -51,7 +51,7 @@
 				{
 					"image" : "https://olsson.tech/assets/images/tape1.jpg",
 					"link" : "/providence",
-					"text" : "The band in which I learned many things"
+					"text" : "A band that taught me many things"
 				},
 				"Gas Music from Jupiter" :
 				{
