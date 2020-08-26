@@ -35,5 +35,10 @@
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
-	padding: 0 2vw 0 2vw;
+	padding: 0 4vw 0 4vw;
+}
+
+.PortraitCard-textbox > *
+{
+	line-height: 1vh;
 }

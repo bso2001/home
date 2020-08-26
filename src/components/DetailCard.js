@@ -8,7 +8,17 @@ import './DetailCard.css'
 
 const styling = theme => 
 ({
-	description :  { padding: '0 4vw 0 4vw' }
+	title : 
+	{
+		textAlign : 'center',
+		marginTop: '1vh',
+		fontWeight : '600'
+	},
+
+	description :
+	{
+		padding : '0 4vw 0 4vw'
+	}
 })
 
 class DetailCard extends React.Component
@@ -23,7 +33,7 @@ class DetailCard extends React.Component
 				<div className="DetailCard-image-container">
 					<div className="DetailCard-image" style={{ background: 'url(' + this.props.image + ')' }} alt=""></div>
 				</div>
-				<div className="DetailCard-title">{ this.props.title }</div>
+				<Typography variant="h5" className={classes.title}>{ this.props.title }</Typography>
 				<Typography variant="body1" className={classes.description} color="textSecondary"
 											dangerouslySetInnerHTML={{ __html: this.props.text }} />
 			    </CardContent>

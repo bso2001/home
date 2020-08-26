@@ -16,8 +16,9 @@ class PortraitCard extends React.Component
 				<div className="PortraitCard-image-container" style={{ backgroundColor : this.props.imageBg }}>
 					<img src={this.props.image} alt="" />
 				</div>
-				<div className="PortraitCard-textbox">
-					<Typography variant="h6">{this.props.title}</Typography>
+				<div className="PortraitCard-textbox"
+						    style={{ textAlign : this.props.reverse ? 'right' : 'left' }}>
+					<Typography variant="h5">{this.props.title}</Typography>
 					<Typography variant="body1" dangerouslySetInnerHTML={{ __html: this.props.text }} />
 				</div>
 			    </CardContent>

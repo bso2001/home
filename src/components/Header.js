@@ -53,15 +53,15 @@ class Header extends React.Component
 			return null
 
 		return (
-			<div className="Header-menu" onClick={() => this.setState({ menuVisible : false })}>
-				<a href="/music"> MUSIC </a>
-				<a href="/images"> IMAGES </a>
-				<a href="https://olsson.tech" target="_new"> TECHNOLOGY </a>
-				<a target="_new" href= "https://www.ebay.com/sch/i.html?_saslop=1&_sasl=bso2001"> My eBay Listings </a>
-				<a href="https://charts.bertolsson.com" target="_new"> Band Charts </a>
-				<a href="https://olsson.tech/assets/Bert-Olsson-Resume.pdf" target="_new"> Résumé </a>
-				<a href="https://olsson.tech/assets/Bert-Olsson-CV.pdf" target="_new"> TLDR? 1 page CV Here </a>
-			</div>
+			<Typography variant="subtitle1" className="Header-menu" onClick={() => this.setState({ menuVisible : false })}>
+				<a className="Header-menu-item" href="/music"> MUSIC </a>
+				<a className="Header-menu-item" href="/images"> IMAGES </a>
+				<a className="Header-menu-item" href="https://olsson.tech" target="_new"> TECHNOLOGY </a>
+				<a className="Header-menu-item" target="_new" href= "https://www.ebay.com/sch/i.html?_saslop=1&_sasl=bso2001"> My eBay Listings </a>
+				<a className="Header-menu-item" href="https://charts.bertolsson.com" target="_new"> Band Charts </a>
+				<a className="Header-menu-item" href="https://olsson.tech/assets/Bert-Olsson-Resume.pdf" target="_new"> Résumé </a>
+				<a className="Header-menu-item" href="https://olsson.tech/assets/Bert-Olsson-CV.pdf" target="_new"> TLDR? 1 page CV Here </a>
+			</Typography>
 		)
 	}
 	
