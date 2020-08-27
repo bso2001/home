@@ -1,6 +1,4 @@
 import React from 'react'
-import './Providence.css'
-
 import Config from '../library/config'
 import Header from '../components/Header'
 import DetailCard from '../components/DetailCard'

@@ -41,4 +41,20 @@ a:visited
 	margin-bottom: 2vh;
 	display: flex;
 	background-color: #f8f8f8 !important;
+	border-radius: 0 !important;
+}
+
+/* Material UI overrides live here. */
+
+.MuiCardContent-root
+{
+	padding: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+#PortraitCard .MuiCardContent-root
+{
+	display: flex;
+	flex-flow: row;
 }

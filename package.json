@@ -15,8 +15,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf build home-*.tgz && react-scripts build && (cd build; tar czf ../home-`date '+%Y%m%d%H%M%S'`.tgz *)",
-    "clean": "rm -rf build home-*.tgz",
+    "build": "rm -rf build ~/OneDrive/Deployments/www-bso.tgz && react-scripts build && (cd build; tar czf ~/OneDrive/Deployments/www-bso.tgz *)",
+    "clean": "rm -rf build ~/OneDrive/Deployments/www-bso.tgz",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

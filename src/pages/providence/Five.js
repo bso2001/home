@@ -1,6 +1,4 @@
 import React from 'react'
-import './Five.css'
-
 import Album from '../../components/Album'
 import Config from '../../library/config'
 import Header from '../../components/Header'

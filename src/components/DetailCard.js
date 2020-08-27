@@ -4,10 +4,21 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 
-import './DetailCard.css'
-
 const styling = theme => 
 ({
+	imageContainer :
+	{
+		height: '12vh',
+		width: '100%'
+	},
+
+	image :
+	{
+		backgroundSize : 'cover !important',
+		backgroundRepeat : 'no-repeat !important',
+		height : '100%'
+	},
+
 	title : 
 	{
 		textAlign : 'center',
@@ -28,16 +39,14 @@ class DetailCard extends React.Component
 		const { classes } = this.props
 
 		return (
-			<Card className="Card DetailCard">
-			    <CardContent>
-				<div className="DetailCard-image-container">
-					<div className="DetailCard-image" style={{ background: 'url(' + this.props.image + ')' }} alt=""></div>
+			<Card className="Card"> <CardContent>
+				<div className={classes.imageContainer}>
+					<div className={classes.image} style={{ background: 'url(' + this.props.image + ')' }} alt=""></div>
 				</div>
 				<Typography variant="h5" className={classes.title}>{ this.props.title }</Typography>
 				<Typography variant="body1" className={classes.description} color="textSecondary"
 											dangerouslySetInnerHTML={{ __html: this.props.text }} />
-			    </CardContent>
-			</Card>
+			</CardContent> </Card>
 		)
 	}
 }

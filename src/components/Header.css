@@ -19,18 +19,9 @@
 	flex: 2;
 }
 
-.Header-title a
+.Header-title a, .Header-title a:visited
 {
 	color: #ffca45;
-}
-
-.Header-title a:visited
-{
-	color: #ffca45;
-}
-
-.Header-menu-box
-{
 }
 
 .Header-menu
@@ -52,7 +43,7 @@
 	display: block;
 	width: 65vw;
 	cursor: pointer;
-	padding-left: 2vw;
+	padding: .5vh 0 .5vh 2vw;
 	box-sizing: border-box;
 }
 

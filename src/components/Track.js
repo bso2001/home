@@ -39,12 +39,11 @@ class Track extends React.Component
 		const { classes } = this.props
 
 		let track = this.props.trackData
+		let numImage = 'url(http://olsson.tech/assets/images/track-' + track.number + '.png)'
 
 		return (
 			<div className={classes.track} onClick={ () => this.trackSelected( track.link ) }>
-				<div className={classes.trknum}
-						style={{ background: 'url(http://olsson.tech/assets/images/track-' + track.number + '.png)' }} alt="">
-				</div>
+				<div className={classes.trknum} style={{ background: numImage }} alt="" />
 				<Typography noWrap={true} variant="body1" className={classes.title}>{ track.title }</Typography>
 				<Typography noWrap={true} variant="subtitle2" className={classes.runtime}>{ '(' + track.time + ')' }</Typography>
 			</div>

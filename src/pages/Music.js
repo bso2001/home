@@ -1,6 +1,4 @@
 import React from 'react'
-import './Music.css'
-
 import Config from '../library/config'
 import Header from '../components/Header'
 import LandscapeCard from '../components/LandscapeCard'
