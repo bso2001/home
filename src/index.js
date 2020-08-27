@@ -10,7 +10,7 @@ import MusicPage from './pages/Music'
 import ProvidencePage from './pages/Providence'
 import ProvidenceFivePage from './pages/providence/Five'
 
-const routing =
+const rootContent =
 (
 	<Router>
 		<Route exact path = "/" component = {LandingPage} />
@@ -20,9 +20,9 @@ const routing =
 	</Router>
 )
 
-ReactDOM.render( routing, document.getElementById('rootContent') )
+ReactDOM.render( rootContent, document.getElementById('rootContent') )
 
 				// If you want your app to work offline and load faster, you can change
 				// unregister() to register() below. Note this comes with some pitfalls.
 				// Learn more about service workers: https://bit.ly/CRA-PWA [301'ed]
-serviceWorker.unregister()
+serviceWorker.register()

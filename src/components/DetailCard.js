@@ -28,7 +28,8 @@ const styling = theme =>
 
 	description :
 	{
-		padding : '0 4vw 0 4vw'
+		padding : '0 4vw 0 4vw',
+		textAlign : 'justify'
 	}
 })
 

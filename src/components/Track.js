@@ -8,12 +8,12 @@ const styling = theme =>
 	{
 		display: 'flex',
 		flexFlow: 'row',
-		marginBottom: '1.8vh'
+		marginBottom: '2vh'
 	},
 	trknum :
 	{
-		width:  '2.8vh',
-		height: '2.8vh',
+		width:  '3.2vh',
+		height: '3.2vh',
 		marginRight: '2vw',
 		backgroundSize: 'cover !important'
 	},
@@ -22,11 +22,12 @@ const styling = theme =>
 		fontWeight : 600,
 		color: '#444 !important',
 		cursor: 'pointer',
+		marginTop: '2px',
 		marginRight: '1.5vw'
 	},
 	runtime :
 	{
-		marginTop: '1px',
+		marginTop: '3px',
 		color: '#707070 !important',
 		textAlign : 'center'
 	}
