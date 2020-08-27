@@ -1,9 +1,9 @@
 import React from 'react'
-import Album from '../../components/Album'
+import Album from '../../elements/Album'
 import Config from '../../library/config'
-import DetailCard from '../../components/DetailCard'
-import Header from '../../components/Header'
-import MyPlayer from '../../components/MyPlayer'
+import DetailCard from '../../elements/DetailCard'
+import Header from '../../elements/Header'
+import MyPlayer from '../../elements/MyPlayer'
 
 class ProvidenceFivePage extends React.Component
 {

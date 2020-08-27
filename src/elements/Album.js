@@ -8,11 +8,12 @@ const styling = theme =>
 ({
 	album :
 	{
-		display: 'inherit',
-		width: 'fit-content !important',
-		height: 'fit-content !important',
-		padding: '2vh 14vw 0 14vw',
-		margin: '0 auto !important',
+		display : 'inherit',
+		width : 'fit-content !important',
+		height : 'fit-content !important',
+		minWidth : '70%',
+		padding : '2vh 4vw 0 4vw',
+		margin : '0 auto !important',
 	}
 })
 

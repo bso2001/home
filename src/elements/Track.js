@@ -8,6 +8,7 @@ const styling = theme =>
 	{
 		display: 'flex',
 		flexFlow: 'row',
+		width : '100%;',
 		marginBottom: '2vh'
 	},
 	trknum :

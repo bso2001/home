@@ -1,8 +1,8 @@
 import React from 'react'
 import Config from '../library/config'
-import Header from '../components/Header'
-import DetailCard from '../components/DetailCard'
-import PortraitCard from '../components/PortraitCard'
+import Header from '../elements/Header'
+import DetailCard from '../elements/DetailCard'
+import PortraitCard from '../elements/PortraitCard'
 
 class ProvidencePage extends React.Component
 {

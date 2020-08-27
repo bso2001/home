@@ -1,8 +1,8 @@
 import React from 'react'
 import Config from '../library/config'
-import Header from '../components/Header'
-import LandscapeCard from '../components/LandscapeCard'
-import PortraitCard from '../components/PortraitCard'
+import Header from '../elements/Header'
+import LandscapeCard from '../elements/LandscapeCard'
+import PortraitCard from '../elements/PortraitCard'
 
 class MusicPage extends React.Component
 {
