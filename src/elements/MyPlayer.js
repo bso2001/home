@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent'
 import { Media, Player, controls, utils } from 'react-media-player'
 const { CurrentTime, Duration, PlayPause, SeekBar } = controls
 
+
 class MyPlayer extends React.Component
 {
 	render()
@@ -25,5 +26,6 @@ class MyPlayer extends React.Component
 		)
 	}
 }
+
 
 export default MyPlayer

@@ -2,6 +2,7 @@ import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 
+
 const styling = theme => 
 ({
 	track :
@@ -34,6 +35,7 @@ const styling = theme =>
 	}
 })
 
+
 class Track extends React.Component
 {
 	render()
@@ -57,5 +59,6 @@ class Track extends React.Component
 		console.log(link)
 	}
 }
+
 
 export default withStyles( styling, { withTheme: true } )( Track )

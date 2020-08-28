@@ -1,8 +1,8 @@
 import React from 'react'
 import Config from '../library/config'
+import Content from '../library/content'
 import Header from '../elements/Header'
 import LandscapeCard from '../elements/LandscapeCard'
-import PortraitCard from '../elements/PortraitCard'
 
 class LandingPage extends React.Component
 {
@@ -11,16 +11,17 @@ class LandingPage extends React.Component
 		super()
 
 		this.data = Config.pageData( 'Landing' )
-		this.portraitCards = PortraitCard.generateList( this.data )
+		if ( ! this.data )
+			this.data = {}
 	}
 
 	render()
 	{
 		return (
-			<div className="Page Landing-page">
+			<div className="Page">
 				<Header />
 				<LandscapeCard image={this.data.bannerImage} text={this.data.bannerText} />
-				{ this.portraitCards }
+				{ Content.generatePortraitCards( this.data.cards ) }
 			</div>
 		)
 	}

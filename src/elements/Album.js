@@ -4,6 +4,7 @@ import CardContent from '@material-ui/core/CardContent'
 import Track from './Track'
 import { withStyles } from '@material-ui/core/styles'
 
+
 const styling = theme => 
 ({
 	album :
@@ -16,6 +17,7 @@ const styling = theme =>
 		margin : '0 auto !important',
 	}
 })
+
 
 class Album extends React.Component
 {
@@ -43,5 +45,6 @@ class Album extends React.Component
 		)
 	}
 }
+
 
 export default withStyles( styling, { withTheme: true } )( Album )

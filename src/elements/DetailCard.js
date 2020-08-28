@@ -4,8 +4,17 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 
+
 const styling = theme => 
 ({
+	detailCard :
+	{
+		marginBottom : '2vh',
+		display : 'flex',
+		backgroundColor : '#f8f8f8 !important',
+		borderRadius : '0 !important'
+	},
+
 	imageContainer :
 	{
 		height: '12vh',
@@ -33,6 +42,7 @@ const styling = theme =>
 	}
 })
 
+
 class DetailCard extends React.Component
 {
 	render()
@@ -40,7 +50,7 @@ class DetailCard extends React.Component
 		const { classes } = this.props
 
 		return (
-			<Card className="Card"> <CardContent>
+			<Card className={classes.detailCard}> <CardContent>
 				<div className={classes.imageContainer}>
 					<div className={classes.image} style={{ background: 'url(' + this.props.image + ')' }} alt=""></div>
 				</div>
@@ -51,5 +61,6 @@ class DetailCard extends React.Component
 		)
 	}
 }
+
 
 export default withStyles( styling, { withTheme: true } )( DetailCard )

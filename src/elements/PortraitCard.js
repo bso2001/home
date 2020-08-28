@@ -2,21 +2,60 @@ import React from 'react'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
 
-import './PortraitCard.css'
+
+const styling = theme => 
+({
+	portraitCard :
+	{
+		width : '96% !important',
+		marginLeft : '2% !important',
+		height : '18vh !important',
+		maxHeight : '18vh !important',
+		marginBottom : '2vh',
+		borderRadius : '2px !important',
+		cursor : 'pointer !important'
+	},
+
+	imageContainer :
+	{
+		flex : '2',
+		maxWidth : '25vh',
+		height : '18vh',
+		maxHeight : '18vh'
+	},
+
+	image :
+	{
+		height : '100%',
+		width : '100%'
+	},
+
+	textbox :
+	{
+		flex : '3',
+		display : 'flex',
+		flexFlow : 'column',
+		justifyContent : 'center',
+		padding : '0 4vw 0 4vw'
+	}
+})
+
 
 class PortraitCard extends React.Component
 {
 	render()
 	{
+		const { classes } = this.props
+
 		return (
-			<Card className="Card PortraitCard" onClick={ () => this.cardClicked() }>
+			<Card className={classes.portraitCard} id="portraitCard" onClick={ () => this.cardClicked() }>
 			    <CardContent style={{ flexDirection : this.props.reverse ? 'row-reverse' : 'initial' }}>
-				<div className="PortraitCard-image-container" style={{ backgroundColor : this.props.imageBg }}>
-					<img src={this.props.image} alt="" />
+				<div className={classes.imageContainer} style={{ backgroundColor : this.props.imageBg }}>
+					<img className={classes.image} src={this.props.image} alt="" />
 				</div>
-				<div className="PortraitCard-textbox"
-						    style={{ textAlign : this.props.reverse ? 'right' : 'left' }}>
+				<div className={classes.textbox} style={{ textAlign : this.props.reverse ? 'right' : 'left' }}>
 					<Typography noWrap={true} variant="h6">{this.props.title}</Typography>
 					<Typography noWrap={true} variant="body1" dangerouslySetInnerHTML={{ __html: this.props.text }} />
 				</div>
@@ -33,42 +72,7 @@ class PortraitCard extends React.Component
 		else if ( this.props.href )
 			window.open( this.props.href, "_blank" )
 	}
-
-	static generateList( pageData, initialReverse? )
-	{
-		let pclist = []
-
-		if ( pageData && pageData.cards )
-		{
-			let reverse = initialReverse !== undefined ? initialReverse : false
-
-			for ( let cardTitle in pageData.cards )
-			{
-				let card = pageData.cards[ cardTitle ]
-
-				if ( ! card.imageBg )
-					card.imageBg = 'white'
-
-				pclist.push
-				(
-					<PortraitCard
-						image={card.image}
-						imageBg={card.imageBg}
-						href={card.href}
-						link={card.link}
-						title={cardTitle}
-						reverse={reverse}
-						text={card.text}
-						key={cardTitle}
-					/>
-				)
-
-				reverse = !reverse
-			}
-		}
-
-		return pclist
-	}
 }
 
-export default PortraitCard
+
+export default withStyles( styling, { withTheme: true } )( PortraitCard )

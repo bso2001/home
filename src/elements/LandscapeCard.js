@@ -5,15 +5,19 @@ import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 
+
 const styling = theme => 
 ({
 	landscapeCard :
 	{
+		width : '100%',
 		height : '18vh',
 		maxHeight : '18vh',
 		display : 'flex',
 		flexFlow : 'column',
-		marginBottom : '2vh !important'
+		marginBottom : '2vh !important',
+		backgroundColor : '#f8f8f8 !important',
+		borderRadius : '0 !important'
 	},
 
 	image :
@@ -36,6 +40,7 @@ const styling = theme =>
 	}
 })
 
+
 class LandscapeCard extends React.Component
 {
 	render()
@@ -43,7 +48,7 @@ class LandscapeCard extends React.Component
 		const { classes } = this.props
 
 		return (
-			<Card className="Card" className={classes.landscapeCard}>
+			<Card className={classes.landscapeCard}>
 			    <CardContent>
 				<div className={classes.imageContainer}>
 					<div className={classes.image} style={{ background: 'url(' + this.props.image + ')' }} alt=""></div>
@@ -54,5 +59,6 @@ class LandscapeCard extends React.Component
 		)
 	}
 }
+
 
 export default withStyles( styling, { withTheme: true } )( LandscapeCard )
