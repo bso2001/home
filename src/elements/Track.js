@@ -1,6 +1,8 @@
 import React from 'react'
+import MyPlayer from './MyPlayer'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
+
 
 
 const styling = theme => 
@@ -45,20 +47,17 @@ class Track extends React.Component
 		let track = this.props.trackData
 		let numImage = 'url(http://olsson.tech/assets/images/track-' + track.number + '.png)'
 
+		this.playCb = this.props.playCb
+
 		return (
-			<div className={classes.track} onClick={ () => this.trackSelected( track.link ) }>
+			<div className={classes.track} onClick={ () => this.playCb( track.link ) }>
 				<div className={classes.trknum} style={{ background: numImage }} alt="" />
 				<Typography noWrap={true} variant="body1" className={classes.title}>{ track.title }</Typography>
 				<Typography noWrap={true} variant="subtitle2" className={classes.runtime}>{ '(' + track.time + ')' }</Typography>
 			</div>
 		)
 	}
-
-	trackSelected( link )
-	{
-		console.log(link)
-	}
 }
 
 
-export default withStyles( styling, { withTheme: true } )( Track )
+export default withStyles( styling, {withTheme:true} )(Track)

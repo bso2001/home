@@ -26,18 +26,19 @@ class Album extends React.Component
 		const { classes } = this.props
 
 		let trackList = this.props.tracks
+		let playCb = this.props.playCb
 
 		if ( ! trackList )
 			trackList = []
 
 		return (
-			<Card className="Card" className={classes.album}>
+			<Card className={classes.album}>
 				<CardContent>
 				{
 					trackList.map( (track, index) =>
 					{
 						track.number = index + 1
-						return <Track trackData={track} key={track.number} />
+						return <Track trackData={track} key={track.number} playCb={playCb} />
 					})
 				}
 				</CardContent>

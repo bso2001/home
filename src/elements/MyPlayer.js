@@ -1,20 +1,25 @@
 import React from 'react'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
+import { Media, Player, controls } from 'react-media-player'
 
-import { Media, Player, controls, utils } from 'react-media-player'
-const { CurrentTime, Duration, PlayPause, SeekBar } = controls
-
+const { CurrentTime, Duration, SeekBar } = controls
 
 class MyPlayer extends React.Component
 {
+	constructor( props )
+	{
+		super(props)
+		this.pPointer = props.pPointer
+	}
+
 	render()
 	{
+		this.storePlayer = (element) => { this.pPointer.player = element }
+
 		return (
 			<Media>
 				{ (mediaProps) => (
 					<div className="MyPlayer">
-						<Player src="https://s3.amazonaws.com/bso-public/mp3/Five/4.+four+corners.mp3" />
+						<Player ref={this.storePlayer} src="https://s3.amazonaws.com/bso-public/mp3/Five/4.+four+corners.mp3" />
 						<nav className="MyPlayerControls">
 							<CurrentTime />
 							<SeekBar />

@@ -12,12 +12,14 @@ import ProvidenceFivePage from './pages/providence/Five'
 
 const rootContent =
 (
-	<Router>
-		<Route exact path = "/" component = {LandingPage} />
-		<Route path = "/music" component = {MusicPage} />
-		<Route path = "/providence" component = {ProvidencePage} />
-		<Route path = "/providence-five" component = {ProvidenceFivePage} />
-	</Router>
+	<span>
+		<Router>
+			<Route exact path = "/" component = {LandingPage} />
+			<Route path = "/music" component = {MusicPage} />
+			<Route path = "/providence" component = {ProvidencePage} />
+			<Route path = "/providence-five" component = {ProvidenceFivePage} />
+		</Router>
+	</span>
 )
 
 ReactDOM.render( rootContent, document.getElementById('rootContent') )

@@ -3,7 +3,6 @@ import Config from '../library/config'
 import Content from '../library/content'
 import Header from '../elements/Header'
 import DetailCard from '../elements/DetailCard'
-import PortraitCard from '../elements/PortraitCard'
 
 class ProvidencePage extends React.Component
 {
