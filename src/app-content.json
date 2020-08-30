@@ -30,6 +30,7 @@
 				}
 			}
 		},
+
 		"Music" :
 		{
 			"bannerImage" : "https://olsson.tech/assets/images/sheet-music-165.jpg",
@@ -39,7 +40,7 @@
 				"Century 21 Music" :
 				{
 					"image" : "https://olsson.tech/assets/images/music.jpg",
-					"link" : "/c21m",
+					"link" : "/century-21",
 					"text" : "A celebration of Y2K survival"
 				},
 				"Solo Recordings" :
@@ -62,10 +63,19 @@
 				}
 			}
 		},
+
+		"Century21" :
+		{
+			"bannerTitle" : "The 21st Century",
+			"bannerImage" : "https://olsson.tech/assets/images/music.jpg",
+			"bannerText" : "<p>Music made after the year turned 2000.  Or 2001 for that matter.<p>Some of the folks involved, in no real order, are my brothers Rick & Wade, Steve Kesselhaut (and son Zach), Rick Robinson, Nick Lavoritano and Mike Luongo.  And happily, once again, Ansel.</p>"
+		},
+
 		"Providence" :
 		{
+			"bannerTitle" : "Providence",
 			"bannerImage" : "https://olsson.tech/assets/images/tape1.jpg",
-			"bannerText" : "I met Ray Nering in grade school when we were 12 or 14 or like that.  Soon thereafter, we were trying to make music.  Not many years later, we met drummer Frank Romond, and by the mid-to-late 70's, we decided we were a band called <i>Providence</i>. <p> Mark Dobry soon joined as the bass player.  Ansel Spada became the singer.  Dana Vagovsky and Dean Rubine played keyboards on some projects.  </p> <p> For ten years or so, we recorded lots of originals, all of them on analog tape.  And all these guys were a big part of my life through all those years.</p>",
+			"bannerText" : "<p>I met Ray Nering in grade school when we were 12 or 14 or like that.  Soon thereafter, we were trying to make music.  Not many years later, we met drummer Frank Romond, and by the mid-to-late 70's, we decided we were a band called <i>Providence</i>. <p> Mark Dobry soon joined as the bass player.  Ansel Spada became the singer.  Dana Vagovsky and Dean Rubine played keyboards on some projects.  </p> <p> For ten years or so, we recorded lots of originals, all of them on analog tape.  And all these guys were a big part of my life through all those years.</p>",
 			"cards" :
 			{
 				"Five" :
@@ -82,7 +92,7 @@
 				},
 				"Prophecies" :
 				{
-					"image" : "https://olsson.tech/assets/images/prophecies.jpg",
+					"image" : "https://olsson.tech/assets/images/prophecies-2.jpg",
 					"link" : "/providence-prophecies",
 					"text" : "January&mdash;March 1983"
 				},
@@ -100,11 +110,12 @@
 				}
 			}
 		},
+	
 		"ProvidenceFive" :
 		{
 			"bannerImage" : "https://olsson.tech/assets/images/five-banner.jpg",
 			"bannerTitle" : "Providence Five",
-			"bannerText" : "Though we didn't know it at the time, this would be the last official Providence recording.  The bass, drums, and some rhythm guitars were recorded on September 8-9, 1984 at Earthquake Studios in Scotch Plains.</p><p>Most of the guitars, the keyboards, and vocals, were added at Cedar Lane during October.  The final mix was apparently produced in a marathon session on November 9.<p/>",
+			"bannerText" : "<p>We didn't know it at the time, but this would be the last <i>official</i> Providence recording.  The bass, drums, and some rhythm guitars were recorded on September 8-9, 1984 at Earthquake Studios in Scotch Plains.</p><p>Most of the guitars, the keyboards, and vocals, were added at Cedar Lane during October.  The final mix was apparently produced in a marathon session on November 9.<p/>",
 			"tracks" :
 			[
 				{
@@ -134,18 +145,20 @@
 				}
 			]
 		},
+
 		"ProvidenceQuestions" :
 		{
 			"bannerImage" : "https://olsson.tech/assets/images/questions.jpg",
 			"bannerTitle" : "Questions of Perspective",
-			"bannerText" : "Welcome Dean to the fray!  All was recorded in the late summer of 1983 at Campbell Lane.",
+			"bannerText" : "<p>Welcome Dean to the fray!  All was recorded in the late summer of 1983 at Campbell Lane.",
 			"tracks" : []
 		},
+
 		"ProvidenceProphecies" :
 		{
-			"bannerImage" : "https://olsson.tech/assets/images/prophecies.jpg",
+			"bannerImage" : "https://olsson.tech/assets/images/prophecies-2.jpg",
 			"bannerTitle" : "Prophecies",
-			"bannerText" : "Ansel and Dana join, and we spend most of Winter 1883 recording these tracks.  All were recorded in glorious 4-track at Campbell Lane in Berkeley Heights.</p>",
+			"bannerText" : "<p>Ansel and Dana join, and we spent most of the winter of 1883 holed up and recording these tracks.  All were captured on the glorious new Tascam 4-track at Campbell Lane in Berkeley Heights.</p>",
 			"tracks" :
 			[
 				{
@@ -184,6 +197,18 @@
                                         "link"  : "https://s3.amazonaws.com/bso-public/mp3/Prophecies/7-seven.mp3"
 				}
 			]
+		},
+
+		"ProvidenceTwo" :
+		{
+			"bannerImage" : "https://olsson.tech/assets/images/wip.png",
+			"bannerTitle" : "Providence II"
+		},
+
+		"ProvidenceOne" :
+		{
+			"bannerImage" : "https://olsson.tech/assets/images/wip.png",
+			"bannerTitle" : "Providence I"
 		}
 	}
 }

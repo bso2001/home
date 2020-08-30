@@ -25,7 +25,6 @@ const styling = theme =>
 	{
 		backgroundSize : 'cover !important',
 		backgroundRepeat : 'no-repeat !important',
-		backgroundPosition : 'center !important',
 		height : '100%'
 	},
 
@@ -33,6 +32,7 @@ const styling = theme =>
 	{
 		textAlign : 'center',
 		marginTop: '1vh',
+		marginBottom: '-1.5vh',
 		fontWeight : '600'
 	},
 
@@ -50,12 +50,16 @@ class DetailCard extends React.Component
 	{
 		const { classes } = this.props
 
+		let imgStyle = { background : 'url(' + this.props.image + ')' }
+		if ( this.props.imagePos )
+			imgStyle['backgroundPositionY'] = this.props.imagePos
+
 		let boldTitle = (this.props.boldTitle !== undefined) ? this.props.boldTitle : true
 
 		return (
 			<Card className={ classes.detailCard }> <CardContent>
 				<div className={ classes.imageContainer }>
-					<div className={classes.image} style= {{ background : 'url(' + this.props.image + ')' }}> </div>
+					<div className={classes.image} style={imgStyle}> </div>
 				</div>
 				<Typography variant="h5" className={ classes.title } style={{ fontWeight : boldTitle ? '600' : '400' }}>{ this.props.title }</Typography>
 				<Typography variant="body1" className={ classes.description } color="textSecondary" dangerouslySetInnerHTML={{ __html: this.props.text }} />

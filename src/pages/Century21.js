@@ -4,14 +4,14 @@ import Content from '../library/content'
 import Header from '../elements/Header'
 import DetailCard from '../elements/DetailCard'
 
-class ProvidencePage extends React.Component
+class Century21Page extends React.Component
 {
 
 	constructor()
 	{
 		super()
 
-		this.pageName = 'Providence'
+		this.pageName = 'Century21'
 		this.data = Config.pageData( this.pageName )
 
 		if ( ! this.data )
@@ -30,4 +30,4 @@ class ProvidencePage extends React.Component
 	}
 }
 
-export default ProvidencePage
+export default Century21Page

@@ -21,7 +21,7 @@ class ProvidenceQuestionsPage extends React.Component
 		return (
 			<div className="Page ProvidenceQuestions-page">
 				<Header />
-				<DetailCard image={this.data.bannerImage} title={this.data.bannerTitle} boldTitle={false} text={this.data.bannerText} />
+				<DetailCard image={this.data.bannerImage} imagePos="center" title={this.data.bannerTitle} boldTitle={false} text={this.data.bannerText} />
 				<Album tracks={this.data.tracks} />
 			</div>
 		)
