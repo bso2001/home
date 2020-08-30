@@ -5,12 +5,12 @@ import DetailCard from '../../elements/DetailCard'
 import Header from '../../elements/Header'
 
 
-class ProvidenceFivePage extends React.Component
+class ProvidenceQuestionsPage extends React.Component
 {
 	constructor()
 	{
 		super()
-		this.data = Config.pageData( 'ProvidenceFive' )
+		this.data = Config.pageData( 'ProvidenceQuestions' )
 
 		if ( ! this.data )
 			this.data = {}
@@ -19,7 +19,7 @@ class ProvidenceFivePage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page ProvidenceFive-page">
+			<div className="Page ProvidenceQuestions-page">
 				<Header />
 				<DetailCard image={this.data.bannerImage} title={this.data.bannerTitle} boldTitle={false} text={this.data.bannerText} />
 				<Album tracks={this.data.tracks} />
@@ -29,4 +29,4 @@ class ProvidenceFivePage extends React.Component
 }
 
 
-export default ProvidenceFivePage
+export default ProvidenceQuestionsPage

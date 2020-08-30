@@ -25,6 +25,7 @@ const styling = theme =>
 	{
 		backgroundSize : 'cover !important',
 		backgroundRepeat : 'no-repeat !important',
+		backgroundPosition : 'center !important',
 		height : '100%'
 	},
 
@@ -49,14 +50,15 @@ class DetailCard extends React.Component
 	{
 		const { classes } = this.props
 
+		let boldTitle = (this.props.boldTitle !== undefined) ? this.props.boldTitle : true
+
 		return (
-			<Card className={classes.detailCard}> <CardContent>
-				<div className={classes.imageContainer}>
-					<div className={classes.image} style={{ background: 'url(' + this.props.image + ')' }} alt=""></div>
+			<Card className={ classes.detailCard }> <CardContent>
+				<div className={ classes.imageContainer }>
+					<div className={classes.image} style= {{ background : 'url(' + this.props.image + ')' }}> </div>
 				</div>
-				<Typography variant="h5" className={classes.title}>{ this.props.title }</Typography>
-				<Typography variant="body1" className={classes.description} color="textSecondary"
-											dangerouslySetInnerHTML={{ __html: this.props.text }} />
+				<Typography variant="h5" className={ classes.title } style={{ fontWeight : boldTitle ? '600' : '400' }}>{ this.props.title }</Typography>
+				<Typography variant="body1" className={ classes.description } color="textSecondary" dangerouslySetInnerHTML={{ __html: this.props.text }} />
 			</CardContent> </Card>
 		)
 	}

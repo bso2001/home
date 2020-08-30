@@ -9,6 +9,8 @@ import LandingPage from './pages/Landing'
 import MusicPage from './pages/Music'
 import ProvidencePage from './pages/Providence'
 import ProvidenceFivePage from './pages/providence/Five'
+import ProvidencePropheciesPage from './pages/providence/Prophecies'
+import ProvidenceQuestionsPage from './pages/providence/Questions'
 
 const rootContent =
 (
@@ -18,6 +20,8 @@ const rootContent =
 			<Route path = "/music" component = {MusicPage} />
 			<Route path = "/providence" component = {ProvidencePage} />
 			<Route path = "/providence-five" component = {ProvidenceFivePage} />
+			<Route path = "/providence-prophecies" component = {ProvidencePropheciesPage} />
+			<Route path = "/providence-questions" component = {ProvidenceQuestionsPage} />
 		</Router>
 	</span>
 )

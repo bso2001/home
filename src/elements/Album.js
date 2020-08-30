@@ -35,8 +35,6 @@ class Album extends React.Component
 		const { classes } = this.props
 
 		let trackList = this.props.tracks
-		let playCb = this.props.playCb
-
 		if ( ! trackList )
 			trackList = []
 
@@ -46,7 +44,7 @@ class Album extends React.Component
 
 			let playUrl = (url) =>
 			{
-				if ( this.lastTrack != url )
+				if ( this.lastTrack !== url )
 					player.src = this.lastTrack = url
 				player.play()
 			}
