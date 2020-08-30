@@ -89,11 +89,13 @@
 				"Providence II" :
 				{
 					"image" : "https://olsson.tech/assets/images/tape1.jpg",
+					"link" : "/providence-two",
 					"text" : "Late 1981"
 				},
 				"Providence" :
 				{
 					"image" : "https://olsson.tech/assets/images/tape1.jpg",
+					"link" : "/providence-one",
 					"text" : "Winter of 1979-1980"
 				}
 			}

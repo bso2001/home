@@ -9,6 +9,8 @@ import LandingPage from './pages/Landing'
 import MusicPage from './pages/Music'
 import ProvidencePage from './pages/Providence'
 import ProvidenceFivePage from './pages/providence/Five'
+import ProvidenceOnePage from './pages/providence/One'
+import ProvidenceTwoPage from './pages/providence/Two'
 import ProvidencePropheciesPage from './pages/providence/Prophecies'
 import ProvidenceQuestionsPage from './pages/providence/Questions'
 
