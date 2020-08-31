@@ -90,9 +90,9 @@ class Header extends React.Component
 
 		return (
 			<Typography variant="subtitle1" id="headerMenu" className={classes.menu} onClick={() => this.setState({ menuVisible : false })}>
-				<a className={classes.menuItem} href="/music"> MUSIC </a>
-				<a className={classes.menuItem} href="/images"> IMAGES </a>
-				<a className={classes.menuItem} href="https://olsson.tech" target="_new"> TECHNOLOGY </a>
+				<a className={classes.menuItem} href="/music"> Music </a>
+				<a className={classes.menuItem} href="/images"> Images </a>
+				<a className={classes.menuItem} href="https://olsson.tech" target="_new"> Technology </a>
 				<a className={classes.menuItem} target="_new" href= "https://www.ebay.com/sch/i.html?_saslop=1&_sasl=bso2001"> My eBay Listings </a>
 				<a className={classes.menuItem} href="https://charts.bertolsson.com" target="_new"> Band Charts </a>
 				<a className={classes.menuItem} href="https://olsson.tech/assets/Bert-Olsson-Resume.pdf" target="_new"> Résumé </a>
