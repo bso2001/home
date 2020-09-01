@@ -2,9 +2,9 @@ import React from 'react'
 import Content from '../library/content'
 import Header from '../elements/Header'
 import LandscapeCard from '../elements/LandscapeCard'
-import PageData from '../content/Landing.json'
+import PageData from '../content/Home.json'
 
-class LandingPage extends React.Component
+class HomePage extends React.Component
 {
 	constructor()
 	{
@@ -26,4 +26,4 @@ class LandingPage extends React.Component
 	}
 }
 
-export default LandingPage
+export default HomePage
