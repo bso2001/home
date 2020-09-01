@@ -1,0 +1,35 @@
+{
+	"bannerImage" : "https://olsson.tech/assets/images/sheet-music-165.jpg",
+	"bannerText" : "RHAPSODIES and ROGUES",
+
+	"cards" :
+	{
+		"Century 21 Music" :
+		{
+			"image" : "https://olsson.tech/assets/images/music.jpg",
+			"link" : "/century-21",
+			"text" : "A celebration of Y2K survival"
+		},
+
+		"Solo Recordings" :
+		{
+			"image" : "http://olsson.tech/assets/images/studio-820b.jpg",
+			"link" : "/solo",
+			"text" : "Creations in home studios"
+		},
+
+		"Providence" :
+		{
+			"image" : "https://olsson.tech/assets/images/tape1.jpg",
+			"link" : "/providence",
+			"text" : "A band that taught me many things"
+		},
+
+		"Gas Music from Jupiter" :
+		{
+			"image" : "https://olsson.tech/assets/images/jupiter-juno.jpg",
+			"link" : "/gas-music",
+			"text" : "Some explanation required"
+		}
+	}
+}

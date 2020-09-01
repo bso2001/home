@@ -1,16 +1,15 @@
 import React from 'react'
-import Config from '../library/config'
 import Content from '../library/content'
 import Header from '../elements/Header'
 import LandscapeCard from '../elements/LandscapeCard'
+import PageData from '../content/Landing.json'
 
 class LandingPage extends React.Component
 {
 	constructor()
 	{
 		super()
-
-		this.data = Config.pageData( 'Landing' )
+		this.data = PageData
 		if ( ! this.data )
 			this.data = {}
 	}

@@ -1,8 +1,9 @@
 import React from 'react'
-import Config from '../../library/config'
 import Content from '../../library/content'
 import Header from '../../elements/Header'
 import DetailCard from '../../elements/DetailCard'
+import PageData from '../../content/providence/Main'
+
 
 class ProvidencePage extends React.Component
 {
@@ -10,10 +11,7 @@ class ProvidencePage extends React.Component
 	constructor()
 	{
 		super()
-
-		this.pageName = 'Providence'
-		this.data = Config.pageData( this.pageName )
-
+		this.data = PageData
 		if ( ! this.data )
 			this.data = {}
 	}

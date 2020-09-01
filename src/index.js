@@ -10,13 +10,13 @@ import LandingPage from './pages/Landing'
 import LastSummerPage from './pages/LastSummer'
 import MusicPage from './pages/Music'
 import PmitsPage from './pages/PMItS'
-import ProvidencePage from './pages/providence/Providence'
+import ProvidencePage from './pages/providence/Main'
 import ProvidenceFivePage from './pages/providence/Five'
 import ProvidenceOnePage from './pages/providence/One'
 import ProvidenceTwoPage from './pages/providence/Two'
 import ProvidencePropheciesPage from './pages/providence/Prophecies'
 import ProvidenceQuestionsPage from './pages/providence/Questions'
-import SoloWorksPage from './pages/Solo'
+import SoloWorksPage from './pages/solo/Main'
 
 const rootContent =
 (

@@ -1,0 +1,22 @@
+{
+	"bannerTitle" : "The 21st Century",
+	"bannerImage" : "https://olsson.tech/assets/images/music.jpg",
+	"bannerText" : "<p>Collaborative projects after the year 2000.  Or 2001.  Whichever.<p>Some of the folks involved, in no real order, are my brothers Rick & Wade, Steve Kesselhaut (and son Zach), Rick Robinson, Nick Lavoritano and Mike Luongo.  And happily, once again, Ansel.</p>",
+
+	"cards" :
+	{
+		"Point Me Into the Sky [RnO]" :
+		{
+			"image" : "https://olsson.tech/assets/images/pmits-cover.jpg",
+			"link" : "/pmits",
+			"text" : "March&mdash;December 2010"
+		},
+
+		"Last Summer [BNML]" :
+		{
+			"image" : "https://olsson.tech/assets/images/bnml-cover1.jpg",
+			"link" : "/last-summer",
+			"text" : "May&mdash;August 2013"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"bannerImage" : "http://olsson.tech/assets/images/lakemcd-07232015.png",
+	"bannerText" : "ARTS & CRAFTS and OTHER SUNDRIES",
+
+	"cards" :
+	{
+		"Music" :
+		{
+			"image" : "https://olsson.tech/assets/images/studio-1.jpg",
+			"link" : "/music",
+			"text" : "Various original sounds"
+		},
+
+		"Images" :
+		{
+			"image" : "https://olsson.tech/assets/images/imagery.png",
+			"imageBg" : "#402f17",
+			"link" : "/images",
+			"text" : "Pictures, some that move"
+		},
+
+		"Technology" :
+		{
+			"image" : "https://olsson.tech/assets/images/tech.png",
+			"href" : "https://olsson.tech",
+			"text" : "Things that help pay bills"
+		}
+	}
+}

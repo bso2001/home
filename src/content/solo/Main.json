@@ -1,0 +1,43 @@
+{
+	"bannerTitle" : "Solo Recordings",
+	"bannerImage" : "http://olsson.tech/assets/images/studio-820b.jpg",
+	"bannerText" : "<p>Music made mostly by myself, in various home studios. Once fours tracks of analog tape, now as many digital tracks as one wants.</p>",
+
+	"cards" :
+	{
+		"Fun With Light and Heat" :
+		{
+			"image" : "https://olsson.tech/assets/images/fwlah-cover.png",
+			"link" : "/heat",
+			"text" : "February&mdash;May 2008"
+		},
+
+		"Songs of the Last Swan" :
+		{
+			"image" : "https://olsson.tech/assets/images/swan-cover.jpg",
+			"link" : "/swan",
+			"text" : "August 2007&mdash;January 2008"
+		},
+
+		"Love and Madness" :
+		{
+			"image" : "https://olsson.tech/assets/images/lm-cover.jpg",
+			"link" : "/madness",
+			"text" : "March 2002&mdash;January 2004"
+		},
+
+		"Cities" :
+		{
+			"image" : "https://olsson.tech/assets/images/cities-cover.jpg",
+			"link" : "/cities",
+			"text" : "September 1987&mdash;December 1988"
+		},
+
+		"Big Frontier" :
+		{
+			"image" : "https://olsson.tech/assets/images/bf-cover.jpg",
+			"link" : "/frontier",
+			"text" : "June 1986&mdash;January 1987"
+		}
+	}
+}

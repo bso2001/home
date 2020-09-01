@@ -1,8 +1,9 @@
 import React from 'react'
 import Album from '../elements/Album'
-import Config from '../library/config'
+import Content from '../library/content'
 import DetailCard from '../elements/DetailCard'
 import Header from '../elements/Header'
+import PageData from '../content/PMItS.json'
 
 
 class PmitsPage extends React.Component
@@ -10,8 +11,7 @@ class PmitsPage extends React.Component
 	constructor()
 	{
 		super()
-		this.data = Config.pageData( 'PMItS' )
-
+		this.data = PageData
 		if ( ! this.data )
 			this.data = {}
 	}

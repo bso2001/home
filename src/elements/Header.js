@@ -1,5 +1,4 @@
 import React from 'react'
-import Config from '../library/config'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 
@@ -68,7 +67,7 @@ class Header extends React.Component
 	{
 		const { classes } = this.props
 
-		this.title = Config.paramData( 'headerTitle' )
+		this.title = 'S. BERT OLSSON'
 
 		return (
 			<div className={classes.header}>

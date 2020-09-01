@@ -1,8 +1,9 @@
 import React from 'react'
 import Album from '../elements/Album'
-import Config from '../library/config'
+import Content from '../library/content'
 import DetailCard from '../elements/DetailCard'
 import Header from '../elements/Header'
+import PageData from '../content/LastSummer.json'
 
 
 class LastSummerPage extends React.Component
@@ -10,8 +11,7 @@ class LastSummerPage extends React.Component
 	constructor()
 	{
 		super()
-		this.data = Config.pageData( 'LastSummer' )
-
+		this.data = PageData
 		if ( ! this.data )
 			this.data = {}
 	}

@@ -1,8 +1,9 @@
 import React from 'react'
 import Album from '../../elements/Album'
-import Config from '../../library/config'
+import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
 import Header from '../../elements/Header'
+import PageData from '../../content/providence/Questions.json'
 
 
 class ProvidenceQuestionsPage extends React.Component
@@ -10,8 +11,7 @@ class ProvidenceQuestionsPage extends React.Component
 	constructor()
 	{
 		super()
-		this.data = Config.pageData( 'ProvidenceQuestions' )
-
+		this.data = PageData
 		if ( ! this.data )
 			this.data = {}
 	}
@@ -19,9 +19,15 @@ class ProvidenceQuestionsPage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page ProvidenceQuestions-page">
+			<div className="Page">
 				<Header />
-				<DetailCard image={this.data.bannerImage} imagePos="center" title={this.data.bannerTitle} boldTitle={false} text={this.data.bannerText} />
+				<DetailCard
+					image={this.data.bannerImage}
+					imagePos="center"
+					title={this.data.bannerTitle}
+					boldTitle={false}
+					text={this.data.bannerText}
+				/>
 				<Album tracks={this.data.tracks} />
 			</div>
 		)

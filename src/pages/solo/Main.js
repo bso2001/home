@@ -1,8 +1,8 @@
 import React from 'react'
-import Config from '../library/config'
-import Content from '../library/content'
-import Header from '../elements/Header'
-import DetailCard from '../elements/DetailCard'
+import Content from '../../library/content'
+import Header from '../../elements/Header'
+import DetailCard from '../../elements/DetailCard'
+import PageData from '../../content/Solo/Main.json'
 
 class SoloWorksPage extends React.Component
 {
@@ -10,10 +10,7 @@ class SoloWorksPage extends React.Component
 	constructor()
 	{
 		super()
-
-		this.pageName = 'SoloWorks'
-		this.data = Config.pageData( this.pageName )
-
+		this.data = PageData
 		if ( ! this.data )
 			this.data = {}
 	}

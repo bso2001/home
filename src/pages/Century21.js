@@ -1,19 +1,15 @@
 import React from 'react'
-import Config from '../library/config'
 import Content from '../library/content'
-import Header from '../elements/Header'
 import DetailCard from '../elements/DetailCard'
+import Header from '../elements/Header'
+import PageData from '../content/Century21.json'
 
 class Century21Page extends React.Component
 {
-
 	constructor()
 	{
 		super()
-
-		this.pageName = 'Century21'
-		this.data = Config.pageData( this.pageName )
-
+		this.data = PageData
 		if ( ! this.data )
 			this.data = {}
 	}
