@@ -10,10 +10,10 @@ const styling = theme =>
 	portraitCard :
 	{
 		width : '96% !important',
-		marginLeft : '2% !important',
+		margin : '2% auto 2% auto !important',
 		height : '18vh !important',
 		maxHeight : '18vh !important',
-		marginBottom : '2vh',
+		maxWidth : '70vh !important',
 		borderRadius : '2px !important',
 		cursor : 'pointer !important'
 	},
