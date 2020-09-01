@@ -1,8 +1,8 @@
 import React from 'react'
-import Config from '../library/config'
-import Content from '../library/content'
-import Header from '../elements/Header'
-import DetailCard from '../elements/DetailCard'
+import Config from '../../library/config'
+import Content from '../../library/content'
+import Header from '../../elements/Header'
+import DetailCard from '../../elements/DetailCard'
 
 class ProvidencePage extends React.Component
 {

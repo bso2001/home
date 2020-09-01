@@ -66,9 +66,42 @@
 
 	"SoloWorks" :
 	{
-		"bannerTitle" : "Solo Works",
+		"bannerTitle" : "Solo Recordings",
 		"bannerImage" : "http://olsson.tech/assets/images/studio-820b.jpg",
-		"bannerText" : "<p>Music made mostly by myself, in various home studios. Once two tracks on analog tape, now as many digital tracks as one wants.</p>"
+		"bannerText" : "<p>Music made mostly by myself, in various home studios. Once fours tracks of analog tape, now as many digital tracks as one wants.</p>",
+		"cards" :
+		{
+			"Fun With Light and Heat" :
+			{
+				"image" : "https://olsson.tech/assets/images/fwlah-cover.png",
+				"link" : "/heat",
+				"text" : "February&mdash;May 2008"
+			},
+			"Songs of the Last Swan" :
+			{
+				"image" : "https://olsson.tech/assets/images/swan-cover.jpg",
+				"link" : "/swan",
+				"text" : "August 2007&mdash;January 2008"
+			},
+			"Love and Madness" :
+			{
+				"image" : "https://olsson.tech/assets/images/lm-cover.jpg",
+				"link" : "/madness",
+				"text" : "March 2002&mdash;January 2004"
+			},
+			"Cities" :
+			{
+				"image" : "https://olsson.tech/assets/images/cities-cover.jpg",
+				"link" : "/cities",
+				"text" : "September 1987&mdash;December 1988"
+			},
+			"Big Frontier" :
+			{
+				"image" : "https://olsson.tech/assets/images/bf-cover.jpg",
+				"link" : "/frontier",
+				"text" : "June 1986&mdash;January 1987"
+			}
+		}
 	},
 
 	"Century21" :
@@ -152,7 +185,7 @@
 	{
 		"bannerImage" : "https://olsson.tech/assets/images/bnml-abs.jpg",
 		"bannerTitle" : "Last Summer",
-		"bannerText" : "<span style=\"line-height: 1.2rem;\"><p>Since 2008, I've done a fair amount of jamming with drummer Nick Lavoritano at his place in Millington.  In Summer 2013, Nick and I were working with bassist Mike Luongo, and we did a lot of improvisations.  This is a curated collection thereof.</p><p>I picked the best parts, took out the really ugly bits, and sweetened the resulting tracks.  No sounds were added, and except for exorcising whole sections, nothing was removed.  The music was mostly spontaneous, with two exceptions: <i>High Chaparral</i> was worked out a bit, and there have been quite a few <i>Scandinavian Jazz Jams</i>.</p></span>",
+		"bannerText" : "<span style=\"line-height: 1.2rem;\"><p>Since 2008, I've done a fair amount of jamming with drummer Nick Lavoritano at his place in Millington.  In Summer 2013, Nick and I were working with bassist Mike Luongo, and we did a lot of improvisations.  This is a curated collection thereof.</p><p>I picked the best parts, took out the really ugly bits, and sweetened the resulting tracks.  No sounds were added, and except for exorcising whole sections, nothing was removed.  The music was mostly spontaneous, with two exceptions: <i>High Chaparral</i> was worked out a bit, and there had been quite a few <i>Scandinavian Jazz Jams</i>.</p></span>",
 		"tracks" :
 		[
 			{

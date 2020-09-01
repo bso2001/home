@@ -23,7 +23,12 @@ class Century21Page extends React.Component
 		return (
 			<div className="Page">
 				<Header />
-				<DetailCard image={this.data.bannerImage} text={this.data.bannerText} title={this.data.bannerTitle} />
+				<DetailCard
+					image={this.data.bannerImage}
+					imagePos="50%"
+					text={this.data.bannerText}
+					title={this.data.bannerTitle}
+				/>
 				{ Content.generatePortraitCards( this.data.cards ) }
 			</div>
 		)
