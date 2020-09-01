@@ -1,12 +1,11 @@
 import React from 'react'
 import Album from '../../elements/Album'
-import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
 import Header from '../../elements/Header'
-import PageData from '../../content/providence/One.json'
+import PageData from '../../content/providence/Questions.json'
 
 
-class ProvidenceOnePage extends React.Component
+class ProvidenceQuestionsPage extends React.Component
 {
 	constructor()
 	{
@@ -21,7 +20,13 @@ class ProvidenceOnePage extends React.Component
 		return (
 			<div className="Page">
 				<Header />
-				<DetailCard image={this.data.bannerImage} title={this.data.bannerTitle} boldTitle={false} text={this.data.bannerText} />
+				<DetailCard
+					image={this.data.bannerImage}
+					imagePos="center"
+					title={this.data.bannerTitle}
+					boldTitle={false}
+					text={this.data.bannerText}
+				/>
 				<Album tracks={this.data.tracks} />
 			</div>
 		)
@@ -29,4 +34,4 @@ class ProvidenceOnePage extends React.Component
 }
 
 
-export default ProvidenceOnePage
+export default ProvidenceQuestionsPage

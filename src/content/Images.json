@@ -1,0 +1,21 @@
+{
+	"bannerImage" : "https://olsson.tech/assets/images/lens.png",
+	"bannerText" : "IMAGERY",
+	"cards" :
+	{
+		"OriginalPhotos" :
+		{
+			"text" : "Original Photography"
+		},
+
+		"YouTube" :
+		{
+			"text" : "YouTube Videos"
+		},
+
+		"Webcams" :
+		{
+			"text" : "Modified Captures Webcam Images"
+		}
+	}
+}

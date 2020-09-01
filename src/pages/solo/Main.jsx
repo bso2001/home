@@ -1,13 +1,12 @@
 import React from 'react'
-import Album from '../../elements/Album'
 import Content from '../../library/content'
-import DetailCard from '../../elements/DetailCard'
 import Header from '../../elements/Header'
-import PageData from '../../content/providence/Questions.json'
+import DetailCard from '../../elements/DetailCard'
+import PageData from '../../content/solo/Main.json'
 
-
-class ProvidenceQuestionsPage extends React.Component
+class SoloWorksPage extends React.Component
 {
+
 	constructor()
 	{
 		super()
@@ -23,16 +22,14 @@ class ProvidenceQuestionsPage extends React.Component
 				<Header />
 				<DetailCard
 					image={this.data.bannerImage}
-					imagePos="center"
-					title={this.data.bannerTitle}
-					boldTitle={false}
+					imagePos="80%"
 					text={this.data.bannerText}
+					title={this.data.bannerTitle}
 				/>
-				<Album tracks={this.data.tracks} />
+				{ Content.generatePortraitCards( this.data.cards ) }
 			</div>
 		)
 	}
 }
 
-
-export default ProvidenceQuestionsPage
+export default SoloWorksPage

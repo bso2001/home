@@ -6,7 +6,8 @@ import './index.css'
 import * as serviceWorker from './library/serviceWorker'
 
 import Century21Page from './pages/Century21'
-import LandingPage from './pages/Landing'
+import HomePage from './pages/Home'
+import ImagesPage from './pages/Images'
 import LastSummerPage from './pages/LastSummer'
 import MusicPage from './pages/Music'
 import PmitsPage from './pages/PMItS'
@@ -22,8 +23,9 @@ const rootContent =
 (
 	<span>
 		<Router>
-			<Route exact path = "/" component = {LandingPage} />
+			<Route exact path = "/" component = {HomePage} />
 			<Route path = "/century-21" component = {Century21Page} />
+			<Route path = "/images" component = {ImagesPage} />
 			<Route path = "/last-summer" component = {LastSummerPage} />
 			<Route path = "/music" component = {MusicPage} />
 			<Route path = "/pmits" component = {PmitsPage} />
