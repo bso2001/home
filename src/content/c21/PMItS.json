@@ -16,6 +16,11 @@
 			"link" : "https://s3.amazonaws.com/bso-public/mp3/Point+Me+Into+the+Sky/03-how-can-i.mp3"
 		},
 		{
+			"title" : "Burn the Night Up",
+			"time" : "5:12",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Point+Me+Into+the+Sky/02-burn-the-night-up.mp3"
+		},
+		{
 			"title" : "Andeline",
 			"time" : "3:22",
 			"link" : "https://s3.amazonaws.com/bso-public/mp3/Point+Me+Into+the+Sky/04-andeline.mp3"

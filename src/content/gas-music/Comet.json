@@ -1,0 +1,38 @@
+{
+	"bannerImage" : "https://olsson.tech/assets/images/ttct-cover.png",
+	"bannerTitle" : "Through the Comet's Tail",
+	"bannerText" : "<span class=\"Album-Desc\"><p>These pieces were the result of four sessions held during the holidays of 1986.  There was a session on Halloween night, one right around Thanksgiving, a third just before Christmas, and the last on the second day of 1987.  The final mix was produced on January 9th.</p><p>The players were myself, Ray, and Frank.  The pieces started out improvised, and were then refined over subsequent sessions.</p></span>",
+	"tracks" :
+	[
+		{
+			"title" : "Pods",
+			"time" : "6:00",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Through+the+Comet's+Tail/1.+Pods.mp3"
+		},
+		{
+			"title" : "Still We Pursue",
+			"time": "11:05",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Through+the+Comet's+Tail/2.+Still+We+Pursue.mp3"
+		},
+		{
+			"title" : "Submerged Rhythm",
+			"time": "9:18",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Through+the+Comet's+Tail/3.+Submerged+Rhythm.mp3"
+		},
+		{
+			"title" : "Habitual Enzymes",
+			"time": "7:00",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Through+the+Comet's+Tail/4.+Habitual+Enzymes.mp3"
+		},
+		{
+			"title" : "Worlds in Motion",
+			"time": "8:53",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Through+the+Comet's+Tail/5.+Worlds+in+Motion.mp3"
+		},
+		{
+			"title" : "Norway: Land of Giants",
+			"time": "3:20",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Through+the+Comet's+Tail/6.+Norway%3A+Land+of+Giants.mp3"
+		}
+	]
+}

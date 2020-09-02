@@ -78,7 +78,6 @@ class Album extends React.Component
 							skipped++
 							return <hr />
 						}
-
 					})
 				}
 				</CardContent>

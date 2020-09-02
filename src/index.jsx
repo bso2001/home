@@ -5,10 +5,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './index.css'
 import * as serviceWorker from './library/serviceWorker'
 
+import ArtImitatesLifePage from './pages/gas-music/Art'
 import Century21Page from './pages/c21/Main'
+import CometPage from './pages/gas-music/Comet'
 import CitiesPage from './pages/solo/Cities'
 import FrontierPage from './pages/solo/Frontier'
 import FunWithLightAndHeatPage from './pages/solo/Heat'
+import GasMusicPage from './pages/gas-music/Main'
 import HomePage from './pages/Home'
 import ImagesPage from './pages/Images'
 import LastSummerPage from './pages/c21/LastSummer'
@@ -29,9 +32,12 @@ const rootContent =
 	<span>
 		<Router>
 			<Route exact path = "/" component = {HomePage} />
+			<Route path = "/art" component = {ArtImitatesLifePage} />
 			<Route path = "/century-21" component = {Century21Page} />
 			<Route path = "/cities" component = {CitiesPage} />
+			<Route path = "/comet" component = {CometPage} />
 			<Route path = "/frontier" component = {FrontierPage} />
+			<Route path = "/gas-music" component = {GasMusicPage} />
 			<Route path = "/heat" component = {FunWithLightAndHeatPage} />
 			<Route path = "/images" component = {ImagesPage} />
 			<Route path = "/last-summer" component = {LastSummerPage} />

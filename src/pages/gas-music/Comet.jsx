@@ -2,10 +2,10 @@ import React from 'react'
 import Album from '../../elements/Album'
 import DetailCard from '../../elements/DetailCard'
 import Header from '../../elements/Header'
-import PageData from '../../content/solo/Heat.json'
+import PageData from '../../content/gas-music/Comet'
 
 
-class FunWithLightAndHeatPage extends React.Component
+class CometsTailPage extends React.Component
 {
 	constructor()
 	{
@@ -22,7 +22,7 @@ class FunWithLightAndHeatPage extends React.Component
 				<Header />
 				<DetailCard
 					image={this.data.bannerImage}
-					imagePos="10%"
+					imagePos="8%"
 					title={this.data.bannerTitle}
 					boldTitle={false}
 					text={this.data.bannerText}
@@ -34,4 +34,4 @@ class FunWithLightAndHeatPage extends React.Component
 }
 
 
-export default FunWithLightAndHeatPage
+export default CometsTailPage

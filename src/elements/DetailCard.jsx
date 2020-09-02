@@ -40,7 +40,7 @@ const styling = theme =>
 	{
 		padding : '0 4vw 0 4vw',
 		lineHeight: '1.4rem',
-		textAlign : 'justify'
+		textAlign : 'center'
 	}
 })
 
@@ -62,8 +62,15 @@ class DetailCard extends React.Component
 				<div className={ classes.imageContainer }>
 					<div className={classes.image} style={imgStyle}> </div>
 				</div>
-				<Typography variant="h5" className={ classes.title } style={{ fontWeight : boldTitle ? '600' : '400' }}>{ this.props.title }</Typography>
-				<Typography variant="body1" className={ classes.description } color="textSecondary" dangerouslySetInnerHTML={{ __html: this.props.text }} />
+				<Typography variant="h5"
+					className={ classes.title }
+					style={{ fontWeight : boldTitle ? '600' : '400' }}> {this.props.title}
+				</Typography>
+				<Typography variant="body1"
+					className={ classes.description }
+					color="textSecondary"
+					dangerouslySetInnerHTML={{ __html: this.props.text }}>
+				</Typography>
 			</CardContent> </Card>
 		)
 	}
