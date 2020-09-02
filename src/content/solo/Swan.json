@@ -1,6 +1,38 @@
 {
 	"bannerImage" : "https://olsson.tech/assets/images/swan-title.jpg",
 	"bannerTitle" : "Songs of the Last Swan",
-	"bannerText" : "<span class=\"Album-Desc\"><p>An instrumental album intended to be sparse.  Or as sparse as I could manage.  This was the first time using only software-generated keyboard sounds.  It was also the first appeareance of Steinberg's Groove Agent for drums.  Otherwise, lots of Strat, some real bass guitar, all recorded using Tracktion.</p><p>There are, as indicated, videos for some tracks.</p></span>",
-	"tracks" : []
+	"bannerText" : "<span class=\"Album-Desc\"><p>An instrumental album intended to be sparse.  Or as sparse as I could manage.  This was the first time using only software-generated keyboard sounds.  It was also the first appeareance of Steinberg's Groove Agent for drums.  Otherwise, lots of Strat, some real bass guitar, all recorded using Tracktion.</p><p>There are, as indicated, videos for some tracks.  Or there will be, I promise.</p></span>",
+	"tracks" :
+	[
+		{
+			"title" : "Lost",
+			"time" : "14:43",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Songs+of+the+Last+Swan/1+-+Lost.mp3"
+		},
+		{
+			"title" : "Bongo Falls",
+			"time" : "3:55",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Songs+of+the+Last+Swan/2+-+Bongo+Falls.mp3"
+		},
+		{
+			"title" : "Rain",
+			"time" : "7:13",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Songs+of+the+Last+Swan/3+-+Rain.mp3"
+		},
+		{
+			"title" : "New Journey",
+			"time" : "4:22",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Songs+of+the+Last+Swan/4+-+New+Journey.mp3"
+		},
+		{
+			"title" : "Found",
+			"time" : "5:11",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Songs+of+the+Last+Swan/5+-+Found.mp3"
+		},
+		{
+			"title" : "Swan's Song",
+			"time" : "7:59",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Songs+of+the+Last+Swan/6+-+Swans+Song.mp3"
+		}
+	]
 }

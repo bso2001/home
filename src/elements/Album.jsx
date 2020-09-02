@@ -60,14 +60,25 @@ class Album extends React.Component
 			}
 		}
 
+		let skipped = 0
+
 		return ( <div>
 			<Card className={classes.album}>
 				<CardContent>
 				{
 					trackList.map( (track, index) =>
 					{
-						track.number = index + 1
-						return <Track trackData={track} key={track.number} playCb={playTrack} />
+						if ( track.title )
+						{
+							track.number = (index + 1) - skipped
+							return <Track trackData={track} key={track.number} playCb={playTrack} />
+						}
+						else
+						{
+							skipped++
+							return <hr />
+						}
+
 					})
 				}
 				</CardContent>

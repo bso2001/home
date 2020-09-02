@@ -2,5 +2,88 @@
 	"bannerImage" : "https://olsson.tech/assets/images/lm-back.jpg",
 	"bannerTitle" : "Love and Madness",
 	"bannerText" : "<span class=\"Album-Desc\"><p>This one is appropriately named: there was a fair amount of madness here.  This is one over-worked album.  For some reason, I counted every day I was in the studio working on this thing.  There were 223 such days, spread across two and a half years spent in my Grandin studio.</p><p>With the music finally done, I put down guide vocals with the idea that someone would eventually redo them.  Dave Moscara came in one night and did some vocals for three tracks.  It is unclear why, and very unfortunate that, Dave did not do vocals for the remaining tracks.  Thus, the version presented here has Dave's very nice vocals on three tracks, and my very rough vocals on the rest.  All the songs that were produced are included, along with a few extras (versions of the three Dave songs without Dave).</p><p>This was also my first digital recording, using Cubase on a Dell PC.</p></span>",
-	"tracks" : []
+	"tracks" :
+	[
+		{
+			"title" : "Free",
+			"time" : "5:22",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/01+Free.mp3"
+		},
+		{
+			"title" : "Quiet Side of Midnight",
+			"time" : "5:58",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/02+Quiet+Side+of+Midnight.mp3"
+		},
+		{
+			"title" : "Random Angel",
+			"time" : "5:26",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/03-Random+Angel.mp3"
+		},
+		{
+			"title" : "Hearts on the Run",
+			"time" : "4:33",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/04-Hearts+on+the+Run.mp3"
+		},
+		{
+			"title" : "Time Won't Mind",
+			"time" : "6:02",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/05+Time+Won't+Mind.mp3"
+		},
+		{
+			"title" : "Sides",
+			"time" : "3:50",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/06+Sides.mp3"
+		},
+		{
+			"title" : "Interim Messiah",
+			"time" : "5:42",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/07+Interim+Messiah.mp3"
+		},
+		{
+			"title" : "Leader No One Knows",
+			"time" : "9:55",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/08+Leader+No+One+Knows.mp3"
+		},
+		{
+			"title" : "Skies in Your Eyes",
+			"time" : "5:05",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/09+Skies+in+Your+Eyes.mp3"
+		},
+		{
+			"title" : "Heaven Never Seen",
+			"time" : "5:10",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/10+Heaven+Never+Seen.mp3"
+		},
+		{
+			"title" : "Nighttime Calling",
+			"time" : "5:27",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/11+Nighttime+Calling.mp3"
+		},
+		{
+			"title" : "April Nine",
+			"time" : "12:46",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/12+April+Nine.mp3"
+		},
+		{
+			"title" : "Epilog",
+			"time" : "2:40",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/13+Epilog.mp3"
+		},
+				{ "title" : null },
+		{
+			"title" : "Free",
+			"time" : "bonus",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/B3+Free+(bonus).mp3"
+		},
+		{
+			"title" : "Sides",
+			"time" : "bonus",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/B1+Sides+(bonus).mp3"
+		},
+		{
+			"title" : "Heaven Never Seen",
+			"time" : "bonus",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Love+and+Madness/B2+Heaven+Never+Seen+(bonus).mp3"
+		}
+	]
 }

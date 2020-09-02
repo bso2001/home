@@ -2,5 +2,42 @@
 	"bannerImage" : "https://olsson.tech/assets/images/cities-title.png",
 	"bannerTitle" : "Cities",
 	"bannerText" : "<span class=\"Album-Desc\"><p>One day in 1987, Frank had the idea to compose an album's worth of drum box parts, then hand them over as the foundation of music to be subsequently written produced.  There was no discussion style or structure.  It just had to fit over the 42 minutes of manic drum box parts.</p><p>Those drum parts, by the way, were all written out.  Frank showed up with like a hundred pages of hand-written drum sheets.  He then tapped these parts into a Roland TR-505 drum box.  Crazy.</p><p> This music was produced on the venerable Tascam 22-4; three tracks of live instruments plus an FSK sync track.  On the live tracks were all guitars, some real bass guitar, a few live keys, and some noises.  The FSK track provided MIDI sync, driving the TR-505 and a Yamaha QX-5, a hardware sequencer containing MIDI data for most of the keyboard parts.</p>",
-	"tracks" : []
+	"tracks" :
+	[
+		{
+			"title" : "New York",
+			"time" : "5:42",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Cities/1-NewYork.mp3"
+		},
+		{
+			"title" : "Kingston",
+			"time" : "5:59",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Cities/2-Kingston.mp3"
+		},
+		{
+			"title" : "Brasilia",
+			"time" : "3:08",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Cities/3-Brasilia.mp3"
+		},
+		{
+			"title" : "Surrey",
+			"time" : "6:51",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Cities/4-Surrey.mp3"
+		},
+		{
+			"title" : "Berlin",
+			"time" : "4:48",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Cities/5-Berlin.mp3"
+		},
+		{
+			"title" : "Sydney",
+			"time" : "7:01",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Cities/6-Sydney.mp3"
+		},
+		{
+			"title" : "Capetown",
+			"time" : "9:25",
+			"link" : "https://s3.amazonaws.com/bso-public/mp3/Cities/7-Capetown.mp3"
+		}
+	]
 }

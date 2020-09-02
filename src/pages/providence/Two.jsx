@@ -18,7 +18,7 @@ class ProvidenceTwoPage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page">
+			<div className="Page Audio-Page">
 				<Header />
 				<DetailCard
 					image={this.data.bannerImage}

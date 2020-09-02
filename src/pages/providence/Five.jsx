@@ -18,7 +18,7 @@ class ProvidenceFivePage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page">
+			<div className="Page Audio-Page">
 				<Header />
 				<DetailCard image={this.data.bannerImage} title={this.data.bannerTitle} boldTitle={false} text={this.data.bannerText} />
 				<Album tracks={this.data.tracks} />

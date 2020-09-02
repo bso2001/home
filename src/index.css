@@ -35,6 +35,11 @@ a:visited
 	box-sizing: border-box;
 }
 
+.Audio-Page
+{
+	padding-bottom: 5vh;
+}
+
 .Album-Desc
 {
 	font-family: HelveticaNeue-Light;
