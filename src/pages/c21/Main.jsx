@@ -1,8 +1,8 @@
 import React from 'react'
-import Content from '../library/content'
-import DetailCard from '../elements/DetailCard'
-import Header from '../elements/Header'
-import PageData from '../content/Century21.json'
+import Content from '../../library/content'
+import DetailCard from '../../elements/DetailCard'
+import Header from '../../elements/Header'
+import PageData from '../../content/c21/Main.json'
 
 class Century21Page extends React.Component
 {

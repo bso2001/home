@@ -15,14 +15,14 @@
 		"Questions of Perspective" :
 		{
 			"image" : "https://olsson.tech/assets/images/questions.jpg",
-			"link" : "/providence-questions",
+			"link" : "/questions",
 			"text" : "August&mdash;September 1983"
 		},
 
 		"Prophecies" :
 		{
 			"image" : "https://olsson.tech/assets/images/prophecies-2.jpg",
-			"link" : "/providence-prophecies",
+			"link" : "/prophecies",
 			"text" : "January&mdash;March 1983"
 		},
 

@@ -39,6 +39,7 @@ const styling = theme =>
 	description :
 	{
 		padding : '0 4vw 0 4vw',
+		lineHeight: '1.4rem',
 		textAlign : 'justify'
 	}
 })

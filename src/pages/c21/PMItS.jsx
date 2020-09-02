@@ -1,8 +1,8 @@
 import React from 'react'
-import Album from '../elements/Album'
-import DetailCard from '../elements/DetailCard'
-import Header from '../elements/Header'
-import PageData from '../content/PMItS.json'
+import Album from '../../elements/Album'
+import DetailCard from '../../elements/DetailCard'
+import Header from '../../elements/Header'
+import PageData from '../../content/c21/PMItS.json'
 
 
 class PmitsPage extends React.Component

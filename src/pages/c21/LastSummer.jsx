@@ -2,10 +2,10 @@ import React from 'react'
 import Album from '../../elements/Album'
 import DetailCard from '../../elements/DetailCard'
 import Header from '../../elements/Header'
-import PageData from '../../content/providence/One.json'
+import PageData from '../../content/c21/LastSummer.json'
 
 
-class ProvidenceOnePage extends React.Component
+class LastSummerPage extends React.Component
 {
 	constructor()
 	{
@@ -22,6 +22,7 @@ class ProvidenceOnePage extends React.Component
 				<Header />
 				<DetailCard
 					image={this.data.bannerImage}
+					imagePos="25%"
 					title={this.data.bannerTitle}
 					boldTitle={false}
 					text={this.data.bannerText}
@@ -33,4 +34,4 @@ class ProvidenceOnePage extends React.Component
 }
 
 
-export default ProvidenceOnePage
+export default LastSummerPage

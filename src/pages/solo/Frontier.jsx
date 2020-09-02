@@ -1,11 +1,11 @@
 import React from 'react'
-import Album from '../elements/Album'
-import DetailCard from '../elements/DetailCard'
-import Header from '../elements/Header'
-import PageData from '../content/LastSummer.json'
+import Album from '../../elements/Album'
+import DetailCard from '../../elements/DetailCard'
+import Header from '../../elements/Header'
+import PageData from '../../content/solo/Frontier.json'
 
 
-class LastSummerPage extends React.Component
+class FrontierPage extends React.Component
 {
 	constructor()
 	{
@@ -22,7 +22,7 @@ class LastSummerPage extends React.Component
 				<Header />
 				<DetailCard
 					image={this.data.bannerImage}
-					imagePos="25%"
+					imagePos="center"
 					title={this.data.bannerTitle}
 					boldTitle={false}
 					text={this.data.bannerText}
@@ -34,4 +34,4 @@ class LastSummerPage extends React.Component
 }
 
 
-export default LastSummerPage
+export default FrontierPage
