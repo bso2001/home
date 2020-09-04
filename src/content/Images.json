@@ -1,5 +1,6 @@
 {
-	"bannerImage" : "https://olsson.tech/assets/images/lens.png",
+	"bannerImage" : "https://olsson.tech/assets/images/imagery.png",
+	"bannerPos" : "12%",
 	"bannerText" : "IMAGERY",
 
 	"cards" :

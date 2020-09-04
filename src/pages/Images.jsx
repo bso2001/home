@@ -21,7 +21,7 @@ class ImagesPage extends React.Component
 				<Header />
 				<LandscapeCard
 					image={this.data.bannerImage}
-					imagePos="50%"
+					imagePos={this.data.bannerPos}
 					text={this.data.bannerText}
 				/>
 				{ Content.generatePortraitCards( this.data.cards ) }
