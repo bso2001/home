@@ -17,6 +17,7 @@ import ImagesPage from './pages/Images'
 import LastSummerPage from './pages/c21/LastSummer'
 import LoveAndMadnessPage from './pages/solo/Madness'
 import MusicPage from './pages/Music'
+import PhotosPage from './pages/Photos'
 import PmitsPage from './pages/c21/PMItS'
 import ProvidencePage from './pages/providence/Main'
 import ProvidenceFivePage from './pages/providence/Five'
@@ -26,6 +27,7 @@ import ProvidencePropheciesPage from './pages/providence/Prophecies'
 import ProvidenceQuestionsPage from './pages/providence/Questions'
 import SoloWorksPage from './pages/solo/Main'
 import SongsOfTheLastSwanPage from './pages/solo/Swan'
+import WebcamsPage from './pages/Webcams'
 
 const rootContent =
 (
@@ -43,6 +45,7 @@ const rootContent =
 			<Route path = "/last-summer" component = {LastSummerPage} />
 			<Route path = "/madness" component = {LoveAndMadnessPage} />
 			<Route path = "/music" component = {MusicPage} />
+			<Route path = "/photos" component = {PhotosPage} />
 			<Route path = "/pmits" component = {PmitsPage} />
 			<Route path = "/providence" component = {ProvidencePage} />
 			<Route path = "/providence-five" component = {ProvidenceFivePage} />
@@ -52,6 +55,7 @@ const rootContent =
 			<Route path = "/providence-one" component = {ProvidenceOnePage} />
 			<Route path = "/solo" component = {SoloWorksPage} />
 			<Route path = "/swan" component = {SongsOfTheLastSwanPage} />
+			<Route path = "/webcams" component = {WebcamsPage} />
 		</Router>
 	</span>
 )

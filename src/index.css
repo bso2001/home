@@ -42,10 +42,10 @@ a:visited
 
 .Album-Desc
 {
-	font-family: HelveticaNeue-Light;
+	font-family: HelveticaNeue;
 	font-size: .95rem;
-	line-height: 1.2rem;
-	color: #383838;
+	line-height: 1.3rem;
+	color: #6a6a6a;
 }
 
 		/* Below is selector-based styling; not clear where to put these... */
@@ -54,6 +54,15 @@ a:visited
 {
 	background-color: #454d61;
 	transition: all .2s;
+}
+
+		/* This is styling for image galleries (react-image-gallery). */
+
+.image-gallery-description
+{
+	font-family: HelveticaNeue !important;
+	font-size: .8rem !important;
+	line-height: 1rem !important;
 }
 
 		/* Here is the styling for our media player. */

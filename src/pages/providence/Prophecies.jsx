@@ -22,7 +22,7 @@ class ProvidencePropheciesPage extends React.Component
 				<Header />
 				<DetailCard
 					image={this.data.bannerImage}
-					imagePos="30%"
+					imagePos={this.data.bannerPosition}
 					title={this.data.bannerTitle}
 					boldTitle={false}
 					text={this.data.bannerText}

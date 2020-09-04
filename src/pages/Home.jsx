@@ -19,7 +19,11 @@ class HomePage extends React.Component
 		return (
 			<div className="Page">
 				<Header />
-				<LandscapeCard image={this.data.bannerImage} text={this.data.bannerText} />
+				<LandscapeCard
+					image={this.data.bannerImage}
+					imagePos="58%"
+					text={this.data.bannerText}
+				/>
 				{ Content.generatePortraitCards( this.data.cards ) }
 			</div>
 		)

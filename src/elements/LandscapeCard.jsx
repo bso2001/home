@@ -19,20 +19,11 @@ const styling = theme =>
 		backgroundColor : '#f8f8f8 !important',
 		borderRadius : '0 !important'
 	},
-
-	image :
-	{
-		backgroundSize : 'cover !important',
-		backgroundPositionY : '70% !important',
-		height : '100%'
-	},
-
 	imageContainer :
 	{
 		width : '100%',
 		height : '75%'
 	},
-
 	text :
 	{
 		textAlign : 'center',
@@ -47,11 +38,20 @@ class LandscapeCard extends React.Component
 	{
 		const { classes } = this.props
 
+		let imgStyle =
+		{
+			backgroundSize : 'cover',
+			backgroundRepeat : 'no-repeat',
+			height : '100%',
+			backgroundImage : 'url(' + this.props.image + ')',
+			backgroundPositionY : this.props.imagePos ? this.props.imagePos : '70%'
+		}
+
 		return (
 			<Card className={classes.landscapeCard}>
 			    <CardContent>
 				<div className={classes.imageContainer}>
-					<div className={classes.image} style={{ background: 'url(' + this.props.image + ')' }} alt=""></div>
+					<div style={imgStyle} ></div>
 				</div>
 				<Typography variant="h6" className={classes.text} dangerouslySetInnerHTML={{ __html: this.props.text }} />
 			    </CardContent>

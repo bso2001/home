@@ -1,21 +1,29 @@
 {
 	"bannerImage" : "https://olsson.tech/assets/images/lens.png",
 	"bannerText" : "IMAGERY",
+
 	"cards" :
 	{
-		"OriginalPhotos" :
+		"Original Photography" :
 		{
-			"text" : "Original Photography"
+			"image" : "https://olsson.tech/assets/images/rose2.jpg",
+			"link" : "/photos",
+			"text" : ""
 		},
 
-		"YouTube" :
+		"WebCam Images" :
 		{
-			"text" : "YouTube Videos"
+			"image" : "https://olsson.tech/assets/images/gbnpbc-09242015.jpg",
+			"link" : "/webcams",
+			"text" : ""
 		},
 
-		"Webcams" :
+		"My Channel" :
 		{
-			"text" : "Modified Captures Webcam Images"
+			"image" : "https://olsson.tech/assets/images/yt1.png",
+			"href" : "https://www.youtube.com/channel/UCZR58XIFIMm2m0PD_yLwdDg",
+			"short" : true,
+			"text" : ""
 		}
 	}
 }

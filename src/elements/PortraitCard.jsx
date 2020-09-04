@@ -11,9 +11,9 @@ const styling = theme =>
 	{
 		width : '96% !important',
 		margin : '2% auto 2% auto !important',
-		height : '18vh !important',
-		maxHeight : '18vh !important',
 		maxWidth : '70vh !important',
+		height : '16vh !important',
+		maxHeight: '16vh !important',
 		borderRadius : '2px !important',
 		cursor : 'pointer !important'
 	},
@@ -21,9 +21,7 @@ const styling = theme =>
 	imageContainer :
 	{
 		flex : '2',
-		maxWidth : '25vh',
-		height : '18vh',
-		maxHeight : '18vh'
+		maxWidth : '25vh'
 	},
 
 	image :
