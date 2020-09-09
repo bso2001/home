@@ -1,6 +1,6 @@
-The current version of bertolsson.com, built using React in August 2020.
+The current version of [bertolsson.com](https://bertolsson.com), built using React in August 2020.
 
-Source is in, of all things, the **src/** directory.  In there you will find:
+The source is stored in, of all places, the **src/** directory.  In there you will find:
 
 **elements/** containing common components such as display cards (based on Material UI), the audio player, albums/tracks, etc.
 
