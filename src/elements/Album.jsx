@@ -1,9 +1,7 @@
 import React from 'react'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
+import { Card, CardContent, withStyles } from '@material-ui/core'
 import MyPlayer from './MyPlayer'
 import Track from './Track'
-import { withStyles } from '@material-ui/core/styles'
 
 
 const styling = theme => 

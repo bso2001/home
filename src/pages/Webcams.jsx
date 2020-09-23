@@ -28,7 +28,7 @@ class WebcamsPage extends React.Component
 					items={this.data.gallery}
 					showBullets={true}
 					showIndex={false}
-					showNav={false}
+					showNav={true}
 					showThumbnails={false}
 					showFullscreenButton={false}
 					showPlayButton={false}
