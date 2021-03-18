@@ -91,7 +91,6 @@ class Header extends React.Component
 				<a className={classes.menuItem} href="/music"> Music </a>
 				<a className={classes.menuItem} href="/images"> Images </a>
 				<a className={classes.menuItem} href="https://olsson.tech" target="_new"> Technology </a>
-				<a className={classes.menuItem} target="_new" href= "https://www.ebay.com/sch/i.html?_saslop=1&_sasl=bso2001"> My eBay Listings </a>
 				<a className={classes.menuItem} href="https://charts.bertolsson.com" target="_new"> Band Charts </a>
 				<a className={classes.menuItem} href="https://olsson.tech/assets/Bert-Olsson-Resume.pdf" target="_new"> Résumé </a>
 				<a className={classes.menuItem} href="https://olsson.tech/assets/Bert-Olsson-CV.pdf" target="_new"> TLDR? 1 page CV Here </a>
