@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { Typography, withStyles } from '@material-ui/core'
+import { isMobile } from 'react-device-detect'
 
 const styling = theme => 
 ({
@@ -37,7 +38,7 @@ const styling = theme =>
 	menuItem :
 	{
 		display : 'block',
-		width : '40vw',
+		width : isMobile ? '75vw' : '40vw',
 		cursor : 'pointer',
 		padding : '.5vh 0 .5vh 2vw',
 		boxSizing : 'border-box'

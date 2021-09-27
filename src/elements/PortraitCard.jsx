@@ -27,6 +27,12 @@ const styling = theme =>
 		width : '100%'
 	},
 
+	title :
+	{
+		fontFamily : 'raleway, sans-serif !important',
+		fontWeight: 500
+	},
+
 	textbox :
 	{
 		flex : '3',
@@ -50,7 +56,7 @@ class PortraitCard extends React.Component
 					<img className={classes.image} src={this.props.image} alt="" />
 				</div>
 				<div className={classes.textbox} style={{ textAlign : this.props.reverse ? 'right' : 'left' }}>
-					<Typography noWrap={true} variant="h6">{this.props.title}</Typography>
+					<Typography className={classes.title} noWrap={true} variant="h6">{this.props.title}</Typography>
 					<Typography noWrap={true} variant="body1" dangerouslySetInnerHTML={{ __html: this.props.text }} />
 				</div>
 			    </CardContent>

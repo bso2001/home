@@ -26,7 +26,8 @@ const styling = theme =>
 		alignItems : 'center',
 		justifyContent : 'center',
 		flexDirection : 'column',
-		fontWeight: 500
+		fontFamily : 'raleway, sans-serif !important',
+		fontWeight: 400
 	}
 })
 
