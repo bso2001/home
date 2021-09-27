@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { Card, CardContent, Typography, withStyles } from '@material-ui/core'
+import { isMobile } from 'react-device-detect'
 
 const styling = theme => 
 ({
@@ -27,12 +28,6 @@ const styling = theme =>
 		width : '100%'
 	},
 
-	title :
-	{
-		fontFamily : 'raleway, sans-serif !important',
-		fontWeight: 500
-	},
-
 	textbox :
 	{
 		flex : '3',
@@ -40,6 +35,19 @@ const styling = theme =>
 		flexFlow : 'column',
 		justifyContent : 'center',
 		padding : '0 4vw 0 4vw'
+	},
+
+	title :
+	{
+		fontFamily : 'raleway-medium, sans-serif !important',
+		fontSize : isMobile ? '1.2rem' : '1.4rem',
+		lineHeight : '1.5rem'
+	},
+
+	text :
+	{
+		fontFamily : 'abortek-rounded, sans-serif !important',
+		fontWeight: 300
 	}
 })
 
@@ -57,7 +65,8 @@ class PortraitCard extends React.Component
 				</div>
 				<div className={classes.textbox} style={{ textAlign : this.props.reverse ? 'right' : 'left' }}>
 					<Typography className={classes.title} noWrap={true} variant="h6">{this.props.title}</Typography>
-					<Typography noWrap={true} variant="body1" dangerouslySetInnerHTML={{ __html: this.props.text }} />
+					<Typography className={classes.text} noWrap={true} variant="body1"
+										dangerouslySetInnerHTML={{ __html: this.props.text }} />
 				</div>
 			    </CardContent>
 			</Card>

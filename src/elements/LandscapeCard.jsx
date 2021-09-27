@@ -27,7 +27,8 @@ const styling = theme =>
 		justifyContent : 'center',
 		flexDirection : 'column',
 		fontFamily : 'raleway, sans-serif !important',
-		fontWeight: 400
+		fontWeight : 400,
+		fontSize : isMobile ? '1.2rem' : '1.5rem'
 	}
 })
 
