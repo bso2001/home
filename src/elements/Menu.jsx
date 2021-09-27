@@ -6,7 +6,7 @@ const styling = theme =>
 ({
 	container :
 	{
-		position : 'absolute',
+		position : 'fixed',
 		top : '10px',
 		right : '0',
 	},
@@ -14,18 +14,22 @@ const styling = theme =>
 	icon :
 	{
 		color: '#efba35',
+		float : 'right',
 		marginRight : '4vw',
 		cursor : 'pointer',
-		fontSize: '30px',
+		fontSize: '34px',
 		height : '40px',
-		width : '40px'
+		width : '50px',
+		textAlign: 'center',
+		backgroundColor : 'rgba(127, 127, 127, 0.7)',
+		borderRadius : '8px'
 	},
 
 	menu :
 	{
-		marginTop : '-50px',
+		marginTop : '-10px',
 		padding : '10px 0',
-		backgroundColor : '#00699f',
+		backgroundColor : '#044567',
 		color : '#ffca45 !important',
 		textDecoration : 'none'
 	},
@@ -57,7 +61,7 @@ class Menu extends React.Component
 
 		return (
 			<div className={classes.container}>
-				<Typography variant="h5" className={classes.icon} onClick={() => this.setState({ menuVisible : !this.state.menuVisible })}>
+				<Typography variant="span" className={classes.icon} onClick={() => this.setState({ menuVisible : !this.state.menuVisible })}>
 					{ this.menuIcon() }
 				</Typography>
 

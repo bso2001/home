@@ -8,7 +8,6 @@ const styling = theme =>
 	landscapeCard :
 	{
 		width : '100%',
-		height : '18vh',
 		display : 'flex',
 		flexFlow : 'column',
 		marginBottom : '2vh !important',
@@ -18,12 +17,16 @@ const styling = theme =>
 	imageContainer :
 	{
 		width : '100%',
-		height : '75%'
+		height : isMobile ? '180px' : '240px',
 	},
 	text :
 	{
-		textAlign : 'center',
-		marginTop : isMobile ? '.6vh' : '.3vh'
+		height : '50px',
+		display : 'flex',
+		alignItems : 'center',
+		justifyContent : 'center',
+		flexDirection : 'column',
+		fontWeight: 500
 	}
 })
 
@@ -48,7 +51,8 @@ class LandscapeCard extends React.Component
 				<div className={classes.imageContainer}>
 					<div style={imgStyle} ></div>
 				</div>
-				<Typography variant="h6" className={classes.text} dangerouslySetInnerHTML={{ __html: this.props.text }} />
+				<Typography variant={isMobile ? `body1` : `h5`} className={classes.text}
+										dangerouslySetInnerHTML={{ __html: this.props.text }} />
 			    </CardContent>
 			</Card>
 		)
