@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Media, Player, controls } from 'react-media-player'
 
@@ -33,5 +34,5 @@ class MyPlayer extends React.Component
 	}
 }
 
-
 export default MyPlayer
+

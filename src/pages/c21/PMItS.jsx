@@ -1,9 +1,8 @@
+
 import React from 'react'
 import Album from '../../elements/Album'
 import DetailCard from '../../elements/DetailCard'
-import Header from '../../elements/Header'
 import PageData from '../../content/c21/PMItS.json'
-
 
 class PmitsPage extends React.Component
 {
@@ -18,8 +17,7 @@ class PmitsPage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page Audio-Page">
-				<Header />
+			<div className="mainContent Audio-Page">
 				<DetailCard
 					image={this.data.bannerImage}
 					imagePos="75%"
@@ -33,5 +31,5 @@ class PmitsPage extends React.Component
 	}
 }
 
-
 export default PmitsPage
+

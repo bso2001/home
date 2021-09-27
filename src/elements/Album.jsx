@@ -1,8 +1,8 @@
+
 import React from 'react'
 import { Card, CardContent, withStyles } from '@material-ui/core'
 import MyPlayer from './MyPlayer'
 import Track from './Track'
-
 
 const styling = theme => 
 ({
@@ -16,7 +16,6 @@ const styling = theme =>
 		margin : '0 auto !important',
 	}
 })
-
 
 class Album extends React.Component
 {
@@ -85,5 +84,5 @@ class Album extends React.Component
 	}
 }
 
-
 export default withStyles( styling, { withTheme: true } )( Album )
+

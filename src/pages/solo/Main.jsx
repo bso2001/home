@@ -1,6 +1,6 @@
+
 import React from 'react'
 import Content from '../../library/content'
-import Header from '../../elements/Header'
 import DetailCard from '../../elements/DetailCard'
 import PageData from '../../content/solo/Main.json'
 
@@ -18,8 +18,7 @@ class SoloWorksPage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page">
-				<Header />
+			<div className="mainContent">
 				<DetailCard
 					image={this.data.bannerImage}
 					imagePos="80%"
@@ -33,3 +32,4 @@ class SoloWorksPage extends React.Component
 }
 
 export default SoloWorksPage
+

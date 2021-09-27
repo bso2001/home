@@ -1,7 +1,7 @@
+
 import React from 'react'
 import { Card, CardContent, Typography, withStyles } from '@material-ui/core'
 import { isMobile } from 'react-device-detect'
-
 
 const styling = theme => 
 ({
@@ -9,7 +9,6 @@ const styling = theme =>
 	{
 		width : '100%',
 		height : '18vh',
-		maxHeight : '18vh',
 		display : 'flex',
 		flexFlow : 'column',
 		marginBottom : '2vh !important',
@@ -27,7 +26,6 @@ const styling = theme =>
 		marginTop : isMobile ? '.6vh' : '.3vh'
 	}
 })
-
 
 class LandscapeCard extends React.Component
 {
@@ -57,5 +55,5 @@ class LandscapeCard extends React.Component
 	}
 }
 
-
 export default withStyles( styling, { withTheme: true } )( LandscapeCard )
+

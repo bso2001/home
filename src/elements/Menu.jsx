@@ -4,29 +4,27 @@ import { Typography, withStyles } from '@material-ui/core'
 
 const styling = theme => 
 ({
-	header :
+	container :
 	{
-		display : 'flex',
-		flexFlow : 'row',
-		alignItems : 'center',
-		justifyContent : 'space-evenly',
-		height : '45px',
-		width : '100%',
-		maxWidth : '1200px',
-		zIndex : '100',
-		backgroundColor : '#00699f',
-		boxSizing : 'border-box'
+		position : 'absolute',
+		top : '10px',
+		right : '0',
+	},
+
+	icon :
+	{
+		color: '#efba35',
+		marginRight : '4vw',
+		cursor : 'pointer',
+		fontSize: '30px',
+		height : '40px',
+		width : '40px'
 	},
 
 	menu :
 	{
-		position : 'relative',
-		top : '5vh',
-		right : '0',
-		margin : '0',
-		width : 'fit-content',
-		height : 'fit-content',
-		padding : '1vh 0 1vh 0',
+		marginTop : '-50px',
+		padding : '10px 0',
 		backgroundColor : '#00699f',
 		color : '#ffca45 !important',
 		textDecoration : 'none'
@@ -35,7 +33,7 @@ const styling = theme =>
 	menuItem :
 	{
 		display : 'block',
-		width : '65vw',
+		width : '40vw',
 		cursor : 'pointer',
 		padding : '.5vh 0 .5vh 2vw',
 		boxSizing : 'border-box'
@@ -46,17 +44,10 @@ const styling = theme =>
 		color: '#efba35',
 		marginLeft: '4vw !important',
 		flex: 2
-	},
-
-	burger :
-	{
-		color: '#efba35',
-		marginRight : '4vw',
-		cursor : 'pointer'
 	}
 })
 
-class Header extends React.Component
+class Menu extends React.Component
 {
 	state = { menuVisible : false }
 
@@ -64,14 +55,10 @@ class Header extends React.Component
 	{
 		const { classes } = this.props
 
-		this.title = 'Sven BERT OLSSON'
-
 		return (
-			<div className={classes.header}>
-				<Typography variant="h5" className={classes.title}> <a href="/">{this.title}</a> </Typography>
-				<Typography variant="h5" className={classes.burger}
-									onClick={() => this.setState({ menuVisible : !this.state.menuVisible })}>
-						{ this.menuIcon() }
+			<div className={classes.container}>
+				<Typography variant="h5" className={classes.icon} onClick={() => this.setState({ menuVisible : !this.state.menuVisible })}>
+					{ this.menuIcon() }
 				</Typography>
 
 				{ this.showMenu( classes ) }
@@ -85,7 +72,8 @@ class Header extends React.Component
 			return null
 
 		return (
-			<Typography variant="subtitle1" id="headerMenu" className={classes.menu} onClick={() => this.setState({ menuVisible : false })}>
+			<Typography variant="subtitle1" className={classes.menu} onClick={() => this.setState({ menuVisible : false })}>
+				<a className={classes.menuItem} href="/"> Home </a>
 				<a className={classes.menuItem} href="/music"> Music </a>
 				<a className={classes.menuItem} href="/images"> Images </a>
 				<a className={classes.menuItem} href="https://olsson.tech" target="_new"> Technology </a>
@@ -102,5 +90,5 @@ class Header extends React.Component
 	}
 }
 
-export default withStyles( styling, { withTheme: true } )( Header )
+export default withStyles( styling, { withTheme: true } )( Menu )
 

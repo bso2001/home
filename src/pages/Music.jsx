@@ -1,6 +1,6 @@
+
 import React from 'react'
 import Content from '../library/content'
-import Header from '../elements/Header'
 import LandscapeCard from '../elements/LandscapeCard'
 import PageData from '../content/Music.json'
 
@@ -17,8 +17,7 @@ class MusicPage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page">
-				<Header />
+			<div className="mainContent">
 				<LandscapeCard image={this.data.bannerImage} text={this.data.bannerText} />
 				{ Content.generatePortraitCards( this.data.cards ) }
 			</div>
@@ -27,3 +26,4 @@ class MusicPage extends React.Component
 }
 
 export default MusicPage
+

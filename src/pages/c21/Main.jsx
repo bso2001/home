@@ -1,7 +1,7 @@
+
 import React from 'react'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import Header from '../../elements/Header'
 import PageData from '../../content/c21/Main.json'
 
 class Century21Page extends React.Component
@@ -17,8 +17,7 @@ class Century21Page extends React.Component
 	render()
 	{
 		return (
-			<div className="Page">
-				<Header />
+			<div className="mainContent">
 				<DetailCard
 					image={this.data.bannerImage}
 					imagePos="50%"
@@ -32,3 +31,4 @@ class Century21Page extends React.Component
 }
 
 export default Century21Page
+

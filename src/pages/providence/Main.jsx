@@ -1,13 +1,11 @@
+
 import React from 'react'
 import Content from '../../library/content'
-import Header from '../../elements/Header'
 import DetailCard from '../../elements/DetailCard'
 import PageData from '../../content/providence/Main'
 
-
 class ProvidencePage extends React.Component
 {
-
 	constructor()
 	{
 		super()
@@ -19,8 +17,7 @@ class ProvidencePage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page">
-				<Header />
+			<div className="mainContent">
 				<DetailCard image={this.data.bannerImage} text={this.data.bannerText} title={this.data.bannerTitle} />
 				{ Content.generatePortraitCards( this.data.cards ) }
 			</div>
@@ -29,3 +26,4 @@ class ProvidencePage extends React.Component
 }
 
 export default ProvidencePage
+

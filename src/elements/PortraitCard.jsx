@@ -1,6 +1,6 @@
+
 import React from 'react'
 import { Card, CardContent, Typography, withStyles } from '@material-ui/core'
-
 
 const styling = theme => 
 ({
@@ -37,7 +37,6 @@ const styling = theme =>
 	}
 })
 
-
 class PortraitCard extends React.Component
 {
 	render()
@@ -69,5 +68,5 @@ class PortraitCard extends React.Component
 	}
 }
 
-
 export default withStyles( styling, { withTheme: true } )( PortraitCard )
+

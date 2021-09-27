@@ -1,6 +1,6 @@
+
 import React from 'react'
 import ImageGallery from 'react-image-gallery'
-import Header from '../elements/Header'
 import LandscapeCard from '../elements/LandscapeCard'
 import PageData from '../content/Photos.json'
 
@@ -21,8 +21,7 @@ class PhotosPage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page">
-				<Header />
+			<div className="mainContent">
 				<LandscapeCard
 					image={this.data.bannerImage}
 					imagePos={this.data.bannerPos}
@@ -43,3 +42,4 @@ class PhotosPage extends React.Component
 }
 
 export default PhotosPage
+

@@ -1,9 +1,8 @@
+
 import React from 'react'
 import Album from '../../elements/Album'
 import DetailCard from '../../elements/DetailCard'
-import Header from '../../elements/Header'
 import PageData from '../../content/providence/Questions.json'
-
 
 class ProvidenceQuestionsPage extends React.Component
 {
@@ -18,8 +17,7 @@ class ProvidenceQuestionsPage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page Audio-Page">
-				<Header />
+			<div className="mainContent Audio-Page">
 				<DetailCard
 					image={this.data.bannerImage}
 					imagePos="center"
@@ -33,5 +31,5 @@ class ProvidenceQuestionsPage extends React.Component
 	}
 }
 
-
 export default ProvidenceQuestionsPage
+

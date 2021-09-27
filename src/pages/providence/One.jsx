@@ -1,9 +1,8 @@
+
 import React from 'react'
 import Album from '../../elements/Album'
 import DetailCard from '../../elements/DetailCard'
-import Header from '../../elements/Header'
 import PageData from '../../content/providence/One.json'
-
 
 class ProvidenceOnePage extends React.Component
 {
@@ -18,8 +17,7 @@ class ProvidenceOnePage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page Audio-Page">
-				<Header />
+			<div className="mainContent Audio-Page">
 				<DetailCard
 					image={this.data.bannerImage}
 					title={this.data.bannerTitle}
@@ -32,5 +30,5 @@ class ProvidenceOnePage extends React.Component
 	}
 }
 
-
 export default ProvidenceOnePage
+

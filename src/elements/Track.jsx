@@ -1,6 +1,6 @@
+
 import React from 'react'
 import { Typography, withStyles } from '@material-ui/core'
-
 
 const styling = theme => 
 ({
@@ -34,7 +34,6 @@ const styling = theme =>
 	}
 })
 
-
 class Track extends React.Component
 {
 	render()
@@ -56,5 +55,5 @@ class Track extends React.Component
 	}
 }
 
-
 export default withStyles( styling, {withTheme:true} )(Track)
+

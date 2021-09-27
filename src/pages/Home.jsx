@@ -1,6 +1,6 @@
+
 import React from 'react'
 import Content from '../library/content'
-import Header from '../elements/Header'
 import LandscapeCard from '../elements/LandscapeCard'
 import PageData from '../content/Home.json'
 
@@ -17,8 +17,7 @@ class HomePage extends React.Component
 	render()
 	{
 		return (
-			<div className="Page">
-				<Header />
+			<div className="mainContent">
 				<LandscapeCard
 					image={this.data.bannerImage}
 					imagePos={this.data.bannerPos}
@@ -31,3 +30,4 @@ class HomePage extends React.Component
 }
 
 export default HomePage
+
