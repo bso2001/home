@@ -1,88 +1,88 @@
 {
-	"bannerImage" : "https://olsson.tech/assets/images/rose2.jpg",
+	"bannerImage" : "https://cdn.olsson.tech/images/rose2.jpg",
 	"bannerPos" : "100%",
 	"bannerText" : "Pictures I've Taken",
 
 	"gallery" :
 	[
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_0941a.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_0941a.jpg",
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0941a.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0941a.jpg",
 			"description" : "Bridge between Lambertville, NJ & New Hope, PA [06/05/2005].  Original photo had traffic; it was removed with Photoshop."
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_1027b.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_1027b.jpg",
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_1027b.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_1027b.jpg",
 			"description" : "Glen Eden Farm, Tewksbury, NJ [07/01/2005]"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/bands.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/bands.jpg",
+			"original" : "https://cdn.olsson.tech/images/gallery/bands.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/bands.jpg",
 			"description" : "Accidentally shot, so to speak [05/25/2019]"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_0935b.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_0935b.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0935b.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0935b.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/20200528_092920.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/20200528_092920.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/20200528_092920.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/20200528_092920.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_0922.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_0922.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0922.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0922.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_2245.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_2245.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_2245.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_2245.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_0964a.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_0964a.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0964a.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0964a.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_20170708_200800.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_20170708_200800.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_20170708_200800.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_20170708_200800.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_2741.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_2741.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_2741.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_2741.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_0945b.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_0945b.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0945b.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0945b.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/shadow-27b.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/shadow-27b.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/shadow-27b.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/shadow-27b.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/ccv.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/ccv.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/ccv.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/ccv.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_1396.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_1396.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_1396.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_1396.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_0951.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_0951.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0951.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0951.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/disc-hole.png",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/disc-hole.png"
+			"original" : "https://cdn.olsson.tech/images/gallery/disc-hole.png",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/disc-hole.png"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_1389.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_1389.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_1389.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_1389.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_0296.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_0296.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0296.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0296.jpg"
 		},
 		{
-			"original" : "https://olsson.tech/assets/images/gallery/IMG_0955a.jpg",
-			"thumbnail" : "https://olsson.tech/assets/images/gallery/IMG_0955a.jpg"
+			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0955a.jpg",
+			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0955a.jpg"
 		}
 	]
 }

@@ -1,5 +1,5 @@
 {
-	"bannerImage" : "http://olsson.tech/assets/images/lakemcd-07232015.png",
+	"bannerImage" : "https://cdn.olsson.tech/images/lakemcd-07232015.png",
 	"bannerPos" : "58%",
 	"bannerText" : "ARTS & CRAFTS and OTHER SUNDRIES",
 
@@ -7,14 +7,14 @@
 	{
 		"Music" :
 		{
-			"image" : "https://olsson.tech/assets/images/studio-1.jpg",
+			"image" : "https://cdn.olsson.tech/images/studio-1.jpg",
 			"link" : "/music",
 			"text" : "Various original sounds"
 		},
 
 		"Images" :
 		{
-			"image" : "https://olsson.tech/assets/images/imagery.png",
+			"image" : "https://cdn.olsson.tech/images/imagery.png",
 			"imageBg" : "#402f17",
 			"link" : "/images",
 			"text" : "Pictures, some that move"
@@ -22,7 +22,7 @@
 
 		"Technology" :
 		{
-			"image" : "https://olsson.tech/assets/images/tech.png",
+			"image" : "https://cdn.olsson.tech/images/tech.png",
 			"href" : "https://olsson.tech",
 			"text" : "Things that help pay bills"
 		}

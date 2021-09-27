@@ -42,7 +42,7 @@ class Track extends React.Component
 		const { classes } = this.props
 
 		let track = this.props.trackData
-		let numImage = 'url(http://olsson.tech/assets/images/track-' + track.number + '.png)'
+		let numImage = 'url(https://cdn.olsson.tech/images/track-' + track.number + '.png)'
 
 		this.playCb = this.props.playCb
 

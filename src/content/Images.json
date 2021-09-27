@@ -1,5 +1,5 @@
 {
-	"bannerImage" : "https://olsson.tech/assets/images/imagery.png",
+	"bannerImage" : "https://cdn.olsson.tech/images/imagery.png",
 	"bannerPos" : "12%",
 	"bannerText" : "IMAGERY",
 
@@ -7,21 +7,21 @@
 	{
 		"Original Photography" :
 		{
-			"image" : "https://olsson.tech/assets/images/rose2.jpg",
+			"image" : "https://cdn.olsson.tech/images/rose2.jpg",
 			"link" : "/photos",
 			"text" : ""
 		},
 
 		"WebCam Images" :
 		{
-			"image" : "https://olsson.tech/assets/images/gbnpbc-09242015.jpg",
+			"image" : "https://cdn.olsson.tech/images/gbnpbc-09242015.jpg",
 			"link" : "/webcams",
 			"text" : ""
 		},
 
 		"My Channel" :
 		{
-			"image" : "https://olsson.tech/assets/images/yt1.png",
+			"image" : "https://cdn.olsson.tech/images/yt1.png",
 			"href" : "https://www.youtube.com/channel/UCZR58XIFIMm2m0PD_yLwdDg",
 			"short" : true,
 			"text" : ""
