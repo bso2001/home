@@ -8,6 +8,7 @@ const styling = theme =>
 	container :
 	{
 		position : 'fixed',
+		marginRight : '4vw',
 		top : '10px',
 		right : '0',
 	},
@@ -16,9 +17,9 @@ const styling = theme =>
 	{
 		color: '#efba35',
 		float : 'right',
-		marginRight : '4vw',
 		cursor : 'pointer',
 		fontSize: '34px',
+		marginRight : '10px',
 		height : '40px',
 		width : '50px',
 		textAlign: 'center',
@@ -38,16 +39,17 @@ const styling = theme =>
 	menuItem :
 	{
 		display : 'block',
-		width : isMobile ? '75vw' : '40vw',
+		width : isMobile ? '200px' : '400px',
 		cursor : 'pointer',
-		padding : '.5vh 0 .5vh 2vw',
+		margin : '10px 0 10px 20px',
+		fontSize: isMobile ? '1.8rem' : '1.5rem',
 		boxSizing : 'border-box'
 	},
 
 	title :
 	{
 		color: '#efba35',
-		marginLeft: '4vw !important',
+		marginLeft: '4% !important',
 		flex: 2
 	}
 })
