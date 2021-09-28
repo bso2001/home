@@ -10,7 +10,6 @@ const styling =(theme)=>
 		margin : '2% auto 2% auto !important',
 		width : '88%',
 		height : isMobile ? '100px' : '200px',
-		borderRadius : '8px !important',
 		cursor : 'pointer !important'
 	},
 

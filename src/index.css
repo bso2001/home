@@ -63,11 +63,11 @@ a:visited
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	border-radius : 8px 8px 0 0;
+	border-radius : 8px 8px 0 0 !important;
 	max-width: 1000px;
 	background-color: #f4f4f4;
 	box-sizing: border-box;
-	margin: 0 auto !important;
+	margin: 1% auto 1% auto !important;
 	padding-bottom: 20px;
 }
 

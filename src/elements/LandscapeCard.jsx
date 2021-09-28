@@ -11,8 +11,7 @@ const styling = theme =>
 		display : 'flex',
 		flexFlow : 'column',
 		marginBottom : '2vh !important',
-		backgroundColor : '#f8f8f8 !important',
-		borderRadius : '0 !important'
+		backgroundColor : '#f8f8f8 !important'
 	},
 
 	imageContainer :

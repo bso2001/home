@@ -9,8 +9,7 @@ const styling = theme =>
 	{
 		marginBottom : '2%',
 		display : 'flex',
-		backgroundColor : '#f8f8f8 !important',
-		borderRadius : '0 !important'
+		backgroundColor : '#f8f8f8 !important'
 	},
 
 	imageContainer :
@@ -65,10 +64,7 @@ class DetailCard extends React.Component
 				<div className={ classes.imageContainer }>
 					<div className={classes.image} style={imgStyle}> </div>
 				</div>
-				<Typography variant="h5"
-					className={ classes.title }
-					style={{ fontWeight : boldTitle ? '600' : '400' }}> {this.props.title}
-				</Typography>
+				<Typography variant="h5" className={ classes.title } > {this.props.title} </Typography>
 				<Typography 
 					className={ classes.description }
 					color="textSecondary"
