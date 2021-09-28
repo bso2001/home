@@ -67,8 +67,13 @@ a:visited
 	max-width: 1000px;
 	background-color: #f4f4f4;
 	box-sizing: border-box;
-	margin: 1% auto 1% auto !important;
+	margin: 0 auto 1% auto !important;
 	padding-bottom: 20px;
+}
+
+@media screen and (min-width: 1000px)
+{
+	.mainContent { margin-top: 1% !important; }
 }
 
 .Audio-Page
