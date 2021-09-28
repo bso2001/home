@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { Typography, withStyles } from '@material-ui/core'
+import { isMobile } from 'react-device-detect'
 
 const styling = theme => 
 ({
@@ -9,28 +10,33 @@ const styling = theme =>
 		display: 'flex',
 		flexFlow: 'row',
 		width : '100%;',
-		marginBottom: '2vh'
+		marginBottom: '2%',
+		alignItems : 'baseline'
 	},
+
 	trknum :
 	{
-		width:  '3.2vh',
-		height: '3.2vh',
-		marginRight: '2vw',
-		backgroundSize: 'cover !important'
+		fontFamily : 'raleway-medium, sans-serif !important',
+		fontSize : isMobile ? '1.25rem' : '1.1rem',
+		color : '#888',
+		marginRight: '4px'
 	},
+
 	title :
 	{
-		fontWeight : 600,
+		fontFamily : 'novecento-sans, sans-serif !important',
+		fontWeight : '500',
+		fontSize : isMobile ? '1.4rem' : '1.2rem',
 		color: '#444 !important',
 		cursor: 'pointer',
 		marginTop: '2px',
 		marginRight: '1.5vw'
 	},
+
 	runtime :
 	{
-		marginTop: '3px',
 		color: '#707070 !important',
-		textAlign : 'center'
+		fontSize : isMobile ? '1.1rem' : '.8rem'
 	}
 })
 
@@ -47,7 +53,7 @@ class Track extends React.Component
 
 		return (
 			<div className={classes.track} onClick={ () => this.playCb( track.link ) }>
-				<div className={classes.trknum} style={{ background: numImage }} alt="" />
+				<div className={classes.trknum}>{track.number}.&nbsp;</div>
 				<Typography noWrap={true} variant="body1" className={classes.title}>{ track.title }</Typography>
 				<Typography noWrap={true} variant="subtitle2" className={classes.runtime}>{ '(' + track.time + ')' }</Typography>
 			</div>

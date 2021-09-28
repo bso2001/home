@@ -14,11 +14,13 @@ const styling = theme =>
 		backgroundColor : '#f8f8f8 !important',
 		borderRadius : '0 !important'
 	},
+
 	imageContainer :
 	{
 		width : '100%',
 		height : isMobile ? '180px' : '240px',
 	},
+
 	text :
 	{
 		height : '50px',
@@ -28,7 +30,7 @@ const styling = theme =>
 		flexDirection : 'column',
 		fontFamily : 'raleway, sans-serif !important',
 		fontWeight : 400,
-		fontSize : isMobile ? '1.2rem' : '1.5rem'
+		fontSize : '2rem'
 	}
 })
 

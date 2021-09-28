@@ -1,12 +1,13 @@
 
 import React from 'react'
 import { Card, CardContent, Typography, withStyles } from '@material-ui/core'
+import { isMobile } from 'react-device-detect'
 
 const styling = theme => 
 ({
 	detailCard :
 	{
-		marginBottom : '2vh',
+		marginBottom : '2%',
 		display : 'flex',
 		backgroundColor : '#f8f8f8 !important',
 		borderRadius : '0 !important'
@@ -14,8 +15,8 @@ const styling = theme =>
 
 	imageContainer :
 	{
-		height: '12vh',
-		width: '100%'
+		width : '100%',
+		height : isMobile ? '120px' : '180px',
 	},
 
 	image :
@@ -28,16 +29,22 @@ const styling = theme =>
 	title : 
 	{
 		textAlign : 'center',
-		marginTop: '1vh',
-		marginBottom: '-1.5vh',
-		fontWeight : '600'
+		marginTop : '1em',
+		color : '#464646',
+		fontFamily : 'arboria-book, sans-serif !important',
+		fontSize : `${isMobile ? '2.2' : '1.6'}rem !important`,
 	},
 
 	description :
 	{
-		padding : '0 4vw 0 4vw',
-		lineHeight: '1.4rem',
-		textAlign : 'center'
+		marginTop : '1em',
+		marginLeft : isMobile ? '5%' : '10%',
+		marginRight : isMobile ? '5%' : '10%',
+		fontFamily : 'raleway, sans-serif !important',
+		fontWeight : 500,
+		fontSize : `${isMobile ? '1.5' : '1'}rem`,
+		letterSpacing : `${isMobile ? '-.5' : '1'}px`,
+		color : '#585858'
 	}
 })
 
@@ -62,7 +69,7 @@ class DetailCard extends React.Component
 					className={ classes.title }
 					style={{ fontWeight : boldTitle ? '600' : '400' }}> {this.props.title}
 				</Typography>
-				<Typography variant="body1"
+				<Typography 
 					className={ classes.description }
 					color="textSecondary"
 					dangerouslySetInnerHTML={{ __html: this.props.text }}>

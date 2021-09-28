@@ -1,7 +1,7 @@
 {
 	"bannerImage" : "https://cdn.olsson.tech/images/swan-title.jpg",
-	"bannerTitle" : "Songs of the Last Swan",
-	"bannerText" : "<span class=\"Album-Desc\"><p>An instrumental album intended to be sparse.  Or as sparse as I could manage.  This was the first time using only software-generated keyboard sounds.  It was also the first use of Steinberg's <i>Groove Agent</i> VST for the drums.  Otherwise, lots of Strat, some real bass guitar, all recorded using Tracktion.</p></span>",
+	"bannerTitle" : "songs of the last swan",
+	"bannerText" : "<p>An instrumental album intended to be sparse.  Or as sparse as I could manage.  This was the first time using only software-generated keyboard sounds.  It was also the first use of Steinberg's <i><b>Groove Agent</b></i> VST for the drums.  Otherwise, lots of Strat, some real bass guitar, all recorded using Tracktion.</p>",
 	"tracks" :
 	[
 		{

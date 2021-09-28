@@ -3,50 +3,50 @@ import React from 'react'
 import { Card, CardContent, Typography, withStyles } from '@material-ui/core'
 import { isMobile } from 'react-device-detect'
 
-const styling = theme => 
+const styling =(theme)=> 
 ({
 	portraitCard :
 	{
-		width : '96% !important',
 		margin : '2% auto 2% auto !important',
-		maxWidth : '70vh !important',
-		height : '16vh !important',
-		maxHeight: '16vh !important',
-		borderRadius : '2px !important',
+		width : '88%',
+		height : isMobile ? '100px' : '200px',
+		borderRadius : '8px !important',
 		cursor : 'pointer !important'
 	},
 
 	imageContainer :
 	{
-		flex : '2',
-		maxWidth : '25vh'
+		width : '45%'
 	},
 
 	image :
 	{
 		height : '100%',
-		width : '100%'
+		width : '100%',
+		objectFit : 'cover'
 	},
 
 	textbox :
 	{
-		flex : '3',
+		padding : '0 4% 0 4%',
 		display : 'flex',
-		flexFlow : 'column',
-		justifyContent : 'center',
-		padding : '0 4vw 0 4vw'
+		width : '55%',
+		height : '100%',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		alignSelf: 'center'
 	},
 
 	title :
 	{
 		fontFamily : 'raleway-medium, sans-serif !important',
-		fontSize : isMobile ? '1.2rem' : '1.4rem',
-		lineHeight : '1.5rem'
+		fontSize : '1.5rem',
+		lineHeight : '2.5rem'
 	},
 
 	text :
 	{
-		fontFamily : 'abortek-rounded, sans-serif !important',
+		fontSize : '1.4rem',
 		fontWeight: 300
 	}
 })
@@ -63,7 +63,7 @@ class PortraitCard extends React.Component
 				<div className={classes.imageContainer} style={{ backgroundColor : this.props.imageBg }}>
 					<img className={classes.image} src={this.props.image} alt="" />
 				</div>
-				<div className={classes.textbox} style={{ textAlign : this.props.reverse ? 'right' : 'left' }}>
+				<div className={classes.textbox}>
 					<Typography className={classes.title} noWrap={true} variant="h6">{this.props.title}</Typography>
 					<Typography className={classes.text} noWrap={true} variant="body1"
 										dangerouslySetInnerHTML={{ __html: this.props.text }} />
