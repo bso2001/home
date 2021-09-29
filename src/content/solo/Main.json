@@ -4,39 +4,39 @@
 	"bannerText" : "<p>Music made mostly by myself, in various home studios, over the past 35 years or so. Once on fours tracks of analog tape, now using as many bits of digital audio as one could want.</p>",
 	"cards" :
 	{
-		"Fun With Light and Heat" :
+		"fun with light and heat" :
 		{
 			"image" : "https://cdn.olsson.tech/images/fwlah-cover.png",
 			"link" : "/heat",
-			"text" : "February&mdash;May 2008"
+			"text" : "Feb&mdash;May 2008"
 		},
 
-		"Songs of the Last Swan" :
+		"songs of the last swan" :
 		{
 			"image" : "https://cdn.olsson.tech/images/swan-cover.jpg",
 			"link" : "/swan",
-			"text" : "August 2007&mdash;January 2008"
+			"text" : "Aug 2007&mdash;Jan 2008"
 		},
 
-		"Love and Madness" :
+		"love and madness" :
 		{
 			"image" : "https://cdn.olsson.tech/images/lm-cover.jpg",
 			"link" : "/madness",
-			"text" : "March 2002&mdash;January 2004"
+			"text" : "Mar 2002&mdash;Jan 2004"
 		},
 
-		"Cities" :
+		"cities" :
 		{
 			"image" : "https://cdn.olsson.tech/images/cities-cover.jpg",
 			"link" : "/cities",
-			"text" : "September 1987&mdash;December 1988"
+			"text" : "Sep 1987&mdash;Dec 1988"
 		},
 
-		"Big Frontier" :
+		"big frontier" :
 		{
 			"image" : "https://cdn.olsson.tech/images/bf-cover.jpg",
 			"link" : "/frontier",
-			"text" : "June 1986&mdash;January 1987"
+			"text" : "Jun 1986&mdash;Jan 1987"
 		}
 	}
 }

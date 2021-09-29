@@ -1,6 +1,6 @@
 {
 	"bannerImage" : "https://cdn.olsson.tech/images/studio-1.jpg",
-	"bannerText" : "RHAPSODIES and ROGUES",
+	"bannerText" : "RHAPSODIES &amp; ROGUES",
 
 	"cards" :
 	{
@@ -8,7 +8,7 @@
 		{
 			"image" : "https://cdn.olsson.tech/images/music.jpg",
 			"link" : "/century-21",
-			"text" : "A celebration of Y2K survival"
+			"text" : "Celebrating Y2K survival"
 		},
 
 		"Solo Recordings" :
@@ -22,14 +22,14 @@
 		{
 			"image" : "https://cdn.olsson.tech/images/tape1.jpg",
 			"link" : "/providence",
-			"text" : "A band that taught me many things"
+			"text" : "Band of years"
 		},
 
 		"Gas Music from Jupiter" :
 		{
 			"image" : "https://cdn.olsson.tech/images/jupiter-juno.jpg",
 			"link" : "/gas-music",
-			"text" : "Some explanation required"
+			"text" : "Explanation required"
 		}
 	}
 }

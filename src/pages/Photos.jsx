@@ -24,6 +24,8 @@ class PhotosPage extends React.Component
 			<div className="mainContent">
 				<LandscapeCard
 					image={this.data.bannerImage}
+					short={true}
+					noMargin={true}
 					imagePos={this.data.bannerPos}
 					text={this.data.bannerText}
 				/>

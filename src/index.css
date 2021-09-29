@@ -63,17 +63,17 @@ a:visited
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	border-radius : 8px 8px 0 0 !important;
 	max-width: 1000px;
 	background-color: #f4f4f4;
 	box-sizing: border-box;
 	margin: 0 auto 1% auto !important;
 	padding-bottom: 20px;
+
 }
 
 @media screen and (min-width: 1000px)
 {
-	.mainContent { margin-top: 1% !important; }
+	.mainContent { margin-top: 3vh !important; }
 }
 
 .Audio-Page
@@ -93,8 +93,8 @@ a:visited
 
 .image-gallery-description
 {
+	font-family: serenity,sans-serif !important;
 	font-size: .8rem !important;
-	line-height: 1rem !important;
 }
 
 		/* Here is the styling for our media player. */

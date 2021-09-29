@@ -1,21 +1,21 @@
 {
 	"bannerTitle" : "Gas Music from Jupiter",
 	"bannerImage" : "https://cdn.olsson.tech/images/jupiter-juno.jpg",
-	"bannerText" : "<p>Beginning in the late 70's, a series of rather, er, loose improvisations took place.  Initially, these were perpetrated by Ray Nering and myself.  Frank Romond and Lee Walsh would ultimately become complicit as well.</p><p>Early on, Ray termed these sessions <i>Gas Music from Jupiter</i> (from the Firesign Theatre album <b>Everything You Know is Wrong</b>).  Gas Music gatherings were a thing throughout the 80's.  The result was some 20 sessions.  An attempt will be made to document as many as possible.</p>",
+	"bannerText" : "<p>Beginning in the late 70's, a series of rather, er, loose improvisations took place.  Initially, these were perpetrated by Ray Nering and myself.  Frank Romond and Lee Walsh would ultimately become complicit as well.</p><p>Early on, Ray termed these sessions <i><b>Gas Music from Jupiter</b></i> (a phrase borrowed from the Firesign Theatre album <i>Everything You Know is Wrong</i>).  Gas Music gatherings were a thing for us throughout the 80's,  resulting in some 20 sessions.  An attempt will be made to document as many as possible.</p>",
 	"cards" :
 	{
-		"Art Imitates Life" :
+		"art imitates life" :
 		{
 			"image" : "https://cdn.olsson.tech/images/ail-cover.jpg",
 			"link" : "/art",
 			"text" : "New Year's Day, 1988"
 		},
 
-		"Through the Comet's Tail" :
+		"through the comet's tail" :
 		{
 			"image" : "https://cdn.olsson.tech/images/ttct-cover.png",
 			"link" : "/comet",
-			"text" : "Halloween 1986&mdash;New Year 1987"
+			"text" : "Oct 1986&mdash;Jan 1987"
 		}
 	}
 }

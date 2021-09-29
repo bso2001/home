@@ -9,7 +9,7 @@ const styling = theme =>
 	{
 		position : 'fixed',
 		marginRight : '4vw',
-		top : '10px',
+		top : '4vh',
 		right : '0',
 	},
 
@@ -24,11 +24,12 @@ const styling = theme =>
 		width : '50px',
 		textAlign: 'center',
 		backgroundColor : 'rgba(127, 127, 127, 0.7)',
-		borderRadius : '8px'
+		borderRadius : '4px'
 	},
 
 	menu :
 	{
+		borderRadius : '4px',
 		marginTop : '-10px',
 		padding : '10px 0',
 		backgroundColor : '#044567',
@@ -82,7 +83,7 @@ class Menu extends React.Component
 			<Typography variant="subtitle1" className={classes.menu} onClick={() => this.setState({ menuVisible : false })}>
 				<a className={classes.menuItem} href="/"> Home </a>
 				<a className={classes.menuItem} href="/music"> Music </a>
-				<a className={classes.menuItem} href="/images"> Images </a>
+				<a className={classes.menuItem} href="/images"> Imagery </a>
 				<a className={classes.menuItem} href="https://olsson.tech" target="_new"> Technology </a>
 				<a className={classes.menuItem} href="https://charts.bertolsson.com" target="_new"> Band Charts </a>
 				<a className={classes.menuItem} href="https://cdn.olsson.tech/Bert-Olsson-Resume.pdf" target="_new"> Résumé </a>

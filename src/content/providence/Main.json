@@ -5,39 +5,39 @@
 
 	"cards" :
 	{
-		"Five" :
+		"five" :
 		{
 			"image" : "https://cdn.olsson.tech/images/five-cover.png",
 			"link" : "/providence-five",
-			"text" : "September&mdash;November 1984"
+			"text" : "Sep&mdash;Nov 1984"
 		},
 
-		"Questions of Perspective" :
+		"questions of perspective" :
 		{
 			"image" : "https://cdn.olsson.tech/images/questions.jpg",
 			"link" : "/questions",
-			"text" : "August&mdash;September 1983"
+			"text" : "Aug&mdash;Sep 1983"
 		},
 
-		"Prophecies" :
+		"prophecies" :
 		{
 			"image" : "https://cdn.olsson.tech/images/prophecies-2.jpg",
 			"link" : "/prophecies",
-			"text" : "January&mdash;March 1983"
+			"text" : "Jan&mdash;Mar 1983"
 		},
 
-		"Providence II" :
+		"providence II" :
 		{
 			"image" : "https://cdn.olsson.tech/images/tape1.jpg",
 			"link" : "/providence-two",
 			"text" : "Late 1981"
 		},
 
-		"Providence" :
+		"providence" :
 		{
 			"image" : "https://cdn.olsson.tech/images/tape1.jpg",
 			"link" : "/providence-one",
-			"text" : "Winter of 1979-1980"
+			"text" : "Winter 1979-1980"
 		}
 	}
 }

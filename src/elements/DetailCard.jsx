@@ -57,8 +57,6 @@ class DetailCard extends React.Component
 		if ( this.props.imagePos )
 			imgStyle['backgroundPositionY'] = this.props.imagePos
 
-		let boldTitle = (this.props.boldTitle !== undefined) ? this.props.boldTitle : true
-
 		return (
 			<Card className={ classes.detailCard }> <CardContent>
 				<div className={ classes.imageContainer }>

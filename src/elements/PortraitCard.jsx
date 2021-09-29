@@ -38,14 +38,16 @@ const styling =(theme)=>
 
 	title :
 	{
-		fontFamily : 'raleway-medium, sans-serif !important',
-		fontSize : '1.5rem',
-		lineHeight : '2.5rem'
+		fontFamily : 'serenity, sans-serif !important',
+		fontSize : isMobile ? '2rem' : '1.8rem',
+		fontWeight: 300,
+		lineHeight : '2rem'
 	},
 
 	text :
 	{
-		fontSize : '1.4rem',
+		fontSize : isMobile ? '1.6rem' : '1.4rem',
+		fontFamily : 'omnes-cyrillic-semicondensed, sans-serif !important',
 		fontWeight: 300
 	}
 })
@@ -62,7 +64,7 @@ class PortraitCard extends React.Component
 				<div className={classes.imageContainer} style={{ backgroundColor : this.props.imageBg }}>
 					<img className={classes.image} src={this.props.image} alt="" />
 				</div>
-				<div className={classes.textbox}>
+				<div className={classes.textbox} style={{ textAlign : this.props.reverse ? 'right' : 'left' }}>
 					<Typography className={classes.title} noWrap={true} variant="h6">{this.props.title}</Typography>
 					<Typography className={classes.text} noWrap={true} variant="body1"
 										dangerouslySetInnerHTML={{ __html: this.props.text }} />

@@ -10,14 +10,8 @@ const styling = theme =>
 		width : '100%',
 		display : 'flex',
 		flexFlow : 'column',
-		marginBottom : '2vh !important',
+		borderRadius : '4px 4px 0 0',
 		backgroundColor : '#f8f8f8 !important'
-	},
-
-	imageContainer :
-	{
-		width : '100%',
-		height : isMobile ? '180px' : '240px',
 	},
 
 	text :
@@ -48,10 +42,12 @@ class LandscapeCard extends React.Component
 			backgroundPositionY : this.props.imagePos ? this.props.imagePos : '70%'
 		}
 
+		let h = this.props.short ? '100px' : (isMobile ? '180px' : '240px')
+
 		return (
-			<Card className={classes.landscapeCard}>
+			<Card className={classes.landscapeCard} style={{ marginBottom : this.props.noMargin ? '0' : '2vh' }}>
 			    <CardContent>
-				<div className={classes.imageContainer}>
+				<div className={classes.imageContainer} style={{ height : h }}>
 					<div style={imgStyle} ></div>
 				</div>
 				<Typography variant={isMobile ? `body1` : `h5`} className={classes.text}
