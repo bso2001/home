@@ -23,7 +23,7 @@ const styling = theme =>
 		height : '40px',
 		width : '50px',
 		textAlign: 'center',
-		backgroundColor : 'rgba(127, 127, 127, 0.7)',
+		backgroundColor : 'rgba(100, 100, 100, 0.7)',
 		borderRadius : '4px'
 	},
 
@@ -43,7 +43,9 @@ const styling = theme =>
 		width : isMobile ? '200px' : '400px',
 		cursor : 'pointer',
 		margin : '10px 0 10px 20px',
-		fontSize: isMobile ? '1.8rem' : '1.5rem',
+		fontFamily : 'serenity, sans-serif !important',
+		fontSize: isMobile ? '1.8rem' : '1.6rem',
+		fontWeight: '300',
 		boxSizing : 'border-box'
 	},
 

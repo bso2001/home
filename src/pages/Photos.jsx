@@ -1,7 +1,7 @@
 
 import React from 'react'
 import ImageGallery from 'react-image-gallery'
-import LandscapeCard from '../elements/LandscapeCard'
+import PlainCard from '../elements/PlainCard'
 import PageData from '../content/Photos.json'
 
 class PhotosPage extends React.Component
@@ -22,13 +22,7 @@ class PhotosPage extends React.Component
 	{
 		return (
 			<div className="mainContent">
-				<LandscapeCard
-					image={this.data.bannerImage}
-					short={true}
-					noMargin={true}
-					imagePos={this.data.bannerPos}
-					text={this.data.bannerText}
-				/>
+				<PlainCard text={this.data.bannerText} />
 				<ImageGallery
 					items={this.data.gallery}
 					showBullets={true}
