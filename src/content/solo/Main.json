@@ -1,40 +1,40 @@
 {
 	"bannerTitle" : "Solo Recordings",
-	"bannerImage" : "https://cdn.olsson.tech/images/studio-820b.jpg",
+	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/studio-820b.jpg",
 	"bannerText" : "<p>Music made mostly by myself, in various home studios, over the past 35 years or so. Once on fours tracks of analog tape, now using as many bits of digital audio as one could want.</p>",
 	"cards" :
 	{
 		"fun with light and heat" :
 		{
-			"image" : "https://cdn.olsson.tech/images/fwlah-cover.png",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/fwlah-cover.png",
 			"link" : "/heat",
 			"text" : "Feb&mdash;May 2008"
 		},
 
 		"songs of the last swan" :
 		{
-			"image" : "https://cdn.olsson.tech/images/swan-cover.jpg",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/swan-cover.jpg",
 			"link" : "/swan",
 			"text" : "Aug 2007&mdash;Jan 2008"
 		},
 
 		"love and madness" :
 		{
-			"image" : "https://cdn.olsson.tech/images/lm-cover.jpg",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/lm-cover.jpg",
 			"link" : "/madness",
 			"text" : "Mar 2002&mdash;Jan 2004"
 		},
 
 		"cities" :
 		{
-			"image" : "https://cdn.olsson.tech/images/cities-cover.jpg",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/cities-cover.jpg",
 			"link" : "/cities",
 			"text" : "Sep 1987&mdash;Dec 1988"
 		},
 
 		"big frontier" :
 		{
-			"image" : "https://cdn.olsson.tech/images/bf-cover.jpg",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/bf-cover.jpg",
 			"link" : "/frontier",
 			"text" : "Jun 1986&mdash;Jan 1987"
 		}

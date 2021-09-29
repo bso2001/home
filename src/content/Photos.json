@@ -1,93 +1,93 @@
 {
-	"bannerImage" : "https://cdn.olsson.tech/images/rose2.jpg",
+	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/rose2.jpg",
 	"bannerPos" : "50%",
 	"bannerText" : "Original Pix",
 
 	"gallery" :
 	[
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0941a.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0941a.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0941a.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0941a.jpg",
 			"description" : "Bridge between Lambertville, NJ & New Hope, PA [06/25/2005]. Original photo had traffic; it was removed with Photoshop."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_1027b.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_1027b.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_1027b.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_1027b.jpg",
 			"description" : "Glen Eden Farm, Tewksbury, NJ [07/01/2005]"
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/bands.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/bands.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/bands.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/bands.jpg",
 			"description" : "Accidentally shot, so to speak [05/25/2019]"
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/20200528_092920.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/20200528_092920.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/20200528_092920.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/20200528_092920.jpg",
 			"description" : "Outside my window [05/28/2020]."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_2245.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_2245.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_2245.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_2245.jpg",
 			"description" : "Backyard; stock G5 on a tripod [06/30/2006]. The speck might be Venus, Jupiter, or a bad pixel."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0964a.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0964a.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0964a.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0964a.jpg",
 			"description" : "Just outside New Hope [06/25/2005]. Photoshop post-processed."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_20170708_200800.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_20170708_200800.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_20170708_200800.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_20170708_200800.jpg",
 			"description" : "Off our deck [07/08/2017]. Double rainbow plus balloon on horizon."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_2741.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_2741.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_2741.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_2741.jpg",
 			"description" : "Glamour shot of windows [07/09/2006]. Likely 'shopped up a bit."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0935b.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0935b.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0935b.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0935b.jpg",
 			"description" : "Outside New Hope, PA [06/25/2005]."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/shadow-27b.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/shadow-27b.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/shadow-27b.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/shadow-27b.jpg",
 			"description" : "Sunlight thru blinds thru side of photo box; shadow of ... dunno [07/27/2019]."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/ccv.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/ccv.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/ccv.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/ccv.jpg",
 			"description" : "Long Valley, NJ [04/11/2004]. 'shopped into hideous image."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_1396.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_1396.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_1396.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_1396.jpg",
 			"description" : "A river in Asbury, NJ [10/16/2005]."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0951.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0951.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0951.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0951.jpg",
 			"description" : "New Hope train station [06/25/2005]. People, power wires & other modern things were 'shopped out."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/disc-hole.png",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/disc-hole.png",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/disc-hole.png",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/disc-hole.png",
 			"description" : "Not a black hole [Point in spacetime unknown]."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0955a.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0955a.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0955a.jpg",
+			"thumbnail" : "https://cdd5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0955a.jpg",
 			"description" : "Peddler's Village, PA [06/25/2005]."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_1389.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_1389.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_1389.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_1389.jpg",
 			"description" : "Asbury, NJ [10/16/2005]. This structure is apparently no more; glad I got this."
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/IMG_0296.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/IMG_0296.jpg",
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0296.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/IMG_0296.jpg",
 			"description" : "Sunrise over the waters around Haiti [08/27/2013]."
 		}
 	]

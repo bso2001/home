@@ -1,41 +1,41 @@
 {
 	"bannerTitle" : "Providence",
-	"bannerImage" : "https://cdn.olsson.tech/images/tape1.jpg",
+	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/tape1.jpg",
 	"bannerText" : "<p>I met Ray Nering in grade school when we were 12 or 14 or like that.  Soon thereafter, we were trying to make music.  Not many years later, we met drummer Frank Romond, and by the mid-to-late 70's, we decided we were a band called <i>Providence</i>. <p> Mark Dobry soon joined as the bass player.  Ansel Spada became the singer.  Dana Vagovsky and Dean Rubine played keyboards on some projects.  </p> <p> For ten years or so, we recorded lots of originals, all of them on analog tape.  And all these guys were a big part of my life through all those years.</p>",
 
 	"cards" :
 	{
 		"five" :
 		{
-			"image" : "https://cdn.olsson.tech/images/five-cover.png",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/five-cover.png",
 			"link" : "/providence-five",
 			"text" : "Sep&mdash;Nov 1984"
 		},
 
 		"questions of perspective" :
 		{
-			"image" : "https://cdn.olsson.tech/images/questions.jpg",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/questions.jpg",
 			"link" : "/questions",
 			"text" : "Aug&mdash;Sep 1983"
 		},
 
 		"prophecies" :
 		{
-			"image" : "https://cdn.olsson.tech/images/prophecies-2.jpg",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/prophecies-2.jpg",
 			"link" : "/prophecies",
 			"text" : "Jan&mdash;Mar 1983"
 		},
 
 		"providence II" :
 		{
-			"image" : "https://cdn.olsson.tech/images/tape1.jpg",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/tape1.jpg",
 			"link" : "/providence-two",
 			"text" : "Late 1981"
 		},
 
 		"providence" :
 		{
-			"image" : "https://cdn.olsson.tech/images/tape1.jpg",
+			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/tape1.jpg",
 			"link" : "/providence-one",
 			"text" : "Winter 1979-1980"
 		}

@@ -1,40 +1,40 @@
 {
-	"bannerImage" : "https://cdn.olsson.tech/images/gallery/lakemcd-08132015.jpg",
+	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/lakemcd-08132015.jpg",
 	"bannerText" : "Images from Webcams, 'shopped a bit",
 
 	"gallery" :
 	[
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/ranier-08132015b.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/ranier-08132015b.jpg"
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/ranier-08132015b.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/ranier-08132015b.jpg"
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/gtnpcr-08132015.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/gtnpcr-08132015.jpg"
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/gtnpcr-08132015.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/gtnpcr-08132015.jpg"
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/wnpa-171222.png",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/wnpa-171222.png"
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/wnpa-171222.png",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/wnpa-171222.png"
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/hellesylt-20180322.png",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/hellesylt-20180322.png"
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/hellesylt-20180322.png",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/hellesylt-20180322.png"
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/PSX_20180306_182903.jpg",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/PSX_20180306_182903.jpg"
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/PSX_20180306_182903.jpg",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/PSX_20180306_182903.jpg"
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/gts-171231.png",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/gts-171231.png"
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/gts-171231.png",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/gts-171231.png"
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/tvi-180115.png",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/tvi-180115.png"
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/tvi-180115.png",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/tvi-180115.png"
 		},
 		{
-			"original" : "https://cdn.olsson.tech/images/gallery/vrbovsko-10262019.png",
-			"thumbnail" : "https://cdn.olsson.tech/images/gallery/vrbovsko-10262019.png"
+			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/vrbovsko-10262019.png",
+			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/vrbovsko-10262019.png"
 		}
 	]
 }
