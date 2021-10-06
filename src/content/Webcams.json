@@ -1,40 +1,40 @@
 {
-	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/lakemcd-08132015.jpg",
+	"bannerImage" : "_CDN_URL_/images/gallery/lakemcd-08132015.jpg",
 	"bannerText" : "Images from Webcams, 'shopped a bit",
 
 	"gallery" :
 	[
 		{
-			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/ranier-08132015b.jpg",
-			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/ranier-08132015b.jpg"
+			"original" : "_CDN_URL_/images/gallery/ranier-08132015b.jpg",
+			"thumbnail" : "_CDN_URL_/images/gallery/ranier-08132015b.jpg"
 		},
 		{
-			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/gtnpcr-08132015.jpg",
-			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/gtnpcr-08132015.jpg"
+			"original" : "_CDN_URL_/images/gallery/gtnpcr-08132015.jpg",
+			"thumbnail" : "_CDN_URL_/images/gallery/gtnpcr-08132015.jpg"
 		},
 		{
-			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/wnpa-171222.png",
-			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/wnpa-171222.png"
+			"original" : "_CDN_URL_/images/gallery/wnpa-171222.png",
+			"thumbnail" : "_CDN_URL_/images/gallery/wnpa-171222.png"
 		},
 		{
-			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/hellesylt-20180322.png",
-			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/hellesylt-20180322.png"
+			"original" : "_CDN_URL_/images/gallery/hellesylt-20180322.png",
+			"thumbnail" : "_CDN_URL_/images/gallery/hellesylt-20180322.png"
 		},
 		{
-			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/PSX_20180306_182903.jpg",
-			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/PSX_20180306_182903.jpg"
+			"original" : "_CDN_URL_/images/gallery/PSX_20180306_182903.jpg",
+			"thumbnail" : "_CDN_URL_/images/gallery/PSX_20180306_182903.jpg"
 		},
 		{
-			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/gts-171231.png",
-			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/gts-171231.png"
+			"original" : "_CDN_URL_/images/gallery/gts-171231.png",
+			"thumbnail" : "_CDN_URL_/images/gallery/gts-171231.png"
 		},
 		{
-			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/tvi-180115.png",
-			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/tvi-180115.png"
+			"original" : "_CDN_URL_/images/gallery/tvi-180115.png",
+			"thumbnail" : "_CDN_URL_/images/gallery/tvi-180115.png"
 		},
 		{
-			"original" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/vrbovsko-10262019.png",
-			"thumbnail" : "https://d5m8p2okztqk9.cloudfront.net/images/gallery/vrbovsko-10262019.png"
+			"original" : "_CDN_URL_/images/gallery/vrbovsko-10262019.png",
+			"thumbnail" : "_CDN_URL_/images/gallery/vrbovsko-10262019.png"
 		}
 	]
 }

@@ -26,9 +26,10 @@ const styling = theme =>
 	{
 		fontFamily : 'novecento-sans, sans-serif !important',
 		fontWeight : '500',
-		fontSize : isMobile ? '1.4rem' : '1.2rem',
+		fontSize : isMobile ? '1.6rem' : '1.2rem',
+		lineHeight : isMobile ? '3rem' : '1.5rem',
 		color: '#444 !important',
-		cursor: 'pointer',
+		cursor: 'cell',
 		marginTop: '2px',
 		marginRight: '1.5vw'
 	},
@@ -36,7 +37,7 @@ const styling = theme =>
 	runtime :
 	{
 		color: '#707070 !important',
-		fontSize : isMobile ? '1.1rem' : '.8rem'
+		fontSize : isMobile ? '1.4rem' : '.8rem'
 	}
 })
 

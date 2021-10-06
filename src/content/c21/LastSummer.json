@@ -1,5 +1,5 @@
 {
-	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/bnml-abs.jpg",
+	"bannerImage" : "_CDN_URL_/images/bnml-abs.jpg",
 	"bannerTitle" : "last summer",
 	"bannerText" : "<p>Between 2008 2014-ish, I enjoyed much jamming with drummer Nick Lavoritano at his place in Millington.  In Summer 2013, Nick and I were working with bassist Mike Luongo, and we did a lot of improvisations.  This is a curated collection thereof.</p><p>I picked the best parts, took out the really ugly bits, and sweetened the resulting tracks.  No sounds were added, and except for exorcising whole sections, nothing was removed.  The music was mostly spontaneous, with two exceptions: <i><b>High Chaparral</b></i> was worked out a bit, and there had been quite a few <i><b>Scandinavian Jazz</b></i> jams.</p>",
 
@@ -8,67 +8,67 @@
 		{
 			"title" : "Business is Business",
 			"time" : "4:09",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/01-businessIsBusiness.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/01-businessIsBusiness.mp3"
 		},
 		{
 			"title" : "Jakarta",
 			"time" : "6:18",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/02-jakarta.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/02-jakarta.mp3"
 		},
 		{
 			"title" : "Sun Ra",
 			"time" : "2:01",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/03-sunRa.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/03-sunRa.mp3"
 		},
 		{
 			"title" : "Death Mice",
 			"time" : "4:21",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/04-deathMice.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/04-deathMice.mp3"
 		},
 		{
 			"title" : "Links",
 			"time" : "5:20",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/05-links.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/05-links.mp3"
 		},
 		{
 			"title" : "Variation on Bridge of Sighs",
 			"time" : "7:17",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/06-sighs.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/06-sighs.mp3"
 		},
 		{
 			"title" : "Derek",
 			"time" : "3:09",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/07-derek.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/07-derek.mp3"
 		},
 		{
 			"title" : "Raw Onions",
 			"time" : "5:08",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/08-rawOnions.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/08-rawOnions.mp3"
 		},
 		{
 			"title" : "High Chaparral",
 			"time" : "4:14",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/09-highChaparral.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/09-highChaparral.mp3"
 		},
 		{
 			"title" : "Burning Silver Trees",
 			"time" : "5:54",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/10-burningSilverTrees.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/10-burningSilverTrees.mp3"
 		},
 		{
 			"title" : "Scandinavian Jazz Jam",
 			"time" : "5:23",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/11-scandinavianJazzJam.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/11-scandinavianJazzJam.mp3"
 		},
 		{
 			"title" : "Last Lap",
 			"time" : "3:28",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/12-lastLap.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/12-lastLap.mp3"
 		},
 		{
 			"title" : "Raisin",
 			"time" : "4:32",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Last+Summer/13-raisin.mp3"
+			"link" : "_CDN_URL_/mp3/Last+Summer/13-raisin.mp3"
 		}
 	]
 }

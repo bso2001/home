@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Content from '../library/content'
 import ImageGallery from 'react-image-gallery'
 import LandscapeCard from '../elements/LandscapeCard'
 import PageData from '../content/Webcams.json'
@@ -10,7 +11,7 @@ class WebcamsPage extends React.Component
 	{
 		super()
 
-		this.data = PageData
+		this.data = Content.preProcessData( PageData )
 		if ( ! this.data )
 			this.data = {}
 

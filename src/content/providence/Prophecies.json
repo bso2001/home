@@ -1,5 +1,5 @@
 {
-	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/prophecies-2.jpg",
+	"bannerImage" : "_CDN_URL_/images/prophecies-2.jpg",
 	"bannerPosition" : "90%",
 	"bannerTitle" : "prophecies",
 	"bannerText" : "<p>Ansel and Dana join, and we spent most of the winter of 1983 holed up and recording these tracks.  All were captured on the glorious new Tascam 4-track at Campbell Lane in Berkeley Heights.</p>",
@@ -9,37 +9,37 @@
 		{
 			"title" : "One Day",
 			"time"  : "5:41",
-			"link"  : "https://s3.amazonaws.com/bso-public/mp3/Prophecies/1-one+day.mp3"
+			"link"  : "_CDN_URL_/mp3/Prophecies/1-one+day.mp3"
 		},
 		{
 			"title" : "Collect From Vienna",
 			"time"  : "4:53",
-			"link"  : "https://s3.amazonaws.com/bso-public/mp3/Prophecies/2-collect+from+vienna.mp3"
+			"link"  : "_CDN_URL_/mp3/Prophecies/2-collect+from+vienna.mp3"
 		},
 		{
 			"title" : "Activity",
 			"time"  : "4:15",
-			"link"  : "https://s3.amazonaws.com/bso-public/mp3/Prophecies/3-activity.mp3"
+			"link"  : "_CDN_URL_/mp3/Prophecies/3-activity.mp3"
 		},
 		{
 			"title" : "Tables Turned",
 			"time"  : "8:19",
-			"link"  : "https://s3.amazonaws.com/bso-public/mp3/Prophecies/4-tables+turned.mp3"
+			"link"  : "_CDN_URL_/mp3/Prophecies/4-tables+turned.mp3"
 		},
 		{
 			"title" : "Raider",
 			"time"  : "8:15",
-			"link"  : "https://s3.amazonaws.com/bso-public/mp3/Prophecies/5-raider.mp3"
+			"link"  : "_CDN_URL_/mp3/Prophecies/5-raider.mp3"
 		},
 		{
 			"title" : "Marionettes",
 			"time"  : "7:15",
-			"link"  : "https://s3.amazonaws.com/bso-public/mp3/Prophecies/6-marionettes.mp3"
+			"link"  : "_CDN_URL_/mp3/Prophecies/6-marionettes.mp3"
 		},
 		{
 			"title" : "Seven Before the Seventh Eight",
 			"time"  : "9:29",
-			"link"  : "https://s3.amazonaws.com/bso-public/mp3/Prophecies/7-seven.mp3"
+			"link"  : "_CDN_URL_/mp3/Prophecies/7-seven.mp3"
 		}
 	]
 }

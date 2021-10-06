@@ -12,7 +12,7 @@ const styling = theme =>
 		width : 'fit-content !important',
 		height : 'fit-content !important',
 		minWidth : '70%',
-		padding : '2vh 4vw 0 4vw',
+		padding : '2vh 4vw',
 		margin : '0 auto !important',
 	}
 })
@@ -24,7 +24,6 @@ class Album extends React.Component
 		super()
 		this.pPointer = {}
 		this.lastTrack = null
-		this.nullmp3 = 'https://s3.amazonaws.com/bso-public/mp3/null.mp3'
 	}
 
 	render()
@@ -79,7 +78,7 @@ class Album extends React.Component
 				}
 				</CardContent>
 			</Card>
-			<MyPlayer pPointer={this.pPointer} nullmp3={this.nullmp3} />
+			<MyPlayer pPointer={this.pPointer} />
 		</div> )
 	}
 }

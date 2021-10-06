@@ -33,8 +33,6 @@ class PlainCard extends React.Component
 	{
 		const { classes } = this.props
 
-		let h = this.props.short ? '100px' : (isMobile ? '180px' : '240px')
-
 		return (
 			<Card className={classes.plainCard}>
 			    <CardContent>

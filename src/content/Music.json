@@ -1,33 +1,33 @@
 {
-	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/studio-1.jpg",
+	"bannerImage" : "_CDN_URL_/images/studio-1.jpg",
 	"bannerText" : "RHAPSODIES &amp; ROGUES",
 
 	"cards" :
 	{
 		"Century 21 Music" :
 		{
-			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/music.jpg",
+			"image" : "_CDN_URL_/images/music.jpg",
 			"link" : "/century-21",
 			"text" : "Celebrating Y2K survival"
 		},
 
 		"Solo Recordings" :
 		{
-			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/studio-820b.jpg",
+			"image" : "_CDN_URL_/images/studio-820b.jpg",
 			"link" : "/solo",
 			"text" : "Creations in home studios"
 		},
 
 		"Providence" :
 		{
-			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/tape1.jpg",
+			"image" : "_CDN_URL_/images/tape1.jpg",
 			"link" : "/providence",
 			"text" : "Band of years"
 		},
 
 		"Gas Music from Jupiter" :
 		{
-			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/jupiter-juno.jpg",
+			"image" : "_CDN_URL_/images/jupiter-juno.jpg",
 			"link" : "/gas-music",
 			"text" : "Explanation required"
 		}

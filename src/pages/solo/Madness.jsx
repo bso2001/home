@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Album from '../../elements/Album'
+import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
 import PageData from '../../content/solo/Madness.json'
 
@@ -9,7 +10,7 @@ class LoveAndMadnessPage extends React.Component
 	constructor()
 	{
 		super()
-		this.data = PageData
+		this.data = Content.preProcessData( PageData )
 		if ( ! this.data )
 			this.data = {}
 	}

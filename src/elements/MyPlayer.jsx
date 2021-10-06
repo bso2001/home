@@ -10,7 +10,6 @@ class MyPlayer extends React.Component
 	{
 		super(props)
 		this.pPointer = props.pPointer
-		this.nullmp3 = props.nullmp3
 	}
 
 	render()
@@ -21,7 +20,7 @@ class MyPlayer extends React.Component
 			<Media>
 				{ (mediaProps) => (
 					<div className="MyPlayer">
-						<Player ref={this.storePlayer} src={this.nullmp3} />
+						<Player ref={this.storePlayer} />
 						<nav className="MyPlayerControls">
 							<CurrentTime />
 							<SeekBar />

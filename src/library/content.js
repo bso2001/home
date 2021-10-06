@@ -1,5 +1,8 @@
+
 import React from 'react'
 import PortraitCard from '../elements/PortraitCard'
+
+const bsoCdn = 'https://d5m8p2okztqk9.cloudfront.net'
 
 const generatePortraitCards = ( cards, initiallyReverse? ) =>
 {
@@ -33,4 +36,15 @@ const generatePortraitCards = ( cards, initiallyReverse? ) =>
 	return pclist
 }
 
-export default { generatePortraitCards }
+const preProcessData =( data )=>
+{
+	const jstr = JSON.stringify(data)
+
+	if ( ! jstr )
+		return {}
+
+	return JSON.parse( jstr.replace( /_CDN_URL_/g, bsoCdn ))
+}
+
+export default { generatePortraitCards, preProcessData }
+

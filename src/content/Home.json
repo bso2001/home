@@ -1,20 +1,20 @@
 {
-	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/lakemcd-07232015.png",
+	"bannerImage" : "_CDN_URL_/images/lakemcd-07232015.png",
 	"bannerPos" : "58%",
-	"bannerText" : "THINGS I DO",
+	"bannerText" : "THINGS i DO",
 
 	"cards" :
 	{
 		"Music" :
 		{
-			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/studio-1.jpg",
+			"image" : "_CDN_URL_/images/studio-1.jpg",
 			"link" : "/music",
 			"text" : "Various original sounds"
 		},
 
 		"Images" :
 		{
-			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/imagery.png",
+			"image" : "_CDN_URL_/images/imagery.png",
 			"imageBg" : "#402f17",
 			"link" : "/images",
 			"text" : "Pictures, some that move"
@@ -22,7 +22,7 @@
 
 		"Technology" :
 		{
-			"image" : "https://d5m8p2okztqk9.cloudfront.net/images/tech.png",
+			"image" : "_CDN_URL_/images/tech.png",
 			"href" : "https://olsson.tech",
 			"text" : "Pays the bills"
 		}

@@ -9,7 +9,7 @@ class ImagesPage extends React.Component
 	constructor()
 	{
 		super()
-		this.data = PageData
+		this.data = Content.preProcessData( PageData )
 		if ( ! this.data )
 			this.data = {}
 	}

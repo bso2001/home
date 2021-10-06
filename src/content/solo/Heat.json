@@ -1,5 +1,5 @@
 {
-	"bannerImage" : "https://d5m8p2okztqk9.cloudfront.net/images/fwlah-3w.png",
+	"bannerImage" : "_CDN_URL_/images/fwlah-3w.png",
 	"bannerTitle" : "fun with light and heat",
 	"bannerText" : "<p>These were experiments that eventually became a collection.  Not as much guitar&mdash;lots of synths, noises and such.  Mostly virtual instruments, a few real keys and some bass guitar.  As with <a href='/swan'><i><b>Songs of the Last Swan</b></i></a>, made around the same time, these tracks were recorded on a Dell Pentium 4 using Tracktion software.</p>",
 	"tracks" :
@@ -7,77 +7,77 @@
 		{
 			"title" : "Car Wars",
 			"time" : "4:37",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/01-+Car+Wars.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/01-+Car+Wars.mp3"
 		},
 		{
 			"title" : "Jersey Street",
 			"time" : "3:03",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/02-+Jersey+Street.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/02-+Jersey+Street.mp3"
 		},
 		{
 			"title" : "Wait Less",
 			"time" : "1:16",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/03-+Wait+Less.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/03-+Wait+Less.mp3"
 		},
 		{
 			"title" : "Space Erased",
 			"time" : "4:26",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/04-+Space+Erased.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/04-+Space+Erased.mp3"
 		},
 		{
 			"title" : "Heartbreak in Blue",
 			"time" : "3:09",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/05-+Heartbreak+in+Blue.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/05-+Heartbreak+in+Blue.mp3"
 		},
 		{
 			"title" : "Mad Circus",
 			"time" : "2:10",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/06-+Mad+Circus.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/06-+Mad+Circus.mp3"
 		},
 		{
 			"title" : "The Wave Song",
 			"time" : "3:25",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/07-+The+Wave+Song.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/07-+The+Wave+Song.mp3"
 		},
 		{
 			"title" : "Einshop",
 			"time" : "4:14",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/08-+Einshop.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/08-+Einshop.mp3"
 		},
 		{
 			"title" : "Heavy Cream",
 			"time" : "3:23",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/09-+Heavy+Cream.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/09-+Heavy+Cream.mp3"
 		},
 		{
 			"title" : "Miss Polywog",
 			"time" : "3:48",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/10-+Miss+Polywog.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/10-+Miss+Polywog.mp3"
 		},
 		{
 			"title" : "The Coldest War",
 			"time" : "3:01",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/11-+The+Coldest+War.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/11-+The+Coldest+War.mp3"
 		},
 		{
 			"title" : "L.A. Dreams",
 			"time" : "2:13",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/12-+L+A+Dreams.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/12-+L+A+Dreams.mp3"
 		},
 		{
 			"title" : "Titan",
 			"time" : "2:06",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/13-+Titan.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/13-+Titan.mp3"
 		},
 		{
 			"title" : "Watch Your Step",
 			"time" : "4:45",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/14-+Watch+Your+Step.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/14-+Watch+Your+Step.mp3"
 		},
 		{
 			"title" : "Au Revoir, Mon Général",
 			"time" : "1:54",
-			"link" : "https://s3.amazonaws.com/bso-public/mp3/Fun+With+Light+and+Heat/15-+Au+Revoir%2C+Mon+Ge%CC%81ne%CC%81ral.mp3"
+			"link" : "_CDN_URL_/mp3/Fun+With+Light+and+Heat/15-+Au+Revoir%2C+Mon+Ge%CC%81ne%CC%81ral.mp3"
 		}
 	]
 }
