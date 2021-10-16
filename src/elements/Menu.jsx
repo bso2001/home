@@ -7,6 +7,7 @@ const styling = theme =>
 ({
 	container :
 	{
+display : 'none',
 		position : 'fixed',
 		marginRight : '4vw',
 		top : '4vh',

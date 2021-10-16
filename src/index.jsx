@@ -30,6 +30,8 @@ import SoloWorksPage from './pages/solo/Main'
 import SongsOfTheLastSwanPage from './pages/solo/Swan'
 import WebcamsPage from './pages/Webcams'
 
+import AttendeeChecks from './elements/AttendeeChecks/AttendeeChecks'
+
 const App = () => (
 	<span>
 	    <Menu />
@@ -57,6 +59,8 @@ const App = () => (
 		<Route path = "/solo" component = {SoloWorksPage} />
 		<Route path = "/swan" component = {SongsOfTheLastSwanPage} />
 		<Route path = "/webcams" component = {WebcamsPage} />
+
+		<Route path = "/browser-checks" component = {AttendeeChecks} />
 	    </Router>
 	</span>
 )

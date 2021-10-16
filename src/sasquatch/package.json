@@ -1,0 +1,16 @@
+{
+	"name": "sasq",
+	"version": "1.0.1",
+	"description": "Tiny Node app to do auto SASS compilations during development.",
+	"scripts":
+	{
+		"generate": "node-sass --output-style compressed ../master.scss ../_generated_style_.css",
+		"watch": "nodemon --watch ../master.scss --watch ../scss -e scss --exec 'npm run generate && pbcopy < ../_generated_style_.css'"
+	},
+	"author": "S Bert Olsson",
+	"dependencies":
+	{
+		"node-sass": "^6.0.1",
+		"nodemon": "^2.0.12"
+	}
+}
