@@ -25,23 +25,23 @@ export const EStatus = Object.freeze(
 
 export const CHECKS =
 [
-	[ 'Operating System', CheckOperatingSystem ],
-	[ 'Browser', CheckBrowser ],
-	[ 'Local Storage', CheckLocalStorage ],
-	[ 'Network', CheckApi ],
-	[ 'Chatbot', CheckChatbot ],
-	[ 'Video', CheckVideo ],
-	[ 'Audio', CheckAudio ],
+	[ 'Operating System', CheckOperatingSystem, 'grid.jpg' ],
+	[ 'Browser', CheckBrowser, 'monitor.jpg' ],
+	[ 'Local Storage', CheckLocalStorage, 'code.jpg' ],
+	[ 'Network', CheckApi, '' ],
+	[ 'Chatbot', CheckChatbot, '' ],
+	[ 'Video', CheckVideo, '' ],
+	[ 'Audio', CheckAudio, '' ],
 
 	/*
-	[ 'Cookies', CheckCookies ],
-	[ 'CSS', CheckCss ],
-	[ 'Engine', CheckEngine ],
-	[ 'Glisser', CheckGlisser ],
-	[ 'Platform', CheckPlatform ],
-	[ 'Popup Blockers', CheckPopupBlockers ],
+	[ 'Cookies', CheckCookies, '' ],
+	[ 'CSS', CheckCss, '' ],
+	[ 'Engine', CheckEngine, '' ],
+	[ 'Glisser', CheckGlisser, '' ],
+	[ 'Platform', CheckPlatform, '' ],
+	[ 'Popup Blockers', CheckPopupBlockers, '' ],
 	*/
-].map(([name, module]) => ({ name, module }))
+].map(([name, module, image]) => ({ name, module, image }))
 
 export const LOG_INIT = CHECKS.reduce( (log, { name }) =>
 {

@@ -80,14 +80,17 @@ export const AttendeeChecks = () =>
 
 	const renderCheck =()=>
 	{
-		const currentStep = CHECKS[ stepIndex ].name
+		const name = CHECKS[ stepIndex ].name
+		const img  = CHECKS[ stepIndex ].image
 		const TheCheckModule = CHECKS[ stepIndex ].module
 		
 		return (
 			<TheCheckModule
-				key={currentStep}
-				status={checkLog[currentStep]}
-				onComplete={recordResult}
+				key={ name }
+				image={ img }
+				title={ name }
+				status={ checkLog[name] }
+				onComplete={ recordResult }
 			/>
 		)
 	}
@@ -107,7 +110,7 @@ export const AttendeeChecks = () =>
 			{
 				CHECKS.map( ({name}, index) =>
 				(
-				    <div style={ STYLES.step }>
+				    <div style={ STYLES.step } key={name+'.'+index}>
 					<Step
 						key={ name }
 						name={ name }

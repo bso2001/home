@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from 'react'
+
 import { getDeviceInfo } from 'library/device'
+import { CSTYLES } from './styles'
 import { EStatus } from '../constants'
 
 const SUPPORTED_OS_LIST =
@@ -20,21 +22,12 @@ const SUPPORTED_OS_LIST =
 	'Windows Phone' :	null,
 }
 
-const STYLES =
-{
-	outer : 
-	{
-		display : 'flex',
-	}
-}
-
-export const CheckOperatingSystem = ({ status, onComplete }) =>
+export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 {
 	const [result, setResult] = useState(null)
 
 	useEffect( () =>
 	{
-		console.log('OS', status.value)
 		if ( status.value === EStatus.PENDING || status.value === EStatus.TESTING )
 			runTest()
 				/* eslint-disable react-hooks/exhaustive-deps */
@@ -65,7 +58,6 @@ export const CheckOperatingSystem = ({ status, onComplete }) =>
 			if ( ! outcome )
 				outcome = `${name} ${version} ${versionName}`
 
-	console.log(outcome)
 			setResult(outcome)
 		}
 	}
@@ -76,9 +68,21 @@ export const CheckOperatingSystem = ({ status, onComplete }) =>
 	}
 
 	return ( 
-		<div style={ STYLES.outer }>
-			{result}
-			<button onClick={endTest}>Continue</button>
+		<div style={ CSTYLES.outer }>
+
+			<div style={ CSTYLES.column }>
+				<img src={ image } alt={ title } style={ CSTYLES.image } />
+			</div>
+
+			<div style={ CSTYLES.column }>
+				<div style={ CSTYLES.title }>{ title }</div>
+				<div style={ CSTYLES.result }>{ result }</div>
+			</div>
+
+			<div style={ CSTYLES.column }>
+				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
+			</div>
+
 		</div>
 	)
 }
