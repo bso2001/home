@@ -8,18 +8,11 @@ import { CheckVideo } from './CheckModules/CheckVideo'
 import { CheckAudio } from './CheckModules/CheckAudio'
 
 /*
-import
-{
 	CheckCookies,
 	CheckCss,
 	CheckEngine,
 	CheckGlisser,
 	CheckPlatform,
-} from './CheckModules'
-*/
-
-/**
-* @return {Object}
 */
 
 export const EStatus = Object.freeze(
@@ -29,10 +22,6 @@ export const EStatus = Object.freeze(
 	PASSED  : 'PASSED',
 	FAILED  : 'FAILED',
 })
-
-/**
-* @return {Array}
-*/
 
 export const CHECKS =
 [
@@ -53,3 +42,15 @@ export const CHECKS =
 	[ 'Popup Blockers', CheckPopupBlockers ],
 	*/
 ].map(([name, TheCheckModule]) => ({ name, TheCheckModule }))
+
+export const LOG_INIT = CHECKS.reduce( (log, { name }) =>
+{
+	log[name] =
+	{
+		value: EStatus.PENDING,
+		info : [],
+	}
+
+	return log
+}, {})
+

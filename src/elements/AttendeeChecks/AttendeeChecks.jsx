@@ -1,7 +1,7 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Step } from './Step'
-import { CHECKS } from './constants'
+import { CHECKS, LOG_INIT } from './constants'
 
 const STYLES =
 {
@@ -41,10 +41,13 @@ const STYLES =
 
 export const AttendeeChecks = () =>
 {
+	const [checkLog, setCheckLog] = useState(LOG_INIT)
 	const [stepIndex, setStepIndex] = React.useState(0)
 
-	const nextStep = () =>
+	const recordResult = ( name, status, info ) =>
 	{
+		setCheckLog( { ...checkLog, [name]: { status, info } })
+
 		setStepIndex( stepIndex + 1 )
 	}
 
@@ -59,9 +62,9 @@ export const AttendeeChecks = () =>
 				(
 					<Step
 						key={name}
-						active={index === stepIndex}
 						name={name}
 						number={index + 1}
+						status={checkLog[name]}
 					/>
 				))
 			}
@@ -73,8 +76,9 @@ export const AttendeeChecks = () =>
 				(
 					<TheCheckModule
 						key={name}
-						active={index === stepIndex}
-						onComplete={nextStep}
+						name={name}
+						status={checkLog[name]}
+						onComplete={recordResult}
 					/>
 				))
 			}

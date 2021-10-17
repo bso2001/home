@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { getDeviceInfo } from 'library/device'
 
 const SUPPORTED_OS_LIST =
@@ -27,39 +27,58 @@ const STYLES =
 	}
 }
 
-export const CheckOperatingSystem = ({ active, onComplete }) =>
+export const CheckOperatingSystem = (props) =>
 {
-	if ( !active )
-		return <div></div>
+	const [result, setResult] = useState(null)
+	const [name, setName] = useState(null)
+	const [onComplete, setOnComplete] = useState(null)
+	const [status, setStatus] = useState(null)
 
-	const { os } = getDeviceInfo()
-
-	let testResult = 'OS Check'
-
-	if ( ! os?.name )
-		testResult = `Sorry, but your operating system couldn't be identified.`
-	else
+	useEffect( () =>
 	{
-		const { name, version, versionName } = os
+		setName( props.name )
+		setOnComplete( props.onComplete )
+		setStatus( props.status )
 
-		if ( version )
+		runTest()
+	}, [props])
+
+	// if ( !active )
+		// return <div></div>
+
+	const runTest =()=>
+	{
+		const { os } = getDeviceInfo()
+
+		let testResult = ''
+
+		if ( ! os?.name )
+			testResult = `Sorry, but your operating system couldn't be identified.`
+		else
 		{
-			const recommendedVersion = SUPPORTED_OS_LIST[name]
-			
-			if ( recommendedVersion )
+			const { name, version, versionName } = os
+
+			if ( version )
 			{
-				if (Number(version) < recommendedVersion)
-					testResult = `Please consider upgrading to at least: ${recommendedVersion}`
+				const recommendedVersion = SUPPORTED_OS_LIST[name]
+				
+				if ( recommendedVersion )
+				{
+					if (Number(version) < recommendedVersion)
+						testResult = `Please consider upgrading to at least: ${recommendedVersion}`
+				}
 			}
+
+			if ( ! testResult )
+				testResult = `${name} ${version} ${versionName}`
 		}
 
-		if ( ! testResult )
-			testResult = `${name} ${version} ${versionName}`
+		setResult( testResult )
 	}
 
 	return (
 		<div style={ STYLES.outer }>
-			{testResult}
+			{result}
 		</div>
 	)
 }
