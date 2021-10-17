@@ -1,5 +1,7 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
+import { EStatus } from '../constants'
 import { getDeviceInfo } from 'library/device'
 
 const NOT_SUPPORTED = 'NOT SUPPORTED'
@@ -57,39 +59,56 @@ const STYLES =
 	}
 }
 
-export const CheckBrowser = ({ active, onComplete }) =>
+export const CheckBrowser = ({ status, onComplete }) =>
 {
-	if ( !active )
-		return <div></div>
+	const [result, setResult] = useState(null)
 
-	const { browser, platform } = getDeviceInfo()
-
-	let testResult = 'Browser Check'
-
-	if (!browser?.name)
-		testResult = `Your browser couldn't be identified.`
-
-	const { name, version } = browser
-
-	if (SUPPORTED[name] === NOT_SUPPORTED)
-		testResult = `Your browser is not supported.`
-	else
+	useEffect( () =>
 	{
-		if (version)
-		{
-			const recommendedVersion = SUPPORTED[ platform?.type === "mobile" ? `${name} Mobile` : name ]
+		console.log(status.value)
+		if ( status.value === EStatus.TESTING )
+			runTest()
+				/* eslint-disable react-hooks/exhaustive-deps */
+	}, [status, result])
 
-			if (recommendedVersion)
+	const runTest =()=>
+	{
+		const { browser, platform } = getDeviceInfo()
+		let outcome = 'Browser Check'
+
+		if (!browser?.name)
+			outcome = `Your browser couldn't be identified.`
+
+		const { name, version } = browser
+
+		if (SUPPORTED[name] === NOT_SUPPORTED)
+			outcome = `Your browser is not supported.`
+		else
+		{
+			if (version)
 			{
-				if ( Number(version) < recommendedVersion )
-					testResult = `Please consider upgrading to: ${recommendedVersion}`
+				const recommendedVersion = SUPPORTED[ platform?.type === "mobile" ? `${name} Mobile` : name ]
+
+				if (recommendedVersion)
+				{
+					if ( Number(version) < recommendedVersion )
+						outcome = `Please consider upgrading to: ${recommendedVersion}`
+				}
 			}
 		}
+
+		setResult(outcome)
 	}
 
-	return (
+	const endTest =()=>
+	{
+		onComplete(EStatus.PASSED, {})
+	}
+
+	return ( result &&
 		<div style={ STYLES.outer }>
-			{testResult}
+			{result}
+			<button onClick={endTest}>Continue</button>
 		</div>
 	)
 }

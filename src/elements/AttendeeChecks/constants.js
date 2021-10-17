@@ -41,7 +41,7 @@ export const CHECKS =
 	[ 'Platform', CheckPlatform ],
 	[ 'Popup Blockers', CheckPopupBlockers ],
 	*/
-].map(([name, TheCheckModule]) => ({ name, TheCheckModule }))
+].map(([name, module]) => ({ name, module }))
 
 export const LOG_INIT = CHECKS.reduce( (log, { name }) =>
 {

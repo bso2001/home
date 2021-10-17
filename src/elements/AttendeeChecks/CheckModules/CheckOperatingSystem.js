@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { getDeviceInfo } from 'library/device'
+import { EStatus } from '../constants'
 
 const SUPPORTED_OS_LIST =
 {
@@ -27,33 +28,25 @@ const STYLES =
 	}
 }
 
-export const CheckOperatingSystem = (props) =>
+export const CheckOperatingSystem = ({ status, onComplete }) =>
 {
 	const [result, setResult] = useState(null)
-	const [name, setName] = useState(null)
-	const [onComplete, setOnComplete] = useState(null)
-	const [status, setStatus] = useState(null)
 
 	useEffect( () =>
 	{
-		setName( props.name )
-		setOnComplete( props.onComplete )
-		setStatus( props.status )
-
-		runTest()
-	}, [props])
-
-	// if ( !active )
-		// return <div></div>
+		console.log('OS', status.value)
+		if ( status.value === EStatus.PENDING || status.value === EStatus.TESTING )
+			runTest()
+				/* eslint-disable react-hooks/exhaustive-deps */
+	}, [status, result])
 
 	const runTest =()=>
 	{
 		const { os } = getDeviceInfo()
-
-		let testResult = ''
+		let outcome = ''
 
 		if ( ! os?.name )
-			testResult = `Sorry, but your operating system couldn't be identified.`
+			outcome = `Sorry, but your operating system couldn't be identified.`
 		else
 		{
 			const { name, version, versionName } = os
@@ -65,20 +58,27 @@ export const CheckOperatingSystem = (props) =>
 				if ( recommendedVersion )
 				{
 					if (Number(version) < recommendedVersion)
-						testResult = `Please consider upgrading to at least: ${recommendedVersion}`
+						outcome = `Please consider upgrading to at least: ${recommendedVersion}`
 				}
 			}
 
-			if ( ! testResult )
-				testResult = `${name} ${version} ${versionName}`
-		}
+			if ( ! outcome )
+				outcome = `${name} ${version} ${versionName}`
 
-		setResult( testResult )
+	console.log(outcome)
+			setResult(outcome)
+		}
 	}
 
-	return (
+	const endTest =()=>
+	{
+		onComplete(EStatus.PASSED, {})
+	}
+
+	return ( 
 		<div style={ STYLES.outer }>
 			{result}
+			<button onClick={endTest}>Continue</button>
 		</div>
 	)
 }

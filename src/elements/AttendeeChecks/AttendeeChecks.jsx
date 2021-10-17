@@ -1,7 +1,7 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Step } from './Step'
-import { CHECKS, LOG_INIT } from './constants'
+import { EStatus, CHECKS, LOG_INIT } from './constants'
 
 const STYLES =
 {
@@ -31,6 +31,11 @@ const STYLES =
 		paddingTop : '10vh',
 	},
 
+	step :
+	{
+		maxWidth : '100px',
+	},
+
 	checkContainer :
 	{
 		paddingTop : '100px',
@@ -42,14 +47,56 @@ const STYLES =
 export const AttendeeChecks = () =>
 {
 	const [checkLog, setCheckLog] = useState(LOG_INIT)
-	const [stepIndex, setStepIndex] = React.useState(0)
+	const [stepIndex, setStepIndex] = useState(0)
 
-	const recordResult = ( name, status, info ) =>
+	const updateLog = ( index, result, info ) =>
 	{
-		setCheckLog( { ...checkLog, [name]: { status, info } })
+		let stepName = CHECKS[ index ].name
+							console.log('updateLog', index, stepName, result, checkLog)
+		let nLog = { ...checkLog }
 
-		setStepIndex( stepIndex + 1 )
+		nLog[stepName].value = result
+		nLog[stepName].info  = info
+
+		setCheckLog(nLog)
 	}
+
+	const nextStep = (result, additionalInfo = null) =>
+	{
+		updateLog( stepIndex, result, additionalInfo ? additionalInfo : {} )
+
+		if ( additionalInfo )
+		{
+			let newIndex = stepIndex + 1
+			setStepIndex( stepIndex + 1 )
+			updateLog( newIndex, EStatus.TESTING, additionalInfo )
+		}
+	}
+
+	const recordResult = ( status, info ) =>
+	{
+		nextStep(status, info)
+	}
+
+	const renderCheck =()=>
+	{
+		const currentStep = CHECKS[ stepIndex ].name
+		const TheCheckModule = CHECKS[ stepIndex ].module
+		
+		return (
+			<TheCheckModule
+				key={currentStep}
+				status={checkLog[currentStep]}
+				onComplete={recordResult}
+			/>
+		)
+	}
+
+	useEffect( () =>
+	{
+		nextStep( EStatus.TESTING )
+			/* eslint-disable react-hooks/exhaustive-deps */
+	}, [])
 
 	return (
 		<div style={ STYLES.outer }>
@@ -58,30 +105,22 @@ export const AttendeeChecks = () =>
 
 			<div style={ STYLES.steps }>
 			{
-				CHECKS.map( ({ name, TheCheckModule }, index) =>
+				CHECKS.map( ({name}, index) =>
 				(
+				    <div style={ STYLES.step }>
 					<Step
-						key={name}
-						name={name}
-						number={index + 1}
-						status={checkLog[name]}
+						key={ name }
+						name={ name }
+						number={ index + 1 }
+						status={ checkLog[name] }
 					/>
+				    </div>
 				))
 			}
 			</div>
 
 			<div style={ STYLES.checkContainer }>
-			{
-				CHECKS.map( ( {name, TheCheckModule}, index ) =>
-				(
-					<TheCheckModule
-						key={name}
-						name={name}
-						status={checkLog[name]}
-						onComplete={recordResult}
-					/>
-				))
-			}
+				{ renderCheck() }
 			</div>
 
 		</div>
