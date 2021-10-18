@@ -62,7 +62,7 @@ export const SUPPORTED_BROWSERS =
 	"Android Browser Mobile": 81,
 	Bada: null,
 	BlackBerry: null,
-	Chrome: 169,
+	Chrome: 38376,
 	"Chrome Mobile": 81,
 	Chromium: null,
 	Electron: null,

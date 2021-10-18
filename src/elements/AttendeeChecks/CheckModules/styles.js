@@ -49,6 +49,11 @@ export const CSTYLES =
 		fontWeight : '600',
 		color : '#ddf',
 		cursor : 'pointer',
+	},
+
+	noButton :
+	{
+		backgroundColor : '#dd6a65',
 	}
 }
 

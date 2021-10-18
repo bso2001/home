@@ -1,47 +1,44 @@
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import { CSTYLES } from './styles'
 import { EStatus } from '../common'
-import { Error } from './Error'
-import { Okay } from './Okay'
 
 export const CheckAudio = ({ status, image, title, onComplete }) =>
 {
-	const [passed, setPassed] = useState(false)
-	const [message, setMessage] = useState(null)
+	const [started, setStarted] = useState(false)
 
-	useEffect( () =>
-	{
-		if ( status.value === EStatus.TESTING )
-			runTest()
-				/* eslint-disable react-hooks/exhaustive-deps */
-	}, [status, message])
+	const testPassed =()=> { onComplete( EStatus.PASSED, {} ) }
+	const testFailed =()=> { onComplete( EStatus.FAILED, {} ) }
 
-	const runTest =()=>
+	const noButtonStyle = { ...CSTYLES.button, ...CSTYLES.noButton }
+	const col3Style = { ...CSTYLES.column, justifyContent : 'space-between' } 
+
+	const startAudio =()=>
 	{
-		setMessage('Under Construction')
+		document.getElementById('audioTestation').play()
+		setStarted(true)
 	}
 
-	const endTest =()=>
-	{
-		onComplete( passed, {} )
-	}
-
-	return ( message &&
+	return ( 
 		<div style={ CSTYLES.outer }>
 
 			<div style={ CSTYLES.column }>
 				<img src={ image } alt={ title } style={ CSTYLES.image } />
+				<audio id="audioTestation" src="test.wav" autoplay loop />
 			</div>
 
 			<div style={ CSTYLES.column }>
 				<div style={ CSTYLES.title }>{ title }</div>
-				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
+				    <div style={ CSTYLES.result } hidden={ started }>
+					<button style={ CSTYLES.button } onClick={startAudio}>Click to play audio</button>
+				    </div>
+				    <div style={ CSTYLES.result } hidden={ ! started }>Do you hear the audio playing?</div>
 			</div>
 
-			<div style={ {...CSTYLES.column, justifyContent : 'flex-end'} }>
-				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
+			<div style={ col3Style }>
+				<button style={ CSTYLES.button } onClick={testPassed} hidden={ !started }>Yes, I hear the audio</button>
+				<button style={ noButtonStyle } onClick={testFailed} hidden={ !started }>No, I don't hear the audio</button>
 			</div>
 
 		</div>

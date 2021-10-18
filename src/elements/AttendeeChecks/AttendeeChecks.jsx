@@ -71,7 +71,7 @@ export const AttendeeChecks = () =>
 		if ( index < CHECKS.length )
 		{
 			let stepName = CHECKS[ index ].name
-							console.log('updateLog', index, stepName, result, checkLog)
+							// console.log('updateLog', index, stepName, result, checkLog)
 			let nLog = { ...checkLog }
 
 			nLog[stepName].value = result
