@@ -36,7 +36,7 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 	const runTest =()=>
 	{
 		const { os } = getDeviceInfo()
-		let outcome = ''
+		let outcome = null
 
 		if ( ! os?.name )
 			outcome = `Sorry, but your operating system couldn't be identified.`
@@ -56,7 +56,7 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 			}
 
 			if ( ! outcome )
-				outcome = `${name} ${version} ${versionName}`
+				outcome = `${name}<br>${versionName}<br>${version}`
 
 			setResult(outcome)
 		}
@@ -76,7 +76,7 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 
 			<div style={ CSTYLES.column }>
 				<div style={ CSTYLES.title }>{ title }</div>
-				<div style={ CSTYLES.result }>{ result }</div>
+				<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: result }} />
 			</div>
 
 			<div style={ CSTYLES.column }>

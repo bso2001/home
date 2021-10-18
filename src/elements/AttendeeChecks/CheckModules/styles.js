@@ -31,10 +31,11 @@ export const CSTYLES =
 		backgroundColor : '#4698d0',
 		border : '0',
 		width : '180px',
-		height : '40px',
-		fontSize : '16px',
+		height : '45px',
+		fontSize : '15px',
 		fontWeight : '600',
-		color : '#eee',
+		color : '#ddf',
+		cursor : 'pointer',
 	}
 }
 

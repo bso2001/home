@@ -35,6 +35,8 @@ const STYLES =
 	stepNumberComplete :
 	{
 		backgroundColor : '#4698d0',
+		fontSize : '16px',
+		paddingLeft : '14px',
 	},
 
 	stepLine :
@@ -52,6 +54,7 @@ const STYLES =
 
 export const Step = ({ name, number, status }) =>
 {
+	let numberValue = '' + number
 	let numberStyle = {}
 	let lineStyle = {}
 
@@ -62,14 +65,17 @@ export const Step = ({ name, number, status }) =>
 		numberStyle = { ...STYLES.stepNumber, ...STYLES.stepNumberTesting }
 
 	else
+	{
 		numberStyle = { ...STYLES.stepNumber, ...STYLES.stepNumberComplete }
+		numberValue = "<i class='fa fa-check'></i>"
+	}
 
 			// console.log( status.value, numberStyle )
 
 	return (
 		<div style={ STYLES.step } key={name}>
 			<div style={ STYLES.stepGraphics }>
-				<div style={ numberStyle }>{number}</div>
+				<div style={ numberStyle } dangerouslySetInnerHTML={{ __html: numberValue }} />
 				<div style={ lineStyle }></div>
 			</div>
 			<div style={ STYLES.stepName }>{name}</div>

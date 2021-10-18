@@ -16,11 +16,29 @@ const STYLES =
 		padding : '5vh 10vw',
 	},
 
+	header :
+	{
+		display : 'flex',
+		justifyContent : 'space-between',
+	},
+
 	logo : 
 	{
 		backgroundImage : 'url(./buzzcast-logo-wide.5cc4a5d3.svg)',
 		width : '128px',
 		height: '30px',
+	},
+
+	restart : 
+	{
+		backgroundColor : 'transparent',
+		border : '2px solid #444',
+		width : '120px',
+		height : '30px',
+		fontSize : '14px',
+		fontWeight : '600',
+		color : '#eee',
+		cursor : 'pointer',
 	},
 
 	steps :
@@ -101,10 +119,15 @@ export const AttendeeChecks = () =>
 			/* eslint-disable react-hooks/exhaustive-deps */
 	}, [])
 
+	const restart =()=> { window.location.reload() }
+
 	return (
 		<div style={ STYLES.outer }>
 
-			<div style={ STYLES.logo } />
+			<div style={ STYLES.header }>
+				<div style={ STYLES.logo } />
+				<button style={ STYLES.restart } onClick={restart}>Rerun Checks</button>
+			</div>
 
 			<div style={ STYLES.steps }>
 			{

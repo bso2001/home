@@ -28,10 +28,10 @@ export const CHECKS =
 	[ 'Operating System', CheckOperatingSystem, 'grid.jpg' ],
 	[ 'Browser', CheckBrowser, 'monitor.jpg' ],
 	[ 'Local Storage', CheckLocalStorage, 'code.jpg' ],
-	[ 'Network', CheckApi, '' ],
-	[ 'Chatbot', CheckChatbot, '' ],
-	[ 'Video', CheckVideo, '' ],
-	[ 'Audio', CheckAudio, '' ],
+	[ 'Network', CheckApi, 'network.png' ],
+	[ 'Chatbot', CheckChatbot, 'chatbot.png' ],
+	[ 'Video', CheckVideo, 'video.jpg' ],
+	[ 'Audio', CheckAudio, 'audio.jpg' ],
 
 	/*
 	[ 'Cookies', CheckCookies, '' ],

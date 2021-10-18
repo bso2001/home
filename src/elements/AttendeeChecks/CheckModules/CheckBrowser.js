@@ -67,9 +67,9 @@ export const CheckBrowser = ({ status, image, title, onComplete }) =>
 	const runTest =()=>
 	{
 		const { browser, platform } = getDeviceInfo()
-		let outcome = 'Browser Check'
+		let outcome = null
 
-		if (!browser?.name)
+		if ( ! browser?.name )
 			outcome = `Your browser couldn't be identified.`
 
 		const { name, version } = browser
@@ -90,6 +90,9 @@ export const CheckBrowser = ({ status, image, title, onComplete }) =>
 			}
 		}
 
+		if ( ! outcome )
+			outcome = `${version}<br>${name}<br>(${platform.type})`
+
 		setResult(outcome)
 	}
 
@@ -107,7 +110,7 @@ export const CheckBrowser = ({ status, image, title, onComplete }) =>
 
 			<div style={ CSTYLES.column }>
 				<div style={ CSTYLES.title }>{ title }</div>
-				<div style={ CSTYLES.result }>{ result }</div>
+				<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: result }} />
 			</div>
 
 			<div style={ CSTYLES.column }>
