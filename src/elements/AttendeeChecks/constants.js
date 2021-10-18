@@ -25,13 +25,13 @@ export const EStatus = Object.freeze(
 
 export const CHECKS =
 [
-	[ 'Operating System', CheckOperatingSystem, 'grid.jpg' ],
-	[ 'Browser', CheckBrowser, 'monitor.jpg' ],
-	[ 'Local Storage', CheckLocalStorage, 'code.jpg' ],
-	[ 'Network', CheckApi, 'network.png' ],
+	[ 'Operating System', CheckOperatingSystem, 'os.jpg' ],
+	[ 'Browser', CheckBrowser, 'browser.jpg' ],
+	[ 'Local Storage', CheckLocalStorage, 'storage.jpg' ],
+	[ 'Network', CheckApi, 'network.jpg' ],
 	[ 'Chatbot', CheckChatbot, 'chatbot.png' ],
-	[ 'Video', CheckVideo, 'video.jpg' ],
 	[ 'Audio', CheckAudio, 'audio.jpg' ],
+	[ 'Video', CheckVideo, 'video.jpg' ],
 
 	/*
 	[ 'Cookies', CheckCookies, '' ],

@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react'
 
 import { getDeviceInfo } from 'library/device'
+import { Error } from './Error'
+import { Okay } from './Okay'
 import { CSTYLES } from './styles'
 import { EStatus } from '../constants'
 
@@ -24,18 +26,20 @@ const SUPPORTED_OS_LIST =
 
 export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 {
-	const [result, setResult] = useState(null)
+	const [passed, setPassed] = useState(false)
+	const [message, setMessage] = useState(null)
 
 	useEffect( () =>
 	{
 		if ( status.value === EStatus.PENDING || status.value === EStatus.TESTING )
 			runTest()
 				/* eslint-disable react-hooks/exhaustive-deps */
-	}, [status, result])
+	}, [status, message])
 
 	const runTest =()=>
 	{
 		const { os } = getDeviceInfo()
+		let passed  = false
 		let outcome = null
 
 		if ( ! os?.name )
@@ -44,22 +48,28 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 		{
 			const { name, version, versionName } = os
 
-			if ( version )
+			if ( name )
 			{
 				const recommendedVersion = SUPPORTED_OS_LIST[name]
 				
-				if ( recommendedVersion )
+				if ( ! recommendedVersion )
+					outcome = `Sorry, but your operating system is not supported.`
+
+				else if ( version )
 				{
-					if (Number(version) < recommendedVersion)
-						outcome = `Please consider upgrading to at least: ${recommendedVersion}`
+					if ( Number(version) < recommendedVersion )
+						outcome = `Please upgrade your version to at least: ${recommendedVersion}`
 				}
 			}
 
 			if ( ! outcome )
-				outcome = `${name}<br>${versionName}<br>${version}`
-
-			setResult(outcome)
+			{
+				setPassed( true )
+				outcome = `You are running:<br/>${name} ${version} (${versionName})`
+			}
 		}
+
+		setMessage( outcome )
 	}
 
 	const endTest =()=>
@@ -76,7 +86,7 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 
 			<div style={ CSTYLES.column }>
 				<div style={ CSTYLES.title }>{ title }</div>
-				<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: result }} />
+				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
 			</div>
 
 			<div style={ {...CSTYLES.column, justifyContent : 'flex-end'} }>

@@ -4,6 +4,7 @@ export const CSTYLES =
 	outer : 
 	{
 		display : 'flex',
+		flexDirection : 'row',
 		width : '100%',
 	},
 
@@ -27,6 +28,11 @@ export const CSTYLES =
 		fontSize : '20px',
 		fontWeight : '600',
 		color : '#eee',
+	},
+
+	result :
+	{
+		maxWidth : '70%',
 	},
 
 	button : 
