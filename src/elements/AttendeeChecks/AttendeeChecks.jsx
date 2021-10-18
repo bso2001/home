@@ -69,14 +69,17 @@ export const AttendeeChecks = () =>
 
 	const updateLog = ( index, result, info ) =>
 	{
-		let stepName = CHECKS[ index ].name
+		if ( index < CHECKS.length )
+		{
+			let stepName = CHECKS[ index ].name
 							console.log('updateLog', index, stepName, result, checkLog)
-		let nLog = { ...checkLog }
+			let nLog = { ...checkLog }
 
-		nLog[stepName].value = result
-		nLog[stepName].info  = info
+			nLog[stepName].value = result
+			nLog[stepName].info  = info
 
-		setCheckLog(nLog)
+			setCheckLog(nLog)
+		}
 	}
 
 	const nextStep = (result, additionalInfo = null) =>
@@ -98,6 +101,9 @@ export const AttendeeChecks = () =>
 
 	const renderCheck =()=>
 	{
+		if ( stepIndex >= CHECKS.length )
+			return <div></div>
+
 		const name = CHECKS[ stepIndex ].name
 		const img  = CHECKS[ stepIndex ].image
 		const TheCheckModule = CHECKS[ stepIndex ].module

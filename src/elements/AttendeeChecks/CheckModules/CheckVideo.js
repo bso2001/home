@@ -56,7 +56,7 @@ export const CheckVideo = ({ status, image, title, onComplete }) =>
 				*/}
 			</div>
 
-			<div style={ CSTYLES.column }>
+			<div style={ {...CSTYLES.column, justifyContent : 'flex-end'} }>
 				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
 			</div>
 

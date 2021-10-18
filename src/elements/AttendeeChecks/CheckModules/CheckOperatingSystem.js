@@ -79,7 +79,7 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 				<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: result }} />
 			</div>
 
-			<div style={ CSTYLES.column }>
+			<div style={ {...CSTYLES.column, justifyContent : 'flex-end'} }>
 				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
 			</div>
 

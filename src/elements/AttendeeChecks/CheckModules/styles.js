@@ -9,13 +9,16 @@ export const CSTYLES =
 
 	column :
 	{
-		paddingLeft : '5vw',
+		paddingRight : '1vw',
 		flex : '1',
+		display : 'flex',
+		flexDirection : 'column',
 	},
 
 	image :
 	{
-		width : '100%',
+		width : '300px',
+		height: '160px',
 	},
 
 	title :
