@@ -29,15 +29,14 @@ const STYLES =
 		height: '30px',
 	},
 
-	restart : 
+	rerunChecks : 
 	{
+		padding : '6px 18px',
 		backgroundColor : 'transparent',
 		border : '2px solid #444',
-		width : '120px',
-		height : '30px',
-		fontSize : '14px',
+		fontSize : '12px',
 		fontWeight : '600',
-		color : '#eee',
+		color : '#aaa',
 		cursor : 'pointer',
 	},
 
@@ -125,14 +124,14 @@ export const AttendeeChecks = () =>
 			/* eslint-disable react-hooks/exhaustive-deps */
 	}, [])
 
-	const restart =()=> { window.location.reload() }
+	const rerunChecks =()=> { window.location.reload() }
 
 	return (
 		<div style={ STYLES.outer }>
 
 			<div style={ STYLES.header }>
 				<div style={ STYLES.logo } />
-				<button style={ STYLES.restart } onClick={restart}>Rerun Checks</button>
+				<button style={ STYLES.rerunChecks } onClick={rerunChecks}>Rerun Checks</button>
 			</div>
 
 			<div style={ STYLES.steps }>
