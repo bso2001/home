@@ -3,29 +3,32 @@ import React, { useEffect, useState } from 'react'
 
 import { CSTYLES } from './styles'
 import { EStatus } from '../constants'
+import { Error } from './Error'
+import { Okay } from './Okay'
 
 export const CheckAudio = ({ status, image, title, onComplete }) =>
 {
-	const [result, setResult] = useState(null)
+	const [passed, setPassed] = useState(false)
+	const [message, setMessage] = useState(null)
 
 	useEffect( () =>
 	{
 		if ( status.value === EStatus.TESTING )
 			runTest()
 				/* eslint-disable react-hooks/exhaustive-deps */
-	}, [status, result])
+	}, [status, message])
 
 	const runTest =()=>
 	{
-		setResult('Under Construction')
+		setMessage('Under Construction')
 	}
 
 	const endTest =()=>
 	{
-		onComplete(EStatus.PASSED, {})
+		onComplete( passed, {} )
 	}
 
-	return ( 
+	return ( message &&
 		<div style={ CSTYLES.outer }>
 
 			<div style={ CSTYLES.column }>
@@ -34,9 +37,7 @@ export const CheckAudio = ({ status, image, title, onComplete }) =>
 
 			<div style={ CSTYLES.column }>
 				<div style={ CSTYLES.title }>{ title }</div>
-				{/*
-				<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: result }} />
-				*/}
+				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
 			</div>
 
 			<div style={ {...CSTYLES.column, justifyContent : 'flex-end'} }>

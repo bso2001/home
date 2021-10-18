@@ -33,6 +33,10 @@ export const CSTYLES =
 	result :
 	{
 		maxWidth : '70%',
+		fontSize : '15px',
+		lineHeight :  '24px',
+		fontWeight : '400',
+		color : '#eee',
 	},
 
 	button : 

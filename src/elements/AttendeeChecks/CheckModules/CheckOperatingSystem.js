@@ -39,7 +39,6 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 	const runTest =()=>
 	{
 		const { os } = getDeviceInfo()
-		let passed  = false
 		let outcome = null
 
 		if ( ! os?.name )
@@ -65,7 +64,7 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 			if ( ! outcome )
 			{
 				setPassed( true )
-				outcome = `You are running:<br/>${name} ${version} (${versionName})`
+				outcome = `You are running<br/>${name} ${version} (${versionName})`
 			}
 		}
 
@@ -77,7 +76,7 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 		onComplete(EStatus.PASSED, {})
 	}
 
-	return ( 
+	return ( message &&
 		<div style={ CSTYLES.outer }>
 
 			<div style={ CSTYLES.column }>

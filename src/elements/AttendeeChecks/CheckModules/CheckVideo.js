@@ -1,27 +1,29 @@
 
-
 import React, { useEffect, useState } from 'react'
 
 import { CSTYLES } from './styles'
 import { EStatus } from '../constants'
+import { Error } from './Error'
+import { Okay } from './Okay'
 
 export const CheckVideo = ({ status, image, title, onComplete }) =>
 {
-	const [result, setResult] = useState(null)
+	const [passed, setPassed] = useState(false)
+	const [message, setMessage] = useState(null)
 
 	useEffect( () =>
 	{
 		if ( status.value === EStatus.TESTING )
 			runTest()
 				/* eslint-disable react-hooks/exhaustive-deps */
-	}, [status, result])
+	}, [status, message])
 
 	const runTest =()=>
 	{
 		const video = document.createElement('video')
 		const formats = [ 'video/mp4', 'video/webm', 'video/ogg' ]
 
-		let outcome = ''
+		let outcome = null
 
 		for (const format of formats)
 		{
@@ -34,15 +36,21 @@ export const CheckVideo = ({ status, image, title, onComplete }) =>
 				outcome = `Might play - ${format}`
 		}
 
-		setResult(outcome)
+		if ( !outcome )
+		{
+			outcome = 'Passed'
+			setPassed( true )
+		}
+
+		setMessage(outcome)
 	}
 
 	const endTest =()=>
 	{
-		onComplete(EStatus.PASSED, {})
+		onComplete( passed, {} )
 	}
 
-	return ( 
+	return ( message &&
 		<div style={ CSTYLES.outer }>
 
 			<div style={ CSTYLES.column }>
@@ -51,9 +59,7 @@ export const CheckVideo = ({ status, image, title, onComplete }) =>
 
 			<div style={ CSTYLES.column }>
 				<div style={ CSTYLES.title }>{ title }</div>
-				{/*
-				<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: result }} />
-				*/}
+				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
 			</div>
 
 			<div style={ {...CSTYLES.column, justifyContent : 'flex-end'} }>

@@ -93,9 +93,9 @@ export const AttendeeChecks = () =>
 		}
 	}
 
-	const recordResult = ( status, info ) =>
+	const recordResult = ( passed, info ) =>
 	{
-		nextStep(status, info)
+		nextStep(passed ? EStatus.PASSED : EStatus.FAILED, info)
 	}
 
 	const renderCheck =()=>

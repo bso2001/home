@@ -2,67 +2,22 @@
 import React, { useEffect, useState } from 'react'
 
 import { CSTYLES } from './styles'
-import { EStatus } from '../constants'
+import { EStatus, NOT_SUPPORTED, SUPPORTED_BROWSERS } from '../constants'
+import { Error } from './Error'
+import { Okay } from './Okay'
 import { getDeviceInfo } from 'library/device'
-
-const NOT_SUPPORTED = 'NOT SUPPORTED'
-
-export const SUPPORTED =
-{
-	"Amazon Silk": null,
-	"Android Browser Mobile": 81,
-	Bada: null,
-	BlackBerry: null,
-	Chrome: 69,
-	"Chrome Mobile": 81,
-	Chromium: null,
-	Electron: null,
-	Epiphany: null,
-	Firefox: 74.0,
-	"Firefox Mobile": 68,
-	Focus: null,
-	Generic: null,
-	Googlebot: null,
-	"Google Search": null,
-	"Internet Explorer": NOT_SUPPORTED,
-	"K-Meleon": null,
-	Maxthon: null,
-	"Microsoft Edge": 79,
-	"MZ Browser": null,
-	"NAVER Whale Browser": null,
-	Opera: null,
-	"Opera Coast": null,
-	PhantomJS: null,
-	Puffin: null,
-	QupZilla: null,
-	"QQ Browser": null,
-	"QQ Browser Lite": null,
-	Safari: 13,
-	"Safari Mobile": 11.3,
-	Sailfish: null,
-	"Samsung Internet for Android": null,
-	SeaMonkey: null,
-	Sleipnir: null,
-	Swing: null,
-	Tizen: null,
-	"UC Browser": null,
-	Vivaldi: null,
-	"WebOS Browser": null,
-	WeChat: null,
-	"Yandex Browser": null,
-}
 
 export const CheckBrowser = ({ status, image, title, onComplete }) =>
 {
-	const [result, setResult] = useState(null)
+	const [passed, setPassed] = useState(false)
+	const [message, setMessage] = useState(null)
 
 	useEffect( () =>
 	{
-		console.log(status.value)
 		if ( status.value === EStatus.TESTING )
 			runTest()
 				/* eslint-disable react-hooks/exhaustive-deps */
-	}, [status, result])
+	}, [status, message])
 
 	const runTest =()=>
 	{
@@ -74,13 +29,13 @@ export const CheckBrowser = ({ status, image, title, onComplete }) =>
 
 		const { name, version } = browser
 
-		if (SUPPORTED[name] === NOT_SUPPORTED)
+		if (SUPPORTED_BROWSERS[name] === NOT_SUPPORTED)
 			outcome = `Your browser is not supported.`
 		else
 		{
 			if (version)
 			{
-				const recommendedVersion = SUPPORTED[ platform?.type === "mobile" ? `${name} Mobile` : name ]
+				const recommendedVersion = SUPPORTED_BROWSERS[ platform?.type === "mobile" ? `${name} Mobile` : name ]
 
 				if (recommendedVersion)
 				{
@@ -91,9 +46,12 @@ export const CheckBrowser = ({ status, image, title, onComplete }) =>
 		}
 
 		if ( ! outcome )
-			outcome = `${version}<br>${name}<br>(${platform.type})`
+		{
+			setPassed( true )
+			outcome = `You are running<br/>${name} ${version} (${platform.type})`
+		}
 
-		setResult(outcome)
+		setMessage(outcome)
 	}
 
 	const endTest =()=>
@@ -101,7 +59,7 @@ export const CheckBrowser = ({ status, image, title, onComplete }) =>
 		onComplete(EStatus.PASSED, {})
 	}
 
-	return ( 
+	return ( message &&
 		<div style={ CSTYLES.outer }>
 
 			<div style={ CSTYLES.column }>
@@ -110,7 +68,7 @@ export const CheckBrowser = ({ status, image, title, onComplete }) =>
 
 			<div style={ CSTYLES.column }>
 				<div style={ CSTYLES.title }>{ title }</div>
-				<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: result }} />
+				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
 			</div>
 
 			<div style={ {...CSTYLES.column, justifyContent : 'flex-end'} }>
