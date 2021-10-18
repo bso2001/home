@@ -5,24 +5,7 @@ import { getDeviceInfo } from 'library/device'
 import { Error } from './Error'
 import { Okay } from './Okay'
 import { CSTYLES } from './styles'
-import { EStatus } from '../constants'
-
-const SUPPORTED_OS_LIST =
-{
-	Android :		9,
-	iOS :			11.3,
-	macOS :			10.11,
-	Windows :		7,
-	Bada :			null,
-	BlackBerry :		null,
-	'Chrome OS' :		null,
-	Linux :			null,
-	'PlayStation 4' :	null,
-	Roku :			null,
-	Tizen :			null,
-	WebOS :			null,
-	'Windows Phone' :	null,
-}
+import { EStatus, SUPPORTED_OS_LIST, vSimplify } from '../common'
 
 export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 {
@@ -45,7 +28,7 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 			outcome = `Sorry, but your operating system couldn't be identified.`
 		else
 		{
-			const { name, version, versionName } = os
+			let { name, version, versionName } = os
 
 			if ( name )
 			{
@@ -56,8 +39,8 @@ export const CheckOperatingSystem = ({ status, image, title, onComplete }) =>
 
 				else if ( version )
 				{
-					if ( Number(version) < recommendedVersion )
-						outcome = `Please upgrade your version to at least: ${recommendedVersion}`
+					if ( Number( vSimplify(version) ) < recommendedVersion )
+						outcome = `Please upgrade your version to at least ${name} ${recommendedVersion}`
 				}
 			}
 

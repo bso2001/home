@@ -62,7 +62,7 @@ export const SUPPORTED_BROWSERS =
 	"Android Browser Mobile": 81,
 	Bada: null,
 	BlackBerry: null,
-	Chrome: 69,
+	Chrome: 169,
 	"Chrome Mobile": 81,
 	Chromium: null,
 	Electron: null,
@@ -99,5 +99,35 @@ export const SUPPORTED_BROWSERS =
 	"WebOS Browser": null,
 	WeChat: null,
 	"Yandex Browser": null,
+}
+
+export const SUPPORTED_OS_LIST =
+{
+	Android :		9,
+	iOS :			11.3,
+	macOS :			10.11,
+	Windows :		7,
+	Bada :			null,
+	BlackBerry :		null,
+	'Chrome OS' :		null,
+	Linux :			null,
+	'PlayStation 4' :	null,
+	Roku :			null,
+	Tizen :			null,
+	WebOS :			null,
+	'Windows Phone' :	null,
+}
+
+export const getPosition = (string, subString, offset) =>
+{
+	return string.split(subString, offset).join(subString).length
+}
+
+export const vSimplify = ( version ) =>
+{
+	if ( (version.split('.').length - 1) > 1 )	// take only one decimal place...
+		version = version.substr(0, getPosition(version, '.', 2))
+
+	return version
 }
 

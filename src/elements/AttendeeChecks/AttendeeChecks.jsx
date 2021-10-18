@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { Step } from './Step'
-import { EStatus, CHECKS, LOG_INIT } from './constants'
+import { EStatus, CHECKS, LOG_INIT } from './common'
 
 const STYLES =
 {

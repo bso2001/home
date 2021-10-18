@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import { EStatus } from './constants'
+import { EStatus } from './common'
 
 const STYLES =
 {

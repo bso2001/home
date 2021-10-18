@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { CSTYLES } from './styles'
-import { EStatus, NOT_SUPPORTED, SUPPORTED_BROWSERS } from '../constants'
+import { EStatus, NOT_SUPPORTED, SUPPORTED_BROWSERS, vSimplify } from '../common'
 import { Error } from './Error'
 import { Okay } from './Okay'
 import { getDeviceInfo } from 'library/device'
@@ -33,14 +33,14 @@ export const CheckBrowser = ({ status, image, title, onComplete }) =>
 			outcome = `Your browser is not supported.`
 		else
 		{
-			if (version)
+			if ( version )
 			{
 				const recommendedVersion = SUPPORTED_BROWSERS[ platform?.type === "mobile" ? `${name} Mobile` : name ]
 
-				if (recommendedVersion)
+				if ( recommendedVersion )
 				{
-					if ( Number(version) < recommendedVersion )
-						outcome = `Please consider upgrading to: ${recommendedVersion}`
+					if ( Number( vSimplify(version) ) < recommendedVersion )
+						outcome = `Please upgrade your version to at least ${name} ${recommendedVersion}`
 				}
 			}
 		}

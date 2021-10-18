@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { CSTYLES } from './styles'
-import { EStatus } from '../constants'
+import { EStatus } from '../common'
 import { Error } from './Error'
 import { Okay } from './Okay'
 
