@@ -21,8 +21,8 @@ export const CSTYLES =
 
 	image :
 	{
-		width : '300px',
-		height: '160px',
+		width : '24vw',
+		height: '24vh',
 	},
 
 	title :
