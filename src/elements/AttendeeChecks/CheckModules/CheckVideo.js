@@ -15,7 +15,8 @@ export const CheckVideo = ({ status, image, title, onComplete }) =>
 	}, [status])
 
 	const testPassed =()=> { onComplete( EStatus.PASSED, {} ) }
-	const testFailed =(nv)=> { onComplete( EStatus.FAILED, { notVisible : nv } ) }
+	const testFailed =()=> { onComplete( EStatus.FAILED, { notVisible : false } ) }
+	const testFailedThumbnail =()=> { onComplete( EStatus.FAILED, { notVisible : true } ) }
 
 	const noButtonStyle = { ...CSTYLES.button, ...CSTYLES.noButton }
 	const col3Style = { ...CSTYLES.column, justifyContent : 'space-between' } 
@@ -32,10 +33,10 @@ export const CheckVideo = ({ status, image, title, onComplete }) =>
 				    <div style={ CSTYLES.result }>Do you see the video playing?</div>
 			</div>
 
-			<div style={ col3Style }>
+			<div style={ col3Style } hidden={ !started }>
+				<button style={ noButtonStyle } onClick={testFailed}>No, I don't see the video playing</button>
+				<button style={ noButtonStyle } onClick={testFailedThumbnail}>No, the video is blank</button>
 				<button style={ CSTYLES.button } onClick={testPassed}>Yes, I see the video playing</button>
-				<button style={ noButtonStyle } onClick={testFailed(false)}>No, I don't see the video playing</button>
-				<button style={ noButtonStyle } onClick={testFailed(true)}>No, the video is blank</button>
 			</div>
 
 		</div>

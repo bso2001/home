@@ -26,8 +26,8 @@ export const CheckAudio = ({ status, image, title, onComplete }) =>
 			</div>
 
 			<div style={ col3Style }>
-				<button style={ CSTYLES.button } onClick={testPassed} >Yes, I hear the audio</button>
 				<button style={ noButtonStyle } onClick={testFailed} >No, I don't hear the audio</button>
+				<button style={ CSTYLES.button } onClick={testPassed} >Yes, I hear the audio</button>
 			</div>
 
 		</div>

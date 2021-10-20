@@ -6,6 +6,8 @@ export const CSTYLES =
 		display : 'flex',
 		flexDirection : 'row',
 		width : '100%',
+		minHeight: '180px',
+		alignItems : 'stretch',
 	},
 
 	column :
@@ -14,6 +16,7 @@ export const CSTYLES =
 		flex : '1',
 		display : 'flex',
 		flexDirection : 'column',
+		minHeight: '180px',
 	},
 
 	image :
