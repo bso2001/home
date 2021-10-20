@@ -59,25 +59,35 @@ const STYLES =
 		display: 'flex',
 		width: '100%',
 	},
+
+	complete : 
+	{
+		backgroundColor : '#222',
+		fontFamily : 'HelveticaNeue-UltraLight, Lato, sans-serif',
+		fontSize : '26px',
+		letterSpacing : '1px',
+		textShadow : ' .22px .22px #eee',
+		color : '#ffffff',
+	},
 }
 
 export const AttendeeChecks = () =>
 {
 	const [checkLog, setCheckLog] = useState(LOG_INIT)
 	const [stepIndex, setStepIndex] = useState(0)
+	const [complete, setComplete] = useState(false)
 
 	const updateLog = ( index, result, info ) =>
 	{
 		if ( index < CHECKS.length )
 		{
 			let stepName = CHECKS[ index ].name
-							// console.log('updateLog', index, stepName, result, checkLog)
 			let nLog = { ...checkLog }
 
 			nLog[stepName].value = result
 			nLog[stepName].info  = info
 
-			setCheckLog(nLog)
+			setCheckLog( nLog )
 		}
 	}
 
@@ -90,6 +100,9 @@ export const AttendeeChecks = () =>
 			let newIndex = stepIndex + 1
 			setStepIndex( stepIndex + 1 )
 			updateLog( newIndex, EStatus.TESTING, additionalInfo )
+
+			if ( newIndex == CHECKS.length )
+				setComplete( true )
 		}
 	}
 
@@ -151,7 +164,8 @@ export const AttendeeChecks = () =>
 			</div>
 
 			<div style={ STYLES.checkContainer }>
-				{ renderCheck() }
+				{ complete && <div style={ STYLES.complete }>Checks Complete!</div> }
+				{ !complete && renderCheck() }
 			</div>
 
 		</div>
