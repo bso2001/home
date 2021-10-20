@@ -7,7 +7,7 @@ import { EStatus } from '../common'
 import { Error } from './Error'
 import { Okay } from './Okay'
 
-export const CheckLocalStorage = ({ status, image, title, onComplete }) =>
+export const CheckLocalStorage = ({ status, image, title, isRowBased, onComplete }) =>
 {
 	const [passed, setPassed] = useState(false)
 	const [message, setMessage] = useState(null)
@@ -44,19 +44,21 @@ export const CheckLocalStorage = ({ status, image, title, onComplete }) =>
 		onComplete(passed, {})
 	}
 
-	return ( message &&
-		<div style={ CSTYLES.outer }>
+	const col3style = { ...CSTYLES.column(isRowBased), justifyContent : isRowBased ? 'flex-end' : 'flex-start' }
 
-			<div style={ CSTYLES.column }>
-				<img src={ image } alt={ title } style={ CSTYLES.image } />
+	return ( message &&
+		<div style={ CSTYLES.outer(isRowBased) }>
+
+			<div style={ CSTYLES.column(isRowBased) }>
+				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
 			</div>
 
-			<div style={ CSTYLES.column }>
+			<div style={ CSTYLES.column(isRowBased) }>
 				<div style={ CSTYLES.title }>{ title }</div>
 				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
 			</div>
 
-			<div style={ {...CSTYLES.column, justifyContent : 'flex-end'} }>
+			<div style={ col3style }>
 				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
 			</div>
 

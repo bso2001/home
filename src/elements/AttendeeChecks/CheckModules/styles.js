@@ -1,29 +1,31 @@
 
 export const CSTYLES =
 {
-	outer : 
+	outer : isRowBased => (
 	{
 		display : 'flex',
-		flexDirection : 'row',
+		flexDirection : 'inherit',
 		width : '100%',
-		minHeight: '180px',
-		alignItems : 'stretch',
-	},
+		alignItems : isRowBased ? 'stretch' : 'center',
+	}),
 
-	column :
+	column : isRowBased => (
 	{
 		paddingRight : '1vw',
 		flex : '1',
 		display : 'flex',
 		flexDirection : 'column',
-		minHeight: '180px',
-	},
+		marginTop: isRowBased ? '0px' : '40px',
+		minHeight: isRowBased ? '180px' : 'default',
+		alignItems : isRowBased ? 'left' : 'center',
+		justifyContent : isRowBased ? 'left' : 'center',
+	}),
 
-	image :
+	image : isRowBased => (
 	{
-		width : '24vw',
+		width : isRowBased ? '24vw' : '40vw',
 		height: '24vh',
-	},
+	}),
 
 	title :
 	{

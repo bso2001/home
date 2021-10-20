@@ -4,6 +4,14 @@ import { CSTYLES } from './styles'
 
 export const STYLES =
 {
+	outer : 
+	{
+		display : 'flex',
+		flexDirection : 'row',
+		width : '100%',
+		justifyContent : 'inherit',
+	},
+
 	okayIcon :
 	{
 		margin : '2px 10px 0 0',
@@ -23,7 +31,7 @@ export const STYLES =
 export const Okay = ({ msg }) =>
 {
 	return (
-		<div style={ CSTYLES.outer }>
+		<div style={ STYLES.outer }>
 			<i style={ STYLES.okayIcon } className={'fa fa-check'}></i>
 			<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: msg }} />
 		</div>

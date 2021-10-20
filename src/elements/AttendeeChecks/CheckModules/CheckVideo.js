@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { CSTYLES } from './styles'
 import { EStatus } from '../common'
 
-export const CheckVideo = ({ status, image, title, onComplete }) =>
+export const CheckVideo = ({ status, image, title, isRowBased, onComplete }) =>
 {
 	const [started, setStarted] = useState(false)
 
@@ -19,16 +19,16 @@ export const CheckVideo = ({ status, image, title, onComplete }) =>
 	const testFailedThumbnail =()=> { onComplete( EStatus.FAILED, { notVisible : true } ) }
 
 	const noButtonStyle = { ...CSTYLES.button, ...CSTYLES.noButton }
-	const col3Style = { ...CSTYLES.column, justifyContent : 'space-between' } 
+	const col3Style = { ...CSTYLES.column(isRowBased), justifyContent : 'space-between' } 
 
 	return ( started &&
-		<div style={ CSTYLES.outer }>
+		<div style={ CSTYLES.outer(isRowBased) }>
 
-			<div style={ CSTYLES.column }>
-				<video id="videoTestation" src="test.mp4" autoPlay loop style={ CSTYLES.image } />
+			<div style={ CSTYLES.column(isRowBased) }>
+				<video id="videoTestation" src="test.mp4" autoPlay loop style={ CSTYLES.image(isRowBased) } />
 			</div>
 
-			<div style={ CSTYLES.column }>
+			<div style={ CSTYLES.column(isRowBased) }>
 				<div style={ CSTYLES.title }>{ title }</div>
 				    <div style={ CSTYLES.result }>Do you see the video playing?</div>
 			</div>

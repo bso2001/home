@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { Step } from './Step'
-import { EStatus, CHECKS, LOG_INIT } from './common'
+import { EStatus, CHECKS, LOG_INIT, useMediaQuery } from './common'
 
 const STYLES =
 {
@@ -12,7 +12,7 @@ const STYLES =
 		color : '#ffffff',
 		display : 'flex',
 		flexDirection : 'column',
-		height: '100%',
+		height: '100vh',
 		padding : '5vh 10vw',
 	},
 
@@ -53,14 +53,16 @@ const STYLES =
 		maxWidth : '100px',
 	},
 
-	checkContainer :
+	checkContainer : isRowBased => (
 	{
-		paddingTop : '100px',
+		paddingTop : isRowBased ? '100px' : '20px',
 		display: 'flex',
 		width: '100%',
-	},
+		flexDirection: isRowBased ? 'row' : 'column',
+		justifyContent: 'space-around',
+	}),
 
-	complete : 
+	complete :
 	{
 		backgroundColor : '#222',
 		fontFamily : 'HelveticaNeue-UltraLight, Lato, sans-serif',
@@ -76,6 +78,8 @@ export const AttendeeChecks = () =>
 	const [checkLog, setCheckLog] = useState(LOG_INIT)
 	const [stepIndex, setStepIndex] = useState(0)
 	const [complete, setComplete] = useState(false)
+
+	const isRowBased = useMediaQuery('(min-width: 900px)')
 
 	const updateLog = ( index, result, info ) =>
 	{
@@ -101,7 +105,7 @@ export const AttendeeChecks = () =>
 			setStepIndex( stepIndex + 1 )
 			updateLog( newIndex, EStatus.TESTING, additionalInfo )
 
-			if ( newIndex == CHECKS.length )
+			if ( newIndex === CHECKS.length )
 				setComplete( true )
 		}
 	}
@@ -126,6 +130,7 @@ export const AttendeeChecks = () =>
 				image={ img }
 				title={ name }
 				status={ checkLog[name] }
+				isRowBased={ isRowBased }
 				onComplete={ recordResult }
 			/>
 		)
@@ -163,7 +168,7 @@ export const AttendeeChecks = () =>
 			}
 			</div>
 
-			<div style={ STYLES.checkContainer }>
+			<div style={ STYLES.checkContainer(isRowBased) }>
 				{ complete && <div style={ STYLES.complete }>Checks Complete!</div> }
 				{ !complete && renderCheck() }
 			</div>
