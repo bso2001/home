@@ -24,7 +24,7 @@ export const Error = ({ msg }) =>
 {
 	return (
 		<div style={ CSTYLES.outer }>
-			<i style={ STYLES.errorIcon } class="fa fa-exclamation"></i>
+			<i style={ STYLES.errorIcon } className={'fa fa-exclamation'}></i>
 			<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: msg }} />
 		</div>
 	)

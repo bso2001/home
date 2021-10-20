@@ -3,67 +3,39 @@ import React, { useEffect, useState } from 'react'
 
 import { CSTYLES } from './styles'
 import { EStatus } from '../common'
-import { Error } from './Error'
-import { Okay } from './Okay'
 
 export const CheckVideo = ({ status, image, title, onComplete }) =>
 {
-	const [passed, setPassed] = useState(false)
-	const [message, setMessage] = useState(null)
+	const [started, setStarted] = useState(false)
 
 	useEffect( () =>
 	{
 		if ( status.value === EStatus.TESTING )
-			runTest()
-				/* eslint-disable react-hooks/exhaustive-deps */
-	}, [status, message])
+			setStarted( true )
+	}, [status])
 
-	const runTest =()=>
-	{
-		const video = document.createElement('video')
-		const formats = [ 'video/mp4', 'video/webm', 'video/ogg' ]
+	const testPassed =()=> { onComplete( EStatus.PASSED, {} ) }
+	const testFailed =(nv)=> { onComplete( EStatus.FAILED, { notVisible : nv } ) }
 
-		let outcome = null
+	const noButtonStyle = { ...CSTYLES.button, ...CSTYLES.noButton }
+	const col3Style = { ...CSTYLES.column, justifyContent : 'space-between' } 
 
-		for (const format of formats)
-		{
-			const status = video.canPlayType(format)
-
-			if ( status === '' )
-				outcome = `Cannot play - ${format}`
-
-			if ( status === 'maybe' )
-				outcome = `Might play - ${format}`
-		}
-
-		if ( !outcome )
-		{
-			outcome = 'Passed'
-			setPassed( true )
-		}
-
-		setMessage(outcome)
-	}
-
-	const endTest =()=>
-	{
-		onComplete( passed, {} )
-	}
-
-	return ( message &&
+	return ( started &&
 		<div style={ CSTYLES.outer }>
 
 			<div style={ CSTYLES.column }>
-				<img src={ image } alt={ title } style={ CSTYLES.image } />
+				<video id="videoTestation" src="test.mp4" autoPlay loop style={ CSTYLES.image } />
 			</div>
 
 			<div style={ CSTYLES.column }>
 				<div style={ CSTYLES.title }>{ title }</div>
-				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
+				    <div style={ CSTYLES.result }>Do you see the video playing?</div>
 			</div>
 
-			<div style={ {...CSTYLES.column, justifyContent : 'flex-end'} }>
-				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
+			<div style={ col3Style }>
+				<button style={ CSTYLES.button } onClick={testPassed}>Yes, I see the video playing</button>
+				<button style={ noButtonStyle } onClick={testFailed(false)}>No, I don't see the video playing</button>
+				<button style={ noButtonStyle } onClick={testFailed(true)}>No, the video is blank</button>
 			</div>
 
 		</div>

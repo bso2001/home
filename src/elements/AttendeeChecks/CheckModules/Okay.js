@@ -24,7 +24,7 @@ export const Okay = ({ msg }) =>
 {
 	return (
 		<div style={ CSTYLES.outer }>
-			<i style={ STYLES.okayIcon } class="fa fa-check"></i>
+			<i style={ STYLES.okayIcon } className={'fa fa-check'}></i>
 			<div style={ CSTYLES.result } dangerouslySetInnerHTML={{ __html: msg }} />
 		</div>
 	)
