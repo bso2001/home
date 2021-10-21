@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 import { CSTYLES } from './styles'
 import { EStatus, NOT_SUPPORTED, SUPPORTED_BROWSERS, vSimplify } from '../common'
-import { Error } from './Error'
-import { Okay } from './Okay'
+import { Passed } from './Passed'
+import { Failed } from './Failed'
 import { getDeviceInfo } from 'library/device'
 
 export const CheckBrowser = ({ status, image, title, isRowBased, onComplete }) =>
@@ -56,7 +56,7 @@ export const CheckBrowser = ({ status, image, title, isRowBased, onComplete }) =
 
 	const endTest =()=>
 	{
-		onComplete(EStatus.PASSED, {})
+		onComplete(EStatus.PASSED)
 	}
 
 	const col3style = { ...CSTYLES.column(isRowBased), justifyContent : isRowBased ? 'flex-end' : 'flex-start' }
@@ -69,12 +69,13 @@ export const CheckBrowser = ({ status, image, title, isRowBased, onComplete }) =
 			</div>
 
 			<div style={ CSTYLES.column(isRowBased) }>
-				<div style={ CSTYLES.title }>{ title }</div>
-				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
+				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
+				{ passed ? <Passed /> : <Failed  /> }
+				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
 			<div style={ col3style }>
-				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
+				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
 			</div>
 
 		</div>

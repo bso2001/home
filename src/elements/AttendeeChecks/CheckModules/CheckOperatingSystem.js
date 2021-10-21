@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 
 import { getDeviceInfo } from 'library/device'
-import { Error } from './Error'
-import { Okay } from './Okay'
+import { Passed } from './Passed'
+import { Failed } from './Failed'
 import { CSTYLES } from './styles'
 import { EStatus, SUPPORTED_OS_LIST, vSimplify } from '../common'
 
@@ -47,7 +47,9 @@ export const CheckOperatingSystem = ({ status, image, title, isRowBased, onCompl
 			if ( ! outcome )
 			{
 				setPassed( true )
-				outcome = `You are running<br/>${name} ${version} (${versionName})`
+				outcome = `You are running<br/>${name} ${version}`
+				if ( versionName && versionName !== 'undefined' )
+					outcome += ` (${versionName})`
 			}
 		}
 
@@ -56,7 +58,7 @@ export const CheckOperatingSystem = ({ status, image, title, isRowBased, onCompl
 
 	const endTest =()=>
 	{
-		onComplete(EStatus.PASSED, {})
+		onComplete(EStatus.PASSED)
 	}
 
 	const col3style = { ...CSTYLES.column(isRowBased), justifyContent : isRowBased ? 'flex-end' : 'flex-start' }
@@ -69,12 +71,13 @@ export const CheckOperatingSystem = ({ status, image, title, isRowBased, onCompl
 			</div>
 
 			<div style={ CSTYLES.column(isRowBased) }>
-				<div style={ CSTYLES.title }>{ title }</div>
-				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
+				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
+				{ passed ? <Passed /> : <Failed /> }
+				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
 			<div style={ col3style }>
-				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
+				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
 			</div>
 
 		</div>

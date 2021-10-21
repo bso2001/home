@@ -11,11 +11,11 @@ export const CSTYLES =
 
 	column : isRowBased => (
 	{
-		paddingRight : '1vw',
+		paddingRight : isRowBased ? '3vw' : '0',
 		flex : '1',
 		display : 'flex',
 		flexDirection : 'column',
-		marginTop: isRowBased ? '0px' : '40px',
+		paddingTop: isRowBased ? '0px' : '30px',
 		minHeight: isRowBased ? '180px' : 'default',
 		alignItems : isRowBased ? 'left' : 'center',
 		justifyContent : isRowBased ? 'left' : 'center',
@@ -23,28 +23,31 @@ export const CSTYLES =
 
 	image : isRowBased => (
 	{
-		width : isRowBased ? '24vw' : '40vw',
-		height: '24vh',
+		height: isRowBased ? '30vh' : '22vh',
+		width : 'auto',
+		maxWidth : isRowBased ? 'default' : '500px',
 	}),
 
-	title :
+	title : isRowBased => (
 	{
-		paddingBottom : '4vh',
+		paddingBottom : isRowBased ? '4vh' : '2vh',
 		fontSize : '20px',
 		fontWeight : '600',
 		color : '#eee',
-	},
+	}),
 
-	result :
+	result : isRowBased => (
 	{
-		maxWidth : '70%',
+		textAlign : isRowBased ? 'left' : 'center',
+		paddingTop : '4vh',
+		minHeight: isRowBased ? 'default' : '50px',
 		fontSize : '15px',
 		lineHeight :  '24px',
 		fontWeight : '400',
 		color : '#eee',
-	},
+	}),
 
-	button : 
+	button : isRowBased => (
 	{
 		backgroundColor : '#4698d0',
 		border : '0',
@@ -54,7 +57,8 @@ export const CSTYLES =
 		fontWeight : '600',
 		color : '#ddf',
 		cursor : 'pointer',
-	},
+		marginBottom : isRowBased ? '0' : '2vh',
+	}),
 
 	noButton :
 	{

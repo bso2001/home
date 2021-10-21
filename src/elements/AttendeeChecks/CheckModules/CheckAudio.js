@@ -9,7 +9,7 @@ export const CheckAudio = ({ status, image, title, isRowBased, onComplete }) =>
 	const testPassed =()=> { onComplete( EStatus.PASSED, {} ) }
 	const testFailed =()=> { onComplete( EStatus.FAILED, {} ) }
 
-	const noButtonStyle = { ...CSTYLES.button, ...CSTYLES.noButton }
+	const noButtonStyle = { ...CSTYLES.button(isRowBased), ...CSTYLES.noButton }
 	const col3Style = { ...CSTYLES.column(isRowBased), justifyContent : 'space-between' } 
 
 	return ( 
@@ -21,13 +21,13 @@ export const CheckAudio = ({ status, image, title, isRowBased, onComplete }) =>
 			</div>
 
 			<div style={ CSTYLES.column(isRowBased) }>
-				<div style={ CSTYLES.title }>{ title }</div>
-				    <div style={ CSTYLES.result } >Do you hear the audio playing?</div>
+				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
+				    <div style={ CSTYLES.result(isRowBased) } >Do you hear the audio playing?</div>
 			</div>
 
 			<div style={ col3Style }>
 				<button style={ noButtonStyle } onClick={testFailed} >No, I don't hear the audio</button>
-				<button style={ CSTYLES.button } onClick={testPassed} >Yes, I hear the audio</button>
+				<button style={ CSTYLES.button(isRowBased) } onClick={testPassed} >Yes, I hear the audio</button>
 			</div>
 
 		</div>

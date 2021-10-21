@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 import { CSTYLES } from './styles'
 import { EStatus } from '../common'
-import { Error } from './Error'
-import { Okay } from './Okay'
+import { Passed } from './Passed'
+import { Failed } from './Failed'
 
 // import { APP_TAWK_TO_ID } from '~/exports.json'
 // import { PASS, FAIL, MAX_TEST_TIME } from '../helpers-and-data'
@@ -85,7 +85,7 @@ export const CheckChatbot = ({ status, image, title, isRowBased, onComplete }) =
 
 	const endTest =()=>
 	{
-		onComplete( passed, {} )
+		onComplete( passed )
 	}
 
 	const col3style = { ...CSTYLES.column(isRowBased), justifyContent : isRowBased ? 'flex-end' : 'flex-start' }
@@ -98,12 +98,13 @@ export const CheckChatbot = ({ status, image, title, isRowBased, onComplete }) =
 			</div>
 
 			<div style={ CSTYLES.column(isRowBased) }>
-				<div style={ CSTYLES.title }>{ title }</div>
-				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
+				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
+				{ passed ? <Passed /> : <Failed  /> }
+				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
 			<div style={ col3style }>
-				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
+				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
 			</div>
 
 		</div>

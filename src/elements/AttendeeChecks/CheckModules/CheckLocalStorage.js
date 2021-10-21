@@ -4,49 +4,43 @@ import React, { useEffect, useState } from 'react'
 
 import { CSTYLES } from './styles'
 import { EStatus } from '../common'
-import { Error } from './Error'
-import { Okay } from './Okay'
+import { Passed } from './Passed'
+import { Failed } from './Failed'
 
 export const CheckLocalStorage = ({ status, image, title, isRowBased, onComplete }) =>
 {
-	const [passed, setPassed] = useState(false)
-	const [message, setMessage] = useState(null)
+	const [passed, setPassed] = useState(null)
 
 	useEffect( () =>
 	{
 		if ( status.value === EStatus.TESTING )
 			runTest()
 				/* eslint-disable react-hooks/exhaustive-deps */
-	}, [status, message])
+	}, [status, passed])
 
 	const runTest =()=>
 	{
-		let outcome = null
-
 		try
 		{
 			const test = 'test'
 			localStorage.setItem( test, test )
 			localStorage.removeItem( test )
-			outcome = 'Passed'
 			setPassed( true )
 		}
 		catch (e)
 		{
-			outcome = 'Failed'
+			console.error('localStorage failed', e)
 		}
-
-		setMessage( outcome )
 	}
 
 	const endTest =()=>
 	{
-		onComplete(passed, {})
+		onComplete(passed)
 	}
 
 	const col3style = { ...CSTYLES.column(isRowBased), justifyContent : isRowBased ? 'flex-end' : 'flex-start' }
 
-	return ( message &&
+	return ( passed !== null  &&
 		<div style={ CSTYLES.outer(isRowBased) }>
 
 			<div style={ CSTYLES.column(isRowBased) }>
@@ -54,12 +48,14 @@ export const CheckLocalStorage = ({ status, image, title, isRowBased, onComplete
 			</div>
 
 			<div style={ CSTYLES.column(isRowBased) }>
-				<div style={ CSTYLES.title }>{ title }</div>
-				{ passed ? <Okay msg={ message } /> : <Error msg={ message } /> }
+				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
+				{ passed ? <Passed /> : <Failed  /> }
+				<div style={ CSTYLES.result(isRowBased) } />
 			</div>
+			
 
 			<div style={ col3style }>
-				<button style={ CSTYLES.button } onClick={endTest}>Continue</button>
+				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
 			</div>
 
 		</div>

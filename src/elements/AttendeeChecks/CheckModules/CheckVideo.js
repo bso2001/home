@@ -14,11 +14,11 @@ export const CheckVideo = ({ status, image, title, isRowBased, onComplete }) =>
 			setStarted( true )
 	}, [status])
 
-	const testPassed =()=> { onComplete( EStatus.PASSED, {} ) }
+	const testPassed =()=> { onComplete( EStatus.PASSED) }
 	const testFailed =()=> { onComplete( EStatus.FAILED, { notVisible : false } ) }
 	const testFailedThumbnail =()=> { onComplete( EStatus.FAILED, { notVisible : true } ) }
 
-	const noButtonStyle = { ...CSTYLES.button, ...CSTYLES.noButton }
+	const noButtonStyle = { ...CSTYLES.button(isRowBased), ...CSTYLES.noButton }
 	const col3Style = { ...CSTYLES.column(isRowBased), justifyContent : 'space-between' } 
 
 	return ( started &&
@@ -29,14 +29,14 @@ export const CheckVideo = ({ status, image, title, isRowBased, onComplete }) =>
 			</div>
 
 			<div style={ CSTYLES.column(isRowBased) }>
-				<div style={ CSTYLES.title }>{ title }</div>
-				    <div style={ CSTYLES.result }>Do you see the video playing?</div>
+				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
+				    <div style={ CSTYLES.result(isRowBased) }>Do you see the video playing?</div>
 			</div>
 
 			<div style={ col3Style } hidden={ !started }>
 				<button style={ noButtonStyle } onClick={testFailed}>No, I don't see the video playing</button>
 				<button style={ noButtonStyle } onClick={testFailedThumbnail}>No, the video is blank</button>
-				<button style={ CSTYLES.button } onClick={testPassed}>Yes, I see the video playing</button>
+				<button style={ CSTYLES.button(isRowBased) } onClick={testPassed}>Yes, I see the video playing</button>
 			</div>
 
 		</div>

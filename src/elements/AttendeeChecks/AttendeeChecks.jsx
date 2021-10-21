@@ -40,37 +40,40 @@ const STYLES =
 		cursor : 'pointer',
 	},
 
-	steps :
+	steps : isRowBased => (
 	{
 		display : 'flex',
 		flexDirection : 'row',
 		justifyContent : 'space-between',
-		paddingTop : '10vh',
-	},
+		paddingTop : isRowBased ? '10vh' : '5vh',
+		overflowX : 'hidden',
+	}),
 
 	step :
 	{
-		maxWidth : '100px',
+		minWidth : '120px',
 	},
 
 	checkContainer : isRowBased => (
 	{
-		paddingTop : isRowBased ? '100px' : '20px',
+		paddingTop : isRowBased ? '10vh' : 'default',
 		display: 'flex',
 		width: '100%',
 		flexDirection: isRowBased ? 'row' : 'column',
-		justifyContent: 'space-around',
+		justifyContent: isRowBased ? 'space-around' : 'space-between',
 	}),
 
-	complete :
+	complete : isRowBased => (
 	{
+		paddingTop : isRowBased ? 'default' : '5vh',
+		textAlign : 'center',
 		backgroundColor : '#222',
 		fontFamily : 'HelveticaNeue-UltraLight, Lato, sans-serif',
 		fontSize : '26px',
 		letterSpacing : '1px',
 		textShadow : ' .22px .22px #eee',
 		color : '#ffffff',
-	},
+	}),
 }
 
 export const AttendeeChecks = () =>
@@ -81,7 +84,7 @@ export const AttendeeChecks = () =>
 
 	const isRowBased = useMediaQuery('(min-width: 900px)')
 
-	const updateLog = ( index, result, info ) =>
+	const updateLog = ( index, result, aInfo ) =>
 	{
 		if ( index < CHECKS.length )
 		{
@@ -89,18 +92,20 @@ export const AttendeeChecks = () =>
 			let nLog = { ...checkLog }
 
 			nLog[stepName].value = result
-			nLog[stepName].info  = info
+			nLog[stepName].info  = aInfo
 
 			setCheckLog( nLog )
 		}
 	}
 
-	const nextStep = (result, additionalInfo = null) =>
+	const nextStep = (result, aInfo = null) =>
 	{
-		updateLog( stepIndex, result, additionalInfo ? additionalInfo : {} )
-
-		if ( additionalInfo )
+		if ( result === EStatus.PASSED || result === EStatus.FAILED )
 		{
+			const additionalInfo = aInfo ? aInfo : {}	// optional info to store with test status; currently unused?
+
+			updateLog( stepIndex, result, additionalInfo )
+
 			let newIndex = stepIndex + 1
 			setStepIndex( stepIndex + 1 )
 			updateLog( newIndex, EStatus.TESTING, additionalInfo )
@@ -110,9 +115,9 @@ export const AttendeeChecks = () =>
 		}
 	}
 
-	const recordResult = ( passed, info ) =>
+	const recordResult = ( passed, aInfo ) =>
 	{
-		nextStep(passed ? EStatus.PASSED : EStatus.FAILED, info)
+		nextStep( passed ? EStatus.PASSED : EStatus.FAILED, aInfo )
 	}
 
 	const renderCheck =()=>
@@ -152,7 +157,7 @@ export const AttendeeChecks = () =>
 				<button style={ STYLES.rerunChecks } onClick={rerunChecks}>Rerun Checks</button>
 			</div>
 
-			<div style={ STYLES.steps }>
+			<div style={ STYLES.steps(isRowBased) }>
 			{
 				CHECKS.map( ({name}, index) =>
 				(
@@ -169,7 +174,7 @@ export const AttendeeChecks = () =>
 			</div>
 
 			<div style={ STYLES.checkContainer(isRowBased) }>
-				{ complete && <div style={ STYLES.complete }>Checks Complete!</div> }
+				{ complete && <div style={ STYLES.complete(isRowBased) }>Checks Complete!</div> }
 				{ !complete && renderCheck() }
 			</div>
 
