@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { getDeviceInfo } from 'library/device'
 import { Passed } from './Passed'
 import { Failed } from './Failed'
-import { CSTYLES } from './styles'
+import { CSTYLES, middleColumnStyle } from './styles'
 import { EStatus, SUPPORTED_OS_LIST, vSimplify } from '../common'
 
 export const CheckOperatingSystem = ({ status, image, title, isRowBased, onComplete }) =>
@@ -14,6 +14,9 @@ export const CheckOperatingSystem = ({ status, image, title, isRowBased, onCompl
 
 	useEffect( () =>
 	{
+			// something is not initialized properly for the 1st step //
+				// this is a hackaround for now .... //
+
 		if ( status.value === EStatus.PENDING || status.value === EStatus.TESTING )
 			runTest()
 				/* eslint-disable react-hooks/exhaustive-deps */
@@ -56,12 +59,7 @@ export const CheckOperatingSystem = ({ status, image, title, isRowBased, onCompl
 		setMessage( outcome )
 	}
 
-	const endTest =()=>
-	{
-		onComplete(EStatus.PASSED)
-	}
-
-	const col3style = { ...CSTYLES.column(isRowBased), justifyContent : isRowBased ? 'flex-end' : 'flex-start' }
+	const endTest =()=> { onComplete(EStatus.PASSED) }
 
 	return ( message &&
 		<div style={ CSTYLES.outer(isRowBased) }>
@@ -70,13 +68,13 @@ export const CheckOperatingSystem = ({ status, image, title, isRowBased, onCompl
 				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
 			</div>
 
-			<div style={ CSTYLES.column(isRowBased) }>
+			<div style={ middleColumnStyle(isRowBased) }>
 				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
 				{ passed ? <Passed /> : <Failed /> }
 				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
-			<div style={ col3style }>
+			<div style={ CSTYLES.column(isRowBased) }>
 				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
 			</div>
 

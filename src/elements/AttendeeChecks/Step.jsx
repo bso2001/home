@@ -7,10 +7,12 @@ const STYLES =
 {
 	step :
 	{
+		width : '160px',
 	},
 
 	stepGraphics :
 	{
+		display : 'flex',
 	},
 
 	stepNumber :
@@ -41,6 +43,22 @@ const STYLES =
 
 	stepLine :
 	{
+		borderTop : '1px dashed #444',
+		height : '1px',
+		width : '90px',
+		margin : '20px 0 0 10px',
+	},
+
+	stepLineTesting :
+	{
+		borderTop : '1px dashed #469d8d0',
+		height : '5px',
+	},
+
+	stepLineComplete :
+	{
+		borderTop : '1px solid #469d8d0',
+		height : '10px',
 	},
 
 	stepName :
@@ -52,31 +70,36 @@ const STYLES =
 	},
 }
 
-export const Step = ({ name, number, status }) =>
+export const Step = ({ name, number, showLine, status }) =>
 {
-	let numberValue = '' + number
-	let numberStyle = {}
 	let lineStyle = {}
+	let numberStyle = {}
+	let numberValue = '' + number
 
 	if ( status.value === EStatus.PENDING )
+	{
+		lineStyle = STYLES.stepLine
 		numberStyle = STYLES.stepNumber
+	}
 
 	else if ( status.value === EStatus.TESTING )
+	{
+		lineStyle = { ...STYLES.stepLine, ...STYLES.stepLineTesting }
 		numberStyle = { ...STYLES.stepNumber, ...STYLES.stepNumberTesting }
+	}
 
 	else
 	{
+		lineStyle = { ...STYLES.stepLine, ...STYLES.stepLineComplete }
 		numberStyle = { ...STYLES.stepNumber, ...STYLES.stepNumberComplete }
 		numberValue = "<i class='fa fa-check'></i>"
 	}
-
-			// console.log( status.value, numberStyle )
 
 	return (
 		<div style={ STYLES.step } key={name}>
 			<div style={ STYLES.stepGraphics }>
 				<div style={ numberStyle } dangerouslySetInnerHTML={{ __html: numberValue }} />
-				<div style={ lineStyle }></div>
+				{ showLine && <div style={ lineStyle }>&nbsp;</div> }
 			</div>
 			<div style={ STYLES.stepName }>{name}</div>
 		</div>

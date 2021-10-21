@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import { CSTYLES } from './styles'
+import { CSTYLES, middleColumnStyle } from './styles'
 import { EStatus } from '../common'
 
 export const CheckAudio = ({ status, image, title, isRowBased, onComplete }) =>
@@ -10,7 +10,6 @@ export const CheckAudio = ({ status, image, title, isRowBased, onComplete }) =>
 	const testFailed =()=> { onComplete( EStatus.FAILED, {} ) }
 
 	const noButtonStyle = { ...CSTYLES.button(isRowBased), ...CSTYLES.noButton }
-	const col3Style = { ...CSTYLES.column(isRowBased), justifyContent : 'space-between' } 
 
 	return ( 
 		<div style={ CSTYLES.outer(isRowBased) }>
@@ -20,12 +19,12 @@ export const CheckAudio = ({ status, image, title, isRowBased, onComplete }) =>
 				<audio id="audioTestation" src="test.wav" autoPlay loop />
 			</div>
 
-			<div style={ CSTYLES.column(isRowBased) }>
+			<div style={ middleColumnStyle(isRowBased) }>
 				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
 				    <div style={ CSTYLES.result(isRowBased) } >Do you hear the audio playing?</div>
 			</div>
 
-			<div style={ col3Style }>
+			<div style={ CSTYLES.column(isRowBased) }>
 				<button style={ noButtonStyle } onClick={testFailed} >No, I don't hear the audio</button>
 				<button style={ CSTYLES.button(isRowBased) } onClick={testPassed} >Yes, I hear the audio</button>
 			</div>

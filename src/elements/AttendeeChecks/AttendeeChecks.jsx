@@ -7,6 +7,8 @@ const STYLES =
 {
 	outer : 
 	{
+		maxWidth : '1010px',
+		margin : '0 auto',
 		fontFamily : 'Lato, sans-serif',
 		backgroundColor : '#22242A',
 		color : '#ffffff',
@@ -44,15 +46,9 @@ const STYLES =
 	{
 		display : 'flex',
 		flexDirection : 'row',
-		justifyContent : 'space-between',
 		paddingTop : isRowBased ? '10vh' : '5vh',
 		overflowX : 'hidden',
 	}),
-
-	step :
-	{
-		minWidth : '120px',
-	},
 
 	checkContainer : isRowBased => (
 	{
@@ -143,7 +139,7 @@ export const AttendeeChecks = () =>
 
 	useEffect( () =>
 	{
-		nextStep( EStatus.TESTING )
+		updateLog( 0, EStatus.TESTING )
 			/* eslint-disable react-hooks/exhaustive-deps */
 	}, [])
 
@@ -161,11 +157,12 @@ export const AttendeeChecks = () =>
 			{
 				CHECKS.map( ({name}, index) =>
 				(
-				    <div style={ STYLES.step } key={name+'.'+index}>
+				    <div key={name+'.'+index}>
 					<Step
 						key={ name }
 						name={ name }
 						number={ index + 1 }
+						showLine={ index < (CHECKS.length - 1) }
 						status={ checkLog[name] }
 					/>
 				    </div>

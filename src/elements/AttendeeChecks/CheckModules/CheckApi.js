@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-import { CSTYLES } from './styles'
+import { CSTYLES, middleColumnStyle } from './styles'
 import { EStatus } from '../common'
 import { Passed } from './Passed'
 import { Failed } from './Failed'
@@ -72,12 +72,7 @@ export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
 		setMessage('Under Construction')
 	}
 
-	const endTest =()=>
-	{
-		onComplete(passed)
-	}
-
-	const col3style = { ...CSTYLES.column(isRowBased), justifyContent : isRowBased ? 'flex-end' : 'flex-start' }
+	const endTest =()=> { onComplete(passed) }
 
 	return ( message &&
 		<div style={ CSTYLES.outer(isRowBased) }>
@@ -86,13 +81,13 @@ export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
 				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
 			</div>
 
-			<div style={ CSTYLES.column(isRowBased) }>
+			<div style={ middleColumnStyle(isRowBased) }>
 				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
 				{ passed ? <Passed /> : <Failed  /> }
 				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
-			<div style={ col3style }>
+			<div style={ CSTYLES.column(isRowBased) }>
 				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
 			</div>
 

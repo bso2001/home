@@ -11,14 +11,19 @@ export const CSTYLES =
 
 	column : isRowBased => (
 	{
-		paddingRight : isRowBased ? '3vw' : '0',
 		flex : '1',
 		display : 'flex',
 		flexDirection : 'column',
 		paddingTop: isRowBased ? '0px' : '30px',
 		minHeight: isRowBased ? '180px' : 'default',
 		alignItems : isRowBased ? 'left' : 'center',
-		justifyContent : isRowBased ? 'left' : 'center',
+		justifyContent : isRowBased ? 'flex-end' : 'flex-start',
+	}),
+
+	middleColumn : isRowBased => (
+	{
+		margin : '0 2vw',
+		justifyContent : isRowBased ? 'normal' : 'center',
 	}),
 
 	image : isRowBased => (
@@ -57,12 +62,18 @@ export const CSTYLES =
 		fontWeight : '600',
 		color : '#ddf',
 		cursor : 'pointer',
-		marginBottom : isRowBased ? '0' : '2vh',
+		marginTop : '2vh',
+		alignSelf : 'flex-end',
 	}),
 
 	noButton :
 	{
 		backgroundColor : '#dd6a65',
 	}
+}
+ 
+export function middleColumnStyle(isRowBased)
+{
+	return { ...CSTYLES.column(isRowBased), ...CSTYLES.middleColumn(isRowBased) }
 }
 
