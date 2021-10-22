@@ -7,7 +7,7 @@ const STYLES =
 {
 	outer : 
 	{
-		maxWidth : '1010px',
+		maxWidth : '840px',
 		margin : '0 auto',
 		fontFamily : 'Lato, sans-serif',
 		backgroundColor : '#22242A',
@@ -15,7 +15,7 @@ const STYLES =
 		display : 'flex',
 		flexDirection : 'column',
 		height: '100vh',
-		padding : '5vh 10vw',
+		padding : '5vh 10px',
 	},
 
 	header :
@@ -37,7 +37,7 @@ const STYLES =
 		backgroundColor : 'transparent',
 		border : '2px solid #444',
 		fontSize : '12px',
-		fontWeight : '600',
+		fontWeight : '800',
 		color : '#aaa',
 		cursor : 'pointer',
 	},
@@ -162,6 +162,7 @@ export const AttendeeChecks = () =>
 						key={ name }
 						name={ name }
 						number={ index + 1 }
+						showLine={ index !== CHECKS.length-1 }
 						status={ checkLog[name] }
 					/>
 				    </div>

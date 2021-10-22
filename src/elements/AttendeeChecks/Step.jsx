@@ -7,7 +7,7 @@ const STYLES =
 {
 	step :
 	{
-		width : '160px',
+		width : '130px',
 	},
 
 	stepGraphics :
@@ -17,12 +17,12 @@ const STYLES =
 
 	stepNumber :
 	{
-		width : '46px',
-		height : '46px',
-		borderRadius : '50px',
+		width : '42px',
+		height : '42px',
+		borderRadius : '42px',
 		border : '1px solid #606060',
 		boxSizing : 'border-box',
-		padding : '11px 0 0 18px',
+		padding : '9px 0 0 16px',
 		fontSize : '14px',
 		fontWeight : '600',
 		color : '#ffffff',
@@ -38,15 +38,15 @@ const STYLES =
 	{
 		backgroundColor : '#4698d0',
 		fontSize : '16px',
-		paddingLeft : '14px',
+		paddingLeft : '12px',
 	},
 
 	stepLine :
 	{
 		borderTop : '1px solid #4698d0',
 		height : '1px',
-		width : '90px',
-		margin : '20px 0 0 10px',
+		width : '60px',
+		margin : '20px 0 0 15px',
 	},
 
 	stepName :
@@ -58,7 +58,7 @@ const STYLES =
 	},
 }
 
-export const Step = ({ name, number, status }) =>
+export const Step = ({ name, number, showLine, status }) =>
 {
 	const [lineStyle, setLineStyle] = useState({})
 	const [numberStyle, setNumberStyle] = useState({})
@@ -94,7 +94,7 @@ console.log(name,status.value,lineStyle)
 		<div style={ STYLES.step } key={name}>
 			<div style={ STYLES.stepGraphics }>
 				<div style={ numberStyle } dangerouslySetInnerHTML={{ __html: numberValue }} />
-				<div style={ lineStyle } />
+				{ showLine && <div style={ lineStyle } /> }
 			</div>
 			<div style={ STYLES.stepName }>{name}</div>
 		</div>

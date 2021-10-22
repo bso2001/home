@@ -28,7 +28,7 @@ export const EStatus = Object.freeze(
 
 export const CHECKS =
 [
-	[ 'Operating System', CheckOperatingSystem, 'os.jpg' ],
+	[ 'OS Version', CheckOperatingSystem, 'os.jpg' ],
 	[ 'Browser', CheckBrowser, 'browser.jpg' ],
 	[ 'Local Storage', CheckLocalStorage, 'storage.jpg' ],
 	[ 'Network', CheckApi, 'network.jpg' ],
