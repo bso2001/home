@@ -42,13 +42,22 @@ const STYLES =
 		cursor : 'pointer',
 	},
 
-	steps : isRowBased => (
+	steps :
 	{
 		display : 'flex',
 		flexDirection : 'row',
-		paddingTop : isRowBased ? '10vh' : '5vh',
+		paddingTop : '10vh',
 		overflowX : 'hidden',
-	}),
+	},
+
+	mobileStep :
+	{
+		display : 'flex',
+		flexDirection : 'column',
+		paddingTop : '5vh',
+		overflowX : 'hidden',
+		alignItems : 'center',
+	},
 
 	checkContainer : isRowBased => (
 	{
@@ -72,7 +81,7 @@ const STYLES =
 	}),
 }
 
-export const AttendeeChecks = () =>
+export const AttendeeChecks =()=>
 {
 	const [checkLog, setCheckLog] = useState(LOG_INIT)
 	const [stepIndex, setStepIndex] = useState(0)
@@ -137,13 +146,52 @@ export const AttendeeChecks = () =>
 		)
 	}
 
-	useEffect( () =>
+	useEffect( ()=>
 	{
 		updateLog( 0, EStatus.TESTING )
 			/* eslint-disable react-hooks/exhaustive-deps */
 	}, [])
 
 	const rerunChecks =()=> { window.location.reload() }
+
+	const renderSteps =()=>
+	{
+		if ( ! isRowBased )
+		{
+			let name = CHECKS[ stepIndex ].name
+
+			return (
+			    <div style={ STYLES.mobileStep }>
+				<Step
+					key={ name }
+					name={ name }
+					number={ stepIndex + 1 }
+					status={ EStatus.TESTING }
+					showLine={ EStatus.TESTING }
+				/>
+			    </div>
+			)
+		}
+
+		return (
+		    <div style={ STYLES.steps }>
+		    {
+			CHECKS.map( ({name}, index) =>
+			(
+			    <div key={name+'.'+index}>
+				<Step
+					key={ name }
+					name={ name }
+					number={ index + 1 }
+					showLine={ index !== CHECKS.length-1 }
+					status={ checkLog[name] }
+				/>
+			    </div>
+			))
+		    }
+		    </div>
+		)
+	}
 
 	return (
 		<div style={ STYLES.outer }>
@@ -153,22 +201,7 @@ export const AttendeeChecks = () =>
 				<button style={ STYLES.rerunChecks } onClick={rerunChecks}>Rerun Checks</button>
 			</div>
 
-			<div style={ STYLES.steps(isRowBased) }>
-			{
-				CHECKS.map( ({name}, index) =>
-				(
-				    <div key={name+'.'+index}>
-					<Step
-						key={ name }
-						name={ name }
-						number={ index + 1 }
-						showLine={ index !== CHECKS.length-1 }
-						status={ checkLog[name] }
-					/>
-				    </div>
-				))
-			}
-			</div>
+			{ renderSteps() }
 
 			<div style={ STYLES.checkContainer(isRowBased) }>
 				{ complete && <div style={ STYLES.complete(isRowBased) }>Checks Complete!</div> }

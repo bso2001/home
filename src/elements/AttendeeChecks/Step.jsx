@@ -5,10 +5,10 @@ import { EStatus } from './common'
 
 const STYLES =
 {
-	step :
+	step : isMobile => (
 	{
-		width : '130px',
-	},
+		width : isMobile ? 'default' : '130px',
+	}),
 
 	stepGraphics :
 	{
@@ -34,28 +34,29 @@ const STYLES =
 		color : '#4698d0',
 	},
 
-	stepNumberComplete :
+	stepNumberComplete : (isMobile) => (
 	{
 		backgroundColor : '#4698d0',
 		fontSize : '16px',
-		paddingLeft : '12px',
-	},
+		paddingLeft : isMobile ? '15px' : '12px',
+	}),
 
-	stepLine :
+	stepLine : (isMobile) => (
 	{
 		borderTop : '1px solid #4698d0',
 		height : '1px',
-		width : '60px',
+		width : isMobile ? '30px' : '60px',
 		margin : '20px 0 0 15px',
-	},
+	}),
 
-	stepName :
+	stepName : (isMobile) => (
 	{
 		marginTop : '20px',
 		letterSpacing : '.8px',
 		fontSize : '14px',
 		fontWeight : '600',
-	},
+		textAlign : isMobile ? 'center' : 'left',
+	}),
 }
 
 export const Step = ({ name, number, showLine, status }) =>
@@ -64,39 +65,41 @@ export const Step = ({ name, number, showLine, status }) =>
 	const [numberStyle, setNumberStyle] = useState({})
 	const [numberValue, setNumberValue] = useState(null)
 
+	const isMobile = ( showLine === EStatus.TESTING )
+
 	useEffect( () =>
 	{
 		setNumberValue( '' + number )
 
 		if ( status.value === EStatus.PENDING )
 		{
-			setLineStyle({ ...STYLES.stepLine, borderTop : '1px dashed #606060' })
+			setLineStyle({ ...STYLES.stepLine(isMobile), borderTop : '1px dashed #606060' })
 			setNumberStyle( STYLES.stepNumber )
 		}
 
 		else if ( status.value === EStatus.TESTING )
 		{
-			setLineStyle({ ...STYLES.stepLine, borderTop : '1px dashed #4698d0' })
+			setLineStyle({ ...STYLES.stepLine(isMobile), borderTop : '1px dashed #4698d0' })
 			setNumberStyle({ ...STYLES.stepNumber, ...STYLES.stepNumberTesting })
 		}
 
 		else
 		{
-			setLineStyle({ ...STYLES.stepLine, borderTop : '1px solid #4698d0' })
-			setNumberStyle({ ...STYLES.stepNumber, ...STYLES.stepNumberComplete })
+			setLineStyle({ ...STYLES.stepLine(isMobile), borderTop : '1px solid #4698d0' })
+			setNumberStyle({ ...STYLES.stepNumber, ...STYLES.stepNumberComplete(isMobile) })
+			if ( ! isMobile )
 			setNumberValue( `<i class='fa fa-check'></i>` )
 		}
-	}, [status.value, number ])
-
-console.log(name,status.value,lineStyle)
+	}, [status.value, isMobile, number ])
 
 	return lineStyle && (
-		<div style={ STYLES.step } key={name}>
+		<div style={ STYLES.step(isMobile) } key={name}>
 			<div style={ STYLES.stepGraphics }>
+				{ isMobile && <div style={{ ...lineStyle, margin : '20px 20px 0 0' }} /> }
 				<div style={ numberStyle } dangerouslySetInnerHTML={{ __html: numberValue }} />
 				{ showLine && <div style={ lineStyle } /> }
 			</div>
-			<div style={ STYLES.stepName }>{name}</div>
+			<div style={ STYLES.stepName(isMobile) }>{name}</div>
 		</div>
 	)
 }
