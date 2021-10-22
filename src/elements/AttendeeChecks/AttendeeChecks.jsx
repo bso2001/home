@@ -162,7 +162,6 @@ export const AttendeeChecks = () =>
 						key={ name }
 						name={ name }
 						number={ index + 1 }
-						showLine={ index !== (CHECKS.length - 1) }
 						status={ checkLog[name] }
 					/>
 				    </div>
