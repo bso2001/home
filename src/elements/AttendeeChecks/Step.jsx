@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import { EStatus } from './common'
 
@@ -43,22 +43,9 @@ const STYLES =
 
 	stepLine :
 	{
-		borderTop : '1px dashed #444',
 		height : '1px',
 		width : '90px',
 		margin : '20px 0 0 10px',
-	},
-
-	stepLineTesting :
-	{
-		borderTop : '1px dashed #469d8d0',
-		height : '5px',
-	},
-
-	stepLineComplete :
-	{
-		borderTop : '1px solid #469d8d0',
-		height : '10px',
 	},
 
 	stepName :
@@ -72,34 +59,40 @@ const STYLES =
 
 export const Step = ({ name, number, showLine, status }) =>
 {
-	let lineStyle = {}
-	let numberStyle = {}
-	let numberValue = '' + number
+	const [lineStyle, setLineStyle] = useState({})
+	const [numberStyle, setNumberStyle] = useState({})
+	const [numberValue, setNumberValue] = useState(null)
 
-	if ( status.value === EStatus.PENDING )
+	useEffect( () =>
 	{
-		lineStyle = STYLES.stepLine
-		numberStyle = STYLES.stepNumber
-	}
+		setNumberValue( '' + number )
 
-	else if ( status.value === EStatus.TESTING )
-	{
-		lineStyle = { ...STYLES.stepLine, ...STYLES.stepLineTesting }
-		numberStyle = { ...STYLES.stepNumber, ...STYLES.stepNumberTesting }
-	}
+		if ( status.value === EStatus.PENDING )
+		{
+			setLineStyle({ ...STYLES.stepLine, borderTop : '1px dashed #444' })
+			setNumberStyle( STYLES.stepNumber )
+		}
 
-	else
-	{
-		lineStyle = { ...STYLES.stepLine, ...STYLES.stepLineComplete }
-		numberStyle = { ...STYLES.stepNumber, ...STYLES.stepNumberComplete }
-		numberValue = "<i class='fa fa-check'></i>"
-	}
+		else if ( status.value === EStatus.TESTING )
+		{
+			setLineStyle({ ...STYLES.stepLine, borderTop : '1px dashed #469d8d0' })
+			setNumberStyle({ ...STYLES.stepNumber, ...STYLES.stepNumberTesting })
+		}
 
-	return (
+		else
+		{
+			setLineStyle({ ...STYLES.stepLine, borderTop : '1px solid #469d8d0' })
+			setNumberStyle({ ...STYLES.stepNumber, ...STYLES.stepNumberComplete })
+			setNumberValue( `<i class='fa fa-check'></i>` )
+		}
+	}, [status.value, number ])
+
+console.log(name,status.value,lineStyle)
+	return lineStyle && (
 		<div style={ STYLES.step } key={name}>
 			<div style={ STYLES.stepGraphics }>
 				<div style={ numberStyle } dangerouslySetInnerHTML={{ __html: numberValue }} />
-				{ showLine && <div style={ lineStyle }>&nbsp;</div> }
+				<div style={ lineStyle }></div>
 			</div>
 			<div style={ STYLES.stepName }>{name}</div>
 		</div>
