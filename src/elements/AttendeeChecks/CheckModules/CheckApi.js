@@ -11,7 +11,7 @@ import { Failed } from './Failed'
 
 export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
 {
-	const [passed, setPassed] = useState(false)
+	const [passed, setPassed] = useState(null)
 	const [message, setMessage] = useState(null)
 
 	useEffect( () =>
@@ -21,9 +21,53 @@ export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
 				/* eslint-disable react-hooks/exhaustive-deps */
 	}, [status, message])
 
-	const runCheck =()=>
+const getEventsList =()=>
+{
+	return new Promise( (resolve) => { setTimeout( ()=>{ resolve({ items : [ '1', '2', '3' ] })}, 800 )})
+}
+
+	const getEvents = async() =>
 	{
+		return new Promise( (resolve) =>
+		{
+			try
+			{
+				getEventsList().then( (rsp) =>
+				{
+					if ( ! rsp?.items || ! Array.isArray( rsp.items ))
+					{
+						resolve(EStatus.FAILED)
+						console.error('CheckApi:', rsp)
+					}
+					else
+						resolve(EStatus.PASSED)
+				})
+			}
+			catch (e)
+			{
+				console.error('CheckApi:', e)
+				resolve(EStatus.FAILED)
+			}
+		})
+	}
+
+	const runCheck = async() =>
+	{
+		let message = ''
+		const result = await getEvents()
+
+		if ( result === EStatus.PASSED )
+			setPassed( true )
+		else
+		{
+			message = 'Network request failed.'
+			setPassed( false )
+		}
+
+		setMessage( message )
+	}
 	/*
+	{
 		let isPassed = true
 		let info = []
 		let responseRestApi = null
@@ -68,13 +112,13 @@ export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
 			info = [...info, 'The GraphQL Mutation request returned an invalid response']
 			console.error(responseGraphQlMutation)
 		}
-*/
 		setMessage('Under Construction')
 	}
+*/
 
 	const endCheck =()=> { onComplete(passed) }
 
-	return ( message &&
+	return (
 		<div style={ CSTYLES.outer(isRowBased) }>
 
 			<div style={ CSTYLES.cell(isRowBased) }>
@@ -83,7 +127,8 @@ export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
 
 			<div style={ resultCellStyle(isRowBased) }>
 				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
-				{ passed ? <Passed /> : <Failed  /> }
+				{ passed === true  && <Passed /> }
+				{ passed === false && <Failed /> }
 				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
