@@ -9,7 +9,7 @@ export const CSTYLES =
 		alignItems : isRowBased ? 'stretch' : 'center',
 	}),
 
-	column : isRowBased => (
+	cell : isRowBased => (
 	{
 		flex : '1',
 		display : 'flex',
@@ -20,15 +20,16 @@ export const CSTYLES =
 		justifyContent : isRowBased ? 'flex-end' : 'flex-start',
 	}),
 
-	middleColumn : isRowBased => (
+	resultCell : isRowBased => (
 	{
 		margin : '0 2vw',
-		justifyContent : isRowBased ? 'normal' : 'center',
+		minHeight : '18vh',
+		height: isRowBased ? '22vh' : '200px',
 	}),
 
 	image : isRowBased => (
 	{
-		height: isRowBased ? '30vh' : '22vh',
+		height: '22vh',
 		width : 'auto',
 		maxWidth : isRowBased ? 'default' : '500px',
 	}),
@@ -36,7 +37,7 @@ export const CSTYLES =
 	title : isRowBased => (
 	{
 		paddingBottom : isRowBased ? '4vh' : '2vh',
-		fontSize : '20px',
+		fontSize : '18px',
 		fontWeight : '600',
 		color : '#eee',
 	}),
@@ -56,7 +57,7 @@ export const CSTYLES =
 	{
 		backgroundColor : '#4698d0',
 		border : '0',
-		width : '180px',
+		width : isRowBased ? '180px' : '65vw',
 		height : '45px',
 		fontSize : '15px',
 		fontWeight : '600',
@@ -72,8 +73,8 @@ export const CSTYLES =
 	}
 }
  
-export function middleColumnStyle(isRowBased)
+export function resultCellStyle(isRowBased)
 {
-	return { ...CSTYLES.column(isRowBased), ...CSTYLES.middleColumn(isRowBased) }
+	return { ...CSTYLES.cell(isRowBased), ...CSTYLES.resultCell(isRowBased) }
 }
 

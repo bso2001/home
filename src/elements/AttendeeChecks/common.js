@@ -29,10 +29,10 @@ export const EStatus = Object.freeze(
 export const CHECKS =
 [
 	[ 'OS Version', CheckOperatingSystem, 'os.jpg' ],
+	[ 'Chatbot', CheckChatbot, 'chatbot.png' ],		// @todo -- currently cannot put chatbot first; dunno why...
 	[ 'Browser', CheckBrowser, 'browser.jpg' ],
 	[ 'Local Storage', CheckLocalStorage, 'storage.jpg' ],
 	[ 'Network', CheckApi, 'network.jpg' ],
-	[ 'Chatbot', CheckChatbot, 'chatbot.png' ],
 	[ 'Audio', CheckAudio, 'audio.jpg' ],
 	[ 'Video', CheckVideo, 'video.jpg' ],
 
@@ -61,47 +61,47 @@ export const NOT_SUPPORTED = 'NOT SUPPORTED'
 
 export const SUPPORTED_BROWSERS =
 {
-	"Amazon Silk": null,
-	"Android Browser Mobile": 81,
+	'Amazon Silk': null,
+	'Android Browser Mobile': 81,
 	Bada: null,
 	BlackBerry: null,
-	Chrome: 38376,
-	"Chrome Mobile": 81,
+	Chrome: 69,
+	'Chrome Mobile': 81,
 	Chromium: null,
 	Electron: null,
 	Epiphany: null,
 	Firefox: 74.0,
-	"Firefox Mobile": 68,
+	'Firefox Mobile': 68,
 	Focus: null,
 	Generic: null,
 	Googlebot: null,
-	"Google Search": null,
-	"Internet Explorer": NOT_SUPPORTED,
-	"K-Meleon": null,
+	'Google Search': null,
+	'Internet Explorer': NOT_SUPPORTED,
+	'K-Meleon': null,
 	Maxthon: null,
-	"Microsoft Edge": 79,
-	"MZ Browser": null,
-	"NAVER Whale Browser": null,
+	'Microsoft Edge': 79,
+	'MZ Browser': null,
+	'NAVER Whale Browser': null,
 	Opera: null,
-	"Opera Coast": null,
+	'Opera Coast': null,
 	PhantomJS: null,
 	Puffin: null,
 	QupZilla: null,
-	"QQ Browser": null,
-	"QQ Browser Lite": null,
+	'QQ Browser': null,
+	'QQ Browser Lite': null,
 	Safari: 13,
-	"Safari Mobile": 11.3,
+	'Safari Mobile': 11.3,
 	Sailfish: null,
-	"Samsung Internet for Android": null,
+	'Samsung Internet for Android': null,
 	SeaMonkey: null,
 	Sleipnir: null,
 	Swing: null,
 	Tizen: null,
-	"UC Browser": null,
+	'UC Browser': null,
 	Vivaldi: null,
-	"WebOS Browser": null,
+	'WebOS Browser': null,
 	WeChat: null,
-	"Yandex Browser": null,
+	'Yandex Browser': null,
 }
 
 export const SUPPORTED_OS_LIST =
@@ -120,6 +120,9 @@ export const SUPPORTED_OS_LIST =
 	WebOS :			null,
 	'Windows Phone' :	null,
 }
+
+export const APP_TAWK_TO_ID = '5f650792f0e7167d0011b051'
+export const MAX_CHECK_RUN_TIME = 15
 
 export const getPosition = (string, subString, offset) =>
 {

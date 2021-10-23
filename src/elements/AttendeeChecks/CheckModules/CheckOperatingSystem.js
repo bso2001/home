@@ -4,12 +4,12 @@ import React, { useEffect, useState } from 'react'
 import { getDeviceInfo } from 'library/device'
 import { Passed } from './Passed'
 import { Failed } from './Failed'
-import { CSTYLES, middleColumnStyle } from './styles'
+import { CSTYLES, resultCellStyle } from './styles'
 import { EStatus, SUPPORTED_OS_LIST, vSimplify } from '../common'
 
 export const CheckOperatingSystem = ({ status, image, title, isRowBased, onComplete }) =>
 {
-	const [passed, setPassed] = useState(false)
+	const [passed, setPassed] = useState(null)
 	const [message, setMessage] = useState(null)
 
 	useEffect( () =>
@@ -18,11 +18,11 @@ export const CheckOperatingSystem = ({ status, image, title, isRowBased, onCompl
 				// this is a hackaround for now .... //
 
 		if ( status.value === EStatus.PENDING || status.value === EStatus.TESTING )
-			runTest()
+			runCheck()
 				/* eslint-disable react-hooks/exhaustive-deps */
 	}, [status, message])
 
-	const runTest =()=>
+	const runCheck =()=>
 	{
 		const { os } = getDeviceInfo()
 		let outcome = null
@@ -50,32 +50,33 @@ export const CheckOperatingSystem = ({ status, image, title, isRowBased, onCompl
 			if ( ! outcome )
 			{
 				setPassed( true )
-				outcome = `You are running<br/>${name} ${version}`
-				if ( versionName && versionName !== 'undefined' )
-					outcome += ` (${versionName})`
+				// outcome = `You are running<br/>${name} ${version}`
+				// if ( versionName && versionName !== 'undefined' )
+					// outcome += ` (${versionName})`
 			}
 		}
 
 		setMessage( outcome )
 	}
 
-	const endTest =()=> { onComplete(EStatus.PASSED) }
+	const endCheck =()=> { onComplete(EStatus.PASSED) }
 
-	return ( message &&
+	return (
 		<div style={ CSTYLES.outer(isRowBased) }>
 
-			<div style={ CSTYLES.column(isRowBased) }>
+			<div style={ CSTYLES.cell(isRowBased) }>
 				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
 			</div>
 
-			<div style={ middleColumnStyle(isRowBased) }>
+			<div style={ resultCellStyle(isRowBased) }>
 				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
-				{ passed ? <Passed /> : <Failed /> }
+				{ passed === true  && <Passed /> }
+				{ passed === false && <Failed /> }
 				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
-			<div style={ CSTYLES.column(isRowBased) }>
-				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
+			<div style={ CSTYLES.cell(isRowBased) }>
+				<button style={ CSTYLES.button(isRowBased) } onClick={endCheck}>Continue</button>
 			</div>
 
 		</div>

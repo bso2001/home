@@ -1,105 +1,116 @@
 
 import React, { useEffect, useState } from 'react'
 
-import { CSTYLES, middleColumnStyle } from './styles'
-import { EStatus } from '../common'
+import { CSTYLES, resultCellStyle } from './styles'
+import { EStatus, APP_TAWK_TO_ID, MAX_CHECK_RUN_TIME } from '../common'
 import { Passed } from './Passed'
 import { Failed } from './Failed'
 
 // import { APP_TAWK_TO_ID } from '~/exports.json'
-// import { PASS, FAIL, MAX_TEST_TIME } from '../helpers-and-data'
+
 // import { useSelector } from 'react-redux'
 // import { selectClientConfig } from 'store/selectors'
 
 export const CheckChatbot = ({ status, image, title, isRowBased, onComplete }) =>
 {
-	const [passed, setPassed] = useState(false)
-	const [message, setMessage] = useState(null)
+	const [passed, setPassed] = useState(null)
+	const [message, setMessage] = useState('Checking Chatbot...')
 
 	useEffect( () =>
 	{
 		if ( status.value === EStatus.TESTING )
-			runTest()
+			runCheck()
 				/* eslint-disable react-hooks/exhaustive-deps */
 	}, [status, message])
 
-	const runTest =()=>
+	const checkTawkTo =()=>
 	{
-/*
-		const clientConfig = useSelector( selectClientConfig )
-
-		switch (clientConfig?.chatbot)
+		return new Promise( (resolve) =>
 		{
-			case 'tawkTo':
+						// ensure there is at least one script available
+			document.getElementsByTagName('head')[0].appendChild( document.createElement('script') )
+
+			const script = document.createElement('script')
+			const locationScript = document.getElementsByTagName('script')[0]
+
+			script.onload = () =>
 			{
-				return new Promise((resolve) =>
+				let timeout = null
+				let count = 0
+				const DELAY = 1000
+
+				const waitForApi = () =>
 				{
-								// ensure there is at least one script available
-					document.getElementsByTagName('head')[0].appendChild( document.createElement('script') )
+					if ( window.Tawk_API && window.Tawk_API.onBeforeLoaded )
+						resolve(EStatus.PASSED)
+					else
+						timeout = setTimeout( waitForApi, DELAY )
 
-					const script = document.createElement('script')
-					const locationScript = document.getElementsByTagName('script')[0]
-
-					script.onload = () =>
+					if ( count > Math.floor(MAX_CHECK_RUN_TIME / DELAY) )
 					{
-						let timeout = null
-						let count = 0
-						const DELAY = 1000
-						
-						const waitForApi = () =>
-						{
-							if ( window.Tawk_API && window.Tawk_API.onBeforeLoaded )
-								resolve(PASS)
-							else
-								timeout = setTimeout( waitForApi, DELAY )
-
-							if ( count > Math.floor(MAX_TEST_TIME / DELAY) )
-							{
-								clearTimeout(timeout)
-								resolve(FAIL)
-							}
-
-							count++
-						}
-
-						waitForApi()
+						clearTimeout(timeout)
+						resolve(null)
 					}
 
-					script.onerror = () => resolve(FAIL)
-
-					script.setAttribute('async', true)
-					script.setAttribute('charset', 'UTF-8')
-					script.setAttribute('crossorigin', '*')
-					script.setAttribute('src', `https://embed.tawk.to/${APP_TAWK_TO_ID}/default`)
-
-					locationScript.parentNode.insertBefore(script, locationScript)
-				})
+					count++
+				}
+				waitForApi()
 			}
 
-			default:
-				return Promise.resolve()
-		}
-*/
-		setMessage('Under Construction')
+			script.onerror = () => resolve(EStatus.FAILED)
+
+			script.setAttribute('async', true)
+			script.setAttribute('charset', 'UTF-8')
+			script.setAttribute('crossorigin', '*')
+			script.setAttribute('src', `https://embed.tawk.to/${APP_TAWK_TO_ID}/default`)
+
+			locationScript.parentNode.insertBefore(script, locationScript)
+		})
 	}
 
-	const endTest =()=> { onComplete( passed ) }
+	const runCheck = async() =>
+	{
+						// const clientConfig = useSelector( selectClientConfig )
+						// if (clientConfig?.chatbot === 'tawkTo')
+		let message = ''
+		const result = await checkTawkTo()
 
-	return ( message &&
+		if ( result === EStatus.PASSED )
+			setPassed( true )
+
+		else if ( result === null )
+		{
+			message = 'Timed out waiting for chatbot.'
+			setPassed( false )
+		}
+
+		else
+		{
+			message = result
+			setPassed( false )
+		}
+
+		setMessage( message )
+	}
+
+	const endCheck =()=> { onComplete( passed ) }
+
+	return ( 
 		<div style={ CSTYLES.outer(isRowBased) }>
 
-			<div style={ CSTYLES.column(isRowBased) }>
+			<div style={ CSTYLES.cell(isRowBased) }>
 				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
 			</div>
 
-			<div style={ middleColumnStyle(isRowBased) }>
-				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
-				{ passed ? <Passed /> : <Failed  /> }
+			<div style={ resultCellStyle(isRowBased) }>
+				{ passed !== null && <div style={ CSTYLES.title(isRowBased) }>{ title }</div> }
+				{ passed === true  && <Passed /> }
+				{ passed === false && <Failed /> }
 				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
-			<div style={ CSTYLES.column(isRowBased) }>
-				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
+			<div style={ CSTYLES.cell(isRowBased) }>
+				{ passed !== null && <button style={ CSTYLES.button(isRowBased) } onClick={endCheck}>Continue</button> }
 			</div>
 
 		</div>

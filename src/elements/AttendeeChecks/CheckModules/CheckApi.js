@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-import { CSTYLES, middleColumnStyle } from './styles'
+import { CSTYLES, resultCellStyle } from './styles'
 import { EStatus } from '../common'
 import { Passed } from './Passed'
 import { Failed } from './Failed'
@@ -17,11 +17,11 @@ export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
 	useEffect( () =>
 	{
 		if ( status.value === EStatus.TESTING )
-			runTest()
+			runCheck()
 				/* eslint-disable react-hooks/exhaustive-deps */
 	}, [status, message])
 
-	const runTest =()=>
+	const runCheck =()=>
 	{
 	/*
 		let isPassed = true
@@ -72,23 +72,23 @@ export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
 		setMessage('Under Construction')
 	}
 
-	const endTest =()=> { onComplete(passed) }
+	const endCheck =()=> { onComplete(passed) }
 
 	return ( message &&
 		<div style={ CSTYLES.outer(isRowBased) }>
 
-			<div style={ CSTYLES.column(isRowBased) }>
+			<div style={ CSTYLES.cell(isRowBased) }>
 				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
 			</div>
 
-			<div style={ middleColumnStyle(isRowBased) }>
+			<div style={ resultCellStyle(isRowBased) }>
 				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
 				{ passed ? <Passed /> : <Failed  /> }
 				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
-			<div style={ CSTYLES.column(isRowBased) }>
-				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
+			<div style={ CSTYLES.cell(isRowBased) }>
+				<button style={ CSTYLES.button(isRowBased) } onClick={endCheck}>Continue</button>
 			</div>
 
 		</div>

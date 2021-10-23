@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-import { CSTYLES, middleColumnStyle } from './styles'
+import { CSTYLES, resultCellStyle } from './styles'
 import { EStatus, NOT_SUPPORTED, SUPPORTED_BROWSERS, vSimplify } from '../common'
 import { Passed } from './Passed'
 import { Failed } from './Failed'
@@ -9,17 +9,17 @@ import { getDeviceInfo } from 'library/device'
 
 export const CheckBrowser = ({ status, image, title, isRowBased, onComplete }) =>
 {
-	const [passed, setPassed] = useState(false)
+	const [passed, setPassed] = useState(null)
 	const [message, setMessage] = useState(null)
 
 	useEffect( () =>
 	{
 		if ( status.value === EStatus.TESTING )
-			runTest()
+			runCheck()
 				/* eslint-disable react-hooks/exhaustive-deps */
 	}, [status, message])
 
-	const runTest =()=>
+	const runCheck =()=>
 	{
 		const { browser, platform } = getDeviceInfo()
 		let outcome = null
@@ -46,31 +46,29 @@ export const CheckBrowser = ({ status, image, title, isRowBased, onComplete }) =
 		}
 
 		if ( ! outcome )
-		{
 			setPassed( true )
-			outcome = `You are running<br/>${name} ${version} (${platform.type})`
-		}
 
 		setMessage(outcome)
 	}
 
-	const endTest =()=> { onComplete(EStatus.PASSED) }
+	const endCheck =()=> { onComplete(EStatus.PASSED) }
 
-	return ( message &&
+	return ( 
 		<div style={ CSTYLES.outer(isRowBased) }>
 
-			<div style={ CSTYLES.column(isRowBased) }>
+			<div style={ CSTYLES.cell(isRowBased) }>
 				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
 			</div>
 
-			<div style={ middleColumnStyle(isRowBased) }>
+			<div style={ resultCellStyle(isRowBased) }>
 				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
-				{ passed ? <Passed /> : <Failed  /> }
+				{ passed === true  && <Passed /> }
+				{ passed === false && <Failed /> }
 				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
-			<div style={ CSTYLES.column(isRowBased) }>
-				<button style={ CSTYLES.button(isRowBased) } onClick={endTest}>Continue</button>
+			<div style={ CSTYLES.cell(isRowBased) }>
+				<button style={ CSTYLES.button(isRowBased) } onClick={endCheck}>Continue</button>
 			</div>
 
 		</div>

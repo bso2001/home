@@ -7,8 +7,6 @@ export const STYLES =
 	{
 		display : 'flex',
 		flexDirection : 'row',
-		width : '100%',
-		justifyContent : 'inherit',
 	},
 
 	okayIcon :

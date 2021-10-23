@@ -18,11 +18,11 @@ const STYLES =
 		padding : '5vh 10px',
 	},
 
-	header :
+	header : isRowBased => (
 	{
 		display : 'flex',
-		justifyContent : 'space-between',
-	},
+		justifyContent : isRowBased ? 'space-between' : 'space-around',
+	}),
 
 	logo : 
 	{
@@ -70,7 +70,7 @@ const STYLES =
 
 	complete : isRowBased => (
 	{
-		paddingTop : isRowBased ? 'default' : '5vh',
+		paddingTop : isRowBased ? 'default' : '18vh',
 		textAlign : 'center',
 		backgroundColor : '#222',
 		fontFamily : 'HelveticaNeue-UltraLight, Lato, sans-serif',
@@ -201,7 +201,7 @@ export const AttendeeChecks =()=>
 	return (
 		<div style={ STYLES.outer }>
 
-			<div style={ STYLES.header }>
+			<div style={ STYLES.header(isRowBased) }>
 				<div style={ STYLES.logo } />
 				<button style={ STYLES.rerunChecks } onClick={rerunChecks}>Rerun Checks</button>
 			</div>
