@@ -158,39 +158,44 @@ export const AttendeeChecks =()=>
 	{
 		if ( ! isRowBased )
 		{
-			let name = CHECKS[ stepIndex ].name
+			if ( stepIndex < CHECKS.length )
+			{
+				let name = CHECKS[ stepIndex ].name
 
+				return (
+				    <div style={ STYLES.mobileStep }>
+					<Step
+						key={ name }
+						name={ name }
+						number={ stepIndex + 1 }
+						status={ EStatus.TESTING }
+						showLine={ EStatus.TESTING }
+					/>
+				    </div>
+				)
+			}
+		}
+		else
+		{
 			return (
-			    <div style={ STYLES.mobileStep }>
-				<Step
-					key={ name }
-					name={ name }
-					number={ stepIndex + 1 }
-					status={ EStatus.TESTING }
-					showLine={ EStatus.TESTING }
-				/>
+			    <div style={ STYLES.steps }>
+			    {
+				CHECKS.map( ({name}, index) =>
+				(
+				    <div key={name+'.'+index}>
+					<Step
+						key={ name }
+						name={ name }
+						number={ index + 1 }
+						showLine={ index !== CHECKS.length-1 }
+						status={ checkLog[name] }
+					/>
+				    </div>
+				))
+			    }
 			    </div>
 			)
 		}
-
-		return (
-		    <div style={ STYLES.steps }>
-		    {
-			CHECKS.map( ({name}, index) =>
-			(
-			    <div key={name+'.'+index}>
-				<Step
-					key={ name }
-					name={ name }
-					number={ index + 1 }
-					showLine={ index !== CHECKS.length-1 }
-					status={ checkLog[name] }
-				/>
-			    </div>
-			))
-		    }
-		    </div>
-		)
 	}
 
 	return (
