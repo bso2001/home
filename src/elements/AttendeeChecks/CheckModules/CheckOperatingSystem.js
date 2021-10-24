@@ -9,7 +9,7 @@ import { EStatus, SUPPORTED_OS_LIST, vSimplify } from '../common'
 
 export const CheckOperatingSystem = ({ status, image, title, isRowBased, onComplete }) =>
 {
-	const [passed, setPassed] = useState(null)
+	const [passed, setPassed] = useState(false)
 	const [message, setMessage] = useState(null)
 
 	useEffect( () =>

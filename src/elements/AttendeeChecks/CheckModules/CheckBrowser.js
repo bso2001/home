@@ -131,7 +131,7 @@ export const CheckBrowser = ({ status, image, title, isRowBased, onComplete }) =
 		setMessage( msg )
 	}
 
-	const endCheck =()=> { onComplete(EStatus.PASSED) }
+	const endCheck =()=> { onComplete( versionPassed && cssPassed ) }
 
 	return ( 
 		<div style={ CSTYLES.outer(isRowBased) }>

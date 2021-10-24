@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { CSTYLES } from './styles'
 
 export const STYLES =
 {
@@ -22,6 +21,12 @@ export const STYLES =
 		padding : '6px 0 0 9px',
 		fontSize : '12px',
 	},
+
+	checkMsg :
+	{
+		fontSize : '15px',
+		color : '#dd6a65',
+	},
 }
 
 export const Failed = ({ msg }) =>
@@ -29,7 +34,7 @@ export const Failed = ({ msg }) =>
 	return (
 		<div style={ STYLES.outer }>
 			<i style={ STYLES.errorIcon } className={`fa fa-exclamation`}></i>
-			<div style={ CSTYLES.checkMsg } dangerouslySetInnerHTML={{ __html: msg ? msg : `Failed` }} />
+			<div style={ STYLES.checkMsg } dangerouslySetInnerHTML={{ __html: msg ? msg : `Failed` }} />
 		</div>
 	)
 }

@@ -5,7 +5,7 @@ import { CheckOperatingSystem } from './CheckModules/CheckOperatingSystem'
 import { CheckBrowser } from './CheckModules/CheckBrowser'
 import { CheckLocalStorage } from './CheckModules/CheckLocalStorage'
 import { CheckChatbot } from './CheckModules/CheckChatbot'
-import { CheckApi } from './CheckModules/CheckApi'
+import { CheckNetwork } from './CheckModules/CheckNetwork'
 import { CheckVideo } from './CheckModules/CheckVideo'
 import { CheckAudio } from './CheckModules/CheckAudio'
 
@@ -33,7 +33,7 @@ export const CHECKS =
 	[ 'Browser', CheckBrowser, 'browser.jpg' ],
 	[ 'Local Storage', CheckLocalStorage, 'storage.jpg' ],
 	[ 'Chatbot', CheckChatbot, 'chatbot.png' ],
-	[ 'Network', CheckApi, 'network.jpg' ],
+	[ 'Network', CheckNetwork, 'network.jpg' ],
 	[ 'Audio', CheckAudio, 'audio.jpg' ],
 	[ 'Video', CheckVideo, 'video.jpg' ],
 

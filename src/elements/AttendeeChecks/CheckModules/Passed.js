@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { CSTYLES } from './styles'
 
 export const STYLES =
 {
@@ -22,14 +21,20 @@ export const STYLES =
 		padding : '5px 0 0 5px',
 		fontSize : '12px',
 	},
+
+	checkMsg :
+	{
+		fontSize : '15px',
+		color : '#eee',
+	},
 }
 
-export const Passed = ({ label, msg }) =>
+export const Passed = ({ msg }) =>
 {
 	return (
 		<div style={ STYLES.outer }>
 			<i style={ STYLES.okayIcon } className={'fa fa-check'}></i>
-			<div style={ CSTYLES.checkMsg } dangerouslySetInnerHTML={{ __html: msg ? msg : `Passed` }} />
+			<div style={ STYLES.checkMsg } dangerouslySetInnerHTML={{ __html: msg ? msg : `Passed` }} />
 		</div>
 	)
 }

@@ -9,7 +9,7 @@ import { Failed } from './Failed'
 // import { getChannels, getEventsList, createConversationMessage } from 'lib/api'
 // import { isValidArray, isValidObject } from '@thebuzzcast/utils'
 
-export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
+export const CheckNetwork = ({ status, image, title, isRowBased, onComplete }) =>
 {
 	const [passed, setPassed] = useState(null)
 	const [message, setMessage] = useState('Checking Network...')
@@ -37,7 +37,7 @@ const getEventsList =()=>
 					if ( ! rsp?.items || ! Array.isArray( rsp.items ))
 					{
 						resolve(EStatus.FAILED)
-						console.error('CheckApi:', rsp)
+						console.error('CheckNetwork:', rsp)
 					}
 					else
 						resolve(EStatus.PASSED)
@@ -45,7 +45,7 @@ const getEventsList =()=>
 			}
 			catch (e)
 			{
-				console.error('CheckApi:', e)
+				console.error('CheckNetwork:', e)
 				resolve(EStatus.FAILED)
 			}
 		})
