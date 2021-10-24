@@ -1,54 +1,134 @@
 
 import React, { useEffect, useState } from 'react'
 
+import
+{
+	combinePropertyAndValue,
+	CSS_PROPERTIES_WHITELIST,
+	CSS_VALUES_WHITELIST,
+	EStatus,
+	NOT_SUPPORTED,
+	propertiesInfo,
+	SUPPORTED_BROWSERS,
+	vSimplify,
+} from '../common'
+
 import { CSTYLES, resultCellStyle } from './styles'
-import { EStatus, NOT_SUPPORTED, SUPPORTED_BROWSERS, vSimplify } from '../common'
 import { Passed } from './Passed'
 import { Failed } from './Failed'
 import { getDeviceInfo } from 'library/device'
 
 export const CheckBrowser = ({ status, image, title, isRowBased, onComplete }) =>
 {
-	const [passed, setPassed] = useState(null)
-	const [message, setMessage] = useState(null)
+	const [ versionPassed, setVersionPassed] = useState(null)
+	const [ cssPassed, setCssPassed] = useState(null)
+	const [ message, setMessage ] = useState(null)
+
+	let messages = []
 
 	useEffect( () =>
 	{
 		if ( status.value === EStatus.TESTING )
-			runCheck()
+			runChecks()
 				/* eslint-disable react-hooks/exhaustive-deps */
-	}, [status, message])
+	}, [status, messages])
 
-	const runCheck =()=>
+	const checkVersion =()=>
 	{
 		const { browser, platform } = getDeviceInfo()
-		let outcome = null
 
 		if ( ! browser?.name )
-			outcome = `Your browser couldn't be identified.`
-
-		const { name, version } = browser
-
-		if (SUPPORTED_BROWSERS[name] === NOT_SUPPORTED)
-			outcome = `Your browser is not supported.`
+		{
+			messages.push( `Your browser couldn't be identified.` )
+			setVersionPassed( false )
+		}
 		else
 		{
-			if ( version )
-			{
-				const recommendedVersion = SUPPORTED_BROWSERS[ platform?.type === "mobile" ? `${name} Mobile` : name ]
+			const { name, version } = browser
 
-				if ( recommendedVersion )
+			if (SUPPORTED_BROWSERS[name] === NOT_SUPPORTED)
+			{
+				messages.push( `Your browser is not supported.` )
+				setVersionPassed( false )
+			}
+			else
+			{
+				setVersionPassed( true )
+
+				if ( version )
 				{
-					if ( Number( vSimplify(version) ) < recommendedVersion )
-						outcome = `Please upgrade your version to at least ${name} ${recommendedVersion}`
+					const recommendedVersion = SUPPORTED_BROWSERS[ platform?.type === "mobile" ? `${name} Mobile` : name ]
+
+					if ( recommendedVersion )
+					{
+						if ( Number( vSimplify(version) ) < recommendedVersion )
+							messages.push( `Please upgrade your version to at least ${name} ${recommendedVersion}` )
+					}
+				}
+			}
+		}
+	}
+
+	const checkCSS =()=>
+	{
+		const { style } = document.createElement( 'div' )
+		const properties = Object.keys( propertiesInfo )
+
+		setCssPassed( true )
+
+		for ( let property of properties )
+		{
+						// console.log('property', property)
+			const { values } = propertiesInfo[property]
+			const isDefined = (value) => typeof value !== 'undefined'
+
+			if ( isDefined( style[property] ))
+			{
+				values.forEach( (value) =>
+				{
+						// const msg1 = `tried to set ${style[property]} to ${value}`
+					style[property] = value
+
+					if ( style[property] !== value )
+					{
+						// console.log(msg1)
+						// console.log('but we set it to', style[property])
+
+						let propertyAndValue = combinePropertyAndValue(property, value)
+
+						if ( ! CSS_VALUES_WHITELIST.includes(propertyAndValue) )
+						{
+							setCssPassed( false )
+							messages.push( `CRITICAL ${propertyAndValue}` )
+						}
+					}
+				})
+			}
+			else
+			{
+				if ( ! CSS_PROPERTIES_WHITELIST.includes(property) )
+				{
+					setCssPassed( false )
+					messages.push( `CRITICAL ${property}` )
 				}
 			}
 		}
 
-		if ( ! outcome )
-			setPassed( true )
+		if ( ! cssPassed )
+			messages.unshift( 'The following CSS properties and/or values were not found:' )
+	}
 
-		setMessage(outcome)
+	const runChecks =()=>
+	{
+		checkVersion()
+		checkCSS()
+
+		let msg = ''
+
+		if ( messages.length )
+			msg = messages.join( '<br/>' )
+
+		setMessage( msg )
 	}
 
 	const endCheck =()=> { onComplete(EStatus.PASSED) }
@@ -62,8 +142,8 @@ export const CheckBrowser = ({ status, image, title, isRowBased, onComplete }) =
 
 			<div style={ resultCellStyle(isRowBased) }>
 				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
-				{ passed === true  && <Passed /> }
-				{ passed === false && <Failed /> }
+				{ versionPassed===null ? null : (versionPassed ? <Passed msg="Version" /> : <Failed msg="Version" />) }
+				{ cssPassed===null ? null : (cssPassed ? <Passed msg="CSS" /> : <Failed msg="CSS" />) }
 				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 

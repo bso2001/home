@@ -6,7 +6,7 @@ export const CSTYLES =
 		display : 'flex',
 		flexDirection : 'inherit',
 		width : '100%',
-		alignItems : isRowBased ? 'stretch' : 'center',
+		alignItems : isRowBased ? 'default' : 'center',
 	}),
 
 	cell : isRowBased => (
@@ -24,7 +24,7 @@ export const CSTYLES =
 	{
 		margin : '0 2vw',
 		minHeight : '18vh',
-		height: isRowBased ? '22vh' : '200px',
+		height: isRowBased ? 'default' : '200px',
 	}),
 
 	image : isRowBased => (
@@ -70,7 +70,13 @@ export const CSTYLES =
 	noButton :
 	{
 		backgroundColor : '#dd6a65',
-	}
+	},
+
+	checkMsg :
+	{
+		fontSize : '15px',
+		color : '#eee',
+	},
 }
  
 export function resultCellStyle(isRowBased)

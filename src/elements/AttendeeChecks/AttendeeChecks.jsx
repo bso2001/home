@@ -42,13 +42,13 @@ const STYLES =
 		cursor : 'pointer',
 	},
 
-	steps :
+	steps : isRowBased => (
 	{
 		display : 'flex',
 		flexDirection : 'row',
-		paddingTop : '10vh',
+		paddingTop : isRowBased ? '5vh' : '10vh',
 		overflowX : 'hidden',
-	},
+	}),
 
 	mobileStep :
 	{
@@ -178,7 +178,7 @@ export const AttendeeChecks =()=>
 		else
 		{
 			return (
-			    <div style={ STYLES.steps }>
+			    <div style={ STYLES.steps(isRowBased) }>
 			    {
 				CHECKS.map( ({name}, index) =>
 				(
