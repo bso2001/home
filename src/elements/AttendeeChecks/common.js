@@ -1,5 +1,4 @@
 
-
 import {useEffect, useState} from 'react'
 
 import { CheckOperatingSystem } from './CheckModules/CheckOperatingSystem'
@@ -28,10 +27,10 @@ export const EStatus = Object.freeze(
 
 export const CHECKS =
 [
-	[ 'OS Version', CheckOperatingSystem, 'os.jpg' ],
-	[ 'Chatbot', CheckChatbot, 'chatbot.png' ],		// @todo -- currently cannot put chatbot first; dunno why...
+	[ 'OS Version', CheckOperatingSystem, 'os.jpg' ],	// @todo -- this must go 1st until i fix some init bug...
 	[ 'Browser', CheckBrowser, 'browser.jpg' ],
 	[ 'Local Storage', CheckLocalStorage, 'storage.jpg' ],
+	[ 'Chatbot', CheckChatbot, 'chatbot.png' ],
 	[ 'Network', CheckApi, 'network.jpg' ],
 	[ 'Audio', CheckAudio, 'audio.jpg' ],
 	[ 'Video', CheckVideo, 'video.jpg' ],

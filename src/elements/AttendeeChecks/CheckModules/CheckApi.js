@@ -12,7 +12,7 @@ import { Failed } from './Failed'
 export const CheckApi = ({ status, image, title, isRowBased, onComplete }) =>
 {
 	const [passed, setPassed] = useState(null)
-	const [message, setMessage] = useState(null)
+	const [message, setMessage] = useState('Checking Network...')
 
 	useEffect( () =>
 	{

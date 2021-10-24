@@ -31,7 +31,7 @@ export const CheckOperatingSystem = ({ status, image, title, isRowBased, onCompl
 			outcome = `Sorry, but your operating system couldn't be identified.`
 		else
 		{
-			let { name, version, versionName } = os
+			let { name, version /*,versionName*/ } = os
 
 			if ( name )
 			{
