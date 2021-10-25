@@ -13,7 +13,6 @@ export const CheckAudio = ({ status, title, inColumns, onComplete }) =>
 
 	return ( 
 		<div style={ CSTYLES.outer( inColumns ) }>
-
 			<div style={{ ...resultCellStyle( inColumns ), minHeight : '20vh' }}>
 				<audio id="audioTestation" src="test.wav" autoPlay loop />
 				<div style={ CSTYLES.title( inColumns ) }>{ title }</div>
@@ -24,7 +23,6 @@ export const CheckAudio = ({ status, title, inColumns, onComplete }) =>
 				<button style={ noButtonStyle } onClick={testFailed} >No, I don't hear the audio</button>
 				<button style={ CSTYLES.button( inColumns ) } onClick={testPassed} >Yes, I hear the audio</button>
 			</div>
-
 		</div>
 	)
 }

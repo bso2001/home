@@ -128,7 +128,7 @@ const getEventsList =()=>
 			</div>
 
 			<div style={ CSTYLES.cell( inColumns ) }>
-				<button style={ CSTYLES.button( inColumns ) } onClick={endCheck}>Continue</button>
+				{ passed !== null && <button style={ CSTYLES.button( inColumns ) } onClick={endCheck}>Continue</button> }
 			</div>
 		</div>
 	)

@@ -143,8 +143,9 @@ export const CheckBrowser = ({ status, title, inColumns, onComplete }) =>
 			</div>
 
 			<div style={ CSTYLES.cell( inColumns ) }>
-				<button style={ CSTYLES.button( inColumns ) } onClick={endCheck}>Continue</button>
+				{ cssPassed !== null && <button style={ CSTYLES.button( inColumns ) } onClick={endCheck}>Continue</button> }
 			</div>
 		</div>
 	)
 }
+
