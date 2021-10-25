@@ -14,7 +14,7 @@ export const CheckAudio = ({ status, title, inColumns, onComplete }) =>
 	return ( 
 		<div style={ CSTYLES.outer( inColumns ) }>
 
-			<div style={ resultCellStyle( inColumns ) }>
+			<div style={{ ...resultCellStyle( inColumns ), minHeight : '20vh' }}>
 				<audio id="audioTestation" src="test.wav" autoPlay loop />
 				<div style={ CSTYLES.title( inColumns ) }>{ title }</div>
 				    <div style={ CSTYLES.result( inColumns ) } >Do you hear the audio playing?</div>

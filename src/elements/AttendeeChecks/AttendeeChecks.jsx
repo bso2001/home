@@ -87,6 +87,7 @@ const STYLES =
 		width : 'auto',
 		maxWidth : inColumns ? '500px' : 'default',
 		margin : inColumns ? '0 auto' : '0',
+		paddingTop : inColumns ? '3vh' : '0',
 	}),
 
 	complete : inColumns => (

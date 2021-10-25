@@ -14,7 +14,7 @@ export const CSTYLES =
 		flex : '1',
 		display : 'flex',
 		flexDirection : 'column',
-		paddingTop: inColumns ? '20px' : '0px',
+		paddingTop: inColumns ? '2vh' : '0',
 		minHeight: inColumns ? 'default' : '180px',
 		alignItems : inColumns ? 'center' : 'left',
 		justifyContent : inColumns ? 'flex-start' : 'flex-end',
@@ -23,6 +23,7 @@ export const CSTYLES =
 	resultCell : inColumns => (
 	{
 		margin : '0 2vw',
+		minHeight: '30vh',
 	}),
 
 	image : inColumns => (
@@ -44,7 +45,6 @@ export const CSTYLES =
 	{
 		textAlign : inColumns ? 'center' : 'left',
 		paddingTop : '4vh',
-		minHeight: inColumns ? '50px' : 'default',
 		fontSize : '15px',
 		lineHeight :  '24px',
 		fontWeight : '400',

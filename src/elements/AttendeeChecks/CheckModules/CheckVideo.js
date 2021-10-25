@@ -22,7 +22,7 @@ export const CheckVideo = ({ status, title, inColumns, onComplete }) =>
 
 	return ( started &&
 		<div style={ CSTYLES.outer( inColumns ) }>
-			<div style={ resultCellStyle( inColumns ) }>
+			<div style={{ ...resultCellStyle( inColumns ), minHeight : '15vh' }}>
 				<div style={ CSTYLES.title( inColumns ) }>{ title }</div>
 				<div style={ CSTYLES.result( inColumns ) }>Is the video playing?</div>
 			</div>
