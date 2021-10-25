@@ -29,7 +29,7 @@ export const CSTYLES =
 
 	image : isRowBased => (
 	{
-		height: '22vh',
+		height: isRowBased ? '30vh' : '22vh',
 		width : 'auto',
 		maxWidth : isRowBased ? 'default' : '500px',
 	}),
