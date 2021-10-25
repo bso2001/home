@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { CSTYLES, resultCellStyle } from './styles'
 import { EStatus } from '../common'
 
-export const CheckVideo = ({ status, image, title, isRowBased, onComplete }) =>
+export const CheckVideo = ({ status, title, inColumns, onComplete }) =>
 {
 	const [started, setStarted] = useState(false)
 
@@ -18,26 +18,20 @@ export const CheckVideo = ({ status, image, title, isRowBased, onComplete }) =>
 	const testFailed =()=> { onComplete( EStatus.FAILED, { notVisible : false } ) }
 	const testFailedThumbnail =()=> { onComplete( EStatus.FAILED, { notVisible : true } ) }
 
-	const noButtonStyle = { ...CSTYLES.button(isRowBased), ...CSTYLES.noButton }
+	const noButtonStyle = { ...CSTYLES.button( inColumns ), ...CSTYLES.noButton }
 
 	return ( started &&
-		<div style={ CSTYLES.outer(isRowBased) }>
-
-			<div style={ CSTYLES.cell(isRowBased) }>
-				<video id="videoTestation" src="test.mp4" autoPlay loop style={ CSTYLES.image(isRowBased) } />
+		<div style={ CSTYLES.outer( inColumns ) }>
+			<div style={ resultCellStyle( inColumns ) }>
+				<div style={ CSTYLES.title( inColumns ) }>{ title }</div>
+				<div style={ CSTYLES.result( inColumns ) }>Is the video playing?</div>
 			</div>
 
-			<div style={ resultCellStyle(isRowBased) }>
-				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
-				    <div style={ CSTYLES.result(isRowBased) }>Is the video playing?</div>
-			</div>
-
-			<div style={ CSTYLES.cell(isRowBased) } hidden={ !started }>
+			<div style={ CSTYLES.cell( inColumns ) } hidden={ !started }>
 				<button style={ noButtonStyle } onClick={testFailed}>No, I don't see the video playing</button>
 				<button style={ noButtonStyle } onClick={testFailedThumbnail}>No, the video is blank</button>
-				<button style={ CSTYLES.button(isRowBased) } onClick={testPassed}>Yes, I see the video playing</button>
+				<button style={ CSTYLES.button( inColumns ) } onClick={testPassed}>Yes, I see the video playing</button>
 			</div>
-
 		</div>
 	)
 }

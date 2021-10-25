@@ -1,63 +1,61 @@
 
 export const CSTYLES =
 {
-	outer : isRowBased => (
+	outer : inColumns => (
 	{
 		display : 'flex',
 		flexDirection : 'inherit',
 		width : '100%',
-		alignItems : isRowBased ? 'default' : 'center',
+		alignItems : inColumns ? 'center' : 'default',
 	}),
 
-	cell : isRowBased => (
+	cell : inColumns => (
 	{
 		flex : '1',
 		display : 'flex',
 		flexDirection : 'column',
-		paddingTop: isRowBased ? '0px' : '30px',
-		minHeight: isRowBased ? '180px' : 'default',
-		alignItems : isRowBased ? 'left' : 'center',
-		justifyContent : isRowBased ? 'flex-end' : 'flex-start',
+		paddingTop: inColumns ? '20px' : '0px',
+		minHeight: inColumns ? 'default' : '180px',
+		alignItems : inColumns ? 'center' : 'left',
+		justifyContent : inColumns ? 'flex-start' : 'flex-end',
 	}),
 
-	resultCell : isRowBased => (
+	resultCell : inColumns => (
 	{
 		margin : '0 2vw',
-		minHeight : '18vh',
-		height: isRowBased ? 'default' : '200px',
 	}),
 
-	image : isRowBased => (
+	image : inColumns => (
 	{
-		height: isRowBased ? '30vh' : '22vh',
+		height: inColumns ? '20vh' : '30vh',
 		width : 'auto',
-		maxWidth : isRowBased ? 'default' : '500px',
+		maxWidth : inColumns ? '500px' : 'default',
 	}),
 
-	title : isRowBased => (
+	title : inColumns => (
 	{
-		paddingBottom : isRowBased ? '4vh' : '2vh',
+		paddingBottom : inColumns ? '2vh' : '4vh',
 		fontSize : '18px',
 		fontWeight : '600',
 		color : '#eee',
 	}),
 
-	result : isRowBased => (
+	result : inColumns => (
 	{
-		textAlign : isRowBased ? 'left' : 'center',
+		textAlign : inColumns ? 'center' : 'left',
 		paddingTop : '4vh',
-		minHeight: isRowBased ? 'default' : '50px',
+		minHeight: inColumns ? '50px' : 'default',
 		fontSize : '15px',
 		lineHeight :  '24px',
 		fontWeight : '400',
 		color : '#eee',
 	}),
 
-	button : isRowBased => (
+	button : inColumns => (
 	{
 		backgroundColor : '#4698d0',
 		border : '0',
-		width : isRowBased ? '180px' : '65vw',
+		width : inColumns ? '65vw' : '180px',
 		height : '45px',
 		fontSize : '15px',
 		fontWeight : '600',
@@ -79,8 +77,8 @@ export const CSTYLES =
 	},
 }
  
-export function resultCellStyle(isRowBased)
+export function resultCellStyle( inColumns )
 {
-	return { ...CSTYLES.cell(isRowBased), ...CSTYLES.resultCell(isRowBased) }
+	return { ...CSTYLES.cell( inColumns ), ...CSTYLES.resultCell( inColumns ) }
 }
 

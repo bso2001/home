@@ -5,9 +5,9 @@ import { EStatus } from './common'
 
 const STYLES =
 {
-	step : isMobile => (
+	step : inColumns => (
 	{
-		width : isMobile ? 'default' : '130px',
+		width : inColumns ? 'default' : '130px',
 	}),
 
 	stepGraphics :
@@ -15,18 +15,18 @@ const STYLES =
 		display : 'flex',
 	},
 
-	stepNumber :
+	stepNumber : (inColumns) => (
 	{
-		width : '42px',
-		height : '42px',
-		borderRadius : '42px',
+		width : inColumns ? '36px' : '42px',
+		height : inColumns ? '36px' : '42px',
+		borderRadius : inColumns ? '36px' : '42px',
 		border : '1px solid #606060',
 		boxSizing : 'border-box',
 		padding : '9px 0 0 16px',
-		fontSize : '14px',
+		fontSize : inColumns ? '12px' : '14px',
 		fontWeight : '600',
 		color : '#ffffff',
-	},
+	}),
 
 	stepNumberTesting :
 	{
@@ -34,28 +34,29 @@ const STYLES =
 		color : '#4698d0',
 	},
 
-	stepNumberComplete : (isMobile) => (
+	stepNumberComplete : (inColumns) => (
 	{
 		backgroundColor : '#4698d0',
 		fontSize : '16px',
-		paddingLeft : isMobile ? '15px' : '12px',
+		paddingLeft : inColumns ? '13px' : '12px',
+		paddingTop : inColumns ? '5px' : 'default',
 	}),
 
-	stepLine : (isMobile) => (
+	stepLine : (inColumns) => (
 	{
 		borderTop : '1px solid #4698d0',
 		height : '1px',
-		width : isMobile ? '30px' : '60px',
+		width : inColumns ? '30px' : '60px',
 		margin : '20px 0 0 15px',
 	}),
 
-	stepName : (isMobile) => (
+	stepName : (inColumns) => (
 	{
-		marginTop : '20px',
+		marginTop : inColumns ? '10px' : '20px',
 		letterSpacing : '.8px',
 		fontSize : '14px',
 		fontWeight : '600',
-		textAlign : isMobile ? 'center' : 'left',
+		textAlign : inColumns ? 'center' : 'left',
 	}),
 }
 
@@ -65,7 +66,7 @@ export const Step = ({ name, number, showLine, status }) =>
 	const [numberStyle, setNumberStyle] = useState({})
 	const [numberValue, setNumberValue] = useState(null)
 
-	const isMobile = ( showLine === EStatus.TESTING )
+	const inColumns = ( showLine === EStatus.TESTING )
 
 	useEffect( () =>
 	{
@@ -73,33 +74,33 @@ export const Step = ({ name, number, showLine, status }) =>
 
 		if ( status.value === EStatus.PENDING )
 		{
-			setLineStyle({ ...STYLES.stepLine(isMobile), borderTop : '1px dashed #606060' })
-			setNumberStyle( STYLES.stepNumber )
+			setLineStyle({ ...STYLES.stepLine(inColumns), borderTop : '1px dashed #606060' })
+			setNumberStyle( STYLES.stepNumber(inColumns) )
 		}
 
 		else if ( status.value === EStatus.TESTING )
 		{
-			setLineStyle({ ...STYLES.stepLine(isMobile), borderTop : '1px dashed #4698d0' })
-			setNumberStyle({ ...STYLES.stepNumber, ...STYLES.stepNumberTesting })
+			setLineStyle({ ...STYLES.stepLine(inColumns), borderTop : '1px dashed #4698d0' })
+			setNumberStyle({ ...STYLES.stepNumber(inColumns), ...STYLES.stepNumberTesting })
 		}
 
 		else
 		{
-			setLineStyle({ ...STYLES.stepLine(isMobile), borderTop : '1px solid #4698d0' })
-			setNumberStyle({ ...STYLES.stepNumber, ...STYLES.stepNumberComplete(isMobile) })
-			if ( ! isMobile )
+			setLineStyle({ ...STYLES.stepLine(inColumns), borderTop : '1px solid #4698d0' })
+			setNumberStyle({ ...STYLES.stepNumber(inColumns), ...STYLES.stepNumberComplete(inColumns) })
+			if ( ! inColumns )
 			setNumberValue( `<i class='fa fa-check'></i>` )
 		}
-	}, [status.value, isMobile, number ])
+	}, [status.value, inColumns, number ])
 
 	return lineStyle && (
-		<div style={ STYLES.step(isMobile) } key={name}>
+		<div style={ STYLES.step(inColumns) } key={name}>
 			<div style={ STYLES.stepGraphics }>
-				{ isMobile && <div style={{ ...lineStyle, margin : '20px 20px 0 0' }} /> }
+				{ inColumns && <div style={{ ...lineStyle, margin : '20px 20px 0 0' }} /> }
 				<div style={ numberStyle } dangerouslySetInnerHTML={{ __html: numberValue }} />
 				{ showLine && <div style={ lineStyle } /> }
 			</div>
-			<div style={ STYLES.stepName(isMobile) }>{name}</div>
+			{ !inColumns && <div style={ STYLES.stepName(inColumns) }>{name}</div> }
 		</div>
 	)
 }

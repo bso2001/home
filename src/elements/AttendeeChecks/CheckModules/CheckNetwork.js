@@ -9,7 +9,7 @@ import { Failed } from './Failed'
 // import { getChannels, getEventsList, createConversationMessage } from 'lib/api'
 // import { isValidArray, isValidObject } from '@thebuzzcast/utils'
 
-export const CheckNetwork = ({ status, image, title, isRowBased, onComplete }) =>
+export const CheckNetwork = ({ status, title, inColumns, onComplete }) =>
 {
 	const [passed, setPassed] = useState(null)
 	const [message, setMessage] = useState('Checking Network...')
@@ -119,23 +119,17 @@ const getEventsList =()=>
 	const endCheck =()=> { onComplete(passed) }
 
 	return (
-		<div style={ CSTYLES.outer(isRowBased) }>
-
-			<div style={ CSTYLES.cell(isRowBased) }>
-				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
-			</div>
-
-			<div style={ resultCellStyle(isRowBased) }>
-				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
+		<div style={ CSTYLES.outer( inColumns ) }>
+			<div style={ resultCellStyle( inColumns ) }>
+				<div style={ CSTYLES.title( inColumns ) }>{ title }</div>
 				{ passed === true  && <Passed /> }
 				{ passed === false && <Failed /> }
-				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
+				{ message && <div style={ CSTYLES.result( inColumns ) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
-			<div style={ CSTYLES.cell(isRowBased) }>
-				<button style={ CSTYLES.button(isRowBased) } onClick={endCheck}>Continue</button>
+			<div style={ CSTYLES.cell( inColumns ) }>
+				<button style={ CSTYLES.button( inColumns ) } onClick={endCheck}>Continue</button>
 			</div>
-
 		</div>
 	)
 }

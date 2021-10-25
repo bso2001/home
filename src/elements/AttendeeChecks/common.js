@@ -30,8 +30,8 @@ export const EStatus = Object.freeze(
 export const CHECKS =
 [
 	[ 'OS Version', CheckOperatingSystem, 'os.jpg' ],	// @todo -- this must go 1st until i fix some init bug...
-	[ 'Browser', CheckBrowser, 'browser.jpg' ],
 	[ 'Local Storage', CheckLocalStorage, 'storage.jpg' ],
+	[ 'Browser', CheckBrowser, 'browser.jpg' ],
 	[ 'Chatbot', CheckChatbot, 'chatbot.png' ],
 	[ 'Network', CheckNetwork, 'network.jpg' ],
 	[ 'Audio', CheckAudio, 'audio.jpg' ],

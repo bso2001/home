@@ -11,7 +11,7 @@ import { Failed } from './Failed'
 // import { useSelector } from 'react-redux'
 // import { selectClientConfig } from 'store/selectors'
 
-export const CheckChatbot = ({ status, image, title, isRowBased, onComplete }) =>
+export const CheckChatbot = ({ status, title, inColumns, onComplete }) =>
 {
 	const [passed, setPassed] = useState(null)
 	const [message, setMessage] = useState('Checking Chatbot...')
@@ -96,23 +96,17 @@ export const CheckChatbot = ({ status, image, title, isRowBased, onComplete }) =
 	const endCheck =()=> { onComplete( passed ) }
 
 	return ( 
-		<div style={ CSTYLES.outer(isRowBased) }>
-
-			<div style={ CSTYLES.cell(isRowBased) }>
-				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
-			</div>
-
-			<div style={ resultCellStyle(isRowBased) }>
-				{ passed !== null && <div style={ CSTYLES.title(isRowBased) }>{ title }</div> }
+		<div style={ CSTYLES.outer( inColumns ) }>
+			<div style={ resultCellStyle( inColumns ) }>
+				{ passed !== null && <div style={ CSTYLES.title( inColumns ) }>{ title }</div> }
 				{ passed === true  && <Passed /> }
 				{ passed === false && <Failed /> }
-				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
+				{ message && <div style={ CSTYLES.result( inColumns ) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 
-			<div style={ CSTYLES.cell(isRowBased) }>
-				{ passed !== null && <button style={ CSTYLES.button(isRowBased) } onClick={endCheck}>Continue</button> }
+			<div style={ CSTYLES.cell( inColumns ) }>
+				{ passed !== null && <button style={ CSTYLES.button( inColumns ) } onClick={endCheck}>Continue</button> }
 			</div>
-
 		</div>
 	)
 }

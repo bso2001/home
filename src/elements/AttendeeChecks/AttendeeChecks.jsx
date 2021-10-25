@@ -18,10 +18,10 @@ const STYLES =
 		padding : '5vh 10px',
 	},
 
-	header : isRowBased => (
+	header : inColumns => (
 	{
 		display : 'flex',
-		justifyContent : isRowBased ? 'space-between' : 'space-around',
+		justifyContent : inColumns ? 'space-around' : 'space-between',
 	}),
 
 	logo : 
@@ -42,11 +42,11 @@ const STYLES =
 		cursor : 'pointer',
 	},
 
-	steps : isRowBased => (
+	steps : inColumns => (
 	{
 		display : 'flex',
 		flexDirection : 'row',
-		paddingTop : isRowBased ? '5vh' : '10vh',
+		paddingTop : '5vh',
 		overflowX : 'hidden',
 	}),
 
@@ -54,23 +54,44 @@ const STYLES =
 	{
 		display : 'flex',
 		flexDirection : 'column',
-		paddingTop : '5vh',
+		paddingTop : '4vh',
 		overflowX : 'hidden',
 		alignItems : 'center',
 	},
 
-	checkContainer : isRowBased => (
+	mainContainer : inColumns => (
 	{
-		paddingTop : isRowBased ? '10vh' : 'default',
+		paddingTop : inColumns ? 'default' : '10vh',
 		display: 'flex',
 		width: '100%',
-		flexDirection: isRowBased ? 'row' : 'column',
-		justifyContent: isRowBased ? 'space-around' : 'space-between',
+		height: inColumns ? 'fit-content' : 'default',
+		flexDirection: inColumns ? 'column' : 'row',
+		justifyContent: inColumns ? 'space-between' : 'space-between',
 	}),
 
-	complete : isRowBased => (
+	checkContainer : inColumns => (
 	{
-		paddingTop : isRowBased ? 'default' : '18vh',
+		display: 'flex',
+		flexDirection : inColumns ? 'column' : 'row',
+		width : '100%',
+	}),
+
+	imageContainer :
+	{
+		textAlign : 'center',
+	},
+
+	image : inColumns => (
+	{
+		height: inColumns ? '20vh' : '30vh',
+		width : 'auto',
+		maxWidth : inColumns ? '500px' : 'default',
+		margin : inColumns ? '0 auto' : '0',
+	}),
+
+	complete : inColumns => (
+	{
+		paddingTop : inColumns ? '18vh' : 'default',
 		textAlign : 'center',
 		backgroundColor : '#222',
 		fontFamily : 'HelveticaNeue-UltraLight, Lato, sans-serif',
@@ -87,7 +108,7 @@ export const AttendeeChecks =()=>
 	const [stepIndex, setStepIndex] = useState(0)
 	const [complete, setComplete] = useState(false)
 
-	const isRowBased = useMediaQuery('(min-width: 900px)')
+	const inColumns = useMediaQuery('(max-width: 900px)')
 
 	const updateLog = ( index, result, aInfo ) =>
 	{
@@ -128,21 +149,31 @@ export const AttendeeChecks =()=>
 	const renderCheck =()=>
 	{
 		if ( stepIndex >= CHECKS.length )
-			return <div></div>
+			return null
 
 		const name = CHECKS[ stepIndex ].name
 		const img  = CHECKS[ stepIndex ].image
 		const TheCheckModule = CHECKS[ stepIndex ].module
 		
 		return (
-			<TheCheckModule
+			<div style={ STYLES.checkContainer( inColumns )}>
+			    <div style={ STYLES.imageContainer }>
+			    {
+				( name === 'Video' ) ?
+					<video src="video.mp4" autoPlay loop style={ STYLES.image( inColumns ) } />
+				:
+					<img src={ img } alt={ name } style={ STYLES.image( inColumns )} />
+			    }
+			    </div>
+
+			    <TheCheckModule
 				key={ name }
-				image={ img }
 				title={ name }
 				status={ checkLog[name] }
-				isRowBased={ isRowBased }
+				inColumns={ inColumns }
 				onComplete={ recordResult }
-			/>
+			    />
+			</div>
 		)
 	}
 
@@ -156,7 +187,7 @@ export const AttendeeChecks =()=>
 
 	const renderSteps =()=>
 	{
-		if ( ! isRowBased )
+		if ( inColumns )
 		{
 			if ( stepIndex < CHECKS.length )
 			{
@@ -178,7 +209,7 @@ export const AttendeeChecks =()=>
 		else
 		{
 			return (
-			    <div style={ STYLES.steps(isRowBased) }>
+			    <div style={ STYLES.steps( inColumns )}>
 			    {
 				CHECKS.map( ({name}, index) =>
 				(
@@ -201,15 +232,15 @@ export const AttendeeChecks =()=>
 	return (
 		<div style={ STYLES.outer }>
 
-			<div style={ STYLES.header(isRowBased) }>
+			<div style={ STYLES.header( inColumns )}>
 				<div style={ STYLES.logo } />
 				<button style={ STYLES.rerunChecks } onClick={rerunChecks}>Rerun Checks</button>
 			</div>
 
 			{ renderSteps() }
 
-			<div style={ STYLES.checkContainer(isRowBased) }>
-				{ complete && <div style={ STYLES.complete(isRowBased) }>Checks Complete!</div> }
+			<div style={ STYLES.mainContainer( inColumns )}>
+				{ complete && <div style={ STYLES.complete( inColumns )}>Checks Complete!</div> }
 				{ !complete && renderCheck() }
 			</div>
 

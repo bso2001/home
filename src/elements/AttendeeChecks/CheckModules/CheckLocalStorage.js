@@ -8,7 +8,7 @@ import { Passed } from './Passed'
 import { Failed } from './Failed'
 import { getDeviceInfo } from 'library/device'
 
-export const CheckLocalStorage = ({ status, image, title, isRowBased, onComplete }) =>
+export const CheckLocalStorage = ({ status, title, inColumns, onComplete }) =>
 {
 	const [ cookiesPassed, setCookiesPassed] = useState(null)
 	const [ storagePassed, setStoragePassed] = useState(null)
@@ -99,7 +99,7 @@ export const CheckLocalStorage = ({ status, image, title, isRowBased, onComplete
 		let msg = ''
 
 		if ( ! cookiesPassed )
-			msg = `<a href=${cookiesHelpLink()} target="_blank">Click here</a> for information on enabling cookies in your browser.`
+			msg = `<b><u><a href=${cookiesHelpLink()} target="_blank">Click here</a></b></u> for information on enabling cookies in your browser.`
 
 		setMessage( msg )
 	}
@@ -107,23 +107,17 @@ export const CheckLocalStorage = ({ status, image, title, isRowBased, onComplete
 	const endCheck =()=> { onComplete( cookiesPassed && storagePassed ) }
 
 	return ( 
-		<div style={ CSTYLES.outer(isRowBased) }>
-
-			<div style={ CSTYLES.cell(isRowBased) }>
-				<img src={ image } alt={ title } style={ CSTYLES.image(isRowBased) } />
-			</div>
-
-			<div style={ resultCellStyle(isRowBased) }>
-				<div style={ CSTYLES.title(isRowBased) }>{ title }</div>
+		<div style={ CSTYLES.outer( inColumns ) }>
+			<div style={ resultCellStyle( inColumns ) }>
+				<div style={ CSTYLES.title( inColumns ) }>{ title }</div>
 				{ cookiesPassed===null ? null : (cookiesPassed ? <Passed msg="Cookies" /> : <Failed msg="Cookies" />) }
 				{ storagePassed===null ? null : (storagePassed ? <Passed msg="Storage" /> : <Failed msg="Storage" />) }
-				{ message && <div style={ CSTYLES.result(isRowBased) } dangerouslySetInnerHTML={{ __html: message }} /> }
+				{ message && <div style={ CSTYLES.result( inColumns ) } dangerouslySetInnerHTML={{ __html: message }} /> }
 			</div>
 			
-			<div style={ CSTYLES.cell(isRowBased) }>
-				<button style={ CSTYLES.button(isRowBased) } onClick={endCheck}>Continue</button>
+			<div style={ CSTYLES.cell( inColumns ) }>
+				<button style={ CSTYLES.button( inColumns ) } onClick={endCheck}>Continue</button>
 			</div>
-
 		</div>
 	)
 }
