@@ -22,7 +22,7 @@ export const CSTYLES =
 
 	resultCell : inColumns => (
 	{
-		margin : '0 2vw',
+		margin : '0 1vw',
 		minHeight: '30vh',
 	}),
 

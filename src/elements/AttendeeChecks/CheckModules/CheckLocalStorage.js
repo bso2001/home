@@ -93,14 +93,11 @@ export const CheckLocalStorage = ({ status, title, inColumns, onComplete }) =>
 	const runChecks = async() =>
 	{
 		setCookiesPassed( await checkCookies() )
-
 		checkStorage()
 
 		let msg = ''
-
 		if ( ! cookiesPassed )
 			msg = `<b><u><a href=${cookiesHelpLink()} target="_blank">Click here</a></b></u> for information on enabling cookies in your browser.`
-
 		setMessage( msg )
 	}
 
