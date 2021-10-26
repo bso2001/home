@@ -9,7 +9,7 @@ export const CheckVideo = ({ status, title, inColumns, onComplete }) =>
 {
 	const [started, setStarted] = useState(false)
 	const [retrying, setRetrying] = useState(false)
-	const [message, setMessage] = useState( `Do you see the video playing?` )
+	const [message, setMessage] = useState(`Do you see the video playing?`)
 
 	useEffect( () =>
 	{
@@ -38,22 +38,22 @@ export const CheckVideo = ({ status, title, inColumns, onComplete }) =>
 		switch ( os?.name )
 		{
 			case 'Android':
-				link = 'https://www.techsolutions.support.com/how-to/fix-call-or-audio-quality-android-phone-or-tablet-10740'
+				link = 'https://www.videoconverterfactory.com/tips/videos-not-playing-on-android.html'
 				type = 'Android'
 				break
 
 			case 'iOS':
-				link = 'https://www.lifewire.com/fix-volume-on-iphone-4174470'
+				link = 'https://www.tenorshare.com/iphone-fix/how-to-fix-videos-not-playing-on-iphone-and-ipad.html'
 				type = 'iPad or iPhone'
 				break
 
 			case 'macOS':
-				link = 'https://macpaw.com/how-to/fix-sound-on-mac'
+				link = 'https://macpaw.com/how-to/video-not-playing-mac'
 				type = 'Mac'
 				break
 
 			case 'Windows':
-				link = 'https://macpaw.com/how-to/fix-sound-on-mac'
+				link = 'https://allthings.how/8-ways-to-fix-windows-10-not-playing-videos-on-your-computer'
 				type = 'Windows'
 				break
 
