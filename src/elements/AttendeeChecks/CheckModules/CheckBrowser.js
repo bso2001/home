@@ -39,7 +39,7 @@ export const CheckBrowser = ({ status, title, inColumns, onComplete }) =>
 
 		if ( ! browser?.name )
 		{
-			messages.push( `Your browser couldn't be identified.` )
+			messages.push( `Sorry, but your browser couldn't be identified.` )
 			setVersionPassed( false )
 		}
 		else
@@ -48,7 +48,7 @@ export const CheckBrowser = ({ status, title, inColumns, onComplete }) =>
 
 			if (SUPPORTED_BROWSERS[name] === NOT_SUPPORTED)
 			{
-				messages.push( `Your browser is not supported.` )
+				messages.push( `Sorry, but your browser is not supported.` )
 				setVersionPassed( false )
 			}
 			else
@@ -78,7 +78,6 @@ export const CheckBrowser = ({ status, title, inColumns, onComplete }) =>
 
 		for ( let property of properties )
 		{
-						// console.log('property', property)
 			const { values } = propertiesInfo[property]
 			const isDefined = (value) => typeof value !== 'undefined'
 
@@ -86,14 +85,10 @@ export const CheckBrowser = ({ status, title, inColumns, onComplete }) =>
 			{
 				values.forEach( (value) =>
 				{
-						// const msg1 = `tried to set ${style[property]} to ${value}`
 					style[property] = value
 
 					if ( style[property] !== value )
 					{
-						// console.log(msg1)
-						// console.log('but we set it to', style[property])
-
 						let propertyAndValue = combinePropertyAndValue(property, value)
 
 						if ( ! CSS_VALUES_WHITELIST.includes(propertyAndValue) )

@@ -49,7 +49,7 @@ export const CheckAudio = ({ status, title, inColumns, onComplete }) =>
 				break
 
 			case 'Windows':
-				link = 'https://macpaw.com/how-to/fix-sound-on-mac'
+				link = 'https://www.pcworld.com/article/491036/how-to-troubleshoot-audio-problems-with-your-pc.html'
 				type = 'Windows'
 				break
 
