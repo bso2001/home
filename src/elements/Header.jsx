@@ -12,7 +12,6 @@ const styling = theme =>
 		flexFlow : 'row',
 		alignItems : 'center',
 		justifyContent : 'space-evenly',
-		height : '45px',
 		width : '100%',
 		maxWidth : '1200px',
 		zIndex : '100',
@@ -66,7 +65,7 @@ class Header extends React.Component
 	{
 		const { classes } = this.props
 
-		this.title = 'Sven BERT OLSSON'
+		this.title = 'SVEN BERT OLSSON'
 
 		return (
 			<div className={classes.header}>

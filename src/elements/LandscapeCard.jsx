@@ -10,7 +10,7 @@ const styling = theme =>
 		width : '100%',
 		display : 'flex',
 		flexFlow : 'column',
-		borderRadius : '4px 4px 0 0',
+		borderRadius : '0',
 		backgroundColor : '#f8f8f8 !important'
 	},
 
@@ -42,7 +42,7 @@ class LandscapeCard extends React.Component
 			backgroundPositionY : this.props.imagePos ? this.props.imagePos : '70%'
 		}
 
-		let h = this.props.short ? '100px' : (isMobile ? '180px' : '240px')
+		let h = this.props.short ? '100px' : (isMobile ? '140px' : '200px')
 
 		return (
 			<Card className={classes.landscapeCard} style={{ marginBottom : this.props.noMargin ? '0' : '2vh' }}>

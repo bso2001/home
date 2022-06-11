@@ -1,22 +1,22 @@
 {
 	"bannerTitle" : "The 21st Century",
 	"bannerImage" : "_CDN_URL_/images/music.jpg",
-	"bannerText" : "<p>Collaborative projects that took place in a different millennium than previous projects.<p>Some of the fine folks involved, in no real order, are my brothers Rick & Wade, Steve Kesselhaut (and son Zach), Rick Robinson, Nick Lavoritano and Mike Luongo.  And happily, once again, Ansel.</p>",
+	"bannerText" : "<p>Collaborative projects that took place in a different millennium than previous projects.</p><p>Some of the fine folks involved, in no real order, are my brothers Rick & Wade, Steve Kesselhaut (and son Zach), Rick Robinson, Nick Lavoritano and Mike Luongo.  And happily, once again, Ansel.</p>",
 
 	"cards" :
 	{
-		"point me into the sky" :
+		"Point Me Into the Sky" :
 		{
 			"image" : "_CDN_URL_/images/pmits-cover.jpg",
 			"link" : "/pmits",
-			"text" : "Mar&mdash;Dec 2010"
+			"text" : "mar&mdash;dec 2010"
 		},
 
-		"last summer" :
+		"Last Summer" :
 		{
 			"image" : "_CDN_URL_/images/bnml-cover1.jpg",
 			"link" : "/last-summer",
-			"text" : "May&mdash;Aug 2013"
+			"text" : "may&mdash;aug 2013"
 		}
 	}
 }

@@ -1,32 +1,32 @@
 {
 	"bannerImage" : "_CDN_URL_/images/five-banner.jpg",
-	"bannerTitle" : "five",
+	"bannerTitle" : "Five",
 	"bannerText" : "<p>We didn't know it at the time, but this would be the last <i>official</i> Providence recording.  The bass, drums, and some rhythm guitars were recorded on September 8-9, 1984 at Earthquake Studios in Scotch Plains.</p><p>Most of the guitars, the keyboards, and vocals, were added at Cedar Lane during October.  The final mix was apparently produced in a marathon session on November 9.<p/>",
 
 	"tracks" :
 	[
 		{
-			"title" : "Crumbling Walls",
+			"title" : "crumbling walls",
 			"time"  : "5:11",
 			"link"  : "_CDN_URL_/mp3/Five/1.+crumbling+walls.mp3"
 		},
 		{
-			"title" : "Empty Rooms",
+			"title" : "empty rooms",
 			"time"  : "6:33",
 			"link"  : "_CDN_URL_/mp3/Five/2.+empty+rooms.mp3"
 		},
 		{
-			"title" : "Life on the Island",
+			"title" : "life on the island",
 			"time"  : "5:08",
 			"link"  : "_CDN_URL_/mp3/Five/3.+life+on+the+island.mp3"
 		},
 		{
-			"title" : "Four Corners",
+			"title" : "four corners",
 			"time"  : "4:17",
 			"link"  : "_CDN_URL_/mp3/Five/4.+four+corners.mp3"
 		},
 		{
-			"title" : "Modern Mysteries",
+			"title" : "modern mysteries",
 			"time"  : "5:21",
 			"link"  : "_CDN_URL_/mp3/Five/5.+modern+mysteries.mp3"
 		}

@@ -1,59 +1,64 @@
 {
 	"bannerImage" : "_CDN_URL_/images/pmits-cover.jpg",
-	"bannerTitle" : "point me into the sky",
+	"bannerTitle" : "Point Me Into the Sky",
 	"bannerText" : "<p>On the second day of 2010, I met Rick Robinson.  We had both answered the same BandMix ad.  On possibly the coldest morning ever, some people who wished to play music instead met for breakfast in a Burger King.  Not a bad plan by our host: see what shows up before letting them in your house.  Later, some of us met to play some rather uninspired covers, and I thought that was that.</p><p>After a couple months, Rick reached out, and we ended up spending the rest of 2010 produced these tracks.  And we never once recorded together.</p><p>I wrote music, organized into what felt like coherent songs, recorded draft versions, and sent them off to Rick.  He wrote lyrics and recorded all the vocals, and added some guitars and live percussion.  He then sent them back for incorporation into the master copy in Tracktion.  I added guitars, keys, bass, and programmed the final Groove Agent drum tracks.  Last, final mixes were produced, completed nearly a year to the day removed from that cold morning.</p>",
 
 	"tracks" :
 	[
 		{
-			"title" : "One More Fool",
+			"title" : "one more fool",
 			"time" : "4:24",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/01-one-more-fool.mp3"
 		},
 		{
-			"title" : "How Can I",
+			"title" : "how can i",
 			"time" : "5:26",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/03-how-can-i.mp3"
 		},
 		{
-			"title" : "Burn the Night Up",
+			"title" : "burn the night up",
 			"time" : "5:12",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/02-burn-the-night-up.mp3"
 		},
 		{
-			"title" : "Andeline",
+			"title" : "andeline",
 			"time" : "3:22",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/04-andeline.mp3"
 		},
 		{
-			"title" : "Point Me Into the Sky",
+			"title" : "point me into the sky",
 			"time" : "5:10",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/05-point-me-into-the-sky.mp3"
 		},
 		{
-			"title" : "The Games People Play",
+			"title" : "the games people play",
 			"time" : "4:15",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/06-the-games-people-play.mp3"
 		},
 		{
-			"title" : "Upside Down",
+			"title" : "upside down",
 			"time" : "4:31",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/07-upside-down.mp3"
 		},
 		{
-			"title" : "The Long Way",
+			"title" : "the long way",
 			"time" : "4:05",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/08-the-long-way.mp3"
 		},
 		{
-			"title" : "Emily",
+			"title" : "emily",
 			"time" : "4:58",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/09-emily.mp3"
 		},
 		{
-			"title" : "Garden of Stone",
+			"title" : "garden of stone",
 			"time" : "4:31",
 			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/10-garden-of-stone.mp3"
+		},
+		{
+			"title" : "for liverpool departed",
+			"time" : "5:42",
+			"link" : "_CDN_URL_/mp3/Point+Me+Into+the+Sky/11-for-liverpool-departed.mp3"
 		}
 	]
 }

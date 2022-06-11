@@ -7,10 +7,11 @@ const styling =(theme)=>
 ({
 	portraitCard :
 	{
-		margin : '2% auto 2% auto !important',
-		width : '88%',
-		height : isMobile ? '100px' : '200px',
-		cursor : 'pointer !important'
+		margin : '4% auto 4% auto !important',
+		width : '80%',
+		height : isMobile ? '100px' : '140px',
+		cursor : 'pointer !important',
+		borderRadius : '0'
 	},
 
 	imageContainer :
@@ -39,7 +40,7 @@ const styling =(theme)=>
 	title :
 	{
 		fontFamily : 'serenity, sans-serif !important',
-		fontSize : isMobile ? '2rem' : '1.8rem',
+		fontSize : '1.8rem',
 		fontWeight: 300,
 		lineHeight : '2rem'
 	},

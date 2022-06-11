@@ -1,36 +1,36 @@
 {
 	"bannerImage" : "_CDN_URL_/images/swan-title.jpg",
-	"bannerTitle" : "songs of the last swan",
+	"bannerTitle" : "Songs of the Last Swan",
 	"bannerText" : "<p>An instrumental album intended to be sparse.  Or as sparse as I could manage.  This was the first time using only software-generated keyboard sounds.  It was also the first use of Steinberg's <i><b>Groove Agent</b></i> VST for the drums.  Otherwise, lots of Strat, some real bass guitar, all recorded using Tracktion.</p>",
 	"tracks" :
 	[
 		{
-			"title" : "Lost",
+			"title" : "lost",
 			"time" : "14:43",
 			"link" : "_CDN_URL_/mp3/Songs+of+the+Last+Swan/1+-+Lost.mp3"
 		},
 		{
-			"title" : "Bongo Falls",
+			"title" : "bongo falls",
 			"time" : "3:55",
 			"link" : "_CDN_URL_/mp3/Songs+of+the+Last+Swan/2+-+Bongo+Falls.mp3"
 		},
 		{
-			"title" : "Rain",
+			"title" : "rain",
 			"time" : "7:13",
 			"link" : "_CDN_URL_/mp3/Songs+of+the+Last+Swan/3+-+Rain.mp3"
 		},
 		{
-			"title" : "New Journey",
+			"title" : "new journey",
 			"time" : "4:22",
 			"link" : "_CDN_URL_/mp3/Songs+of+the+Last+Swan/4+-+New+Journey.mp3"
 		},
 		{
-			"title" : "Found",
+			"title" : "found",
 			"time" : "5:11",
 			"link" : "_CDN_URL_/mp3/Songs+of+the+Last+Swan/5+-+Found.mp3"
 		},
 		{
-			"title" : "Swan's Song",
+			"title" : "swan's song",
 			"time" : "7:59",
 			"link" : "_CDN_URL_/mp3/Songs+of+the+Last+Swan/6+-+Swans+Song.mp3"
 		}

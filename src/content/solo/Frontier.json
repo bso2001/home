@@ -1,61 +1,61 @@
 {
 	"bannerImage" : "_CDN_URL_/images/skyisland.jpg",
-	"bannerTitle" : "big frontier",
+	"bannerTitle" : "Big Frontier",
 	"bannerText" : "<p style=\"margin-top: 2.5vh; margin-bottom: 1vh;\"> <i>\"Well the talk on the street says you might go solo...\"</i><p> It was 1986.  I had a Korg drum box, a shiny new DX-21, and a 4-track.  And enough free time to produce these recordings.</p><p>Yeah, the drum box is boring.  And the sound of the DX-21 is much too shiny.  But this one was fun to make.</p>",
 	"tracks" :
 	[
 		{
-			"title" : "Big City",
+			"title" : "big city",
 			"time" : "4:47",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/01-BigCity.mp3"
 		},
 		{
-			"title" : "No Evidence of Life",
+			"title" : "no evidence of life",
 			"time" : "5:55",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/02-NoEvidenceOfLife.mp3"
 		},
 		{
-			"title" : "Snow One",
+			"title" : "snow one",
 			"time" : "3:01",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/03-SnowOne.mp3"
 		},
 		{
-			"title" : "March to Memphis",
+			"title" : "march to memphis",
 			"time" : "5:38",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/04-MarchToMemphis.mp3"
 		},
 		{
-			"title" : "Forced Reentry",
+			"title" : "forced reentry",
 			"time" : "3:09",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/05-ForcedReentry.mp3"
 		},
 		{
-			"title" : "Dreams of Galileo",
+			"title" : "dreams of galileo",
 			"time" : "2:18",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/06-DreamsOfGalileo.mp3"
 		},
 		{
-			"title" : "Alien Breakfast",
+			"title" : "alien breakfast",
 			"time" : "1:21",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/07-AlienBreakfast.mp3"
 		},
 		{
-			"title" : "The Russian Border Dance",
+			"title" : "the russian border dance",
 			"time" : "2:49",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/08-TheRussianBorderDance.mp3"
 		},
 		{
-			"title" : "Thrill of the Chase",
+			"title" : "thrill of the chase",
 			"time" : "4:00",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/09-ThrillOfTheChase.mp3"
 		},
 		{
-			"title" : "Ice Nine",
+			"title" : "ice nine",
 			"time" : "6:39",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/10-IceNine.mp3"
 		},
 		{
-			"title" : "Lost Frontier",
+			"title" : "lost frontier",
 			"time" : "5:37",
 			"link" : "_CDN_URL_/mp3/Big+Frontier/11-LostFrontier.mp3"
 		}

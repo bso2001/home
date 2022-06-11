@@ -5,39 +5,39 @@
 
 	"cards" :
 	{
-		"five" :
+		"Five" :
 		{
-			"image" : "_CDN_URL_-cover.png",
+			"image" : "_CDN_URL_/images/five-cover.png",
 			"link" : "/providence-five",
-			"text" : "Sep&mdash;Nov 1984"
+			"text" : "sep&mdash;nov 1984"
 		},
 
-		"questions of perspective" :
+		"Questions of Perspective" :
 		{
-			"image" : "_CDN_URL_.jpg",
+			"image" : "_CDN_URL_/images/questions.jpg",
 			"link" : "/questions",
-			"text" : "Aug&mdash;Sep 1983"
+			"text" : "aug&mdash;sep 1983"
 		},
 
-		"prophecies" :
+		"Prophecies" :
 		{
-			"image" : "_CDN_URL_-2.jpg",
+			"image" : "_CDN_URL_/images/prophecies-2.jpg",
 			"link" : "/prophecies",
-			"text" : "Jan&mdash;Mar 1983"
+			"text" : "jan&mdash;mar 1983"
 		},
 
-		"providence II" :
+		"Providence II" :
 		{
-			"image" : "_CDN_URL_.jpg",
+			"image" : "_CDN_URL_/images/prophecies.jpg",
 			"link" : "/providence-two",
-			"text" : "Late 1981"
+			"text" : "late 1981"
 		},
 
-		"providence" :
+		"Providence" :
 		{
-			"image" : "_CDN_URL_.jpg",
+			"image" : "_CDN_URL_/images/gallery/ccv.jpg",
 			"link" : "/providence-one",
-			"text" : "Winter 1979-1980"
+			"text" : "winter 1979-1980"
 		}
 	}
 }

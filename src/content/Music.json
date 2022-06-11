@@ -8,28 +8,28 @@
 		{
 			"image" : "_CDN_URL_/images/music.jpg",
 			"link" : "/century-21",
-			"text" : "Celebrating Y2K survival"
+			"text" : "celebrating Y2K survival"
 		},
 
 		"Solo Recordings" :
 		{
 			"image" : "_CDN_URL_/images/studio-820b.jpg",
 			"link" : "/solo",
-			"text" : "Creations in home studios"
+			"text" : "home studio creations"
 		},
 
 		"Providence" :
 		{
 			"image" : "_CDN_URL_/images/tape1.jpg",
 			"link" : "/providence",
-			"text" : "Band of years"
+			"text" : "band of years"
 		},
 
 		"Gas Music from Jupiter" :
 		{
 			"image" : "_CDN_URL_/images/jupiter-juno.jpg",
 			"link" : "/gas-music",
-			"text" : "Explanation required"
+			"text" : "explanation required"
 		}
 	}
 }

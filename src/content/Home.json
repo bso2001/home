@@ -9,7 +9,7 @@
 		{
 			"image" : "_CDN_URL_/images/studio-1.jpg",
 			"link" : "/music",
-			"text" : "Various original sounds"
+			"text" : "various original sounds"
 		},
 
 		"Images" :
@@ -17,14 +17,14 @@
 			"image" : "_CDN_URL_/images/imagery.png",
 			"imageBg" : "#402f17",
 			"link" : "/images",
-			"text" : "Pictures, some that move"
+			"text" : "pictures, some moving"
 		},
 
 		"Technology" :
 		{
 			"image" : "_CDN_URL_/images/tech.png",
 			"href" : "https://olsson.tech",
-			"text" : "Pays the bills"
+			"text" : "paying the bills"
 		}
 	}
 }

@@ -8,30 +8,26 @@ const styling = theme =>
 	container :
 	{
 		position : 'fixed',
-		marginRight : '4vw',
-		top : '4vh',
-		right : '0',
+		top : '1vh',
+		right : '0px',
 	},
 
 	icon :
 	{
-		color: '#efba35',
+		color: '#bfcf9f',
 		float : 'right',
 		cursor : 'pointer',
-		fontSize: '34px',
+		fontSize: '32px',
 		marginRight : '10px',
-		height : '40px',
+		height : '44px',
 		width : '50px',
 		textAlign: 'center',
-		backgroundColor : 'rgba(100, 100, 100, 0.7)',
-		borderRadius : '4px'
+		borderRadius : '4px',
+		backgroundColor : 'rgba(100, 100, 100, 0.9)',
 	},
 
 	menu :
 	{
-		borderRadius : '4px',
-		marginTop : '-10px',
-		padding : '10px 0',
 		backgroundColor : '#044567',
 		color : '#ffca45 !important',
 		textDecoration : 'none'
@@ -67,7 +63,7 @@ class Menu extends React.Component
 
 		return (
 			<div className={classes.container}>
-				<Typography variant="span" className={classes.icon} onClick={() => this.setState({ menuVisible : !this.state.menuVisible })}>
+				<Typography className={classes.icon} onClick={() => this.setState({ menuVisible : !this.state.menuVisible })}>
 					{ this.menuIcon() }
 				</Typography>
 
