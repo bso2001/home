@@ -7,6 +7,7 @@ const styling = theme =>
 ({
 	landscapeCard :
 	{
+		flex : '1',
 		width : '100%',
 		display : 'flex',
 		flexFlow : 'column',
@@ -39,7 +40,8 @@ class LandscapeCard extends React.Component
 			backgroundRepeat : 'no-repeat',
 			height : '100%',
 			backgroundImage : 'url(' + this.props.image + ')',
-			backgroundPositionY : this.props.imagePos ? this.props.imagePos : '70%'
+			backgroundPositionX : this.props.imagePosX ? this.props.imagePosX : '50%',
+			backgroundPositionY : this.props.imagePosY ? this.props.imagePosY : '70%'
 		}
 
 		let h = this.props.short ? '100px' : (isMobile ? '140px' : '200px')

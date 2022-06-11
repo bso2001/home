@@ -20,10 +20,9 @@ class FunWithLightAndHeatPage extends React.Component
 		return (
 			<div className="mainContent Audio-Page">
 				<DetailCard
-					image={this.data.bannerImage}
-					imagePos="10%"
-					title={this.data.bannerTitle}
 					boldTitle={false}
+					image={this.data.bannerImage}
+					title={this.data.bannerTitle}
 					text={this.data.bannerText}
 				/>
 				<Album tracks={this.data.tracks} />

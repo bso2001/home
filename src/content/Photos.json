@@ -1,6 +1,6 @@
 {
 	"bannerImage" : "_CDN_URL_/images/rose2.jpg",
-	"bannerPos" : "50%",
+	"bannerPosY" : "50%",
 	"bannerText" : "Original Pix",
 
 	"gallery" :
@@ -58,7 +58,7 @@
 		{
 			"original" : "_CDN_URL_/images/gallery/ccv.jpg",
 			"thumbnail" : "_CDN_URL_/images/gallery/ccv.jpg",
-			"description" : "Long Valley, NJ [04/11/2004]. 'shopped into hideous image."
+			"description" : "Long Valley, NJ [04/11/2004]. 'shopped into this hideous image."
 		},
 		{
 			"original" : "_CDN_URL_/images/gallery/IMG_1396.jpg",

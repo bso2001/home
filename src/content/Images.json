@@ -1,6 +1,6 @@
 {
 	"bannerImage" : "_CDN_URL_/images/imagery.png",
-	"bannerPos" : "12%",
+	"bannerPosY" : "12%",
 	"bannerText" : "IMAGERY",
 
 	"cards" :

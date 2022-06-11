@@ -1,5 +1,5 @@
 {
 	"bannerImage" : "_CDN_URL_/images/prophecies.jpg",
-	"bannerPosition" : "90%",
+	"bannerPosY" : "90%",
 	"bannerTitle" : "Providence II"
 }

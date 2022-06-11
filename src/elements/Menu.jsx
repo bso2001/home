@@ -7,9 +7,10 @@ const styling = theme =>
 ({
 	container :
 	{
+		zIndex: '1000',
 		position : 'fixed',
-		top : '1vh',
-		right : '0px',
+		top : '0',
+		right : '0',
 	},
 
 	icon :
@@ -17,19 +18,18 @@ const styling = theme =>
 		color: '#bfcf9f',
 		float : 'right',
 		cursor : 'pointer',
-		fontSize: '32px',
-		marginRight : '10px',
-		height : '44px',
-		width : '50px',
+		fontSize: '2.2em',
+		height : '1.5em',
+		width : '2em',
 		textAlign: 'center',
-		borderRadius : '4px',
-		backgroundColor : 'rgba(100, 100, 100, 0.9)',
+		backgroundColor : 'rgba(64,64,64,.8)'
 	},
 
 	menu :
 	{
-		backgroundColor : '#044567',
-		color : '#ffca45 !important',
+		marginTop: '-20px',
+		padding: '24px 0 10px 0',
+		backgroundColor : '#3f3f3f',
 		textDecoration : 'none'
 	},
 
@@ -42,12 +42,12 @@ const styling = theme =>
 		fontFamily : 'serenity, sans-serif !important',
 		fontSize: isMobile ? '1.8rem' : '1.6rem',
 		fontWeight: '300',
+		color: '#bfcf9f !important',
 		boxSizing : 'border-box'
 	},
 
 	title :
 	{
-		color: '#efba35',
 		marginLeft: '4% !important',
 		flex: 2
 	}

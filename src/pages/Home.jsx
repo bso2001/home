@@ -20,7 +20,8 @@ class HomePage extends React.Component
 			<div className="mainContent">
 				<LandscapeCard
 					image={this.data.bannerImage}
-					imagePos={this.data.bannerPos}
+					imagePosX={this.data.bannerPosX}
+					imagePosY={this.data.bannerPosY}
 					text={this.data.bannerText}
 				/>
 				{ Content.generatePortraitCards( this.data.cards ) }

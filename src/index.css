@@ -1,10 +1,13 @@
+
+.MuiPaper-rounded { border-radius: 0 !important; }
+
 html { font-size: 100%; }
 
 @media (max-width: 1000px) { html { font-size: 95%; }}
 @media (max-width: 850px)  { html { font-size: 90%; }}
 @media (max-width: 720px)  { html { font-size: 85%; }}
 @media (max-width: 620px)  { html { font-size: 70%; }}
-@media (max-width: 400px)  { html { font-size: 60%; }}
+@media (max-width: 420px)  { html { font-size: 60%; }}
 
 body
 {
@@ -44,7 +47,8 @@ a:visited
 #outerContainer > span
 {
 	height: 100%;
-	display: flex;
+	
+	isplay: flex;
 	flex-flow: column;
 }
 
@@ -71,7 +75,7 @@ a:visited
 {
 	.mainContent
 	{
-		margin: 3vh auto 0 auto !important;
+		margin: 0 auto 0 auto !important;
 		min-width: 800px;
 	}
 }
@@ -90,6 +94,13 @@ a:visited
 }
 
 		/* This is styling for image galleries (react-image-gallery). */
+
+@media (min-width: 800px)
+{
+	.image-gallery
+	{
+	}
+}
 
 .image-gallery-description
 {

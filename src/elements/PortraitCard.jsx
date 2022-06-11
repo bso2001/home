@@ -7,9 +7,10 @@ const styling =(theme)=>
 ({
 	portraitCard :
 	{
+		flex : '1',
 		margin : '4% auto 4% auto !important',
 		width : '80%',
-		height : isMobile ? '100px' : '140px',
+		height : '15%',
 		cursor : 'pointer !important',
 		borderRadius : '0'
 	},
@@ -28,7 +29,7 @@ const styling =(theme)=>
 
 	textbox :
 	{
-		padding : '0 4% 0 4%',
+		padding : '0 10% 0 10%',
 		display : 'flex',
 		width : '55%',
 		height : '100%',

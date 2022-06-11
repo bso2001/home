@@ -11,7 +11,7 @@ const styling = theme =>
 		display : 'flex',
 		flexFlow : 'column',
 		borderRadius : '4px 4px 0 0',
-		backgroundColor : '#f8f8f8 !important'
+		backgroundColor : '#3f3f3f !important'
 	},
 
 	text :
@@ -23,7 +23,8 @@ const styling = theme =>
 		flexDirection : 'column',
 		fontFamily : 'raleway, sans-serif !important',
 		fontWeight : 400,
-		fontSize : '2rem'
+		fontSize : '2rem',
+		color : '#fff'
 	}
 })
 
