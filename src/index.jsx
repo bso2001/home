@@ -61,7 +61,7 @@ const App = () => (
 	</span>
 )
 
-ReactDOM.render( <App />, document.getElementById( 'outerContainer' ) )
+ReactDOM.render( <App />, document.getElementById( 'appContainer' ) )
 
 				// To allow the app to work offline and load faster, change unregister() to
 				// register() below.  Note this comes with some pitfalls.

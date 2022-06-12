@@ -23,7 +23,7 @@ class PhotosPage extends React.Component
 	{
 		return (
 			<div className="mainContent">
-				<PlainCard text={this.data.bannerText} />
+				<PlainCard text={this.data.bannerText} style="padding-top: 40px;"/>
 				<ImageGallery
 					items={this.data.gallery}
 					showBullets={true}

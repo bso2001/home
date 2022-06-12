@@ -8,40 +8,36 @@ const styling =(theme)=>
 	portraitCard :
 	{
 		flex : '1',
-		margin : '4% auto 4% auto !important',
+		margin : '10% auto 10% auto !important',
 		width : '80%',
-		height : '15%',
+		minHeight : isMobile ? '80px' : '120px',
+		maxHeight : '10rem',
 		cursor : 'pointer !important',
 		borderRadius : '0'
 	},
 
-	imageContainer :
-	{
-		width : '45%'
-	},
-
 	image :
 	{
-		height : '100%',
-		width : '100%',
-		objectFit : 'cover'
+		flex : '1',
+		backgroundSize : 'cover',
+		backgroundPositionY : 'bottom',
+		minWidth : '40%'
 	},
 
 	textbox :
 	{
-		padding : '0 10% 0 10%',
+		padding : '0 5% 0 5%',
 		display : 'flex',
 		width : '55%',
-		height : '100%',
+		marginBottom: '10px',
 		flexDirection: 'column',
-		justifyContent: 'center',
-		alignSelf: 'center'
+		justifyContent: 'center'
 	},
 
 	title :
 	{
 		fontFamily : 'serenity, sans-serif !important',
-		fontSize : '1.8rem',
+		fontSize : '2rem',
 		fontWeight: 300,
 		lineHeight : '2rem'
 	},
@@ -63,8 +59,7 @@ class PortraitCard extends React.Component
 		return (
 			<Card className={classes.portraitCard} id="portraitCard" onClick={ () => this.cardClicked() }>
 			    <CardContent style={{ flexDirection : this.props.reverse ? 'row-reverse' : 'initial' }}>
-				<div className={classes.imageContainer} style={{ backgroundColor : this.props.imageBg }}>
-					<img className={classes.image} src={this.props.image} alt="" />
+				<div className={classes.image} style={{ backgroundImage : `url(${this.props.image}` }}>
 				</div>
 				<div className={classes.textbox} style={{ textAlign : this.props.reverse ? 'right' : 'left' }}>
 					<Typography className={classes.title} noWrap={true} variant="h6">{this.props.title}</Typography>

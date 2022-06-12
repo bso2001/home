@@ -7,8 +7,8 @@ const styling = theme =>
 ({
 	landscapeCard :
 	{
-		flex : '1',
 		width : '100%',
+		maxWidth: '1000px',
 		display : 'flex',
 		flexFlow : 'column',
 		borderRadius : '0',
@@ -47,7 +47,10 @@ class LandscapeCard extends React.Component
 		let h = this.props.short ? '100px' : (isMobile ? '140px' : '200px')
 
 		return (
-			<Card className={classes.landscapeCard} style={{ marginBottom : this.props.noMargin ? '0' : '2vh' }}>
+			<Card className={classes.landscapeCard}
+			      style={{ marginBottom : this.props.noMargin ? '0' : '2vh' }}
+			      style={{ position : this.props.fixed ? 'fixed' : 'relative' }}
+			>
 			    <CardContent>
 				<div className={classes.imageContainer} style={{ height : h }}>
 					<div style={imgStyle} ></div>

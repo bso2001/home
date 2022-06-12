@@ -1,6 +1,6 @@
 {
 	"bannerImage" : "_CDN_URL_/images/studio-1.jpg",
-	"bannerText" : "RHAPSODIES &amp; ROGUES",
+	"bannerText" : "ORIGINAL RECORDINGS",
 
 	"cards" :
 	{
@@ -29,7 +29,7 @@
 		{
 			"image" : "_CDN_URL_/images/jupiter-juno.jpg",
 			"link" : "/gas-music",
-			"text" : "explanation required"
+			"text" : "some explanation required"
 		}
 	}
 }
