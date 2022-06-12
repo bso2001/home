@@ -20,7 +20,9 @@ const styling =(theme)=>
 	{
 		flex : '1',
 		backgroundSize : 'cover',
-		backgroundPositionY : 'bottom',
+		backgroundPositionY : 'center',
+		backgroundRepeat : 'no-repeat',
+		minHeight : isMobile ? '80px' : '120px',
 		minWidth : '40%'
 	},
 
@@ -37,7 +39,7 @@ const styling =(theme)=>
 	title :
 	{
 		fontFamily : 'serenity, sans-serif !important',
-		fontSize : '2rem',
+		fontSize : '1.9rem',
 		fontWeight: 300,
 		lineHeight : '2rem'
 	},
