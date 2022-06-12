@@ -8,7 +8,7 @@ const styling = theme =>
 	landscapeCard :
 	{
 		width : '100%',
-		maxWidth: '1000px',
+		maxWidth: '800px',
 		display : 'flex',
 		flexFlow : 'column',
 		borderRadius : '0',

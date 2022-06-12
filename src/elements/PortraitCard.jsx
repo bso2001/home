@@ -9,7 +9,7 @@ const styling =(theme)=>
 	{
 		flex : '1',
 		margin : '10% auto 10% auto !important',
-		width : '80%',
+		width : isMobile ? '90%' : '80%',
 		minHeight : isMobile ? '80px' : '120px',
 		maxHeight : '10rem',
 		cursor : 'pointer !important',
@@ -26,7 +26,7 @@ const styling =(theme)=>
 
 	textbox :
 	{
-		padding : '0 5% 0 5%',
+		padding : '0 2% 0 2%',
 		display : 'flex',
 		width : '55%',
 		marginBottom: '10px',
