@@ -3,7 +3,7 @@ import React from 'react'
 import Album from '../../elements/Album'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../content/c21/LastSummer.json'
+import PageData from '../../Content/c21/LastSummer.json'
 
 class LastSummerPage extends React.Component
 {

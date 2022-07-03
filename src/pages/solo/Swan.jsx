@@ -3,7 +3,7 @@ import React from 'react'
 import Album from '../../elements/Album'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../content/solo/Swan.json'
+import PageData from '../../Content/solo/Swan.json'
 
 class SongsOfTheLastSwanPage extends React.Component
 {

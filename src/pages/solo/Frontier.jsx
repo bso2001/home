@@ -3,7 +3,7 @@ import React from 'react'
 import Album from '../../elements/Album'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../content/solo/Frontier.json'
+import PageData from '../../Content/solo/Frontier.json'
 
 class FrontierPage extends React.Component
 {

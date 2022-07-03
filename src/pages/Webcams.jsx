@@ -3,7 +3,7 @@ import React from 'react'
 import Content from '../library/content'
 import ImageGallery from 'react-image-gallery'
 import LandscapeCard from '../elements/LandscapeCard'
-import PageData from '../content/Webcams.json'
+import PageData from '../Content/Webcams.json'
 
 class WebcamsPage extends React.Component
 {

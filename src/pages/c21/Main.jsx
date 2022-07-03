@@ -2,7 +2,7 @@
 import React from 'react'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../content/c21/Main.json'
+import PageData from '../../Content/c21/Main.json'
 
 class Century21Page extends React.Component
 {

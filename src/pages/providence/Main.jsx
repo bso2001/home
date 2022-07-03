@@ -2,7 +2,7 @@
 import React from 'react'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../content/providence/Main'
+import PageData from '../../Content/providence/Main'
 
 class ProvidencePage extends React.Component
 {

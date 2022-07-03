@@ -2,7 +2,7 @@
 import React from 'react'
 import Content from '../library/content'
 import LandscapeCard from '../elements/LandscapeCard'
-import PageData from '../content/Images.json'
+import PageData from '../Content/Images.json'
 
 class ImagesPage extends React.Component
 {

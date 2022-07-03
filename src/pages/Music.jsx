@@ -2,7 +2,7 @@
 import React from 'react'
 import Content from '../library/content'
 import LandscapeCard from '../elements/LandscapeCard'
-import PageData from '../content/Music.json'
+import PageData from '../Content/Music.json'
 
 class MusicPage extends React.Component
 {
