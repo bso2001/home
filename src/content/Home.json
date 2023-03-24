@@ -8,7 +8,7 @@
 		"Music" :
 		{
 			"image" : "_CDN_URL_/images/studio-1.jpg",
-			"link" : "/music",
+			"href" : "https://tntp.bandcamp.com/",
 			"text" : "various original sounds"
 		},
 
