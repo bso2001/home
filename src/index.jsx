@@ -65,4 +65,4 @@ ReactDOM.render( <App />, document.getElementById( 'appContainer' ) )
 
 				// To allow the app to work offline and load faster, change unregister() to
 				// register() below.  Note this comes with some pitfalls.
-serviceWorker.register()
+serviceWorker.unregister()
