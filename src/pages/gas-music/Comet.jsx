@@ -3,7 +3,7 @@ import React from 'react'
 import Album from '../../elements/Album'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../Content/gas-music/Comet'
+import PageData from '../../content/gas-music/Comet'
 
 class CometsTailPage extends React.Component
 {

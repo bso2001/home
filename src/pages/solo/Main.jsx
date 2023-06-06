@@ -2,7 +2,7 @@
 import React from 'react'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../Content/solo/Main.json'
+import PageData from '../../content/solo/Main.json'
 
 class SoloWorksPage extends React.Component
 {

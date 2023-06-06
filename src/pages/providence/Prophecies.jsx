@@ -3,7 +3,7 @@ import React from 'react'
 import Album from '../../elements/Album'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../Content/providence/Prophecies'
+import PageData from '../../content/providence/Prophecies'
 
 class ProvidencePropheciesPage extends React.Component
 {

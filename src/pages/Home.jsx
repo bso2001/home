@@ -1,8 +1,8 @@
 
 import React from 'react'
-import Content from 'library/content'
-import LandscapeCard from 'elements/LandscapeCard'
-import PageData from 'Content/Home.json'
+import Content from '../library/content'
+import LandscapeCard from '../elements/LandscapeCard'
+import PageData from '../content/Home.json'
 
 class HomePage extends React.Component
 {

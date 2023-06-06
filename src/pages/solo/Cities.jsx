@@ -3,7 +3,7 @@ import React from 'react'
 import Album from '../../elements/Album'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../Content/solo/Cities.json'
+import PageData from '../../content/solo/Cities.json'
 
 class CitiesPage extends React.Component
 {

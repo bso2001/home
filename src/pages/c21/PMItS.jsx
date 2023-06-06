@@ -3,7 +3,7 @@ import React from 'react'
 import Album from '../../elements/Album'
 import Content from '../../library/content'
 import DetailCard from '../../elements/DetailCard'
-import PageData from '../../Content/c21/PMItS.json'
+import PageData from '../../content/c21/PMItS.json'
 
 class PmitsPage extends React.Component
 {
