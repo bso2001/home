@@ -12,7 +12,8 @@ const styling = theme =>
 		display : 'flex',
 		flexFlow : 'column',
 		borderRadius : '0',
-		backgroundColor : '#f8f8f8 !important'
+		backgroundColor : '#f8f8f8 !important',
+		borderShadow: '0px 0px 2px black'
 	},
 
 	text :

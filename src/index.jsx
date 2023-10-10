@@ -6,11 +6,6 @@ import './index.css'
 import * as serviceWorker from './library/serviceWorker'
 
 import HomePage from './pages/Home'
-import ImagesPage from './pages/Images'
-import MusicPage from './pages/Music'
-import PhotosPage from './pages/Photos'
-import WebcamsPage from './pages/Webcams'
-
 import Menu from './elements/Menu'
 
 const App = () => (
@@ -18,10 +13,6 @@ const App = () => (
 	    <Menu />
 	    <Router>
 		<Route exact path = "/" component = {HomePage} />
-		<Route path = "/images" component = {ImagesPage} />
-		<Route path = "/music" component = {MusicPage} />
-		<Route path = "/photos" component = {PhotosPage} />
-		<Route path = "/webcams" component = {WebcamsPage} />
 	    </Router>
 	</span>
 )

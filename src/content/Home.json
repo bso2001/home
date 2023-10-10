@@ -1,6 +1,5 @@
 {
-	"bannerImage" : "_CDN_URL_/images/bandcamp-banner.png",
-	"bannerPosX" : "100%",
+	"bannerImage" : "_CDN_URL_/images/home-banner.jpg",
 	"bannerText" : "THINGS i DO",
 
 	"cards" :
@@ -8,16 +7,9 @@
 		"Music" :
 		{
 			"image" : "_CDN_URL_/images/studio-1.jpg",
+			"imageBg" : "#202020",
 			"href" : "https://tntp.bandcamp.com/",
 			"text" : "various original sounds"
-		},
-
-		"Images" :
-		{
-			"image" : "_CDN_URL_/images/imagery.png",
-			"imageBg" : "#402f17",
-			"link" : "/images",
-			"text" : "pictures, some moving"
 		},
 
 		"Technology" :
@@ -25,6 +17,13 @@
 			"image" : "_CDN_URL_/images/tech.png",
 			"href" : "https://olsson.tech",
 			"text" : "having fun, paying bills"
+		},
+
+		"Video" :
+		{
+			"image" : "_CDN_URL_/images/vcam-lens-6.png",
+			"link" : "https://www.youtube.com/@noztrey",
+			"text" : "moving pictures"
 		}
 	}
 }

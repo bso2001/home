@@ -23,7 +23,8 @@ const styling =(theme)=>
 		backgroundPositionY : 'center',
 		backgroundRepeat : 'no-repeat',
 		minHeight : isMobile ? '80px' : '120px',
-		minWidth : '40%'
+		minWidth : '40%',
+		height : '105%'
 	},
 
 	textbox :
