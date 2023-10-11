@@ -8,10 +8,9 @@ const styling =(theme)=>
 	portraitCard :
 	{
 		flex : '1',
-		margin : '10% auto 10% auto !important',
 		width : isMobile ? '90%' : '80%',
 		minHeight : isMobile ? '80px' : '120px',
-		maxHeight : '10rem',
+		maxHeight : '8rem',
 		cursor : 'pointer !important',
 		borderRadius : '0'
 	},
@@ -24,7 +23,7 @@ const styling =(theme)=>
 		backgroundRepeat : 'no-repeat',
 		minHeight : isMobile ? '80px' : '120px',
 		minWidth : '40%',
-		height : '105%'
+		height : '110%'
 	},
 
 	textbox :
@@ -40,16 +39,16 @@ const styling =(theme)=>
 	title :
 	{
 		fontFamily : 'serenity, sans-serif !important',
-		fontSize : '1.9rem',
+		fontSize : isMobile ? '2rem' : '1.8rem',
 		fontWeight: 300,
 		lineHeight : '2rem'
 	},
 
 	text :
 	{
-		fontSize : isMobile ? '1.6rem' : '1.4rem',
+		fontSize : isMobile ? '1.2rem' : '1.4rem',
 		fontFamily : 'omnes-cyrillic-semicondensed, sans-serif !important',
-		fontWeight: 300
+		fontWeight : isMobile ? '500' : '300'
 	}
 })
 

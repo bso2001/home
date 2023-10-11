@@ -8,7 +8,7 @@ const styling = theme =>
 	landscapeCard :
 	{
 		width : '100%',
-		maxWidth: '800px',
+		maxWidth: '1024px',
 		display : 'flex',
 		flexFlow : 'column',
 		borderRadius : '0',
@@ -25,7 +25,7 @@ const styling = theme =>
 		flexDirection : 'column',
 		fontFamily : 'raleway, sans-serif !important',
 		fontWeight : 400,
-		fontSize : '2rem'
+		fontSize : isMobile ? '2.4rem' : '2rem'
 	}
 })
 
@@ -45,7 +45,7 @@ class LandscapeCard extends React.Component
 			backgroundPositionY : this.props.imagePosY ? this.props.imagePosY : '70%'
 		}
 
-		let h = this.props.short ? '100px' : (isMobile ? '140px' : '200px')
+		let h = this.props.short ? '100px' : (isMobile ? '110px' : '125px')
 
 		return (
 			<Card className={classes.landscapeCard}

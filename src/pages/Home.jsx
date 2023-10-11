@@ -24,7 +24,9 @@ class HomePage extends React.Component
 					imagePosY={this.data.bannerPosY}
 					text={this.data.bannerText}
 				/>
-				{ Content.generatePortraitCards( this.data.cards ) }
+				<div className="cards">
+					{ Content.generatePortraitCards( this.data.cards ) }
+				</div>
 			</div>
 		)
 	}

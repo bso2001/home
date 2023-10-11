@@ -1,98 +1,58 @@
 
-.MuiPaper-rounded { border-radius: 0 !important; }
-.MuiTypography-h6 { white-space: normal !important; }
-
 html { font-size: 100%; }
 
-@media (max-width: 1000px) { html { font-size: 95%; }}
-@media (max-width: 850px)  { html { font-size: 90%; }}
-@media (max-width: 720px)  { html { font-size: 85%; }}
-@media (max-width: 620px)  { html { font-size: 70%; }}
-@media (max-width: 500px)  { html { font-size: 60%; }}
-
-body
-{
-	height: 100vh;
-	margin: 0;
-	background-color: #9999ad;
+body {
+	margin: 0 auto;
+	background-color: #492b44;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-code
-{
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
+code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
 
-a
-{
+a {
         color: inherit;
         text-decoration: none;
 }
 
-a:visited
-{
-        color: inherit;
-}
+a:visited { color: inherit; }
 
-		/* Our global styling is living here. */
+		/* Home page styling */
 
-#appContainer, #appContainer > span
-{
+.mainContent {
 	height: 100vh;
-}
-
-.mainContent
-{
-	max-width: 800px;
+	width : 100vw;
+	min-width: 800px;
+	max-width: 1024px;
 	background-color: #f4f4f4;
 	box-sizing: border-box;
-	margin: 0 !important;
-	padding-bottom: 2vh;
-
+	margin: 0 auto !important;
 }
 
-@media (min-width: 800px)
-{
-	.mainContent
-	{
-		margin: 0 auto 0 auto !important;
-		min-width: 800px;
-	}
+.cards {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 78vh;
+	gap: 5vh;
 }
 
-.Audio-Page
+@media (max-width: 799px)
 {
-	padding-bottom: 5vh;
+	.mainContent { min-width: unset; }
 }
 
-		/* Below is selector-based styling; not clear where to put these... */
+		/* Styling for image galleries (react-image-gallery) */
 
-#headerMenu > a:hover
-{
-	background-color: #454d61;
-	transition: all .2s;
-}
-
-		/* This is styling for image galleries (react-image-gallery). */
-
-@media (min-width: 800px)
-{
-	.image-gallery
-	{
-	}
-}
-
-.image-gallery-description
-{
+.image-gallery-description {
 	font-family: serenity,sans-serif !important;
 	font-size: 1rem !important;
 }
 
-		/* Here is the styling for our media player. */
+		/* Styling for our media player */
 
-.MyPlayer
-{
+.MyPlayer {
 	position: fixed;
 	bottom: 0;
 	border-top-left-radius: 4px;
@@ -107,53 +67,46 @@ a:visited
 	box-shadow: 0 0 2px gray;
 }
 
-.MyPlayerControls
-{
+.MyPlayerControls {
 	display: flex;
 	align-items: center;
 }
 
-.MyPlayerControls time
-{
+.MyPlayerControls time {
 	font-size: 2vh;
 	margin: -4px 10px 0 10px;
 	color: #444;
 	font-family: novecento-sans, sans-serif !important;
 }
 
-.MyPlayerControls input[type=range]
-{
+.MyPlayerControls input[type=range] {
 	-webkit-appearance: none;
 	margin: 10px 0;
 	width: 100%;
 }
 
-.MyPlayerControls input[type=range]:focus
-{
+.MyPlayerControls input[type=range]:focus {
 	outline: none;
 }
 
-.MyPlayerControls input[type=range]::-webkit-slider-runnable-track
-{
+.MyPlayerControls input[type=range]::-webkit-slider-runnable-track {
 	width: 100%;
 	height: 1px;
 	background: #777;
 }
 
-.MyPlayerControls input[type=range]::-webkit-slider-thumb
-{
+.MyPlayerControls input[type=range]::-webkit-slider-thumb {
 	margin-top: -7px;
 	cursor: grab;
 }
-		/* Material UI overrides live here. */
+		/* Material UI overrides live here */
 
-.MuiCardContent-root
-{
-	padding: 0 !important;
-}
+.MuiPaper-rounded { border-radius: 0 !important; }
+.MuiTypography-h6 { white-space: normal !important; }
+.MuiCardContent-root { padding: 0 !important; }
 
-#portraitCard .MuiCardContent-root
-{
+#portraitCard .MuiCardContent-root {
 	display: flex;
 	height: 120px;
 }
+
