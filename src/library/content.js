@@ -2,8 +2,7 @@
 import React from 'react'
 import PortraitCard from '../elements/PortraitCard'
 
-// const bsoCdn = 'https://d5m8p2okztqk9.cloudfront.net'
-const bsoCdn = 'https://cdn.olsson.tech'
+const bsoCdn = 'https://www.bertolsson.com/assets'
 
 const generatePortraitCards = ( cards, initiallyReverse? ) =>
 {

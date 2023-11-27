@@ -47,10 +47,10 @@ class LandscapeCard extends React.Component
 
 		let h = this.props.short ? '100px' : (isMobile ? '110px' : '125px')
 
+			      // style={{ position : this.props.fixed ? 'fixed' : 'relative' }}
 		return (
 			<Card className={classes.landscapeCard}
 			      style={{ marginBottom : this.props.noMargin ? '0' : '2vh' }}
-			      style={{ position : this.props.fixed ? 'fixed' : 'relative' }}
 			>
 			    <CardContent>
 				<div className={classes.imageContainer} style={{ height : h }}>

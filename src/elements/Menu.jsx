@@ -81,11 +81,11 @@ class Menu extends React.Component
 			<Typography variant="subtitle1" className={classes.menu} onClick={() => this.setState({ menuVisible : false })}>
 				<a className={classes.menuItem} href="/"> Home </a>
 				<a className={classes.menuItem} href="https://tntp.bandcamp.com" target="_new"> Music </a>
-				<a className={classes.menuItem} href="https://olsson.tech" target="_new"> Technology </a>
+				<a className={classes.menuItem} href="https://www.linkedin.com/in/bert-olsson/" target="_new"> Technology </a>
 				<a className={classes.menuItem} href="https://www.youtube.com/@noztrey" target="_new"> Video </a>
 				<a className={classes.menuItem} href="https://charts.bertolsson.com" target="_new"> Band Charts </a>
-				<a className={classes.menuItem} href="https://cdn.olsson.tech/Bert-Olsson-Resume.pdf" target="_new"> Résumé </a>
-				<a className={classes.menuItem} href="https://cdn.olsson.tech/Bert-Olsson-CV.pdf" target="_new"> TLDR? 1 page CV Here </a>
+				<a className={classes.menuItem} href="/assets/Bert-Olsson-Resume.pdf" target="_new"> Résumé </a>
+				<a className={classes.menuItem} href="/assets/Bert-Olsson-CV.pdf" target="_new"> TLDR? 1 page CV Here </a>
 			</Typography>
 		)
 	}
